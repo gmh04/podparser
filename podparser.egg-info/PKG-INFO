@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: podparser
+Version: 0.1dev
+Summary: Post Office Directory Parser
+Home-page: UNKNOWN
+Author: George Hamilton
+Author-email: gmh04@netscape.net
+License: GPL
+Description: The podparser is a tool for parsing Scotlands post office directories
+Keywords: post-office pod directory geneology history scotland
+Platform: UNKNOWN
