@@ -29,7 +29,7 @@ class Parser:
         self.commit        = commit
 
  
-    def run_parser(self):
+    def run_parser(self, callback):
         """
         
         """
@@ -41,11 +41,18 @@ class Parser:
         files = self.get_listing();
         
         for page in files:
-            entries = self.fix_line_returns(self.parse_page(page))
+            entries = []
+            lines = self.fix_line_returns(self.parse_page(page))
             
-            for i in entries:
-                print i
+            for line in lines:
+                entry = PodEntry(line)
 
+                if entry.valid:
+                    # clean up
+                    # checker.cleanUp(PodEntry(line))
+                entries.append(entry)
+                
+            callback(entries);
     def get_listing(self):
         """
         Get list of djvu xml files
@@ -154,7 +161,14 @@ class Parser:
                     entries.append(entry)
 
         return entries
-    
+
+def read_page(entries):
+    print entries
+
+class PodEntry():
+    def __init__(self, entry):
+        self.entry = entry
+
 class MetaData():
     """
     POD metadata
@@ -209,7 +223,6 @@ if __name__ == "__main__":
     podparser_dir = os.getcwd()
 
     # add parent directory of the podparser to the sys path
-    #os.chdir('%s%c..' % (podparser_dir, os.sep))
     sys.path.append(os.getcwd())
 
     # parse commandline arguments
@@ -268,6 +281,4 @@ if __name__ == "__main__":
                   args.start,
                   args.end,
                   args.verbose,
-                  args.williamson).run_parser()
-    
-    
+                  args.williamson).run_parser(read_page)
