@@ -35,28 +35,31 @@ class Parser:
         """
 
         # read meta data
+        from podparser import entry
+        checker = entry.EntryChecker()
+        
         self.metadata = MetaData(self.directory);
         
         # get list of files to parse
-        files = self.get_listing();
+        files = self._get_listing();
         
         for page in files:
             entries = []
-            lines = self.fix_line_returns(self.parse_page(page))
+            lines = self._fix_line_returns(self._parse_page(page))
             
             for line in lines:
-                entry = PodEntry(line)
+                pod_entry = entry.PodEntry(line)
 
-                if entry.valid:
-                    # clean up
-                    # checker.cleanUp(PodEntry(line))
-                entries.append(entry)
+                if pod_entry.valid:
+                    # clean up valid entries
+                    checker.clean_up(pod_entry)
+
+                entries.append(pod_entry)
                 
             callback(entries);
-    def get_listing(self):
-        """
-        Get list of djvu xml files
-        """
+
+    def _get_listing(self):
+        #  get list of djvu xml files
         files = [];
 
         def get_page_from_file(file):
@@ -78,7 +81,7 @@ class Parser:
 
         return files
 
-    def parse_page(self, page):
+    def _parse_page(self, page):
         entries = []
 
         # parse POD page
@@ -91,7 +94,7 @@ class Parser:
 
         return entries
 
-    def fix_line_returns(self, lines):
+    def _fix_line_returns(self, lines):
         entries = []
 
         def add_to_last(entry):
@@ -113,8 +116,8 @@ class Parser:
                     chars[line[0]] = chars[line[0]] + 1
                 else:
                     chars[line[0]] = 1
-            print lst
-            print chars
+            #print lst
+            #print chars
 
             for char in chars:
                 if chars[char] > char_val:
@@ -163,11 +166,9 @@ class Parser:
         return entries
 
 def read_page(entries):
-    print entries
-
-class PodEntry():
-    def __init__(self, entry):
-        self.entry = entry
+    for entry in entries:
+        #print '=> %s' % entry.print_entry()
+        entry.print_entry()
 
 class MetaData():
     """
