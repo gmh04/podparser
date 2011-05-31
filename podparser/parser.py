@@ -31,7 +31,7 @@ class Parser:
  
     def run_parser(self, callback):
         """
-        
+        Parse post office directories
         """
 
         # read meta data
@@ -73,7 +73,11 @@ class Parser:
                             page_no = get_page_from_file(f);
                         
                         if page_no >= self.start and page_no <= self.end:
-                            files.append('%s%c%s' % (d, os.sep, f))
+                            files.append('%s%c%s%c%s' % (self.directory,
+                                                         os.sep,
+                                                         d,
+                                                         os.sep,
+                                                         f))
                     break
 
         else:
@@ -98,16 +102,11 @@ class Parser:
         entries = []
 
         def add_to_last(entry):
-            entries[len(entries) -1] = '%s %s' % (entries[len(entries) -1], entry)
-
-        def close_char(char):
-            #return ord(char) != ord() + 1
-            if abs(ord(char) - ord(top_char)) < 2:
-                return True
-            else:
-                return False
+            # append an entry with previous
+            entries[len(entries) - 1] = '%s %s' % (entries[len(entries) - 1], entry)
 
         def get_top_char(lst):
+            # find the most commonly occurring first character
             chars = {}
             char_val = 0
             
@@ -116,8 +115,6 @@ class Parser:
                     chars[line[0]] = chars[line[0]] + 1
                 else:
                     chars[line[0]] = 1
-            #print lst
-            #print chars
 
             for char in chars:
                 if chars[char] > char_val:
@@ -136,18 +133,22 @@ class Parser:
                 if entry[0].isalpha() and entry[0].istitle() and len(entry.split(',')) > 2 and abs(ord(entry[0]) - ord(top_char)) < 2:
                    
                     current_alpha = entry[0]
-                    print '**** %c ***** ' % (current_alpha)
                     entries.append(entry)
             else:
-                #print '%c : %d' % (entry[0], ord(entry[0]))
                 previous = entries[len(entries) -1];
 
-                if previous.endswith(',') or previous.endswith(' and') or previous[len(previous) - 1].isdigit():
+                if previous.endswith(',') or previous.endswith(',') or previous.endswith(' and') or previous[len(previous) - 1].isdigit():
                     add_to_last(entry);
-                elif entry[0] != current_alpha: 
+                elif previous.endswith('-'):
+                    # take off last character first
+                    previous = previous[0: len(previous) - 1]
+
+                    # append with no space
+                    entries[len(entries) - 1] = '%s%s' % (previous, entry)
+                elif entry[0] != current_alpha:
                     if ord(entry[0]) == (ord(current_alpha) + 1):
-                        # next char up
-                        # check all remaining entries have the same character
+                        # found next char up
+                        # check remaining entries have the same character
                         remaining = lines[lines.index(entry): len(lines)]
                         top_remaining = get_top_char(remaining)
                         
@@ -167,7 +168,9 @@ class Parser:
 
 def read_page(entries):
     for entry in entries:
-        #print '=> %s' % entry.print_entry()
+        if verbose:
+            print entry.line
+            
         entry.print_entry()
 
 class MetaData():
@@ -268,12 +271,14 @@ if __name__ == "__main__":
     if args.directory:
         directory = args.directory[0]
     elif args.page:
-        #print args
         directory = args.page
     else:
         print '*** No directory given ***'
         print arg_parser.print_help()
         sys.exit(1)
+
+    global verbose
+    verbose = args.verbose
 
     # kick off parsing
     from podparser import parser
