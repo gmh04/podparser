@@ -35,66 +35,68 @@ class Parser:
         """
 
         # read meta data
-        from podparser import entry
+        from podparser import entry, directory
         checker = entry.EntryChecker()
         
-        self.metadata = MetaData(self.directory);
-        
-        # get list of files to parse
-        files = self._get_listing();
-        
-        for page in files:
-            entries = []
-            lines = self._fix_line_returns(self._parse_page(page))
-            
-            for line in lines:
-                pod_entry = entry.PodEntry(line)
+        self.directory = directory.Directory(self.directory);
 
+        print 'Parsing %s for %s\n' % (self.directory.town, self.directory.year)
+
+        # get list of files to parse
+        self._get_listing();
+
+        for page in self.directory.pages:
+            lines = self._fix_line_returns(self._parse_page(page))
+            for line in lines:
+                pod_entry = directory.Entry(line)
+                
                 if pod_entry.valid:
                     # clean up valid entries
                     checker.clean_up(pod_entry)
 
-                entries.append(pod_entry)
+                page.entries.append(pod_entry)
                 
-            callback(entries);
+            callback(self.directory, page);
 
     def _get_listing(self):
         #  get list of djvu xml files
-        files = [];
+
+        from podparser import directory
 
         def get_page_from_file(file):
             return int(file[len(file) -9: len(file) -5])
 
-        if os.path.isdir(self.directory):
-            for d in os.listdir(self.directory):
+        path = self.directory.path
+        if os.path.isdir(path):
+            for d in os.listdir(path):
                 if d.endswith('djvu_xml'):
-                    for f in os.listdir('%s%c%s' % (self.directory, os.sep, d)):
+                    for f in os.listdir('%s%c%s' % (path, os.sep, d)):
                         if((f.startswith("postoffice") or f.startswith("williamsonsdirect")) and f.endswith(".djvu")):
                             page_no = get_page_from_file(f);
                         
                         if page_no >= self.start and page_no <= self.end:
-                            files.append('%s%c%s%c%s' % (self.directory,
-                                                         os.sep,
-                                                         d,
-                                                         os.sep,
-                                                         f))
+                            path = '%s%c%s%c%s' % (path,
+                                                   os.sep,
+                                                   d,
+                                                   os.sep,
+                                                   f)
+
+                            self.directory.pages.append(directory.Page(path, page_no));
                     break
 
         else:
-            files.append(self.directory)
-
-        return files
+            self.directory.pages.append(directory.Page(path, get_page_from_file(path)))
 
     def _parse_page(self, page):
         entries = []
 
         # parse POD page
-        dom = parse(page)
+        dom = parse(page.path)
 
         lines = dom.getElementsByTagName('LINE')
 
         for line in lines:
-           entries.append(line.firstChild.nodeValue); 
+            entries.append(line.firstChild.nodeValue); 
 
         return entries
 
@@ -166,59 +168,15 @@ class Parser:
 
         return entries
 
-def read_page(entries):
-    for entry in entries:
+def read_page(directory, page):
+
+    print 'Page Number: %d ' % page.number
+
+    for entry in page.entries: 
         if verbose:
             print entry.line
             
         entry.print_entry()
-
-class MetaData():
-    """
-    POD metadata
-    """
-
-    def __init__(self, directory):
-        self.directory = directory;
-        self.read();
-        
-    def read(self):
-        """
-        read metadata from POD meta file
-        """
-        if os.path.isdir(self.directory):
-            ddir = self.directory
-        elif os.path.isfile(self.directory):
-            # get parent directory of single file
-            ddir = self.directory[0: self.directory.rfind(os.sep)]
-            ddir = ddir[0: ddir.rfind(os.sep)]
-        else:
-            print '*** Can read directory: %s ***' % self.directory
-            sys.exit(1)
-            
-        # find meta file in directory
-        for f in os.listdir(ddir):
-            if f.endswith('_meta.xml'):
-                meta_file = '%s%c%s' % (ddir, os.sep, f)
-                break
-             
-        if meta_file:
-            # parse meta file
-            dom = parse(meta_file)
-             
-            # use publisher field for town
-            publisher = dom.getElementsByTagName('publisher')[0].firstChild.nodeValue
-            self.town = publisher.split(':')[0].strip()
-             
-            # volume becomes year
-            volume = dom.getElementsByTagName('volume')[0].firstChild.nodeValue
-            self.year = volume.split('-')[0].strip()
-             
-            print 'Parsing %s for %s' % (self.town, self.year)
-            
-        else:
-            print '*** Cannot find metadata file in : %s ***' % ddir
-            sys.exit(1)
 
 if __name__ == "__main__":
 
@@ -251,7 +209,7 @@ if __name__ == "__main__":
                             default=0,
                             help='Start page to be parsed (only applies to -d). If no start page given start from 0.')
     arg_parser.add_argument('-v', '--verbose',
-                            action='store_false',
+                            action='store_true',
                             help='print detailed output')
     arg_parser.add_argument('-w', '--williamson',
                             action='store_false',
