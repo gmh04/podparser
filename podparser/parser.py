@@ -12,11 +12,12 @@ class Parser:
     def __init__(self,
                  config,
                  directory,
-                 start=0,
-                 end=9999,
-                 verbose=False,
-                 prePostOffice=False,
-                 commit=False):
+                 start         = 0,
+                 end           = 9999,
+                 encoder_key   = None,
+                 verbose       = False,
+                 prePostOffice = False,
+                 commit        = False):
         """
         Initialise the parser.
         """
@@ -25,18 +26,23 @@ class Parser:
         self.start         = start
         self.end           = end
         self.verbose       = verbose
+        #self.geoparser = geoparser_key
         self.prePostOffice = prePostOffice
         self.commit        = commit
 
+        if encoder_key:
+           self.geoencoder = podparser.geo.encoder.Google(encoder_key)
+        else:
+            self.geoencoder = None
  
     def run_parser(self, callback):
         """
-        Parse post office directories
+        Parse post office directory
         """
 
         # read meta data
-        from podparser import entry, directory
-        checker = entry.EntryChecker()
+        from podparser import checker, directory
+        checker = checker.EntryChecker(self.config)
         
         self.directory = directory.Directory(self.directory);
 
@@ -50,13 +56,19 @@ class Parser:
             for line in lines:
                 pod_entry = directory.Entry(line)
                 
-                if pod_entry.valid:
+                if pod_entry.valid():
                     # clean up valid entries
                     checker.clean_up(pod_entry)
+
+                    # geo encode address if encoder set up
+                    if self.geoencoder:
+                        pod_entry.geoencode(self.geoencoder)
 
                 page.entries.append(pod_entry)
                 
             callback(self.directory, page);
+
+        return directory
 
     def _get_listing(self):
         #  get list of djvu xml files
@@ -170,18 +182,38 @@ class Parser:
 
 def read_page(directory, page):
 
-    print 'Page Number: %d ' % page.number
+    print 'Page Number: %d\n' % page.number
+    global total
+    rejected = 0
 
-    for entry in page.entries: 
-        if verbose:
+    if verbose:
+        for entry in page.entries:
             print entry.line
-            
-        entry.print_entry()
+
+    for entry in page.entries:
+        
+        if entry.error:
+            print '*** Rejected: %s. Reason: %s' % (entry.line, entry.error)
+            rejected = rejected + 1
+        else:
+            entry.print_entry()
+
+        total = total + 1
+
+    rejected_per = float(rejected) / total * 100
+
+    print '\n%-20s%d' % ('Total Entries:', total)
+    print '%-20s%d%5d%%' % ('Rejected:', rejected, rejected_per)
 
 if __name__ == "__main__":
 
-    # get the pod parser direcory
-    os.chdir('%s%c..' % (os.getcwd(), os.sep))
+    print sys.argv[0]
+
+    # get the pod parser directory
+    cur_dir = os.path.dirname(sys.argv[0])
+    if len(cur_dir) == 0:
+        cur_dir = '.'
+    os.chdir('%s%c..' % (cur_dir, os.sep))
     podparser_dir = os.getcwd()
 
     # add parent directory of the podparser to the sys path
@@ -199,12 +231,14 @@ if __name__ == "__main__":
     arg_parser.add_argument('-d', '--directory',
                             nargs=1, 
                             help='postcode directory to be parsed')
-    arg_parser.add_argument('-p', '--page',
-                            help='single postcode directory page to be parsed')
     arg_parser.add_argument('-e', '--end',
                             default=9999,
                             type=int,
                             help='End page to be parsed (only applies to -d), If no end page given parse until last.')
+    arg_parser.add_argument('-k', '--key',
+                            help='Geo parser key')
+    arg_parser.add_argument('-p', '--page',
+                            help='single postcode directory page to be parsed')
     arg_parser.add_argument('-s', '--start',
                             default=0,
                             help='Start page to be parsed (only applies to -d). If no start page given start from 0.')
@@ -235,8 +269,9 @@ if __name__ == "__main__":
         print arg_parser.print_help()
         sys.exit(1)
 
-    global verbose
+    global verbose, total
     verbose = args.verbose
+    total   = 0
 
     # kick off parsing
     from podparser import parser
@@ -244,5 +279,6 @@ if __name__ == "__main__":
                   directory,
                   args.start,
                   args.end,
+                  args.key,
                   args.verbose,
                   args.williamson).run_parser(read_page)

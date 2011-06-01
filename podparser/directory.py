@@ -66,7 +66,7 @@ class Entry():
     def __init__(self, line):
         self.line       = line
         self.profession = ''
-        self.valid      = True
+        self.error      = None
 
         # parse individual entry values from pod
         self._parse()
@@ -110,12 +110,21 @@ class Entry():
                     
                 self.profession = remaining[0: comma_index]
                 self.address = remaining[comma_index + 1: len(remaining)]
+
+            # process the address(es)
+            #self._parse_address()
         else:
             # anything with less than 3 columns is invalid
-            self.valid = False
+            self.error = 'Not enough columns' 
+
+    def _parse_address(self):
+        print self.address
+
+    def valid(self):
+        return self.error == None
 
     def print_entry(self):
-        if self.valid:
-            print '%s | %s | %s | %s' % (self.surname, self.forename, self.profession, self.address)
-        else:
+        if self.error:
             print self.line 
+        else:
+            print '| %-20s | %-20s | %-20s | %-40s' % (self.surname, self.forename, self.profession, self.address)
