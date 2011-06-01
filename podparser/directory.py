@@ -72,11 +72,14 @@ class Entry():
         self._parse()
 
     def _parse(self):
+        # apply global replace to all columns
+        self.line = self.line.replace("M'", "Mc")
+
         columns = self.line.split(',')
 
         if len(columns) > 2:
-            self.surname = columns[0]
-            self.forename = columns[1]
+            self.surname = columns[0].strip()
+            self.forename = columns[1].strip()
 
             if len(columns) == 3:
                 self.address = columns[2]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<surnames>
+
+  <stopWords>
+    <word>Co.</word>
+    <word>Insurance</word>
+    <word>Parish Church</word>
+  </stopWords>
+
+</surnames>

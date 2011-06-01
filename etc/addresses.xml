@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses>
+
+  <!-- If an address contains the pattern string replace it with value -->
+
+  <replaces>
+    <!-- A -->
+    <replace>
+      <pattern>Affembly</pattern>
+      <value>Assembly</value>
+    </replace>
+    <replace>
+      <pattern>AV</pattern>
+      <value></value>
+    </replace>
+
+    <!-- B -->
+    <replace>
+      <pattern>Brifio</pattern>
+      <value>Bristo</value>
+    </replace>
+    <replace>
+      <pattern>Brou^hton</pattern>
+      <value>Broughton</value>
+    </replace>
+
+    <!-- C -->
+    <replace>
+      <pattern>Caftle</pattern>
+      <value>Castle</value>
+    </replace>
+    <replace>
+      <pattern>Calton-hiil</pattern>
+      <value>Calton hill</value>
+    </replace>
+    <replace>
+      <pattern>Candiemakerrow</pattern>
+      <value>Candlemakerrow</value>
+    </replace>
+    <replace>
+      <pattern>Canongatc</pattern>
+      <value>Canongate</value>
+    </replace>
+    <replace>
+      <pattern>ciofe</pattern>
+      <value>close</value>
+    </replace>
+    <replace>
+      <pattern>ciorfe</pattern>
+      <value>close</value>
+    </replace>
+    <replace>
+      <pattern>clofe</pattern>
+      <value>close</value>
+    </replace>
+    <replace>
+      <pattern>clofc</pattern>
+      <value>close</value>
+    </replace>
+    <replace>
+      <pattern>coiirt</pattern>
+      <value>court</value>
+    </replace>
+    <replace>
+      <pattern>Crofscaufeway</pattern>
+      <value>Crosscauseway</value>
+    </replace>
+
+    <!-- E -->
+    <replace>
+      <pattern>Elackfriars</pattern>
+      <value>Blackfriars</value>
+    </replace>
+
+    <!-- F -->
+    <replace>
+      <pattern>fciuare</pattern>
+      <value>square</value>
+    </replace>
+    <replace>
+      <pattern>Fleafance</pattern>
+      <value>Pleasance</value>
+    </replace>
+    <replace>
+      <pattern>Flefh</pattern>
+      <value>Flesh</value>
+    </replace>
+    <replace>
+      <pattern>fq.</pattern>
+      <value>sq.</value>
+    </replace>
+    <replace>
+      <pattern>fquarc</pattern>
+      <value>square</value>
+    </replace>
+    <replace>
+      <pattern>fqiiare</pattern>
+      <value>square</value>
+    </replace>
+    <replace>
+      <pattern>fquare</pattern>
+      <value>square</value>
+    </replace>
+    <replace>
+      <pattern>fquave</pattern>
+      <value>square</value>
+    </replace>
+    <replace>
+      <pattern>ftables</pattern>
+      <value>stables</value>
+    </replace>
+    <replace>
+      <pattern>ftairs</pattern>
+      <value>stairs</value>
+    </replace>
+    <replace>
+      <pattern>ftr</pattern>
+      <value>str</value>
+    </replace>
+    <replace>
+      <pattern>ftrcet</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>ftreet</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>ftreot</pattern>
+      <value>street</value>
+    </replace>
+
+    <!-- G -->
+    <replace>
+      <pattern>Gcorge</pattern>
+      <value>George</value>
+    </replace>
+    <replace>
+      <pattern>Grafsmarket</pattern>
+      <value>Grassmarket</value>
+    </replace>
+    <replace>
+      <pattern>Graismarket</pattern>
+      <value>Grassmarket</value>
+    </replace>
+    
+    <!-- H -->
+    <replace>
+      <pattern>Hables</pattern>
+      <value>stables</value>
+    </replace>
+    <replace>
+      <pattern>Highfchool</pattern>
+      <value>Highschool</value>
+    </replace>
+    <replace>
+      <pattern>houfes</pattern>
+      <value>houses</value>
+    </replace>
+
+    <!-- I -->
+    <replace>
+      <pattern>ilreet</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>itreet</pattern>
+      <value>street</value>
+    </replace>
+
+    <!-- L -->
+    <replace>
+      <pattern>Lawnniarkct</pattern>
+      <value>Lawnnmarket</value>
+    </replace>
+    <replace>
+      <pattern>Lcith</pattern>
+      <value>Leith</value>
+    </replace>
+    <replace>
+      <pattern>Leitli</pattern>
+      <value>Leith</value>
+    </replace>
+    <replace>
+      <pattern>llrect</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>llreei</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>llreet</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>ltreet</pattern>
+      <value>street</value>
+    </replace>
+
+    <!-- N -->
+    <replace>
+      <pattern>Nicolfon</pattern>
+      <value>Nicolson</value>
+    </replace>
+    <replace>
+      <pattern>Nicollon^s</pattern>
+      <value>Nicolson's</value>
+    </replace>
+    
+    <!-- P -->
+    <replace>
+      <pattern>Paterfon</pattern>
+      <value>Paterson</value>
+    </replace>
+    <replace>
+      <pattern>Pleafancc</pattern>
+      <value>Pleasance</value>
+    </replace>
+    <replace>
+      <pattern>Plea^ance</pattern>
+      <value>Pleasance</value>
+    </replace>
+    <replace>
+      <pattern>Potcerrow</pattern>
+      <value>Potterrow</value>
+    </replace>
+
+    <!-- R -->
+    <replace>
+      <pattern>Ramfay</pattern>
+      <value>Ramsay</value>
+    </replace>
+    
+    <!-- S -->  
+    <replace>
+      <pattern>Shakefpeare</pattern>
+      <value>Shakespeare</value>
+    </replace>
+    
+    <!-- T -->  
+    <replace>
+      <pattern>Thiftle</pattern>
+      <value>Thistle</value>
+    </replace>
+    <replace>
+      <pattern>tlreet</pattern>
+      <value>street</value>
+    </replace>
+
+    <!-- V -->  
+    <replace>
+      <pattern>v/ynd</pattern>
+      <value>wynd</value>
+    </replace>
+
+    <!-- W -->
+    <replace>
+      <pattern>Weft</pattern>
+      <value>West</value>
+    </replace>
+    
+    <replace>
+      <pattern>(Ireet</pattern>
+      <value>street</value>
+    </replace>
+    <replace>
+      <pattern>\\Veft</pattern>
+      <value>West</value>
+    </replace>
+
+  </replaces>
+
+  <changes>
+
+    <place id="Glasgow">
+      <change>
+        <old>Main street, Gorbals</old>
+        <new>Gorbals Street</new>
+      </change>
+    </place>
+    
+  </changes>
+
+</addresses>

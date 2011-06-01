@@ -1,0 +1,5323 @@
+<?xml version="1.0" ?>
+<addresses>
+  <address>
+    <street>Abbotsford Lane</street>
+  </address>
+  <address>
+    <street>Abbotsford Place</street>
+  </address>
+  <address>
+    <street>Abercorn Street</street>
+  </address>
+  <address>
+    <street>Abercromby Place</street>
+  </address>
+  <address>
+    <street>Abercromby Street</street>
+  </address>
+  <address>
+    <street>Abercromby Terrace</street>
+  </address>
+  <address>
+    <street>Abington Street</street>
+  </address>
+  <address>
+    <street>Abyssinia Place</street>
+  </address>
+  <address>
+    <street>Adam's Court Lane</street>
+  </address>
+  <address>
+    <street>Adelaide Place</street>
+  </address>
+  <address>
+    <street>Adelphi Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Adelphi Terrace</street>
+  </address>
+  <address>
+    <street>Afton Crescent</street>
+  </address>
+  <address>
+    <street>Afton Terrace</street>
+  </address>
+  <address>
+    <street>Agnew Place</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ailsa Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Airlie Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albany Place</street>
+  </address>
+  <address>
+    <street>Albany Street</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albany Terrace</street>
+  </address>
+  <address>
+    <street>Albert Drive</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albert Place</street>
+  </address>
+  <address>
+    <street>Albert Road</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albert Street</street>
+    <areas>
+      <area>Townhead</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albert Terrace</street>
+  </address>
+  <address>
+    <street>Alberta Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albion Crescent</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albion Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Albion Street </street>
+  </address>
+  <address>
+    <street>Albyn Street</street>
+  </address>
+  <address>
+    <street>Albyn Terrace</street>
+  </address>
+  <address>
+    <street>Alexander Street</street>
+  </address>
+  <address>
+    <street>Alexandra Parade</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Alexandra Place</street>
+  </address>
+  <address>
+    <street>Alexandra Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Alfred Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Alice Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Alice Street</street>
+  </address>
+  <address>
+    <street>Allander Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Allanton Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Allison Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Alva Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Anderson Street</street>
+    <areas>
+      <area>Gallowgate</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+    <areas>
+      <area>Kinningpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Anderston Quay</street>
+  </address>
+  <address>
+    <street>Ann Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Port-Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Annette Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Annfield Place</street>
+  </address>
+  <address>
+    <street>Annfield Road</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Annfield Street</street>
+  </address>
+  <address>
+    <street>Annfield Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Apsley Place</street>
+  </address>
+  <address>
+    <street>Arden Street</street>
+  </address>
+  <address>
+    <street>Ardgowam Terrace</street>
+  </address>
+  <address>
+    <street>Ardgowan Street</street>
+  </address>
+  <address>
+    <street>Ardine Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ardoch Street</street>
+    <areas>
+      <area>Possil Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Argyle Arcade</street>
+  </address>
+  <address>
+    <street>Argyle Plase</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Argyle Street</street>
+  </address>
+  <address>
+    <street>Argyle Terrace</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ark Lane</street>
+  </address>
+  <address>
+    <street>Arlington Street</street>
+  </address>
+  <address>
+    <street>Armadale Street</street>
+  </address>
+  <address>
+    <street>Armour Street</street>
+  </address>
+  <address>
+    <street>Arthur Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Overnewton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ashburne</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ashgrove Terrace</street>
+  </address>
+  <address>
+    <street>Ashton Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ashton Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Athole Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Athole Place</street>
+  </address>
+  <address>
+    <street>Athole Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Avenue Road</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Avenue Street</street>
+  </address>
+  <address>
+    <street>Avon Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Avondale Place</street>
+  </address>
+  <address>
+    <street>Avondale Terrace</street>
+  </address>
+  <address>
+    <street>Aytoun Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Back Wynd</street>
+  </address>
+  <address>
+    <street>Bain Street</street>
+  </address>
+  <address>
+    <street>Baird Street</street>
+    <areas>
+      <area>St Rollox</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ballochmyle Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ballochmyle Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Balmano Street</street>
+  </address>
+  <address>
+    <street>Balmore Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Baltic Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bank Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bardowie Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Barloch Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Barony Street</street>
+  </address>
+  <address>
+    <street>Barr Street</street>
+  </address>
+  <address>
+    <street>Barrack Street</street>
+  </address>
+  <address>
+    <street>Barrowfield Street</street>
+  </address>
+  <address>
+    <street>Bartholomew Street</street>
+  </address>
+  <address>
+    <street>Bath Street</street>
+  </address>
+  <address>
+    <street>Battlefield Crescent</street>
+    <areas>
+      <area>Mt. Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bazaar</street>
+  </address>
+  <address>
+    <street>Beaconsfield Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Beaufort Gardens</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Beaufort Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Beauly Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bedford Lane</street>
+  </address>
+  <address>
+    <street>Bedford Place</street>
+  </address>
+  <address>
+    <street>Bedford Street</street>
+  </address>
+  <address>
+    <street>Belch Place</street>
+  </address>
+  <address>
+    <street>Belgrave Place</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Belgrave Street</street>
+  </address>
+  <address>
+    <street>Belgrave Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Belhaven Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bell Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bellevue Terrace</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bellfield Street</street>
+  </address>
+  <address>
+    <street>Bellgrove Street</street>
+  </address>
+  <address>
+    <street>Belmar Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Belmont Crescent</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Belmont Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bentinck Street</street>
+  </address>
+  <address>
+    <street>Berkeley Street</street>
+  </address>
+  <address>
+    <street>Berkeley Terrace</street>
+  </address>
+  <address>
+    <street>Berlin Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bernard Street</street>
+  </address>
+  <address>
+    <street>Bilbao Street</street>
+  </address>
+  <address>
+    <street>Binnie Place</street>
+  </address>
+  <address>
+    <street>Bishop Street</street>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Black Street</street>
+  </address>
+  <address>
+    <street>Blackburn Street</street>
+  </address>
+  <address>
+    <street>Blackie Street</street>
+    <areas>
+      <area>Overnewton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Blair Street</street>
+  </address>
+  <address>
+    <street>Bluevale Street</street>
+  </address>
+  <address>
+    <street>Blythswood Square</street>
+  </address>
+  <address>
+    <street>Boden Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bonnington Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Borron Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Boswell Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bothwell Circus</street>
+  </address>
+  <address>
+    <street>Bothwell Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bothwell Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bowmont Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bowmont Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Braco Street</street>
+  </address>
+  <address>
+    <street>Braehead Street</street>
+  </address>
+  <address>
+    <street>Braemar Terrace</street>
+  </address>
+  <address>
+    <street>Braeside Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Braid Street</street>
+  </address>
+  <address>
+    <street>Brandon Place</street>
+  </address>
+  <address>
+    <street>Brandon Street</street>
+  </address>
+  <address>
+    <street>Breadalbane Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Breadalbane Street</street>
+  </address>
+  <address>
+    <street>Breadalbane Terrace</street>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bridge Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bridgegate</street>
+  </address>
+  <address>
+    <street>Bridgeton Cross</street>
+  </address>
+  <address>
+    <street>Bright Street</street>
+  </address>
+  <address>
+    <street>Broad Street</street>
+  </address>
+  <address>
+    <street>Brooielaw</street>
+  </address>
+  <address>
+    <street>Brook Street</street>
+  </address>
+  <address>
+    <street>Broomhall Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Broomhill Avenue</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Broomhill Drive</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Broomhill Street</street>
+  </address>
+  <address>
+    <street>Broomhill Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Broompark Circus</street>
+  </address>
+  <address>
+    <street>Broompark Drive</street>
+  </address>
+  <address>
+    <street>Broompark Terrace</street>
+  </address>
+  <address>
+    <street>Brougham Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Brown Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>Broomielaw</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bruce Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Bruce Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Brunswick Lane</street>
+  </address>
+  <address>
+    <street>Brunswick Street</street>
+  </address>
+  <address>
+    <street>Buccleuch Lane</street>
+  </address>
+  <address>
+    <street>Buccleuch Street</street>
+  </address>
+  <address>
+    <street>Buchan Street</street>
+  </address>
+  <address>
+    <street>Buchanan Street</street>
+  </address>
+  <address>
+    <street>Buckingham Buildings</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Buckingham Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Buckingham Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Burnbank</street>
+  </address>
+  <address>
+    <street>Burnbank Gardens</street>
+  </address>
+  <address>
+    <street>Burnbank Place</street>
+  </address>
+  <address>
+    <street>Burnbank Terrace</street>
+  </address>
+  <address>
+    <street>Burnside Street</street>
+  </address>
+  <address>
+    <street>Burrell's Lane</street>
+  </address>
+  <address>
+    <street>Bute Terrace</street>
+  </address>
+  <address>
+    <street>Byars' Road</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cadogan Street</street>
+  </address>
+  <address>
+    <street>Calder Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Calter Terrace</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Calderwood Street</street>
+  </address>
+  <address>
+    <street>Caledonian Road</street>
+  </address>
+  <address>
+    <street>Callander Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cambridge Drive</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cambridge Street</street>
+  </address>
+  <address>
+    <street>Camden Place</street>
+  </address>
+  <address>
+    <street>Camden Street</street>
+  </address>
+  <address>
+    <street>Cameron Street</street>
+  </address>
+  <address>
+    <street>Campbell Street</street>
+  </address>
+  <address>
+    <street>Campbellfield Street</street>
+  </address>
+  <address>
+    <street>Camperdown Street</street>
+  </address>
+  <address>
+    <street>Camphill Avenue</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Camphill Quadrant</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Campside Crescent</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Camvale Buildings</street>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Canal Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+    <areas>
+      <area>Port Eglinton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Canal Bank Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Candleriggs</street>
+  </address>
+  <address>
+    <street>Cammomg Place</street>
+  </address>
+  <address>
+    <street>Canning Street</street>
+  </address>
+  <address>
+    <street>Canon Street</street>
+  </address>
+  <address>
+    <street>Canonbury Terrace</street>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Caprera Place</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Carbeth Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Carfin Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Carlton Court</street>
+  </address>
+  <address>
+    <street>Carlton Place</street>
+  </address>
+  <address>
+    <street>Carlton Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Carnarvon Street</street>
+  </address>
+  <address>
+    <street>Carrick Street</street>
+  </address>
+  <address>
+    <street>Carrickarden Street</street>
+  </address>
+  <address>
+    <street>Carrington Street</street>
+  </address>
+  <address>
+    <street>Castle Street</street>
+  </address>
+  <address>
+    <street>Castlebank Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cathcart Road</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cathedral Street</street>
+  </address>
+  <address>
+    <street>Catherine Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cathkin Road</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cathkin Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cavendish Street</street>
+  </address>
+  <address>
+    <street>Cecil Place</street>
+  </address>
+  <address>
+    <street>Cecil Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cedar Street</street>
+  </address>
+  <address>
+    <street>Centre Street</street>
+  </address>
+  <address>
+    <street>Chalmers Street</street>
+  </address>
+  <address>
+    <street>Charing Cross</street>
+  </address>
+  <address>
+    <street>Charles Street</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Townhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Charlotte Lane</street>
+  </address>
+  <address>
+    <street>Charlotte Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cheapside Street</street>
+  </address>
+  <address>
+    <street>Chesham Plase</street>
+  </address>
+  <address>
+    <street>Church Place</street>
+  </address>
+  <address>
+    <street>Church Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Circus Drive</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Clairmont Gardens</street>
+  </address>
+  <address>
+    <street>Claremint Street</street>
+  </address>
+  <address>
+    <street>Claremont Terrace</street>
+  </address>
+  <address>
+    <street>Clarence Street</street>
+    <areas>
+      <area>Kingston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Claredon Place</street>
+  </address>
+  <address>
+    <street>Claredon Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Clarinda Terrace</street>
+  </address>
+  <address>
+    <street>Claythorn Street</street>
+  </address>
+  <address>
+    <street>Clayton Terrace</street>
+  </address>
+  <address>
+    <street>Cleland Street</street>
+  </address>
+  <address>
+    <street>Cleveland Street</street>
+  </address>
+  <address>
+    <street>Cliffort Street</street>
+  </address>
+  <address>
+    <street>Clifton Place</street>
+  </address>
+  <address>
+    <street>Clifton Street</street>
+  </address>
+  <address>
+    <street>Clyde Grove Terrace</street>
+  </address>
+  <address>
+    <street>Clyde Place</street>
+  </address>
+  <address>
+    <street>Clyde Buildings</street>
+  </address>
+  <address>
+    <street>Clyde Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Great Clyde Street</street>
+  </address>
+  <address>
+    <street>Clyde Terrace</street>
+  </address>
+  <address>
+    <street>Clydeview</street>
+  </address>
+  <address>
+    <street>Clydeview Terrace</street>
+  </address>
+  <address>
+    <street>Clyde View</street>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Coatbridge Street</street>
+  </address>
+  <address>
+    <street>Cobden Place</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Coburg Place</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Coburg Street</street>
+  </address>
+  <address>
+    <street>Cochrane Street</street>
+  </address>
+  <address>
+    <street>Colebrooke Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>College</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>College Street</street>
+  </address>
+  <address>
+    <street>Comely Park Place</street>
+  </address>
+  <address>
+    <street>Comely Park Street</street>
+  </address>
+  <address>
+    <street>Commerce Street</street>
+  </address>
+  <address>
+    <street>Ciommercial Road</street>
+  </address>
+  <address>
+    <street>Cook Street</street>
+  </address>
+  <address>
+    <street>Coomassie Place</street>
+  </address>
+  <address>
+    <street>Corn Street</street>
+  </address>
+  <address>
+    <street>Cornwall Street</street>
+  </address>
+  <address>
+    <street>Corunna Street</street>
+  </address>
+  <address>
+    <street>Couper Street</street>
+  </address>
+  <address>
+    <street>Cowan Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cowcaddens</street>
+  </address>
+  <address>
+    <street>Cowlairs Road</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Craig Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Craig Park</street>
+  </address>
+  <address>
+    <street>Craig Park Terrace</street>
+  </address>
+  <address>
+    <street>Craighall Road</street>
+  </address>
+  <address>
+    <street>Craigiehall Street</street>
+  </address>
+  <address>
+    <street>Craignestock Place</street>
+  </address>
+  <address>
+    <street>Craignestock Street</street>
+  </address>
+  <address>
+    <street>Cranston Street</street>
+  </address>
+  <address>
+    <street>Crawford Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+    <areas>
+      <area>Port Eglinton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cromwell Street</street>
+  </address>
+  <address>
+    <street>Crookston Place</street>
+  </address>
+  <address>
+    <street>Crookston Street</street>
+    <areas>
+      <area>Kingston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cross Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crossburn Street</street>
+  </address>
+  <address>
+    <street>Crossloan Road</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crow Road</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crown Circus</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crown Gardens</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crown Place</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Crown Street</street>
+  </address>
+  <address>
+    <street>Crown Point Road</street>
+  </address>
+  <address>
+    <street>Crown Point Street</street>
+  </address>
+  <address>
+    <street>Crown Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Croy Place</street>
+  </address>
+  <address>
+    <street>Cubic Street</street>
+  </address>
+  <address>
+    <street>Cumberland Lane</street>
+  </address>
+  <address>
+    <street>Cumberland Street</street>
+    <areas>
+      <area>Laurieston</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Cumberland Road</street>
+  </address>
+  <address>
+    <street>Cumbrae Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Daisy Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dale Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>Tradeston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dalhouse Place</street>
+  </address>
+  <address>
+    <street>Dalhouse Street</street>
+  </address>
+  <address>
+    <street>Dalmarnock Road</street>
+  </address>
+  <address>
+    <street>Darnley Street</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>David Street</street>
+  </address>
+  <address>
+    <street>Dean Street</street>
+  </address>
+  <address>
+    <street>Deanside Lane</street>
+  </address>
+  <address>
+    <street>Denmark Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Derby Crescent</street>
+    <areas>
+      <area>Kelvonside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Derby Street</street>
+  </address>
+  <address>
+    <street>Derby Terrace</street>
+  </address>
+  <address>
+    <street>Devon Street</street>
+  </address>
+  <address>
+    <street>Dixon Avenue</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dixon Street</street>
+  </address>
+  <address>
+    <street>Dobbie's Loan</street>
+  </address>
+  <address>
+    <street>Doncaster Street</street>
+  </address>
+  <address>
+    <street>Doon Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dorset Street</street>
+  </address>
+  <address>
+    <street>Douglas Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Doune Place</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Doune Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dovehill </street>
+  </address>
+  <address>
+    <street>Dover Street</street>
+  </address>
+  <address>
+    <street>Dowanhill Gardens</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dowanhill Place</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dowanhill Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dowanvale Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Downie Place</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Drummond Street</street>
+  </address>
+  <address>
+    <street>Drury Street</street>
+  </address>
+  <address>
+    <street>Drygate</street>
+  </address>
+  <address>
+    <street>Duke Street</street>
+  </address>
+  <address>
+    <street>Dumbarton Road</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Duncan Street</street>
+  </address>
+  <address>
+    <street>Dunchattan Street</street>
+  </address>
+  <address>
+    <street>Dundas Lane</street>
+  </address>
+  <address>
+    <street>Dundas Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kingston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dundas Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dundonald Road</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dunedin Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Dunkelt Place</street>
+    <areas>
+      <area>Hillhead </area>
+    </areas>
+  </address>
+  <address>
+    <street>Dunlop Street</street>
+  </address>
+  <address>
+    <street>Dunmore Place</street>
+  </address>
+  <address>
+    <street>Dunmore Terrace</street>
+  </address>
+  <address>
+    <street>Dunn Street</street>
+  </address>
+  <address>
+    <street>Dunrobin Place</street>
+  </address>
+  <address>
+    <street>Dyer's Lane</street>
+  </address>
+  <address>
+    <street>Eaglesham Street</street>
+  </address>
+  <address>
+    <street>Eastfield Place</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>eastfield Street</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Easton Terrace</street>
+  </address>
+  <address>
+    <street>Edgefauld Terrace</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Edmund Street</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+    <areas>
+      <area>Overnewton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Eglinton Lane</street>
+  </address>
+  <address>
+    <street>Eglinton Street</street>
+  </address>
+  <address>
+    <street>Eglinton Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Eildon Villas</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Elcho Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Elderslie Place</street>
+  </address>
+  <address>
+    <street>Elderslie Street</street>
+  </address>
+  <address>
+    <street>Eldon Street</street>
+  </address>
+  <address>
+    <street>Eldon Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Elgin Place</street>
+  </address>
+  <address>
+    <street>Elgin Street</street>
+  </address>
+  <address>
+    <street>Elgin Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Elliton Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Elm Street</street>
+  </address>
+  <address>
+    <street>Elmbank Crescent</street>
+  </address>
+  <address>
+    <street>Elmbank Street</street>
+  </address>
+  <address>
+    <street>Elmbank Place</street>
+  </address>
+  <address>
+    <street>Emily Place</street>
+  </address>
+  <address>
+    <street>Ethel Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Eton Gardens</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Eton Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ettrick Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Fairlie Bank</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Fairlie Park</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Falkland Place</street>
+  </address>
+  <address>
+    <street>Fauldhouse Street</street>
+  </address>
+  <address>
+    <street>Ferguson Street</street>
+  </address>
+  <address>
+    <street>Fielden Street</street>
+  </address>
+  <address>
+    <street>Fife Place</street>
+  </address>
+  <address>
+    <street>Findlay Drive</street>
+  </address>
+  <address>
+    <street>Findlay Street</street>
+  </address>
+  <address>
+    <street>Finlayson Place</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Finnieston Quay</street>
+  </address>
+  <address>
+    <street>Finnieston Street</street>
+  </address>
+  <address>
+    <street>Firhill Road</street>
+  </address>
+  <address>
+    <street>Firpark Terrace</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Fisher Street</street>
+  </address>
+  <address>
+    <street>Fitzroy Place</street>
+  </address>
+  <address>
+    <street>Fleming Street</street>
+  </address>
+  <address>
+    <street>Flemington Street</street>
+  </address>
+  <address>
+    <street>Florentine Gardens</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Florence Place</street>
+  </address>
+  <address>
+    <street>Florence Street</street>
+  </address>
+  <address>
+    <street>Fordneuk Street</street>
+  </address>
+  <address>
+    <street>Foremount Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Forth Street</street>
+    <areas>
+      <area>Glasogw</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Fountainwell Road</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Franklink Place</street>
+  </address>
+  <address>
+    <street>Franklin Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Franklin Terrace</street>
+  </address>
+  <address>
+    <street>Fraser Street</street>
+  </address>
+  <address>
+    <street>Frederick Lane</street>
+  </address>
+  <address>
+    <street>Frederick Street</street>
+  </address>
+  <address>
+    <street>French Street</street>
+  </address>
+  <address>
+    <street>Gairbraid Street</street>
+  </address>
+  <address>
+    <street>Galbraith Street</street>
+  </address>
+  <address>
+    <street>Gallowgate</street>
+  </address>
+  <address>
+    <street>Garden Place </street>
+  </address>
+  <address>
+    <street>Garden Street</street>
+  </address>
+  <address>
+    <street>Garden Terrace</street>
+  </address>
+  <address>
+    <street>Gardner Street</street>
+  </address>
+  <address>
+    <street>Garnet Place</street>
+  </address>
+  <address>
+    <street>Garnethill Street</street>
+  </address>
+  <address>
+    <street>Garngad Hill</street>
+  </address>
+  <address>
+    <street>Garngad Road</street>
+  </address>
+  <address>
+    <street>Garnkirk Street</street>
+  </address>
+  <address>
+    <street>Garrioch Mill Road</street>
+  </address>
+  <address>
+    <street>Garscadden Street</street>
+  </address>
+  <address>
+    <street>Garscube Lane</street>
+  </address>
+  <address>
+    <street>Garscube Road</street>
+  </address>
+  <address>
+    <street>Garthland Drive</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Garthland Street</street>
+  </address>
+  <address>
+    <street>Garturk Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Gayfield Street</street>
+  </address>
+  <address>
+    <street>George Square</street>
+  </address>
+  <address>
+    <street>George Street</street>
+  </address>
+  <address>
+    <street>Germinston Street</street>
+  </address>
+  <address>
+    <street>Gibson Street</street>
+  </address>
+  <address>
+    <street>Gilmour Street</street>
+  </address>
+  <address>
+    <street>Gladstone Street</street>
+  </address>
+  <address>
+    <street>Glasgow Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Glassford Street</street>
+  </address>
+  <address>
+    <street>Glebe Street</street>
+  </address>
+  <address>
+    <street>Glenavon Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Glenavon Terrace</street>
+  </address>
+  <address>
+    <street>Glencairn Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Glenton Terrace</street>
+  </address>
+  <address>
+    <street>Cloucester Street</street>
+  </address>
+  <address>
+    <street>Golf-hill Drive</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Goosedubs</street>
+  </address>
+  <address>
+    <street>Gordon Lane</street>
+  </address>
+  <address>
+    <street>Gordon Street</street>
+  </address>
+  <address>
+    <street>Gourlay Street</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Govan Road</street>
+  </address>
+  <address>
+    <street>Govan Street</street>
+  </address>
+  <address>
+    <street>Govanhill Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Govanview Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Gower Street</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grace Street</street>
+  </address>
+  <address>
+    <street>Graeme Street</street>
+  </address>
+  <address>
+    <street>Grafton Place</street>
+  </address>
+  <address>
+    <street>Grafton Square</street>
+  </address>
+  <address>
+    <street>Grafton Street</street>
+  </address>
+  <address>
+    <street>Graham Square</street>
+  </address>
+  <address>
+    <street>Graham Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Granby Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Granby Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grange Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grant Street</street>
+  </address>
+  <address>
+    <street>Granville Buildings</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Granville Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Granville Street</street>
+  </address>
+  <address>
+    <street>Gray Street</street>
+  </address>
+  <address>
+    <street>Great George Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Great Kelvin Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Great Wellington Street</street>
+  </address>
+  <address>
+    <street>Great Western Road</street>
+    <areas>
+      <area>Glasogw</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Great Western Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Green Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Low</area>
+    </areas>
+  </address>
+  <address>
+    <street>Greenbank </street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Greendyke Street</street>
+  </address>
+  <address>
+    <street>Greenhead Street</street>
+  </address>
+  <address>
+    <street>Greenhill Place</street>
+  </address>
+  <address>
+    <street>Greenhill Street</street>
+  </address>
+  <address>
+    <street>Greenlaw Place</street>
+  </address>
+  <address>
+    <street>Greenside Lane</street>
+  </address>
+  <address>
+    <street>Greenside Street</street>
+  </address>
+  <address>
+    <street>Greenvale Place</street>
+  </address>
+  <address>
+    <street>Greenvale Street</street>
+  </address>
+  <address>
+    <street>Grosvenor Crescent</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grosvenor Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grosvenor Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Grove Street</street>
+  </address>
+  <address>
+    <street>Hamilton Crescent</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hamilton Drive</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hamilton Park Terrace</street>
+  </address>
+  <address>
+    <street>Hamilton Place</street>
+    <areas>
+      <area>Landside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hamilton Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hamilton Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hampden Place</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hampden Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hampton Court Terrace</street>
+  </address>
+  <address>
+    <street>Hannover Street</street>
+  </address>
+  <address>
+    <street>Harmony Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hartfield Street</street>
+  </address>
+  <address>
+    <street>Harvey Street</street>
+  </address>
+  <address>
+    <street>Havannah Street</street>
+  </address>
+  <address>
+    <street>Havelock Street</street>
+  </address>
+  <address>
+    <street>Havelock Terrace</street>
+  </address>
+  <address>
+    <street>Hawthorn Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hayburn Crescent</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hayburn Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hayfield Street</street>
+  </address>
+  <address>
+    <street>Hayfield Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Henderson Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Henrietta Street</street>
+  </address>
+  <address>
+    <street>Herbertson Street</street>
+  </address>
+  <address>
+    <street>Herriot Street</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>High Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Gallowgate</area>
+    </areas>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+    <areas>
+      <area>
+	
+      </area>
+    </areas>
+  </address>
+  <address>
+    <street>Hill Street</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hillhead Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hillsborough Square</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hillsborough Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hillside Gardens</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hillside Terrace</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hilton Terrace</street>
+  </address>
+  <address>
+    <street>Holborn Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Holland Place</street>
+  </address>
+  <address>
+    <street>Holland Street</street>
+  </address>
+  <address>
+    <street>Holm Street</street>
+  </address>
+  <address>
+    <street>Holmhead Street</street>
+  </address>
+  <address>
+    <street>Holyrood Crescent</street>
+  </address>
+  <address>
+    <street>Holyrood Place</street>
+  </address>
+  <address>
+    <street>Hope Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hope Terrace</street>
+  </address>
+  <address>
+    <street>Hopehill Road</street>
+  </address>
+  <address>
+    <street>Hopetoun Place</street>
+  </address>
+  <address>
+    <street>Horselethill Road</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hospital Street</street>
+  </address>
+  <address>
+    <street>Houldsworth Street</street>
+  </address>
+  <address>
+    <street>Houston Street</street>
+  </address>
+  <address>
+    <street>Howard Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hunter Street</street>
+  </address>
+  <address>
+    <street>Hunter Terrace</street>
+  </address>
+  <address>
+    <street>Huntly Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hutcheson Square</street>
+  </address>
+  <address>
+    <street>Hutcheson Street</street>
+  </address>
+  <address>
+    <street>Hydepark Street</street>
+  </address>
+  <address>
+    <street>Hyndland Road</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Hyndland Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>India Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+    <areas>
+      <area>
+	
+      </area>
+    </areas>
+  </address>
+  <address>
+    <street>Ingleby Drive</street>
+  </address>
+  <address>
+    <street>Inglefield Street</street>
+  </address>
+  <address>
+    <street>Inglefield Terrace</street>
+  </address>
+  <address>
+    <street>Inglis Street</street>
+  </address>
+  <address>
+    <street>Ingram Street</street>
+  </address>
+  <address>
+    <street>Iona Place</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Jackson Street</street>
+  </address>
+  <address>
+    <street>Jail Square</street>
+  </address>
+  <address>
+    <street>Jamaica Street</street>
+  </address>
+  <address>
+    <street>James' Street</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Greenhead</area>
+    </areas>
+    <areas>
+      <area>Mile-end</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>James Morrison Street</street>
+  </address>
+  <address>
+    <street>James Watt Street</street>
+  </address>
+  <address>
+    <street>Jamieson Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Jane Place</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Jardine Street</street>
+  </address>
+  <address>
+    <street>John Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>John Knox Street</street>
+  </address>
+  <address>
+    <street>Keir Street</street>
+    <areas>
+      <area>East Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Keir Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kelbourne Street</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kelburn Terrace</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kelvin Drive</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kelvin Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kelvingrove Street</street>
+  </address>
+  <address>
+    <street>Kelvingrove Terrace</street>
+  </address>
+  <address>
+    <street>Kelvinhaugh Street</street>
+  </address>
+  <address>
+    <street>Kelvinside Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kenmure Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kenmure Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kenmure Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kennedy Street</street>
+  </address>
+  <address>
+    <street>Kent Road</street>
+  </address>
+  <address>
+    <street>Kent Square</street>
+  </address>
+  <address>
+    <street>Keppochhill Road</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kerr Street</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kersland Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kersland Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kew Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Keyden Street</street>
+  </address>
+  <address>
+    <street>Killearn Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Killermont Street</street>
+  </address>
+  <address>
+    <street>Kingston Place</street>
+  </address>
+  <address>
+    <street>King Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Mile-end</area>
+    </areas>
+    <areas>
+      <area>Tradeston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kinning Place</street>
+  </address>
+  <address>
+    <street>Kinning Street</street>
+    <areas>
+      <area>Kingston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kirk Street</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Gorbals</area>
+    </areas>
+    <areas>
+      <area>Townhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kirklee Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kirklee Road</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kirkpatrick Street</street>
+  </address>
+  <address>
+    <street>Knightswood Place</street>
+  </address>
+  <address>
+    <street>Knowe Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Kyle Street</street>
+  </address>
+  <address>
+    <street>La Belle Place</street>
+    <areas>
+      <area>Kelvingrove</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lacrosse Place</street>
+  </address>
+  <address>
+    <street>Ladywell Street</street>
+  </address>
+  <address>
+    <street>Lambhill Street</street>
+  </address>
+  <address>
+    <street>Lamlash Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lanarck Street</street>
+  </address>
+  <address>
+    <street>Lancaster Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lancefield Quay</street>
+  </address>
+  <address>
+    <street>Lancefield Street</street>
+  </address>
+  <address>
+    <street>Lancelot Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Landore Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Landressy Street</street>
+  </address>
+  <address>
+    <street>Langside Road</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Landsdowne Crescent</street>
+  </address>
+  <address>
+    <street>Largo Place</street>
+  </address>
+  <address>
+    <street>Laurel Bank</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lawrence Place</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lendel Terrace</street>
+    <areas>
+      <area>Govan</area>
+    </areas>
+  </address>
+  <address>
+    <street>Leslie Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Leslie Street</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Leven Street</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lillybank Road</street>
+  </address>
+  <address>
+    <street>Lillybank Street</street>
+  </address>
+  <address>
+    <street>Lillybank Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lime Street</street>
+  </address>
+  <address>
+    <street>Linden Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lindsay Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Linhall Terrace</street>
+  </address>
+  <address>
+    <street>Linwood Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Little Street</street>
+  </address>
+  <address>
+    <street>Livingston Terrace</street>
+  </address>
+  <address>
+    <street>Lochinver Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Logan Street</street>
+  </address>
+  <address>
+    <street>Lomond Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>London Road</street>
+  </address>
+  <address>
+    <street>London Street</street>
+  </address>
+  <address>
+    <street>Lorne Place</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lorne Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Loudon Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Loudon Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Love Loan</street>
+  </address>
+  <address>
+    <street>Lugar Place</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lumsden Street</street>
+  </address>
+  <address>
+    <street>Luton Place</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Lynedoch Crescent</street>
+  </address>
+  <address>
+    <street>Lynedoch Place</street>
+  </address>
+  <address>
+    <street>Lynedoch Street</street>
+  </address>
+  <address>
+    <street>Lyon Street</street>
+  </address>
+  <address>
+    <street>McAlpine Street</street>
+  </address>
+  <address>
+    <street>McAslin Street</street>
+  </address>
+  <address>
+    <street>McCulloch Street</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Macfarlane Street</street>
+  </address>
+  <address>
+    <street>McIntosh Street</street>
+  </address>
+  <address>
+    <street>McIntyre Street</street>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+  </address>
+  <address>
+    <street>McKechnie Street</street>
+  </address>
+  <address>
+    <street>McKinlay Street</street>
+  </address>
+  <address>
+    <street>McLean Street</street>
+  </address>
+  <address>
+    <street>McLellan Street</street>
+  </address>
+  <address>
+    <street>McNeil Street</street>
+  </address>
+  <address>
+    <street>McPherson Street</street>
+  </address>
+  <address>
+    <street>Main Street</street>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Gorbals</area>
+    </areas>
+    <areas>
+      <area>
+	
+      </area>
+    </areas>
+  </address>
+  <address>
+    <street>Mains Street</street>
+  </address>
+  <address>
+    <street>Mair Street</street>
+  </address>
+  <address>
+    <street>Maitland Place</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mallsmire Place</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mansfield Place</street>
+  </address>
+  <address>
+    <street>Mansfield Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mansion House Road</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mansion Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Marchmont Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Margaret Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Laurieston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Marjory Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Market Street</street>
+  </address>
+  <address>
+    <street>Markland Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Marlborough Street</street>
+  </address>
+  <address>
+    <street>Marlow Street</street>
+  </address>
+  <address>
+    <street>Marquis Street</street>
+  </address>
+  <address>
+    <street>Marshall Place</street>
+  </address>
+  <address>
+    <street>Mason Stret</street>
+  </address>
+  <address>
+    <street>Mathieson Street</street>
+  </address>
+  <address>
+    <street>Matilda Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Matilda Terrace</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Matilda Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Maule Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Maxwell Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Maxwell Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Maxwell Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>May Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Maybank Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Meadowbank Crescent</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Meadowbank Place</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Meadowpart Street</street>
+  </address>
+  <address>
+    <street>Meadowvale</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Melrose Buildings</street>
+  </address>
+  <address>
+    <street>Melrose Place</street>
+  </address>
+  <address>
+    <street>Melrose Street</street>
+  </address>
+  <address>
+    <street>Melville Lane</street>
+  </address>
+  <address>
+    <street>Melville Place</street>
+  </address>
+  <address>
+    <street>Melville Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Melville Terrace</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Merchant Lane</street>
+  </address>
+  <address>
+    <street>Merkland Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Middleton Place</street>
+  </address>
+  <address>
+    <street>Mill Street</street>
+  </address>
+  <address>
+    <street>Millarbank Street</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Millbrae Crescent</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Millbrae Road</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Millbrae Terrace</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Millburn Street</street>
+    <areas>
+      <area>Garngadhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Millcroft Place</street>
+  </address>
+  <address>
+    <street>Miller's Place</street>
+  </address>
+  <address>
+    <street>Miller Street</street>
+  </address>
+  <address>
+    <street>Millroad Street</street>
+  </address>
+  <address>
+    <street>Milton Place</street>
+  </address>
+  <address>
+    <street>Milton Street</street>
+  </address>
+  <address>
+    <street>Milton Terrace</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Minard Avenue</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Minard Road</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Minard Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Minerva Street</street>
+  </address>
+  <address>
+    <street>Mitchell Lane</street>
+  </address>
+  <address>
+    <street>Mitchell Street</street>
+  </address>
+  <address>
+    <street>Moir Street</street>
+  </address>
+  <address>
+    <street>Moncur Street</street>
+  </address>
+  <address>
+    <street>Monkland Street</street>
+  </address>
+  <address>
+    <street>Montague Place</street>
+  </address>
+  <address>
+    <street>Monteith Row</street>
+  </address>
+  <address>
+    <street>Montgomerie Crescent</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Montgomerie Drive</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Montgomery Street</street>
+  </address>
+  <address>
+    <street>Montgomerie Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Montrose Street</street>
+  </address>
+  <address>
+    <street>Moore Pace</street>
+  </address>
+  <address>
+    <street>Moore Street</street>
+  </address>
+  <address>
+    <street>Moray Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mordaunt Street</street>
+  </address>
+  <address>
+    <street>Morris Place</street>
+  </address>
+  <address>
+    <street>Morrison Street</street>
+  </address>
+  <address>
+    <street>Mosesfield Terrace</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mossview </street>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Mount Street</street>
+  </address>
+  <address>
+    <street>Muirhead Street</street>
+  </address>
+  <address>
+    <street>Murray Place</street>
+  </address>
+  <address>
+    <street>Murray Street</street>
+  </address>
+  <address>
+    <street>Muse Lane</street>
+    <areas>
+      <area>Cowcaddens</area>
+    </areas>
+  </address>
+  <address>
+    <street>Muslin Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Myrtle Park</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Myrtle Street</street>
+  </address>
+  <address>
+    <street>Naburn Street</street>
+  </address>
+  <address>
+    <street>Napier Place</street>
+  </address>
+  <address>
+    <street>Napiershall Street</street>
+  </address>
+  <address>
+    <street>Nelson Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Tradeston</area>
+    </areas>
+  </address>
+  <address>
+    <street>Nelson Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>New City Road</street>
+  </address>
+  <address>
+    <street>Newhall Street</street>
+  </address>
+  <address>
+    <street>Newhall Terrace</street>
+  </address>
+  <address>
+    <street>New Street</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Newton Place</street>
+  </address>
+  <address>
+    <street>Newton Street</street>
+  </address>
+  <address>
+    <street>Newton Terrace</street>
+  </address>
+  <address>
+    <street>New Wynd</street>
+  </address>
+  <address>
+    <street>Nicholas Street</street>
+  </address>
+  <address>
+    <street>Nicholson Street</street>
+  </address>
+  <address>
+    <street>Nile Street</street>
+  </address>
+  <address>
+    <street>Nithsdale Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Norfolk Street</street>
+  </address>
+  <address>
+    <street>Northburn Street</street>
+  </address>
+  <address>
+    <street>North Court</street>
+  </address>
+  <address>
+    <street>North Street</street>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+  </address>
+  <address>
+    <street>North-East Park Street</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>North Woodside Road</street>
+  </address>
+  <address>
+    <street>Norwood Terrace</street>
+  </address>
+  <address>
+    <street>Nuneaton Street</street>
+  </address>
+  <address>
+    <street>Oak Street</street>
+  </address>
+  <address>
+    <street>Oakbank Street</street>
+  </address>
+  <address>
+    <street>Oakfield Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Oakley Terrace</street>
+  </address>
+  <address>
+    <street>Oakvale</street>
+  </address>
+  <address>
+    <street>Old Kelvinhaugh Road</street>
+  </address>
+  <address>
+    <street>Old Wynd</street>
+  </address>
+  <address>
+    <street>Onslow Drive</street>
+  </address>
+  <address>
+    <street>Onslow Square</street>
+  </address>
+  <address>
+    <street>Orchard Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Orr Street</street>
+  </address>
+  <address>
+    <street>Oswald Place</street>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Oswald Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+    <areas>
+      <area>
+	
+      </area>
+    </areas>
+  </address>
+  <address>
+    <street>Otago Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Overnewton Square</street>
+  </address>
+  <address>
+    <street>Overnewton Street</street>
+  </address>
+  <address>
+    <street>Oxford Street</street>
+  </address>
+  <address>
+    <street>Paisley Road</street>
+  </address>
+  <address>
+    <street>Park Circus</street>
+  </address>
+  <address>
+    <street>Park Gardens</street>
+  </address>
+  <address>
+    <street>Park Lane</street>
+  </address>
+  <address>
+    <street>Park Place</street>
+  </address>
+  <address>
+    <street>Park Quadrant</street>
+  </address>
+  <address>
+    <street>Park Road</street>
+  </address>
+  <address>
+    <street>Park Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kelvinhaugh</area>
+    </areas>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+    <areas>
+      <area>Plantation</area>
+    </areas>
+    <areas>
+      <area>
+	
+      </area>
+    </areas>
+  </address>
+  <address>
+    <street>Park Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Parkgrove Place</street>
+  </address>
+  <address>
+    <street>Park Grove Terrace</street>
+  </address>
+  <address>
+    <street>Parkhouse Lane</street>
+  </address>
+  <address>
+    <street>Parkview</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Parliamentary Road</street>
+  </address>
+  <address>
+    <street>Parson Street</street>
+  </address>
+  <address>
+    <street>Partickhill Road</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Paterson Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Kingaton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Paul Street</street>
+  </address>
+  <address>
+    <street>Paxton Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Peel Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Peel Terrace</street>
+  </address>
+  <address>
+    <street>Pembroke Street</street>
+  </address>
+  <address>
+    <street>Percy Street</street>
+  </address>
+  <address>
+    <street>Percy Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Perth Street</street>
+  </address>
+  <address>
+    <street>Petershill Road</street>
+  </address>
+  <address>
+    <street>Pettigrew Street</street>
+  </address>
+  <address>
+    <street>Piccadilly Street</street>
+  </address>
+  <address>
+    <street>Pine Street</street>
+  </address>
+  <address>
+    <street>Pitt Street</street>
+  </address>
+  <address>
+    <street>Plantation Buildings</street>
+  </address>
+  <address>
+    <street>Plantation Place</street>
+  </address>
+  <address>
+    <street>Plantation Street</street>
+  </address>
+  <address>
+    <street>Pollock Street</street>
+  </address>
+  <address>
+    <street>Pollockshaws Road</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Polmadie Street</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Port Street</street>
+  </address>
+  <address>
+    <street>Port Dundas Road</street>
+  </address>
+  <address>
+    <street>Prtland Street</street>
+  </address>
+  <address>
+    <street>Portman Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Portman Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Portugal Street</street>
+  </address>
+  <address>
+    <street>Preston Street</street>
+    <areas>
+      <area>Bridgetonm Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Prince Edward Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Prince's Square</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Prince's Street</street>
+  </address>
+  <address>
+    <street>Prince's Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Prince of Wales Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Pulteny Street</street>
+  </address>
+  <address>
+    <street>Queen Arcade</street>
+  </address>
+  <address>
+    <street>Queensberry Terrace</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Queen's Crescent</street>
+  </address>
+  <address>
+    <street>Queen's Drive</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Queen Mary Avenue</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Queen Mary Street</street>
+  </address>
+  <address>
+    <street>Queen's Park Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Queen's Park Terrace</street>
+  </address>
+  <address>
+    <street>Queen's Place</street>
+  </address>
+  <address>
+    <street>Queen Square</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Queen Street</street>
+  </address>
+  <address>
+    <street>Queen's Terrace</street>
+  </address>
+  <address>
+    <street>Radnor Street</street>
+  </address>
+  <address>
+    <street>Radnor Terrace</street>
+  </address>
+  <address>
+    <street>Rae Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Raeberry Street</street>
+  </address>
+  <address>
+    <street>Raglan Street</street>
+  </address>
+  <address>
+    <street>Randolph Place</street>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Randolph Terrace</street>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ranfurly Place</street>
+  </address>
+  <address>
+    <street>Regent Park Square</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Regent Park Terrace</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Regent Street Lane</street>
+  </address>
+  <address>
+    <street>Regent Street</street>
+  </address>
+  <address>
+    <street>Reid Street</street>
+    <areas>
+      <area>Bridgeton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Reidvale Street</street>
+  </address>
+  <address>
+    <street>Renfield Lane</street>
+  </address>
+  <address>
+    <street>Renfield Street</street>
+  </address>
+  <address>
+    <street>Renfrew Court</street>
+  </address>
+  <address>
+    <street>Renfrew Lane</street>
+  </address>
+  <address>
+    <street>Renfrew Street</street>
+  </address>
+  <address>
+    <street>Renton Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Renwick Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Richard Street</street>
+  </address>
+  <address>
+    <street>Richmond Street</street>
+  </address>
+  <address>
+    <street>Risk Street</street>
+  </address>
+  <address>
+    <street>Robertson Lane</street>
+  </address>
+  <address>
+    <street>Robertson Street</street>
+  </address>
+  <address>
+    <street>Rochester Street</street>
+  </address>
+  <address>
+    <street>Rockbank </street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rocklea Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rokeby Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Ronald Street</street>
+  </address>
+  <address>
+    <street>Ropework Lane</street>
+  </address>
+  <address>
+    <street>Rose Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+    <areas>
+      <area>Hutchesontown</area>
+    </areas>
+  </address>
+  <address>
+    <street>Roseband Terrace</street>
+  </address>
+  <address>
+    <street>Roseberry Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rosehall Street</street>
+  </address>
+  <address>
+    <street>Rosehill</street>
+  </address>
+  <address>
+    <street>Roseland Terrace</street>
+  </address>
+  <address>
+    <street>Roslea Drive</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rosemount Street</street>
+  </address>
+  <address>
+    <street>Rosevale Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rosevale Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rosslyn Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rosslyn Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rottenrow</street>
+  </address>
+  <address>
+    <street>Roxburgh Street</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Royal Arcade</street>
+  </address>
+  <address>
+    <street>Royal Bank Place</street>
+  </address>
+  <address>
+    <street>Royal Crescent</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Royal Exchange Buildings</street>
+  </address>
+  <address>
+    <street>Royal Exchange Place</street>
+  </address>
+  <address>
+    <street>Royal Exchange Square</street>
+  </address>
+  <address>
+    <street>Royal Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Royal Street</street>
+  </address>
+  <address>
+    <street>Rumford Street</street>
+  </address>
+  <address>
+    <street>Rupert Street</street>
+  </address>
+  <address>
+    <street>Russel Street</street>
+  </address>
+  <address>
+    <street>Rutherford Lane</street>
+  </address>
+  <address>
+    <street>Rutherglen Loan</street>
+  </address>
+  <address>
+    <street>Rutherglen Road</street>
+  </address>
+  <address>
+    <street>Ruthven Street</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Rutland Crescent</street>
+  </address>
+  <address>
+    <street>Rutland Place</street>
+  </address>
+  <address>
+    <street>Alban's Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>St Andrew's Lane</street>
+  </address>
+  <address>
+    <street>St Andrew's Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>St Andrew's Square</street>
+  </address>
+  <address>
+    <street>St Andrew's Street</street>
+  </address>
+  <address>
+    <street>St Bernard's Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>St Clair Street</street>
+  </address>
+  <address>
+    <street>St Enoch Square</street>
+  </address>
+  <address>
+    <street>St Enoch Qynd</street>
+  </address>
+  <address>
+    <street>St George's Place</street>
+  </address>
+  <address>
+    <street>St George's Road</street>
+  </address>
+  <address>
+    <street>St James' Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Kingston</area>
+    </areas>
+  </address>
+  <address>
+    <street>St James' Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>St John's Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>St John's Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>St Marnock Street</street>
+  </address>
+  <address>
+    <street>St Mary's Place</street>
+  </address>
+  <address>
+    <street>St Mungo Street</street>
+  </address>
+  <address>
+    <street>St Ninian Street</street>
+  </address>
+  <address>
+    <street>St Peter's Lane</street>
+  </address>
+  <address>
+    <street>St Vincent Crescent</street>
+  </address>
+  <address>
+    <street>St Vincent Lane</street>
+  </address>
+  <address>
+    <street>St Vincent Street</street>
+  </address>
+  <address>
+    <street>Salisbury Quadrant</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Salisbury Street</street>
+  </address>
+  <address>
+    <street>Salisbury Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Salkeld Street</street>
+  </address>
+  <address>
+    <street>Saltmarket</street>
+  </address>
+  <address>
+    <street>Sanbank</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Sandringham Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Sandyfaulds Street</street>
+  </address>
+  <address>
+    <street>Sandyford Buildings</street>
+  </address>
+  <address>
+    <street>Sandyford Place</street>
+  </address>
+  <address>
+    <street>Sandyford Street</street>
+  </address>
+  <address>
+    <street>Saracen Street</street>
+    <areas>
+      <area>Possilpark</area>
+    </areas>
+  </address>
+  <address>
+    <street>Sardinia Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Sauchiehall Lane</street>
+  </address>
+  <address>
+    <street>Sauchiehall Street</street>
+  </address>
+  <address>
+    <street>Scotia Street</street>
+  </address>
+  <address>
+    <street>Scotland Street</street>
+    <areas>
+      <area>Tradeston</area>
+    </areas>
+    <areas>
+      <area>Woodlands</area>
+    </areas>
+  </address>
+  <address>
+    <street>Scott Street</street>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Seamour Street</street>
+  </address>
+  <address>
+    <street>Sedan Place</street>
+  </address>
+  <address>
+    <street>Seton Terrace </street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Seyton Avenue</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Shaftesbury Buildings</street>
+  </address>
+  <address>
+    <street>Shaftesbury Street</street>
+  </address>
+  <address>
+    <street>Shaftesbury Terrace</street>
+  </address>
+  <address>
+    <street>Shamrock Street</street>
+  </address>
+  <address>
+    <street>Shawfield Place</street>
+  </address>
+  <address>
+    <street>Shields Road</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Shields Terrace</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Shuttle Lane</street>
+  </address>
+  <address>
+    <street>Shuttle Street</street>
+  </address>
+  <address>
+    <street>Silvergrove Street</street>
+  </address>
+  <address>
+    <street>Simpson Street</street>
+  </address>
+  <address>
+    <street>Sister Street</street>
+  </address>
+  <address>
+    <street>Skiphall Place</street>
+  </address>
+  <address>
+    <street>Skirbing Street</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Slatefield Street</street>
+  </address>
+  <address>
+    <street>Smith Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Soho Street</street>
+  </address>
+  <address>
+    <street>Somerset Place</street>
+  </address>
+  <address>
+    <street>Somerville Place</street>
+  </address>
+  <address>
+    <street>Somerville Drive</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>South Park Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>South Shamrock Street</street>
+  </address>
+  <address>
+    <street>South Woodside Road</street>
+  </address>
+  <address>
+    <street>Spiers' Place</street>
+  </address>
+  <address>
+    <street>Spiers' Wharf</street>
+  </address>
+  <address>
+    <street>Spoutmouth</street>
+    <areas>
+      <area>Gallowgate</area>
+    </areas>
+  </address>
+  <address>
+    <street>Spring Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Spring Place</street>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Springburn Road</street>
+  </address>
+  <address>
+    <street>Springfield Lane</street>
+  </address>
+  <address>
+    <street>Springfield Place</street>
+  </address>
+  <address>
+    <street>Springfield Road</street>
+  </address>
+  <address>
+    <street>Springhill Terrace</street>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stafford Place</street>
+  </address>
+  <address>
+    <street>Stafford Terrace</street>
+  </address>
+  <address>
+    <street>Staffort Street</street>
+  </address>
+  <address>
+    <street>Stanhope Street</street>
+  </address>
+  <address>
+    <street>Stanley Buildings</street>
+  </address>
+  <address>
+    <street>Stanley Place</street>
+  </address>
+  <address>
+    <street>Stanley Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stanmore Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Steel Street</street>
+  </address>
+  <address>
+    <street>Stella Place</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stevenson Drive</street>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stevenson Street</street>
+  </address>
+  <address>
+    <street>Stewart Place</street>
+  </address>
+  <address>
+    <street>Stewart Street</street>
+  </address>
+  <address>
+    <street>Stuart Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stewartville Street</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stirling Road</street>
+  </address>
+  <address>
+    <street>Stirling Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Stobbie's Place</street>
+  </address>
+  <address>
+    <street>Stobcross Street</street>
+  </address>
+  <address>
+    <street>Stockwell Place</street>
+  </address>
+  <address>
+    <street>Stockwell Street</street>
+  </address>
+  <address>
+    <street>Stonefield Terrace</street>
+  </address>
+  <address>
+    <street>Strathclyde Street</street>
+  </address>
+  <address>
+    <street>Strathearn Place</street>
+  </address>
+  <address>
+    <street>Struan Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+    <areas>
+      <area>Gvanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Struthers Street</street>
+  </address>
+  <address>
+    <street>Summerfield Cottages</street>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Summerfield Place</street>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Summer Street</street>
+  </address>
+  <address>
+    <street>Surrey Lane</street>
+  </address>
+  <address>
+    <street>Surrey Place</street>
+  </address>
+  <address>
+    <street>Surrey Street</street>
+  </address>
+  <address>
+    <street>Sussex Place</street>
+  </address>
+  <address>
+    <street>Sussex Street</street>
+  </address>
+  <address>
+    <street>Sutherland Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Swan Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Swanston Street</street>
+  </address>
+  <address>
+    <street>Sword Street</street>
+  </address>
+  <address>
+    <street>Sydney Street</street>
+  </address>
+  <address>
+    <street>Tarbert Street</street>
+  </address>
+  <address>
+    <street>Taylor Place</street>
+  </address>
+  <address>
+    <street>Taylor Street</street>
+  </address>
+  <address>
+    <street>Tennant Street</street>
+  </address>
+  <address>
+    <street>Terrace Street</street>
+  </address>
+  <address>
+    <street>Teviot Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Tharsis Street</street>
+  </address>
+  <address>
+    <street>Thistle Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Garnethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Thistle Terrace</street>
+  </address>
+  <address>
+    <street>Thomson's Lane</street>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Mile-end</area>
+    </areas>
+  </address>
+  <address>
+    <street>Thomson Street</street>
+  </address>
+  <address>
+    <street>Thorne Place</street>
+  </address>
+  <address>
+    <street>Thornville Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Tillie Street</street>
+  </address>
+  <address>
+    <street>Titwood Place</street>
+    <areas>
+      <area>Strathbungo</area>
+    </areas>
+  </address>
+  <address>
+    <street>Tobago Street</street>
+  </address>
+  <address>
+    <street>Tower Street</street>
+  </address>
+  <address>
+    <street>Towerhill Terrace</street>
+    <areas>
+      <area>Springburn</area>
+    </areas>
+  </address>
+  <address>
+    <street>Townhill Road</street>
+  </address>
+  <address>
+    <street>Trongate</street>
+  </address>
+  <address>
+    <street>Tureen Street</street>
+  </address>
+  <address>
+    <street>Turner's Street</street>
+  </address>
+  <address>
+    <street>Tylefield Street</street>
+  </address>
+  <address>
+    <street>Union Street</street>
+  </address>
+  <address>
+    <street>University Avenue</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>University Street</street>
+  </address>
+  <address>
+    <street>Ure Place</street>
+  </address>
+  <address>
+    <street>Valeview Terrace</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Vermont Street</street>
+  </address>
+  <address>
+    <street>Victoria Buildings</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Crescent</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Cross</street>
+    <areas>
+      <area>Grosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Drive</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Place</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Road</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Port Eglinton</area>
+    </areas>
+  </address>
+  <address>
+    <street>Victoria Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Viewfield Terrace</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Villiers Street</street>
+  </address>
+  <address>
+    <street>Vinicombe Street</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Virginia Street</street>
+  </address>
+  <address>
+    <street>Vulcan Street</street>
+  </address>
+  <address>
+    <street>Waddell Street</street>
+  </address>
+  <address>
+    <street>Walker Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Walkinshaw Street</street>
+  </address>
+  <address>
+    <street>Wallace Grove Place</street>
+  </address>
+  <address>
+    <street>Wallace Street</street>
+  </address>
+  <address>
+    <street>Wall's Street</street>
+  </address>
+  <address>
+    <street>Walmer Crescent</street>
+  </address>
+  <address>
+    <street>Walworth Terrace</street>
+  </address>
+  <address>
+    <street>Ward Street</street>
+  </address>
+  <address>
+    <street>Warroch Street</street>
+  </address>
+  <address>
+    <street>Warwick Street</street>
+  </address>
+  <address>
+    <street>Washington Street</street>
+  </address>
+  <address>
+    <street>Water Street</street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Waterloo Street</street>
+  </address>
+  <address>
+    <street>Watson Street</street>
+  </address>
+  <address>
+    <street>Watt Street</street>
+    <areas>
+      <area>Kinning Park</area>
+    </areas>
+  </address>
+  <address>
+    <street>Weaver Street</street>
+  </address>
+  <address>
+    <street>Well Road</street>
+  </address>
+  <address>
+    <street>Well Street</street>
+  </address>
+  <address>
+    <street>Wellcroft Place</street>
+  </address>
+  <address>
+    <street>Wellfield Street</street>
+  </address>
+  <address>
+    <street>Wellington Arcade</street>
+  </address>
+  <address>
+    <street>Wellington Lane</street>
+  </address>
+  <address>
+    <street>Wellington Place</street>
+  </address>
+  <address>
+    <street>Wellington Street</street>
+  </address>
+  <address>
+    <street>Wellpark Place</street>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Wellpark Street</street>
+  </address>
+  <address>
+    <street>Wellpark Terrace</street>
+  </address>
+  <address>
+    <street>Wemyss Place</street>
+  </address>
+  <address>
+    <street>Wendover Crescent</street>
+    <areas>
+      <area>Mount Florida</area>
+    </areas>
+  </address>
+  <address>
+    <street>Wesleyan Street</street>
+    <areas>
+      <area>Mile-end</area>
+    </areas>
+  </address>
+  <address>
+    <street>West Street</street>
+  </address>
+  <address>
+    <street>Westbank Place</street>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+  </address>
+  <address>
+    <street>Westbank Quadrant</street>
+  </address>
+  <address>
+    <street>Westbank Terrace</street>
+  </address>
+  <address>
+    <street>Westbourne Gardens</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Westbourne Terrace</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Westburn Place</street>
+    <areas>
+      <area>Whiteinch</area>
+    </areas>
+  </address>
+  <address>
+    <street>Westbury Street</street>
+  </address>
+  <address>
+    <street>Westfield Terrace</street>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>West Garden Street</street>
+  </address>
+  <address>
+    <street>West George Lane</street>
+  </address>
+  <address>
+    <street>West Scotland Street</street>
+  </address>
+  <address>
+    <street>West-end Park Street</street>
+  </address>
+  <address>
+    <street>West View Gardens</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Wester Craigs</street>
+  </address>
+  <address>
+    <street>Westminster Terrace</street>
+  </address>
+  <address>
+    <street>Westmoreland Street</street>
+    <areas>
+      <area>Govanhill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Weymouth Terrace</street>
+  </address>
+  <address>
+    <street>Wharf </street>
+    <areas>
+      <area>Port Dundas</area>
+    </areas>
+  </address>
+  <address>
+    <street>Whitehall Place</street>
+    <areas>
+      <area>Ganethill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Whitehill Street</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Whitehill Gardens</street>
+    <areas>
+      <area>Dennistoun</area>
+    </areas>
+  </address>
+  <address>
+    <street>Whitevale</street>
+  </address>
+  <address>
+    <street>Wigton Street</street>
+  </address>
+  <address>
+    <street>William Street</street>
+    <areas>
+      <area>Anderston</area>
+    </areas>
+    <areas>
+      <area>Calton</area>
+    </areas>
+    <areas>
+      <area>Cowcaddens</area>
+    </areas>
+    <areas>
+      <area>Mile-end</area>
+    </areas>
+  </address>
+  <address>
+    <street>Willowbank Crescent</street>
+  </address>
+  <address>
+    <street>Willowbank Street</street>
+  </address>
+  <address>
+    <street>Wilson Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Hillhead</area>
+    </areas>
+    <areas>
+      <area>Partick</area>
+    </areas>
+  </address>
+  <address>
+    <street>Wilton Crescent</street>
+  </address>
+  <address>
+    <street>Wilton Terrace</street>
+  </address>
+  <address>
+    <street>Windsor Circus</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Windsor Place</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Windsor Quadrant</street>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Windsor Street</street>
+  </address>
+  <address>
+    <street>Windsor Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Kelvinside</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Winton Terrace</street>
+    <areas>
+      <area>Crosshill</area>
+    </areas>
+  </address>
+  <address>
+    <street>Wolseley Street</street>
+  </address>
+  <address>
+    <street>Wood Lane</street>
+  </address>
+  <address>
+    <street>Woodlands Road</street>
+  </address>
+  <address>
+    <street>Woodlands Terrace</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Langside</area>
+    </areas>
+  </address>
+  <address>
+    <street>Woodrow Road</street>
+    <areas>
+      <area>Pollockshields</area>
+    </areas>
+  </address>
+  <address>
+    <street>Woodside Crescent</street>
+  </address>
+  <address>
+    <street>Woodside Place</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Crossmyloof</area>
+    </areas>
+  </address>
+  <address>
+    <street>Woodside Quadrant</street>
+  </address>
+  <address>
+    <street>Woodside Terrace</street>
+  </address>
+  <address>
+    <street>York Lane</street>
+  </address>
+  <address>
+    <street>York Street</street>
+    <areas>
+      <area>Glasgow</area>
+    </areas>
+    <areas>
+      <area>Little Govan</area>
+    </areas>
+  </address>
+  <address>
+    <street>Yorkhill Street</street>
+  </address>
+  <address>
+    <street>Young Street</street>
+  </address>
+</addresses>
