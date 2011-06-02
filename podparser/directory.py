@@ -9,8 +9,9 @@ class Directory():
     """
 
     def __init__(self, path):
-        self.pages = []
-        self.path  = path;
+        self.country = 'Scotland'
+        self.pages   = []
+        self.path    = path;
         self.read_from_meta();
         
     def read_from_meta(self):
@@ -40,7 +41,7 @@ class Directory():
             # use publisher field for town
             publisher = dom.getElementsByTagName('publisher')[0].firstChild.nodeValue
             self.town = publisher.split(':')[0].strip()
-             
+            print '****** %s' % self.town
             # volume becomes year
             volume = dom.getElementsByTagName('volume')[0].firstChild.nodeValue
             self.year = volume.split('-')[0].strip()
@@ -126,8 +127,15 @@ class Entry():
     def valid(self):
         return self.error == None
 
-    def print_entry(self):
+    def __str__(self):
+        
         if self.error:
-            print self.line 
+            str = self.line 
         else:
-            print '| %-20s | %-20s | %-20s | %-40s' % (self.surname, self.forename, self.profession, self.address)
+            str = '| %-20s | %-20s | %-20s | %-40s\n' % (self.surname, self.forename, self.profession, self.address)
+
+            for location in self.locations:
+                loc_str = '| %-50s | %f | %f | %s ' % (location.address, location.point['lat'], location.point['lng'], location.accuracy)
+                str = '%s%s\n' % (str, loc_str)
+
+        return str

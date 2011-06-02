@@ -19,29 +19,40 @@ class Google():
         output = f.read()
         result = json.loads(output)
 
-        if result['status'] == 'OK':
-            print output
-            geom = result['results'][0]['geometry']
-            #accuracy = geom['location_type']
-            #location = geom['location']
+        #print address
 
-            location = Location(geom['location'],  geom['location_type']):
+        if result['status'] == 'OK':
+            #print output
+            geom = result['results'][0]['geometry']            
+
+            location = Location(address, geom['location'],  geom['location_type'])
         else:
-            print 'Fetch returned a status of %s' % result['status']
-            print url
+            if result['status'] == 'ZERO_RESULTS':
+                pass
+            elif result['status'] == 'OVER_QUERY_LIMIT':
+                print 'Google limit quota reached'
+            elif result['status'] == "REQUEST_DENIED" or  result['status'] == "INVALID_REQUEST":
+                print 'Fetch rejected: %s' % result['status']
+                print url
 
         return location
 
 class Location():
-    def __init__(self, point, accuracy):
-        #self.lat = lat
-        self.point
+    def __init__(self, address, point, accuracy):
+        self.address  = address
+        self.point    = point
         self.accuracy = accuracy
 
-if __name__ == "__main__":
-    g = Google('ABQIAAAAteMzW-ziP3HW3ZZjPgk9ixT8_INs4XMsnY5-NjTNJBeA3ldNBhS1z74Tapal2-XqbvvkBJL1McMXQA&client=gme-unied')
+    def __str__(self):
+        latlon = '%(lat)f : %(lng)f ' % (self.point)
+        return '%s : %s : %s' % (self.address, latlon, self.accuracy)
 
-    if len(sys.argv) > 1:
-        g.get_location(sys.argv[1])
+if __name__ == "__main__":
+  
+    if len(sys.argv) > 2:
+        g = Google(sys.argv[1])
+        print g.get_location(sys.argv[2])
+        
     else:
-        print 'Address is missing'
+        print 'Args are missing'
+

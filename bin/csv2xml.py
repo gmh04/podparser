@@ -35,12 +35,15 @@ for line in csv:
     address = address[1: len(address) -1]
 
     anode = doc.createElement('address')
-    top_element.appendChild(anode)
+    top_element.appendChild(anode) 
+
+    pnode = doc.createElement('pattern')
+    anode.appendChild(pnode)
+    pnode.appendChild(doc.createTextNode(address.lower()))
+
     snode = doc.createElement('street')
     anode.appendChild(snode)
-
-    text = doc.createTextNode(address)
-    snode.appendChild(text)
+    snode.appendChild(doc.createTextNode(address))
 
     area = area[1: len(area) -1]
     areas = area.split(',')
@@ -58,7 +61,7 @@ for line in csv:
         text = doc.createTextNode(a)
         area_node.appendChild(text)
 
-ugly_xml   = doc.toprettyxml()
+ugly_xml   = doc.toprettyxml(indent='  ')
 text_re    = re.compile('>\n\s+([^<>\s].*?)\n\s+</', re.DOTALL)    
 pretty_xml = text_re.sub('>\g<1></', ugly_xml)
 
@@ -66,5 +69,3 @@ xml.write(pretty_xml)
 
 csv.close()
 xml.close()
-
-

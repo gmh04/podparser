@@ -3,6 +3,7 @@ from xml.dom.minidom import parse
 import argparse
 import os
 import sys
+import time
 
 class Parser:
     """
@@ -12,26 +13,27 @@ class Parser:
     def __init__(self,
                  config,
                  directory,
-                 start         = 0,
-                 end           = 9999,
-                 encoder_key   = None,
-                 verbose       = False,
-                 prePostOffice = False,
-                 commit        = False):
+                 start           = 0,
+                 end             = 9999,
+                 encoder_key     = None,
+                 verbose         = False,
+                 pre_post_office = False,
+                 commit          = False):
         """
         Initialise the parser.
         """
-        self.config        = config
-        self.directory     = directory
-        self.start         = start
-        self.end           = end
-        self.verbose       = verbose
+        self.config          = config
+        self.directory       = directory
+        self.start           = start
+        self.end             = end
+        self.verbose         = verbose
         #self.geoparser = geoparser_key
-        self.prePostOffice = prePostOffice
-        self.commit        = commit
+        self.pre_post_office = pre_post_office
+        self.commit          = commit
 
         if encoder_key:
-           self.geoencoder = podparser.geo.encoder.Google(encoder_key)
+            import podparser.geo.encoder
+            self.geoencoder = podparser.geo.encoder.Google(encoder_key)
         else:
             self.geoencoder = None
  
@@ -40,11 +42,13 @@ class Parser:
         Parse post office directory
         """
 
-        # read meta data
         from podparser import checker, directory
-        checker = checker.EntryChecker(self.config)
-        
+
+        # read meta data
         self.directory = directory.Directory(self.directory);
+
+        # create checker object
+        checker = checker.EntryChecker(self.directory, self.config)
 
         print 'Parsing %s for %s\n' % (self.directory.town, self.directory.year)
 
@@ -53,6 +57,12 @@ class Parser:
 
         for page in self.directory.pages:
             lines = self._fix_line_returns(self._parse_page(page))
+
+            if self.verbose:
+                for line in lines:
+                    print line
+                print '\n'
+
             for line in lines:
                 pod_entry = directory.Entry(line)
                 
@@ -62,8 +72,10 @@ class Parser:
 
                     # geo encode address if encoder set up
                     if self.geoencoder:
-                        pod_entry.geoencode(self.geoencoder)
-
+                        checker.geo_encode(self.geoencoder, self.directory, pod_entry)
+                        print pod_entry
+                        time.sleep(1)
+                        
                 page.entries.append(pod_entry)
                 
             callback(self.directory, page);
@@ -186,17 +198,18 @@ def read_page(directory, page):
     global total
     rejected = 0
 
+    """
     if verbose:
         for entry in page.entries:
             print entry.line
-
+    """
     for entry in page.entries:
         
         if entry.error:
-            print '*** Rejected: %s. Reason: %s' % (entry.line, entry.error)
+            #print '*** Rejected: %s. Reason: %s' % (entry.line, entry.error)
             rejected = rejected + 1
-        else:
-            entry.print_entry()
+        #else:
+        #    entry.print_entry()
 
         total = total + 1
 
@@ -269,16 +282,12 @@ if __name__ == "__main__":
         print arg_parser.print_help()
         sys.exit(1)
 
-    global verbose, total
-    verbose = args.verbose
-    total   = 0
-
     # kick off parsing
     from podparser import parser
-    parser.Parser(config_dir,
-                  directory,
-                  args.start,
-                  args.end,
-                  args.key,
-                  args.verbose,
-                  args.williamson).run_parser(read_page)
+    parser.Parser(config          = config_dir,
+                  directory       = directory,
+                  start           = args.start,
+                  end             = args.end,
+                  encoder_key     = args.key,
+                  verbose         = args.verbose,
+                  pre_post_office = args.williamson).run_parser(read_page)
