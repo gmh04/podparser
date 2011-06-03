@@ -42,6 +42,7 @@ class Location():
         self.address  = address
         self.point    = point
         self.accuracy = accuracy
+        self.type     = ''
 
     def __str__(self):
         latlon = '%(lat)f : %(lng)f ' % (self.point)

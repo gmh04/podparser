@@ -1,6 +1,13 @@
 <?xml version="1.0" ?>
 <addresses>
   <address>
+    <pattern>street name</pattern>
+    <street>STREET NAME</street>
+    <areas>
+      <area>TOWN IF NOT GLASGOW</area>
+    </areas>
+  </address>
+  <address>
     <pattern>abbotsford lane</pattern>
     <street>Abbotsford Lane</street>
   </address>
@@ -2801,7 +2808,10 @@
     <pattern>hamilton terrace</pattern>
     <street>Hamilton Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>(East</area>
+    </areas>
+    <areas>
+      <area>West) Partick</area>
     </areas>
   </address>
   <address>

@@ -1,8 +1,12 @@
 from xml.dom.minidom import parse
 
 import os
+import re
 
 class EntryChecker():
+    """
+    checks and repairs OCR errors based on configuration
+    """
 
     def __init__(self, directory, config_dir):
         self.config_dir = config_dir
@@ -15,7 +19,7 @@ class EntryChecker():
 
         self.professions = {}
         self._populate_global_replace('professions.xml', self.professions)
-# categories ?
+        # categories ?
 
         self.address_replaces = {}
         self._populate_global_replace("addresses.xml", self.address_replaces)
@@ -35,6 +39,7 @@ class EntryChecker():
                 value = valueNode.nodeValue
             
             map[pattern] = value
+        print '%s : %d' % (file_name, len(map))
 
     def _populate_stop_words(self, file_name, lst):
         dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
@@ -44,25 +49,27 @@ class EntryChecker():
             lst.append(word.firstChild.nodeValue)
 
     def _populate_address_lookup(self, directory):
+        self.addresses = {}
+
         # directory specific addresses
         fname = '%s%c%s-%s.xml' % (self.config_dir, os.sep, directory.town.lower(), directory.year)
 
         if os.path.isfile(fname):
-            self.addresses = {}
             dom = parse(fname)
-            addresses = dom.getElementsByTagName('address')
+            addrs = dom.getElementsByTagName('address')
 
-            for addr_node in addresses:
+            for addr_node in addrs:
+                pattern = addr_node.getElementsByTagName('pattern')[0].firstChild.nodeValue
                 street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
-                self.addresses[street] = {'areas': [], 'modern_name': ''}
+                self.addresses[pattern] = {'areas': [],
+                                           'street': street,
+                                           'modern_name': ''}
                 areas_node = addr_node.getElementsByTagName('areas')
 
                 if len(areas_node) > 0:
                     area_nodes = areas_node[0].getElementsByTagName('area')
                     for area_node in area_nodes:
-                        self.addresses[street]['areas'].append(area_node.firstChild.nodeValue)               
-                    
-       
+                        self.addresses[pattern]['areas'].append(area_node.firstChild.nodeValue)
 
     def clean_up(self, entry):
 
@@ -75,31 +82,53 @@ class EntryChecker():
 
         for profession in self.professions:
             if entry.profession.find(profession) != -1:
-                entry.profession.replace(profession, self.professions[profession])
-
+                entry.profession = entry.profession.replace(profession, self.professions[profession])
+              
         for address in self.address_replaces:
             if entry.address.find(address) != -1:
-                entry.address.replace(address, self.address_replaces[address])
+                entry.address = entry.address.replace(address, self.address_replaces[address])
 
     def geo_encode(self, encoder, directory, entry):
 
         entry.locations = []
-        addresses = []
+        addrs = []
 
         if entry.address.find(';'):
-            addresses = entry.address.split(';')
+            addrs = entry.address.split(';')
         else:
-            addresses.append(entry.address)
+            addrs.append(entry.address)
         
-        for addr in addresses:
-            # do lookup
+        for addr in addrs:
+            addr = addr.strip()
             
-            # do encode
+            # do lookup
+            for address in self.addresses:
+
+                # add space to front of lookup
+                # this means 'well st' wont match 'bothwell st'
+                address_with_space = ' %s' % address 
+                if address_with_space in addr.lower():
+                    derived_address = self.addresses[address]['street']
+                    areas           = self.addresses[address]['areas']
+
+                    # try and get house number from original
+                    match = re.search('(\d+)', addr)
+                    if match:
+                        derived_address = '%s %s' % (match.group(1), derived_address)
+
+                    # got a hit - check area
+                    for area in areas:
+                        if area.lower() in addr.lower():
+                            derived_address = '%s, %s' % (derived_address, area)
+                            print 'AREA found %s ' % area
+                    location = encoder.get_location('%s, %s, %s' % (derived_address, directory.town, directory.country))
+                    if location:
+                        location.type = 'derived'
+                        entry.locations.append(location)
+                    
+            # encode address as is
             location = encoder.get_location('%s, %s, %s' % (addr, directory.town, directory.country))
-
-            if location:
-                entry.locations.append(location)
-
-        #import sys
-        #sys.exit(1)
         
+            if location:
+                location.type = 'raw'
+                entry.locations.append(location)

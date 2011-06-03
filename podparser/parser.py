@@ -5,6 +5,12 @@ import os
 import sys
 import time
 
+total    = 0
+rejected = 0
+no_geo   = 0
+bad_geo  = 0
+#bad_geo_derived = 0
+
 class Parser:
     """
     Post office directory parser.
@@ -27,7 +33,6 @@ class Parser:
         self.start           = start
         self.end             = end
         self.verbose         = verbose
-        #self.geoparser = geoparser_key
         self.pre_post_office = pre_post_office
         self.commit          = commit
 
@@ -73,9 +78,11 @@ class Parser:
                     # geo encode address if encoder set up
                     if self.geoencoder:
                         checker.geo_encode(self.geoencoder, self.directory, pod_entry)
-                        print pod_entry
+
+                        # sleep otherwise will be blacklisted by google
                         time.sleep(1)
-                        
+
+                self._print_entry(pod_entry)
                 page.entries.append(pod_entry)
                 
             callback(self.directory, page);
@@ -192,35 +199,38 @@ class Parser:
 
         return entries
 
+    def _print_entry(self, entry):
+        print entry
+
 def read_page(directory, page):
 
     print 'Page Number: %d\n' % page.number
-    global total
-    rejected = 0
+    global total, rejected, no_geo, bad_geo, bad_geo_derived
 
-    """
-    if verbose:
-        for entry in page.entries:
-            print entry.line
-    """
+    # tally up out some stats
     for entry in page.entries:
         
         if entry.error:
-            #print '*** Rejected: %s. Reason: %s' % (entry.line, entry.error)
             rejected = rejected + 1
-        #else:
-        #    entry.print_entry()
+        else:
+            if entry.get_geo_status() == 0:
+                no_geo = no_geo + 1
+            elif entry.get_geo_status() == 1:
+                bad_geo = bad_geo + 1
 
         total = total + 1
 
     rejected_per = float(rejected) / total * 100
+    good_entries = total - rejected
+    no_geo_per   = float(no_geo) / good_entries * 100
+    bad_geo_per  = float(bad_geo) / good_entries * 100
 
     print '\n%-20s%d' % ('Total Entries:', total)
     print '%-20s%d%5d%%' % ('Rejected:', rejected, rejected_per)
+    print '%-20s%d%5d%%' % ('No Geo Tag:', no_geo, no_geo_per)
+    print '%-20s%d%5d%%' % ('Bad Geo Tag:', bad_geo, bad_geo_per)
 
 if __name__ == "__main__":
-
-    print sys.argv[0]
 
     # get the pod parser directory
     cur_dir = os.path.dirname(sys.argv[0])
