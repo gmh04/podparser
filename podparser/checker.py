@@ -9,6 +9,7 @@ class EntryChecker():
     """
 
     def __init__(self, directory, config_dir):
+        self.directory  = directory
         self.config_dir = config_dir
 
         self.forenames = {}
@@ -39,7 +40,7 @@ class EntryChecker():
                 value = valueNode.nodeValue
             
             map[pattern] = value
-        print '%s : %d' % (file_name, len(map))
+        #print '%s : %d' % (file_name, len(map))
 
     def _populate_stop_words(self, file_name, lst):
         dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
@@ -59,7 +60,23 @@ class EntryChecker():
             addrs = dom.getElementsByTagName('address')
 
             for addr_node in addrs:
-                pattern = addr_node.getElementsByTagName('pattern')[0].firstChild.nodeValue
+                #pattern = addr_node.getElementsByTagName('pattern')[0].firstChild.nodeValue
+
+                patterns = addr_node.getElementsByTagName('pattern')
+                for patternNode in patterns:
+                    pattern = patternNode.firstChild.nodeValue
+                    street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
+                    self.addresses[pattern] = {'areas': [],
+                                               'street': street,
+                                               'modern_name': ''}
+                    areas_node = addr_node.getElementsByTagName('areas')
+
+                    if len(areas_node) > 0:
+                        area_nodes = areas_node[0].getElementsByTagName('area')
+                        for area_node in area_nodes:
+                            self.addresses[pattern]['areas'].append(area_node.firstChild.nodeValue)
+
+                """
                 street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
                 self.addresses[pattern] = {'areas': [],
                                            'street': street,
@@ -70,7 +87,7 @@ class EntryChecker():
                     area_nodes = areas_node[0].getElementsByTagName('area')
                     for area_node in area_nodes:
                         self.addresses[pattern]['areas'].append(area_node.firstChild.nodeValue)
-
+                        """
     def clean_up(self, entry):
 
         if entry.forename in self.forenames:
@@ -88,7 +105,7 @@ class EntryChecker():
             if entry.address.find(address) != -1:
                 entry.address = entry.address.replace(address, self.address_replaces[address])
 
-    def geo_encode(self, encoder, directory, entry):
+    def geo_encode(self, encoder, entry):
 
         entry.locations = []
         addrs = []
@@ -100,35 +117,60 @@ class EntryChecker():
         
         for addr in addrs:
             addr = addr.strip()
-            
-            # do lookup
-            for address in self.addresses:
 
-                # add space to front of lookup
-                # this means 'well st' wont match 'bothwell st'
-                address_with_space = ' %s' % address 
-                if address_with_space in addr.lower():
-                    derived_address = self.addresses[address]['street']
-                    areas           = self.addresses[address]['areas']
-
-                    # try and get house number from original
-                    match = re.search('(\d+)', addr)
-                    if match:
-                        derived_address = '%s %s' % (match.group(1), derived_address)
-
-                    # got a hit - check area
-                    for area in areas:
-                        if area.lower() in addr.lower():
-                            derived_address = '%s, %s' % (derived_address, area)
-                            print 'AREA found %s ' % area
-                    location = encoder.get_location('%s, %s, %s' % (derived_address, directory.town, directory.country))
-                    if location:
-                        location.type = 'derived'
-                        entry.locations.append(location)
-                    
             # encode address as is
-            location = encoder.get_location('%s, %s, %s' % (addr, directory.town, directory.country))
+            location = encoder.get_location('%s, %s, %s' % (addr,
+                                                            self.directory.town,
+                                                            self.directory.country))
         
             if location:
+
+                # TODO: this is here for debugging - only append if good geo tag
                 location.type = 'raw'
+                entry.locations.append(location)
+
+                if location.get_geo_status() < 2:
+                    # poor location try getting a derived location
+                    self._get_derived_location(addr, encoder, entry)
+            else:
+                # no location returned try derived
+                self._get_derived_location(addr, encoder, entry)    
+
+    def _get_derived_location(self, addr, encoder, entry):
+
+        matches = []
+        best_match = ''
+
+        # do lookup
+        for address in self.addresses:
+            if address in addr.lower():
+                matches.append(address)
+
+        if len(matches) == 1:
+            best_match = matches[0]
+        elif len(matches) > 1:
+            # more than one match - the best match will be the longest text
+            for match in matches:
+                if len(match) > len(best_match):
+                    best_match = match
+                    
+        if len(best_match) > 0:
+            derived_address = self.addresses[best_match]['street']
+            areas           = self.addresses[best_match]['areas']
+
+            # try and get house number from original
+            match = re.search('(\d+)', addr)
+            if match:
+                derived_address = '%s %s' % (match.group(1), derived_address)
+
+            # check if area is associated with entry
+            for area in areas:
+                if area.lower() in addr.lower():
+                    derived_address = '%s, %s' % (derived_address, area)
+                    #print 'AREA found %s ' % area
+            location = encoder.get_location('%s, %s, %s' % (derived_address,
+                                                            self.directory.town,
+                                                            self.directory.country))
+            if location:
+                location.type = 'derived'
                 entry.locations.append(location)

@@ -1,5 +1,6 @@
 import json
 import sys
+import time
 import urllib
 
 class Google():
@@ -17,14 +18,13 @@ class Google():
         url = '%s?%s' % (self.url, urllib.urlencode(self.params))
         f = urllib.urlopen(url)
         output = f.read()
+
+        #print output
+
         result = json.loads(output)
 
-        #print address
-
         if result['status'] == 'OK':
-            #print output
             geom = result['results'][0]['geometry']            
-
             location = Location(address, geom['location'],  geom['location_type'])
         else:
             if result['status'] == 'ZERO_RESULTS':
@@ -35,14 +35,43 @@ class Google():
                 print 'Fetch rejected: %s' % result['status']
                 print url
 
+        # enforce 1/2 second sleep after each fetch otherwise will be
+        # blacklisted by google
+        time.sleep(0.5)
+
         return location
 
 class Location():
+    """
+    Stores location information related to an address
+    """
     def __init__(self, address, point, accuracy):
         self.address  = address
         self.point    = point
         self.accuracy = accuracy
         self.type     = ''
+
+    def get_geo_status(self):
+        """
+        Get geo status of an entry. This will return 
+
+        0 - there is no geo tag
+        1 - there is a poor geo tag
+        2 - there is a good geo tag
+
+        A poor geo tag is accuracy 'APPROXIMATE', while a good tag is any value
+        above that (ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, see
+        http://code.google.com/apis/maps/documentation/geocoding/#Results).
+        """
+       
+        if not self.accuracy:
+            status = 0
+        elif self.accuracy == 'APPROXIMATE':
+            status = 1
+        else:
+            status = 2
+        
+        return status
 
     def __str__(self):
         latlon = '%(lat)f : %(lng)f ' % (self.point)
@@ -56,4 +85,3 @@ if __name__ == "__main__":
         
     else:
         print 'Args are missing'
-

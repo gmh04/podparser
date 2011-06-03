@@ -3,13 +3,11 @@ from xml.dom.minidom import parse
 import argparse
 import os
 import sys
-import time
 
 total    = 0
 rejected = 0
 no_geo   = 0
 bad_geo  = 0
-#bad_geo_derived = 0
 
 class Parser:
     """
@@ -77,10 +75,7 @@ class Parser:
 
                     # geo encode address if encoder set up
                     if self.geoencoder:
-                        checker.geo_encode(self.geoencoder, self.directory, pod_entry)
-
-                        # sleep otherwise will be blacklisted by google
-                        time.sleep(1)
+                        checker.geo_encode(self.geoencoder, pod_entry)
 
                 self._print_entry(pod_entry)
                 page.entries.append(pod_entry)
@@ -91,9 +86,8 @@ class Parser:
 
     def _get_listing(self):
         #  get list of djvu xml files
-
         from podparser import directory
-
+        
         def get_page_from_file(file):
             return int(file[len(file) -9: len(file) -5])
 
@@ -200,6 +194,16 @@ class Parser:
         return entries
 
     def _print_entry(self, entry):
+
+        # print entry details to stdout
+        if entry.valid:
+            geo_status = entry.get_geo_status()
+
+            if geo_status == 0:
+                print '*** No geo tag'
+            elif geo_status == 1:
+                print '*** Poor geo tag'
+
         print entry
 
 def read_page(directory, page):

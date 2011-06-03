@@ -68,6 +68,7 @@ class Entry():
         self.line       = line
         self.profession = ''
         self.error      = None
+        self.locations  = []
 
         # parse individual entry values from pod
         self._parse()
@@ -133,13 +134,25 @@ class Entry():
 
         return match
 
-    def _parse_address(self):
-        print self.address
-
     def valid(self):
+        """
+        Is the entry valid? The entry is deemed invalid if the error property is
+        set.
+        """
         return self.error == None
 
     def get_geo_status(self):
+        """
+        Get geo status of an entry. This will return 
+
+        0 - there is no geo tag
+        1 - there is a poor geo tag
+        2 - there is a good geo tag
+
+        A poor geo tag is accuracy 'APPROXIMATE', while a good tag is any value
+        above that (ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, see
+        http://code.google.com/apis/maps/documentation/geocoding/#Results).
+        """
         status = 0
 
         if len(self.locations) == 0:
@@ -150,6 +163,7 @@ class Entry():
                 if location.accuracy != 'APPROXIMATE':
                     status = 2
                     break
+
         return status
 
     def __str__(self):
@@ -161,10 +175,10 @@ class Entry():
 
             for location in self.locations:
                 loc_str = '| %-60s | %f | %f | %-20s | %-5s' % (location.address,
-                                                              location.point['lat'],
-                                                              location.point['lng'],
-                                                              location.accuracy,
-                                                              location.type)
+                                                                location.point['lat'],
+                                                                location.point['lng'],
+                                                                location.accuracy,
+                                                                location.type)
                 str = '%s%s\n' % (str, loc_str)
 
         return str
