@@ -3003,6 +3003,7 @@
   <address>
     <pattern>holmhead street</pattern>
     <street>Holmhead Street</street>
+    <modern_name>Cunningham Street</modern_name>
   </address>
   <address>
     <pattern>holyrood crescent</pattern>
@@ -5219,6 +5220,7 @@
   </address>
   <address>
     <pattern>st enoch square</pattern>
+    <pattern>st. enoch square</pattern>
     <street>St Enoch Square</street>
   </address>
   <address>

@@ -2,6 +2,7 @@ from xml.dom.minidom import parse
 
 import os
 import re
+import sys
 
 class Directory():
     """
@@ -25,7 +26,7 @@ class Directory():
             ddir = self.path[0: self.path.rfind(os.sep)]
             ddir = ddir[0: ddir.rfind(os.sep)]
         else:
-            print '*** Can read directory: %s ***' % self.path
+            print '*** Cannot read directory: %s ***' % self.path
             sys.exit(1)
             
         # find meta file in directory

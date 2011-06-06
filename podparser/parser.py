@@ -28,8 +28,8 @@ class Parser:
         """
         self.config          = config
         self.directory       = directory
-        self.start           = start
-        self.end             = end
+        self.start           = int(start)
+        self.end             = int(end)
         self.verbose         = verbose
         self.pre_post_office = pre_post_office
         self.commit          = commit
@@ -62,6 +62,7 @@ class Parser:
             lines = self._fix_line_returns(self._parse_page(page))
 
             if self.verbose:
+                print '\n'
                 for line in lines:
                     print line
                 print '\n'
@@ -95,18 +96,17 @@ class Parser:
         if os.path.isdir(path):
             for d in os.listdir(path):
                 if d.endswith('djvu_xml'):
-                    for f in os.listdir('%s%c%s' % (path, os.sep, d)):
+                    pod_path = '%s%c%s' % (path, os.sep, d)
+                    for f in os.listdir(pod_path):
                         if((f.startswith("postoffice") or f.startswith("williamsonsdirect")) and f.endswith(".djvu")):
                             page_no = get_page_from_file(f);
-                        
                         if page_no >= self.start and page_no <= self.end:
-                            path = '%s%c%s%c%s' % (path,
-                                                   os.sep,
-                                                   d,
-                                                   os.sep,
-                                                   f)
-
-                            self.directory.pages.append(directory.Page(path, page_no));
+                            fpath = '%s%c%s' % (pod_path,
+                                                os.sep,
+                                                f)
+                            self.directory.pages.append(directory.Page(fpath, page_no));
+                            if self.verbose:
+                                print fpath
                     break
 
         else:
@@ -196,7 +196,8 @@ class Parser:
     def _print_entry(self, entry):
 
         # print entry details to stdout
-        if entry.valid:
+
+        if entry.valid():
             geo_status = entry.get_geo_status()
 
             if geo_status == 0:

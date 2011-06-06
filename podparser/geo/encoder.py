@@ -1,25 +1,29 @@
+import argparse
+import base64
+import hashlib
+import hmac
 import json
 import sys
 import time
 import urllib
+import urlparse
 
-class Google():
-    def __init__(self, key):
-        self.params = {'key': key,
-                       'bounds': '55.8,-3.6|56.1,-2.6',
+class Google(object):
+    def __init__(self):
+        self.params = {'bounds': '55.8,-3.6|56.1,-2.6',
                        'sensor': 'false'}
-        
         self.url = 'http://maps.googleapis.com/maps/api/geocode/json'
 
     def get_location(self, address):
         location = None
-        self.params['address'] = address
+        self.params['address'] = address.encode('utf-8')
 
-        url = '%s?%s' % (self.url, urllib.urlencode(self.params))
+        url = self._get_url()
+
         f = urllib.urlopen(url)
         output = f.read()
 
-        #print output
+        print output
 
         result = json.loads(output)
 
@@ -40,6 +44,45 @@ class Google():
         time.sleep(0.5)
 
         return location
+
+    def _get_url(self):
+        return '%s?%s' % (self.url, urllib.urlencode(self.params))
+
+class GooglePremium(Google):
+    """
+    Use premium google geocode with premium key and client id
+    """
+
+    def __init__(self, key, client_id):
+        super(GooglePremium, self).__init__()
+
+        self.key              = key
+        self.params['client'] = client_id
+
+    def _get_url(self):
+
+        # for google's URL signing process see
+        # http://code.google.com/apis/maps/documentation/webservices/#SignatureProcess
+
+        # encode url
+        url              = '%s?%s' % (self.url, urllib.urlencode(self.params))
+
+        # convert the URL string to a URL,
+        url              = urlparse.urlparse(url)
+
+        # only sign the path+query part of the string
+        urlToSign        = url.path + "?" + url.query
+
+        # decode the private key into its binary format
+        decodedKey       = base64.urlsafe_b64decode(self.key)
+
+        # create a signature using the private key and the URL-encoded
+        # string using HMAC SHA1. This signature will be binary.
+        signature        = hmac.new(decodedKey, urlToSign, hashlib.sha1)
+        encodedSignature = base64.urlsafe_b64encode(signature.digest())
+
+        originalUrl      = url.scheme + "://" + url.netloc + url.path + "?" + url.query
+        return '%s&signature=%s' % (originalUrl, encodedSignature)
 
 class Location():
     """
@@ -78,10 +121,22 @@ class Location():
         return '%s : %s : %s' % (self.address, latlon, self.accuracy)
 
 if __name__ == "__main__":
-  
-    if len(sys.argv) > 2:
-        g = Google(sys.argv[1])
-        print g.get_location(sys.argv[2])
-        
+
+    arg_parser = argparse.ArgumentParser(description='Wrapper for Google geo-encoder')
+
+    arg_parser.add_argument('-a', '--address',
+                            help='Address to encode',
+                            required=True)
+    arg_parser.add_argument('-c', '--client_id',
+                            help='Google client id')
+    arg_parser.add_argument('-k', '--key',
+                            help='Google private key')
+ 
+    args = arg_parser.parse_args()
+    
+    if args.client_id and args.key:
+        google = GooglePremium(args.key, args.client_id)
     else:
-        print 'Args are missing'
+        google = Google()
+        
+    print google.get_location(args.address)
