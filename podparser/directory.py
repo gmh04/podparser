@@ -68,6 +68,7 @@ class Entry():
     def __init__(self, line):
         self.line       = line
         self.profession = ''
+        self.category   = ''
         self.error      = None
         self.locations  = []
 
@@ -172,7 +173,11 @@ class Entry():
         if self.error:
             str = 'Rejected: %s. Reason: %s\n' % (self.line, self.error)
         else:
-            str = '| %-20s | %-20s | %-20s | %-40s\n' % (self.surname, self.forename, self.profession, self.address)
+            str = '| %-20s | %-20s | %-20s | %-1s | %-40s\n' % (self.surname,
+                                                                self.forename,
+                                                                self.profession,
+                                                                self.category,
+                                                                self.address)
 
             for location in self.locations:
                 loc_str = '| %-60s | %f | %f | %-20s | %-5s' % (location.address,

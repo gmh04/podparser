@@ -1,13 +1,16 @@
+from time            import time
 from xml.dom.minidom import parse
 
 import argparse
 import os
 import sys
 
-total    = 0
-rejected = 0
-no_geo   = 0
-bad_geo  = 0
+total       = 0
+rejected    = 0
+no_geo      = 0
+bad_geo     = 0
+profession  = 0
+no_category = 0
 
 class Parser:
     """
@@ -208,13 +211,15 @@ class Parser:
                 print '*** No geo tag'
             elif geo_status == 1:
                 print '*** Poor geo tag'
+            elif len(entry.profession) > 0 and len(entry.category) == 0:
+                print '*** No profession category'
 
         print entry
 
 def read_page(directory, page):
 
     print 'Page Number: %d\n' % page.number
-    global total, rejected, no_geo, bad_geo, bad_geo_derived
+    global total, rejected, no_geo, bad_geo, bad_geo_derived, profession, no_category
 
     # tally up out some stats
     for entry in page.entries:
@@ -227,17 +232,27 @@ def read_page(directory, page):
             elif entry.get_geo_status() == 1:
                 bad_geo = bad_geo + 1
 
+        if len(entry.profession) > 0:
+            profession = profession + 1
+
+            if len(entry.category) == 0:
+                no_category = no_category + 1
+
         total = total + 1
 
-    rejected_per = float(rejected) / total * 100
-    good_entries = total - rejected
-    no_geo_per   = float(no_geo) / good_entries * 100
-    bad_geo_per  = float(bad_geo) / good_entries * 100
+    rejected_per    = float(rejected) / total * 100
+    good_entries    = total - rejected
+    no_geo_per      = float(no_geo) / good_entries * 100
+    bad_geo_per     = float(bad_geo) / good_entries * 100
+    profession_per  = float(profession) / good_entries * 100
+    no_category_per = float(no_category) / good_entries * 100
 
     print '\n%-20s%d' % ('Total Entries:', total)
-    print '%-20s%d%5d%%' % ('Rejected:', rejected, rejected_per)
-    print '%-20s%d%5d%%' % ('No Geo Tag:', no_geo, no_geo_per)
-    print '%-20s%d%5d%%' % ('Bad Geo Tag:', bad_geo, bad_geo_per)
+    print '%-20s%5d%5d%%' % ('Rejected:',    rejected,    rejected_per)
+    print '%-20s%5d%5d%%' % ('No Geo Tag:',  no_geo,      no_geo_per)
+    print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo,     bad_geo_per)
+    print '%-20s%5d%5d%%' % ('Professions:', profession,  profession_per)
+    print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
 if __name__ == "__main__":
 
@@ -303,6 +318,8 @@ if __name__ == "__main__":
         print arg_parser.print_help()
         sys.exit(1)
 
+    t = time()
+
     # kick off parsing
     from podparser import parser
     parser.Parser(config          = config_dir,
@@ -313,3 +330,5 @@ if __name__ == "__main__":
                   client_id       = args.client_id,
                   verbose         = args.verbose,
                   pre_post_office = args.williamson).run_parser(read_page)
+
+    print '\nParse took %.2f mins' % ((time() - t) / 60)

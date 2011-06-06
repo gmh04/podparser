@@ -95,219 +95,119 @@
 
   <categories>
     <category>
-      <name>Accountant</name>
-      <list>
-        <pattern>actuary</pattern>
-        <pattern>accountant</pattern>
-        <pattern>bookkeeper</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Advocate</name>
-      <list>
-        <pattern>advocate</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Architect</name>
-      <list>
-        <pattern>architect</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Auctioneer</name>
-      <list>
-        <pattern>auctioneer</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Baker</name>
-      <list>
-        <pattern>baker</pattern>
-        <pattern>confectioner</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Brewer</name>
-      <list>
-        <pattern>brewer</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Builder</name>
-      <list>
-        <pattern>builder</pattern>
-        <pattern>carpenter</pattern>
-        <pattern>carver</pattern>
-        <pattern>contractor</pattern>
-        <pattern>glazier</pattern>
-        <pattern>mason</pattern>
-        <pattern>slater</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Butcher</name>
-      <list>
-        <pattern>butcher</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Cabinetmaker</name>
-      <list>
-        <pattern>cabinetmaker</pattern>
-        <pattern>cabinetmakers</pattern>
-        <pattern></pattern>
-      </list>
-    </category>
-    <category>
-      <name>Chemist</name>
-      <list>
-        <pattern>chemist</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Clock &amp; Watchmaker</name>
-      <list>
-        <pattern>clockmaker</pattern>
-        <pattern>watchmaker</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Cobbler</name>
-      <list> 
-        <pattern>boot and shoe maker</pattern>
-        <pattern>boot and shoe manufacturer</pattern>
-        <pattern>boot and shoemaker</pattern>
-        <pattern>bootmaker</pattern>
-        <pattern>shoemaker</pattern>
-        <pattern>shoemakers</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Engineer</name>
-      <list>
-        <pattern>civil engineer</pattern>
-        <pattern>engineer</pattern>
-        <pattern>millwright</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Engraver</name>
-      <list>
-        <pattern>engraver</pattern>
-        <pattern>engravers</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Farmer</name>
+      <name>Agriculture, forestry and fishing</name>
+      <code>A</code>
       <list>
         <pattern>dairy</pattern>
-        <pattern>farmer</pattern>
+        <pattern>farmer</pattern>        
       </list>
     </category>
     <category>
-      <name>Financial</name>
+      <name>Mining and quarrying</name>
+      <code>B</code>
       <list>
-        <pattern>bank</pattern>
-        <pattern>broker</pattern>
-        <pattern>insurance</pattern>
-        <pattern>pawnbroker</pattern>
-        <pattern>stockbroker</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Grocer</name>
-      <list>
-        <pattern>fruit salesman</pattern>
-        <pattern>fruiterer</pattern>
-        <pattern>greengrocer</pattern>
-        <pattern>grocer</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Gunmaker</name>
-      <list>
-        <pattern>gunmaker</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Hairdresser</name>
-      <list>
-        <pattern>artistic hair worker</pattern>
-        <pattern>hairdresser</pattern>
+        
       </list>
     </category>
     <category>
       <name>Manufacturing</name>
+      <code>C</code>
       <list>
+        <pattern>boot and shoe maker</pattern>
+        <pattern>boot and shoe manufacturer</pattern>
+        <pattern>boot and shoemaker</pattern>
+        <pattern>bootmaker</pattern>
+        <pattern>cabinetmaker</pattern>
+        <pattern>cabinetmakers</pattern>        
+        <pattern>civil engineer</pattern>
+        <pattern>clockmaker</pattern>
+        <pattern>clothier</pattern>
+        <pattern>dressmaker</pattern>
+        <pattern>engineer</pattern>
+        <pattern>gunmaker</pattern>
+        <pattern>hatter</pattern>
+        <pattern>hosier</pattern>
         <pattern>manufacturer</pattern>
+        <pattern>milliner</pattern>
+        <pattern>millwright</pattern>
+        <pattern>shirt maker</pattern>
+        <pattern>shoemaker</pattern>
+        <pattern>shoemakers</pattern>
+        <pattern>tailor</pattern>
+        <pattern>watchmaker</pattern>
       </list>
     </category>
     <category>
-      <name>Management</name>
+      <name>Electricity, gas, steam and air conditioning supply</name>
+      <code>D</code>
       <list>
-        <pattern>manager</pattern>
+        <pattern>gasfitter</pattern>        
       </list>
     </category>
     <category>
-      <name>Medical</name>
+      <name>Water supply; sewerage, waste management and remediation activities</name>
+      <code>E</code>
       <list>
-        <pattern>chiropodist</pattern>
-        <pattern>dentist</pattern>
-        <pattern>druggist</pattern>
-        <pattern>midwife</pattern>
-        <pattern>nurse</pattern>
-        <pattern>pathology</pattern>
-        <pattern>physician</pattern>
-        <pattern>surgeon-dentist</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Merchant</name>
-      <list>
-        <pattern>merchant</pattern>
-        <pattern>merchants</pattern>
-        <pattern>mercht.</pattern>
-        <pattern>provision dealer</pattern>
-        <pattern>spirit merchant</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Optician</name>
-      <list>
-        <pattern>optician</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Painter</name>
-      <list>
-        <pattern>decorator</pattern>
-        <pattern>painter</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Photographer</name>
-      <list>
-        <pattern>photographer</pattern>
-        <pattern>photographic</pattern>
-        <pattern>photographist</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Plumber</name>
-      <list>
-        <pattern>gasfitter</pattern>
         <pattern>plumber</pattern>
       </list>
     </category>
     <category>
-      <name>Police</name>
+      <name>Construction</name>
+      <code>F</code>
       <list>
-        <pattern>police</pattern>
+        <pattern>architect</pattern>        
+        <pattern>builder</pattern>
+        <pattern>carpenter</pattern>
+        <pattern>carver</pattern>
+        <pattern>contractor</pattern>
+        <pattern>decorator</pattern>
+        <pattern>glazier</pattern>
+        <pattern>mason</pattern>
+        <pattern>painter</pattern>
+        <pattern>slater</pattern>
       </list>
     </category>
     <category>
-      <name>Printer</name>
+      <name>Wholesale and retail trade; repair of motor vehicles and motor cycles</name>
+      <code>G</code>
+      <list>
+        <pattern>auctioneer</pattern>
+        <pattern>baker</pattern>
+        <pattern>brewer</pattern>
+        <pattern>butcher</pattern>
+        <pattern>chemist</pattern>
+        <pattern>confectioner</pattern>
+        <pattern>fruit salesman</pattern>
+        <pattern>fruiterer</pattern>
+        <pattern>furniture dealer</pattern>
+        <pattern>greengrocer</pattern>
+        <pattern>grocer</pattern>
+        <pattern>merchant</pattern>
+        <pattern>merchants</pattern>
+        <pattern>mercht.</pattern>
+        <pattern>provision dealer</pattern> 
+        <pattern>spirit merchant</pattern>
+        <pattern>traveller</pattern>
+        <pattern>travelling</pattern>
+      </list>
+    </category>
+    <category>
+      <name>Transport and storage</name>
+      <code>H</code>
+      <list>
+        <pattern>shipmaster</pattern>
+      </list>
+    </category>
+    <category>
+      <name>Accommodation and food service activities</name>
+      <code>I</code>
+      <list>
+        
+      </list>
+    </category>
+    <category>
+      <name>Information and communication</name>
+      <code>J</code>
       <list>
         <pattern>bookbinders</pattern>
         <pattern>printer</pattern>
@@ -316,63 +216,108 @@
       </list>
     </category>
     <category>
-      <name>Sales</name>
+      <name>Financial and insurance activities</name>
+      <code>K</code>
       <list>
-        <pattern>furniture dealer</pattern>
+        <pattern>actuary</pattern>
+        <pattern>accountant</pattern>
+        <pattern>bank</pattern>
+        <pattern>bookkeeper</pattern>
+        <pattern>broker</pattern>
+        <pattern>insurance</pattern>
+        <pattern>pawnbroker</pattern>
+        <pattern>stockbroker</pattern>
       </list>
     </category>
     <category>
-      <name>Shipmaster</name>
+      <name>Real estate activities</name>
+      <code>L</code>
       <list>
-        <pattern>shipmaster</pattern>
+        
       </list>
     </category>
     <category>
-      <name>Tailor</name>
+      <name>Professional, scientific and technical activities</name>
+      <code>M</code>
       <list>
-        <pattern>clothier</pattern>
-        <pattern>dressmaker</pattern>
-        <pattern>hatter</pattern>
-        <pattern>hosier</pattern>
-        <pattern>milliner</pattern>
-        <pattern>tailor</pattern>
-        <pattern>shirt maker</pattern>
+        <pattern>advocate</pattern>
+        <pattern>manager</pattern>
       </list>
     </category>
     <category>
-      <name>Teacher</name>
+      <name>Administrative and support service activities</name>
+      <code>N</code>
+      <list>
+        
+      </list>
+    </category>
+    <category>
+      <name>Public administration and defence; compulsory social security</name>
+      <code>O</code>
+      <list>        
+        <pattern>police</pattern>
+      </list>
+    </category>
+    <category>
+      <name>Education</name>
+      <code>P</code>
       <list>
         <pattern>professor</pattern>
         <pattern>rector</pattern>
         <pattern>teacher</pattern>
-        <pattern>teachers</pattern>
-      </list>
-    </category> 
-    <category>
-      <name>Traveller</name>
-      <list>
-        <pattern>traveller</pattern>
-        <pattern>travelling</pattern>
+        <pattern>teachers</pattern>        
       </list>
     </category>
     <category>
-      <name>Waiter</name>
+      <name>Human health and social work activities</name>
+      <code>Q</code>
+      <list>
+        <pattern>chiropodist</pattern>
+        <pattern>dentist</pattern>
+        <pattern>druggist</pattern>
+        <pattern>midwife</pattern>
+        <pattern>nurse</pattern>
+        <pattern>optician</pattern>
+        <pattern>pathology</pattern>
+        <pattern>physician</pattern>
+        <pattern>surgeon-dentist</pattern>        
+      </list>
+    </category>
+    <category>
+      <name>Arts, entertainment and recreation</name>
+      <code>R</code>
+      <list>
+        <pattern>engraver</pattern>
+        <pattern>engravers</pattern>        
+        <pattern>photographer</pattern>
+        <pattern>photographic</pattern>
+        <pattern>photographist</pattern>
+        <pattern>writer</pattern>
+      </list>
+    </category>
+    <category>
+      <name>Other service activities</name>
+      <code>S</code>
+      <list>
+        <pattern>artistic hair worker</pattern>
+        <pattern>draper</pattern>
+        <pattern>hairdresser</pattern>        
+        <pattern>upholsterer</pattern>
+        <pattern>upholsteress</pattern>
+      </list>
+    </category>
+    <category>
+      <name>Activities of households as employers; undifferentiated goods-and services-producing activities of households for own use</name>
+      <code>T</code>
       <list>
         <pattern>waiter</pattern>
       </list>
     </category>
     <category>
-      <name>Writer</name>
+      <name>Activities of extraterritorial organisations and bodies</name>
+      <code>U</code>
       <list>
-        <pattern>writer</pattern>
-      </list>
-    </category>
-    <category>
-      <name>Upholsterer</name>
-      <list>
-        <pattern>draper</pattern>
-        <pattern>upholsterer</pattern>
-        <pattern>upholsteress</pattern>
+        
       </list>
     </category>
 

@@ -5,10 +5,17 @@ import re
 
 class EntryChecker():
     """
-    checks and repairs OCR errors based on configuration
+    Checks and repairs OCR errors based on configuration
     """
 
     def __init__(self, directory, config_dir):
+        """
+        Contructor.
+
+        directory  -- POD directory object
+        config_dir -- full path to the config direcory
+        """
+
         self.directory  = directory
         self.config_dir = config_dir
 
@@ -20,7 +27,7 @@ class EntryChecker():
 
         self.professions = {}
         self._populate_global_replace('professions.xml', self.professions)
-        # categories ?
+        self._populate_categories()
 
         self.address_replaces = {}
         self._populate_global_replace("addresses.xml", self.address_replaces)
@@ -89,6 +96,28 @@ class EntryChecker():
 
                             self.addresses[pattern]['areas'][name] = area_modern_name
 
+    def _populate_categories(self):
+        self.categories = {}
+
+        # directory specific addresses
+        fname = '%s%cprofessions.xml' % (self.config_dir, os.sep)
+
+        if os.path.isfile(fname):
+            dom = parse(fname)
+            categories_node = dom.getElementsByTagName('category')
+
+            for category_node in categories_node:
+                code_node = category_node.getElementsByTagName('code')
+
+                if len(code_node) > 0:
+                    code = code_node[0].firstChild.nodeValue
+                    list_node = category_node.getElementsByTagName('pattern')
+
+                    if len(list_node) > 0:
+                        for lnode in list_node:
+                            pattern = lnode.firstChild.nodeValue
+                            self.categories[pattern] = code                        
+
     def clean_up(self, entry):
 
         if entry.forename in self.forenames:
@@ -98,9 +127,16 @@ class EntryChecker():
             if entry.surname.find(word) != -1:
                 entry.error = 'Surname contains stop word: %s' % word
 
+        # do profession global replaces
         for profession in self.professions:
             if entry.profession.find(profession) != -1:
                 entry.profession = entry.profession.replace(profession, self.professions[profession])
+
+        # determine profession category
+        for category in self.categories:
+            if entry.profession.find(category) != -1:
+                entry.category = self.categories[category]
+                break
               
         for address in self.address_replaces:
             if entry.address.find(address) != -1:
