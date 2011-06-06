@@ -60,34 +60,35 @@ class EntryChecker():
             addrs = dom.getElementsByTagName('address')
 
             for addr_node in addrs:
-                #pattern = addr_node.getElementsByTagName('pattern')[0].firstChild.nodeValue
-
                 patterns = addr_node.getElementsByTagName('pattern')
                 for patternNode in patterns:
                     pattern = patternNode.firstChild.nodeValue
                     street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
-                    self.addresses[pattern] = {'areas': [],
+
+                    modern_name = ''
+                    modern_name_node = addr_node.getElementsByTagName('modern_name')
+                    if len(modern_name_node) > 0:
+                        modern_name =  modern_name_node[0].firstChild.nodeValue
+
+                    self.addresses[pattern] = {'areas': {},
                                                'street': street,
-                                               'modern_name': ''}
+                                               'modern_name': modern_name}
+
                     areas_node = addr_node.getElementsByTagName('areas')
 
                     if len(areas_node) > 0:
                         area_nodes = areas_node[0].getElementsByTagName('area')
                         for area_node in area_nodes:
-                            self.addresses[pattern]['areas'].append(area_node.firstChild.nodeValue)
+                            nameNode = area_node.getElementsByTagName('name')
+                            name = nameNode[0].firstChild.nodeValue
 
-                """
-                street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
-                self.addresses[pattern] = {'areas': [],
-                                           'street': street,
-                                           'modern_name': ''}
-                areas_node = addr_node.getElementsByTagName('areas')
+                            area_modern_name = ''
+                            modNode = area_node.getElementsByTagName('modern_name')
+                            if len(modNode) > 0:
+                                area_modern_name = modNode[0].firstChild.nodeValue
 
-                if len(areas_node) > 0:
-                    area_nodes = areas_node[0].getElementsByTagName('area')
-                    for area_node in area_nodes:
-                        self.addresses[pattern]['areas'].append(area_node.firstChild.nodeValue)
-                        """
+                            self.addresses[pattern]['areas'][name] = area_modern_name
+
     def clean_up(self, entry):
 
         if entry.forename in self.forenames:
@@ -157,6 +158,10 @@ class EntryChecker():
         if len(best_match) > 0:
             derived_address = self.addresses[best_match]['street']
             areas           = self.addresses[best_match]['areas']
+            modern_name     = self.addresses[best_match]['modern_name']
+
+            if modern_name:
+                derived_address = modern_name
 
             # try and get house number from original
             match = re.search('(\d+)', addr)
@@ -166,8 +171,14 @@ class EntryChecker():
             # check if area is associated with entry
             for area in areas:
                 if area.lower() in addr.lower():
-                    derived_address = '%s, %s' % (derived_address, area)
-                    #print 'AREA found %s ' % area
+                    # modern name is stored as a value
+                    if areas[area]:
+                        # replace address with modern name (note: drop area and door number)
+                        derived_address = areas[area]
+                    else:
+                        # append area to derived address
+                        derived_address = '%s, %s' % (derived_address, area)
+                    break
             location = encoder.get_location('%s, %s, %s' % (derived_address,
                                                             self.directory.town,
                                                             self.directory.country))

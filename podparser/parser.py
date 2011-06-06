@@ -20,6 +20,7 @@ class Parser:
                  start           = 0,
                  end             = 9999,
                  encoder_key     = None,
+                 client_id       = None,
                  verbose         = False,
                  pre_post_office = False,
                  commit          = False):
@@ -34,11 +35,12 @@ class Parser:
         self.pre_post_office = pre_post_office
         self.commit          = commit
 
-        if encoder_key:
-            import podparser.geo.encoder
-            self.geoencoder = podparser.geo.encoder.Google(encoder_key)
+        import podparser.geo.encoder
+        if encoder_key and client_id:
+            self.geoencoder = podparser.geo.encoder.GooglePremium(encoder_key, client_id)
         else:
-            self.geoencoder = None
+            self.geoencoder = podparser.geo.encoder.Google()
+            #self.geoencoder = None
  
     def run_parser(self, callback):
         """
@@ -126,6 +128,8 @@ class Parser:
         return entries
 
     def _fix_line_returns(self, lines):
+        # fix line wrapping int the PODs
+
         entries = []
 
         def add_to_last(entry):
@@ -257,14 +261,16 @@ if __name__ == "__main__":
                             nargs=1,
                             help='configuration directory')
     arg_parser.add_argument('-d', '--directory',
-                            nargs=1, 
+                            nargs=1,
                             help='postcode directory to be parsed')
     arg_parser.add_argument('-e', '--end',
                             default=9999,
                             type=int,
                             help='End page to be parsed (only applies to -d), If no end page given parse until last.')
     arg_parser.add_argument('-k', '--key',
-                            help='Geo parser key')
+                            help='Google premium private key')
+    arg_parser.add_argument('-i', '--client_id',
+                            help='Google premium client identifier')
     arg_parser.add_argument('-p', '--page',
                             help='single postcode directory page to be parsed')
     arg_parser.add_argument('-s', '--start',
@@ -304,5 +310,6 @@ if __name__ == "__main__":
                   start           = args.start,
                   end             = args.end,
                   encoder_key     = args.key,
+                  client_id       = args.client_id,
                   verbose         = args.verbose,
                   pre_post_office = args.williamson).run_parser(read_page)

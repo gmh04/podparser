@@ -4,7 +4,9 @@
     <pattern>street name</pattern>
     <street>STREET NAME</street>
     <areas>
-      <area>TOWN IF NOT GLASGOW</area>
+      <area>
+        <name>TOWN IF NOT GLASGOW</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -51,7 +53,9 @@
     <pattern>adelphi street</pattern>
     <street>Adelphi Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -70,24 +74,30 @@
     <pattern>agnew place</pattern>
     <street>Agnew Place</street>
     <areas>
-      <area>Crosshill</area>
-    </areas>
-    <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ailsa terrace</pattern>
     <street>Ailsa Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>airlie terrace</pattern>
     <street>Airlie Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -98,7 +108,9 @@
     <pattern>albany street</pattern>
     <street>Albany Street</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -109,7 +121,9 @@
     <pattern>albert drive</pattern>
     <street>Albert Drive</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -120,23 +134,27 @@
     <pattern>albert road</pattern>
     <street>Albert Road</street>
     <areas>
-      <area>(East) Crosshill</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
-    </areas>
-    <areas>
-      <area>(North) Pollockshields</area>
+      <area>
+        <name>(East) Crosshill</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
+      <area>
+        <name>(North) Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>albert street</pattern>
     <street>Albert Street</street>
     <areas>
-      <area>Townhead</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Townhead</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -147,21 +165,27 @@
     <pattern>alberta terrace</pattern>
     <street>Alberta Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>albion crescent</pattern>
     <street>Albion Crescent</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>albion place</pattern>
     <street>Albion Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -184,7 +208,9 @@
     <pattern>alexandra parade</pattern>
     <street>Alexandra Parade</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -195,21 +221,27 @@
     <pattern>alexandra street</pattern>
     <street>Alexandra Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>alfred terrace</pattern>
     <street>Alfred Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>alice place</pattern>
     <street>Alice Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -220,41 +252,51 @@
     <pattern>allander street</pattern>
     <street>Allander Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>allanton terrace</pattern>
     <street>Allanton Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>allison street</pattern>
     <street>Allison Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>alva terrace</pattern>
     <street>Alva Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>anderson street</pattern>
     <street>Anderson Street</street>
     <areas>
-      <area>Gallowgate</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
-    </areas>
-    <areas>
-      <area>Kinningpark</area>
+      <area>
+        <name>Gallowgate</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
+      <area>
+        <name>Kinningpark</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -265,23 +307,27 @@
     <pattern>ann street</pattern>
     <street>Ann Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Port-Dundas</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Port-Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>annette street</pattern>
     <street>Annette Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -292,7 +338,9 @@
     <pattern>annfield road</pattern>
     <street>Annfield Road</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -303,7 +351,9 @@
     <pattern>annfield terrace</pattern>
     <street>Annfield Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -326,17 +376,21 @@
     <pattern>ardine terrace</pattern>
     <street>Ardine Terrace</street>
     <areas>
-      <area>Govanhill</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ardoch street</pattern>
     <street>Ardoch Street</street>
     <areas>
-      <area>Possil Park</area>
+      <area>
+        <name>Possil Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -347,10 +401,12 @@
     <pattern>argyle plase</pattern>
     <street>Argyle Plase</street>
     <areas>
-      <area>Springburn</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Springburn</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -361,10 +417,12 @@
     <pattern>argyle terrace</pattern>
     <street>Argyle Terrace</street>
     <areas>
-      <area>Langside</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Langside</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -387,17 +445,21 @@
     <pattern>arthur street</pattern>
     <street>Arthur Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Overnewton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Overnewton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ashburne</pattern>
     <street>Ashburne</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -408,21 +470,27 @@
     <pattern>ashton place</pattern>
     <street>Ashton Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ashton terrace</pattern>
     <street>Ashton Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>athole gardens</pattern>
     <street>Athole Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -433,14 +501,18 @@
     <pattern>athole terrace</pattern>
     <street>Athole Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>avenue road</pattern>
     <street>Avenue Road</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -451,7 +523,9 @@
     <pattern>avon street</pattern>
     <street>Avon Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -466,7 +540,9 @@
     <pattern>aytoun road</pattern>
     <street>Aytoun Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -481,21 +557,27 @@
     <pattern>baird street</pattern>
     <street>Baird Street</street>
     <areas>
-      <area>St Rollox</area>
+      <area>
+        <name>St Rollox</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ballochmyle place</pattern>
     <street>Ballochmyle Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ballochmyle terrace</pattern>
     <street>Ballochmyle Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -506,35 +588,45 @@
     <pattern>balmore street</pattern>
     <street>Balmore Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>baltic street</pattern>
     <street>Baltic Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bank street</pattern>
     <street>Bank Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bardowie street</pattern>
     <street>Bardowie Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>barloch street</pattern>
     <street>Barloch Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -565,7 +657,9 @@
     <pattern>battlefield crescent</pattern>
     <street>Battlefield Crescent</street>
     <areas>
-      <area>Mt. Florida</area>
+      <area>
+        <name>Mt. Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -576,28 +670,36 @@
     <pattern>beaconsfield street</pattern>
     <street>Beaconsfield Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>beaufort gardens</pattern>
     <street>Beaufort Gardens</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>beaufort terrace</pattern>
     <street>Beaufort Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>beauly terrace</pattern>
     <street>Beauly Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -620,10 +722,12 @@
     <pattern>belgrave place</pattern>
     <street>Belgrave Place</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -634,31 +738,39 @@
     <pattern>belgrave terrace</pattern>
     <street>Belgrave Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>belhaven terrace</pattern>
     <street>Belhaven Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bell street</pattern>
     <street>Bell Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bellevue terrace</pattern>
     <street>Bellevue Terrace</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -673,21 +785,27 @@
     <pattern>belmar terrace</pattern>
     <street>Belmar Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>belmont crescent</pattern>
     <street>Belmont Crescent</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>belmont street</pattern>
     <street>Belmont Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -706,7 +824,9 @@
     <pattern>berlin place</pattern>
     <street>Berlin Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -725,10 +845,12 @@
     <pattern>bishop street</pattern>
     <street>Bishop Street</street>
     <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -743,7 +865,9 @@
     <pattern>blackie street</pattern>
     <street>Blackie Street</street>
     <areas>
-      <area>Overnewton</area>
+      <area>
+        <name>Overnewton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -762,28 +886,36 @@
     <pattern>boden street</pattern>
     <street>Boden Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bonnington terrace</pattern>
     <street>Bonnington Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>borron street</pattern>
     <street>Borron Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>boswell terrace</pattern>
     <street>Boswell Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -794,31 +926,39 @@
     <pattern>bothwell street</pattern>
     <street>Bothwell Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bothwell terrace</pattern>
     <street>Bothwell Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bowmont gardens</pattern>
     <street>Bowmont Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bowmont terrace</pattern>
     <street>Bowmont Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -837,7 +977,9 @@
     <pattern>braeside terrace</pattern>
     <street>Braeside Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -856,7 +998,9 @@
     <pattern>breadalbane place</pattern>
     <street>Breadalbane Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -867,17 +1011,21 @@
     <pattern>breadalbane terrace</pattern>
     <street>Breadalbane Terrace</street>
     <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bridge street</pattern>
     <street>Bridge Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -908,21 +1056,27 @@
     <pattern>broomhall street</pattern>
     <street>Broomhall Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>broomhill avenue</pattern>
     <street>Broomhill Avenue</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>broomhill drive</pattern>
     <street>Broomhill Drive</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -933,7 +1087,9 @@
     <pattern>broomhill terrace</pattern>
     <street>Broomhill Terrace</street>
     <areas>
-      <area>(West) Partick</area>
+      <area>
+        <name>(West) Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -952,34 +1108,42 @@
     <pattern>brougham terrace</pattern>
     <street>Brougham Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>brown street</pattern>
     <street>Brown Street</street>
     <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
-      <area>Broomielaw</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Broomielaw</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bruce road</pattern>
     <street>Bruce Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>bruce street</pattern>
     <street>Bruce Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1010,24 +1174,30 @@
     <pattern>buckingham buildings</pattern>
     <street>Buckingham Buildings</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>buckingham street</pattern>
     <street>Buckingham Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>buckingham terrace</pattern>
     <street>Buckingham Terrace</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1062,10 +1232,12 @@
     <pattern>byars' road</pattern>
     <street>Byars' Road</street>
     <areas>
-      <area>Partick</area>
-    </areas>
-    <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Partick</name>
+      </area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1076,14 +1248,18 @@
     <pattern>calder street</pattern>
     <street>Calder Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>calter terrace</pattern>
     <street>Calter Terrace</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1098,14 +1274,18 @@
     <pattern>callander place</pattern>
     <street>Callander Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>cambridge drive</pattern>
     <street>Cambridge Drive</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1140,45 +1320,57 @@
     <pattern>camphill avenue</pattern>
     <street>Camphill Avenue</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>camphill quadrant</pattern>
     <street>Camphill Quadrant</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>campside crescent</pattern>
     <street>Campside Crescent</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>camvale buildings</pattern>
     <street>Camvale Buildings</street>
     <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>canal street</pattern>
     <street>Canal Street</street>
     <areas>
-      <area>Port Dundas</area>
-    </areas>
-    <areas>
-      <area>Port Eglinton</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
+      <area>
+        <name>Port Eglinton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>canal bank street</pattern>
     <street>Canal Bank Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1201,28 +1393,36 @@
     <pattern>canonbury terrace</pattern>
     <street>Canonbury Terrace</street>
     <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>caprera place</pattern>
     <street>Caprera Place</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>carbeth street</pattern>
     <street>Carbeth Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>carfin street</pattern>
     <street>Carfin Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1237,7 +1437,9 @@
     <pattern>carlton terrace</pattern>
     <street>Carlton Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1264,17 +1466,21 @@
     <pattern>castlebank street</pattern>
     <street>Castlebank Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>cathcart road</pattern>
     <street>Cathcart Road</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1285,27 +1491,33 @@
     <pattern>catherine street</pattern>
     <street>Catherine Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>cathkin road</pattern>
     <street>Cathkin Road</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>cathkin terrace</pattern>
     <street>Cathkin Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1320,10 +1532,12 @@
     <pattern>cecil street</pattern>
     <street>Cecil Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1346,10 +1560,12 @@
     <pattern>charles street</pattern>
     <street>Charles Street</street>
     <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Townhead</area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Townhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1360,10 +1576,12 @@
     <pattern>charlotte street</pattern>
     <street>Charlotte Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1382,14 +1600,18 @@
     <pattern>church street</pattern>
     <street>Church Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>circus drive</pattern>
     <street>Circus Drive</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1408,7 +1630,9 @@
     <pattern>clarence street</pattern>
     <street>Clarence Street</street>
     <areas>
-      <area>Kingston</area>
+      <area>
+        <name>Kingston</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1419,10 +1643,12 @@
     <pattern>claredon street</pattern>
     <street>Claredon Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1473,16 +1699,18 @@
     <pattern>clyde street</pattern>
     <street>Clyde Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1505,7 +1733,9 @@
     <pattern>clyde view</pattern>
     <street>Clyde View</street>
     <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1516,14 +1746,18 @@
     <pattern>cobden place</pattern>
     <street>Cobden Place</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>coburg place</pattern>
     <street>Coburg Place</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1538,14 +1772,18 @@
     <pattern>colebrooke street</pattern>
     <street>Colebrooke Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>college</pattern>
     <street>College</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1596,7 +1834,9 @@
     <pattern>cowan street</pattern>
     <street>Cowan Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1607,14 +1847,18 @@
     <pattern>cowlairs road</pattern>
     <street>Cowlairs Road</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>craig street</pattern>
     <street>Craig Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1649,16 +1893,18 @@
     <pattern>crawford street</pattern>
     <street>Crawford Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
-    </areas>
-    <areas>
-      <area>Port Eglinton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
+      <area>
+        <name>Port Eglinton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1673,14 +1919,18 @@
     <pattern>crookston street</pattern>
     <street>Crookston Street</street>
     <areas>
-      <area>Kingston</area>
+      <area>
+        <name>Kingston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>cross street</pattern>
     <street>Cross Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1691,35 +1941,45 @@
     <pattern>crossloan road</pattern>
     <street>Crossloan Road</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>crow road</pattern>
     <street>Crow Road</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>crown circus</pattern>
     <street>Crown Circus</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>crown gardens</pattern>
     <street>Crown Gardens</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>crown place</pattern>
     <street>Crown Place</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1738,7 +1998,9 @@
     <pattern>crown terrace</pattern>
     <street>Crown Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1757,10 +2019,12 @@
     <pattern>cumberland street</pattern>
     <street>Cumberland Street</street>
     <areas>
-      <area>Laurieston</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
+      <area>
+        <name>Laurieston</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1771,24 +2035,30 @@
     <pattern>cumbrae place</pattern>
     <street>Cumbrae Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>daisy street</pattern>
     <street>Daisy Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dale street</pattern>
     <street>Dale Street</street>
     <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
-      <area>Tradeston</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Tradeston</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1807,7 +2077,9 @@
     <pattern>darnley street</pattern>
     <street>Darnley Street</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1826,14 +2098,18 @@
     <pattern>denmark street</pattern>
     <street>Denmark Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>derby crescent</pattern>
     <street>Derby Crescent</street>
     <areas>
-      <area>Kelvonside</area>
+      <area>
+        <name>Kelvonside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1852,7 +2128,9 @@
     <pattern>dixon avenue</pattern>
     <street>Dixon Avenue</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1871,7 +2149,9 @@
     <pattern>doon terrace</pattern>
     <street>Doon Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1882,24 +2162,30 @@
     <pattern>douglas street</pattern>
     <street>Douglas Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>doune place</pattern>
     <street>Doune Place</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>doune terrace</pattern>
     <street>Doune Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1914,35 +2200,45 @@
     <pattern>dowanhill gardens</pattern>
     <street>Dowanhill Gardens</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dowanhill place</pattern>
     <street>Dowanhill Place</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dowanhill street</pattern>
     <street>Dowanhill Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dowanvale terrace</pattern>
     <street>Dowanvale Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>downie place</pattern>
     <street>Downie Place</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1965,10 +2261,12 @@
     <pattern>dumbarton road</pattern>
     <street>Dumbarton Road</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -1987,38 +2285,48 @@
     <pattern>dundas street</pattern>
     <street>Dundas Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kingston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kingston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dundas terrace</pattern>
     <street>Dundas Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dundonald road</pattern>
     <street>Dundonald Road</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dunedin place</pattern>
     <street>Dunedin Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>dunkelt place</pattern>
     <street>Dunkelt Place</street>
     <areas>
-      <area>Hillhead </area>
+      <area>
+        <name>Hillhead </name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2053,14 +2361,18 @@
     <pattern>eastfield place</pattern>
     <street>Eastfield Place</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>eastfield street</pattern>
     <street>eastfield Street</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2071,17 +2383,21 @@
     <pattern>edgefauld terrace</pattern>
     <street>Edgefauld Terrace</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>edmund street</pattern>
     <street>Edmund Street</street>
     <areas>
-      <area>Dennistoun</area>
-    </areas>
-    <areas>
-      <area>Overnewton</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
+      <area>
+        <name>Overnewton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2096,21 +2412,27 @@
     <pattern>eglinton terrace</pattern>
     <street>Eglinton Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>eildon villas</pattern>
     <street>Eildon Villas</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>elcho place</pattern>
     <street>Elcho Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2129,7 +2451,9 @@
     <pattern>eldon terrace</pattern>
     <street>Eldon Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2144,17 +2468,21 @@
     <pattern>elgin terrace</pattern>
     <street>Elgin Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>elliton street</pattern>
     <street>Elliton Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2181,42 +2509,54 @@
     <pattern>ethel terrace</pattern>
     <street>Ethel Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>eton gardens</pattern>
     <street>Eton Gardens</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>eton place</pattern>
     <street>Eton Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>ettrick terrace</pattern>
     <street>Ettrick Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>fairlie bank</pattern>
     <street>Fairlie Bank</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>fairlie park</pattern>
     <street>Fairlie Park</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2251,7 +2591,9 @@
     <pattern>finlayson place</pattern>
     <street>Finlayson Place</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2270,7 +2612,9 @@
     <pattern>firpark terrace</pattern>
     <street>Firpark Terrace</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2293,7 +2637,9 @@
     <pattern>florentine gardens</pattern>
     <street>Florentine Gardens</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2312,24 +2658,30 @@
     <pattern>foremount terrace</pattern>
     <street>Foremount Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>forth street</pattern>
     <street>Forth Street</street>
     <areas>
-      <area>Glasogw</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasogw</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>fountainwell road</pattern>
     <street>Fountainwell Road</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2340,7 +2692,9 @@
     <pattern>franklin street</pattern>
     <street>Franklin Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2431,7 +2785,9 @@
     <pattern>garthland drive</pattern>
     <street>Garthland Drive</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2442,7 +2798,9 @@
     <pattern>garturk street</pattern>
     <street>Garturk Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2477,7 +2835,9 @@
     <pattern>glasgow street</pattern>
     <street>Glasgow Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2492,7 +2852,9 @@
     <pattern>glenavon terrace</pattern>
     <street>Glenavon Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2503,7 +2865,9 @@
     <pattern>glencairn terrace</pattern>
     <street>Glencairn Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2518,7 +2882,9 @@
     <pattern>golf-hill drive</pattern>
     <street>Golf-hill Drive</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2537,7 +2903,9 @@
     <pattern>gourlay street</pattern>
     <street>Gourlay Street</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2552,21 +2920,27 @@
     <pattern>govanhill street</pattern>
     <street>Govanhill Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>govanview terrace</pattern>
     <street>Govanview Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>gower street</pattern>
     <street>Gower Street</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2597,31 +2971,39 @@
     <pattern>graham street</pattern>
     <street>Graham Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>granby place</pattern>
     <street>Granby Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>granby terrace</pattern>
     <street>Granby Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>grange terrace</pattern>
     <street>Grange Terrace</street>
     <areas>
-      <area>Mount Florida</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2632,14 +3014,18 @@
     <pattern>granville buildings</pattern>
     <street>Granville Buildings</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>granville place</pattern>
     <street>Granville Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2654,14 +3040,18 @@
     <pattern>great george street</pattern>
     <street>Great George Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>great kelvin terrace</pattern>
     <street>Great Kelvin Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2672,40 +3062,48 @@
     <pattern>great western road</pattern>
     <street>Great Western Road</street>
     <areas>
-      <area>Glasogw</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Glasogw</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>great western terrace</pattern>
     <street>Great Western Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>green street</pattern>
     <street>Green Street</street>
     <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Low</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Low</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>greenbank </pattern>
     <street>Greenbank </street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2748,21 +3146,27 @@
     <pattern>grosvenor crescent</pattern>
     <street>Grosvenor Crescent</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>grosvenor place</pattern>
     <street>Grosvenor Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>grosvenor terrace</pattern>
     <street>Grosvenor Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2773,14 +3177,18 @@
     <pattern>hamilton crescent</pattern>
     <street>Hamilton Crescent</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hamilton drive</pattern>
     <street>Hamilton Drive</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2791,41 +3199,51 @@
     <pattern>hamilton place</pattern>
     <street>Hamilton Place</street>
     <areas>
-      <area>Landside</area>
+      <area>
+        <name>Landside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hamilton street</pattern>
     <street>Hamilton Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hamilton terrace</pattern>
     <street>Hamilton Terrace</street>
     <areas>
-      <area>(East</area>
-    </areas>
-    <areas>
-      <area>West) Partick</area>
+      <area>
+        <name>(East</name>
+      </area>
+      <area>
+        <name>West) Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hampden place</pattern>
     <street>Hampden Place</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hampden terrace</pattern>
     <street>Hampden Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2840,7 +3258,9 @@
     <pattern>harmony place</pattern>
     <street>Harmony Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2867,21 +3287,27 @@
     <pattern>hawthorn street</pattern>
     <street>Hawthorn Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hayburn crescent</pattern>
     <street>Hayburn Crescent</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hayburn terrace</pattern>
     <street>Hayburn Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2892,17 +3318,21 @@
     <pattern>hayfield terrace</pattern>
     <street>Hayfield Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>henderson street</pattern>
     <street>Henderson Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2917,27 +3347,31 @@
     <pattern>herriot street</pattern>
     <street>Herriot Street</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>high street</pattern>
     <street>High Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Gallowgate</area>
-    </areas>
-    <areas>
-      <area>Garnethill</area>
-    </areas>
-    <areas>
       <area>
-         
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Gallowgate</name>
+      </area>
+      <area>
+        <name>Garnethill</name>
+      </area>
+      <area>
+        <name>
+           
+        </name>
       </area>
     </areas>
   </address>
@@ -2945,45 +3379,57 @@
     <pattern>hill street</pattern>
     <street>Hill Street</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hillhead street</pattern>
     <street>Hillhead Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hillsborough square</pattern>
     <street>Hillsborough Square</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hillsborough terrace</pattern>
     <street>Hillsborough Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hillside gardens</pattern>
     <street>Hillside Gardens</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hillside terrace</pattern>
     <street>Hillside Terrace</street>
     <areas>
-      <area>Dennistoun</area>
-    </areas>
-    <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -2994,7 +3440,9 @@
     <pattern>holborn terrace</pattern>
     <street>Holborn Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3025,10 +3473,12 @@
     <pattern>hope street</pattern>
     <street>Hope Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3047,7 +3497,9 @@
     <pattern>horselethill road</pattern>
     <street>Horselethill Road</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3066,10 +3518,12 @@
     <pattern>howard street</pattern>
     <street>Howard Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3084,7 +3538,9 @@
     <pattern>huntly gardens</pattern>
     <street>Huntly Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3103,28 +3559,34 @@
     <pattern>hyndland road</pattern>
     <street>Hyndland Road</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>hyndland street</pattern>
     <street>Hyndland Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>india street</pattern>
     <street>India Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
-    </areas>
-    <areas>
       <area>
-         
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
+      <area>
+        <name>
+           
+        </name>
       </area>
     </areas>
   </address>
@@ -3152,7 +3614,9 @@
     <pattern>iona place</pattern>
     <street>Iona Place</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3171,16 +3635,18 @@
     <pattern>james' street</pattern>
     <street>James' Street</street>
     <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Greenhead</area>
-    </areas>
-    <areas>
-      <area>Mile-end</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Greenhead</name>
+      </area>
+      <area>
+        <name>Mile-end</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3195,17 +3661,21 @@
     <pattern>jamieson street</pattern>
     <street>Jamieson Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>jane place</pattern>
     <street>Jane Place</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3216,10 +3686,12 @@
     <pattern>john street</pattern>
     <street>John Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3230,48 +3702,60 @@
     <pattern>keir street</pattern>
     <street>Keir Street</street>
     <areas>
-      <area>East Pollockshields</area>
+      <area>
+        <name>East Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>keir terrace</pattern>
     <street>Keir Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kelbourne street</pattern>
     <street>Kelbourne Street</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kelburn terrace</pattern>
     <street>Kelburn Terrace</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kelvin drive</pattern>
     <street>Kelvin Drive</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kelvin street</pattern>
     <street>Kelvin Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3290,31 +3774,39 @@
     <pattern>kelvinside gardens</pattern>
     <street>Kelvinside Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kenmure place</pattern>
     <street>Kenmure Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kenmure street</pattern>
     <street>Kenmure Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields (East)</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields (East)</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kenmure terrace</pattern>
     <street>Kenmure Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3333,35 +3825,45 @@
     <pattern>keppochhill road</pattern>
     <street>Keppochhill Road</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kerr street</pattern>
     <street>Kerr Street</street>
     <areas>
-      <area>Calton</area>
+      <area>
+        <name>Calton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kersland street</pattern>
     <street>Kersland Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kersland terrace</pattern>
     <street>Kersland Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kew terrace</pattern>
     <street>Kew Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3372,7 +3874,9 @@
     <pattern>killearn street</pattern>
     <street>Killearn Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3387,16 +3891,18 @@
     <pattern>king street</pattern>
     <street>King Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Mile-end</area>
-    </areas>
-    <areas>
-      <area>Tradeston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Mile-end</name>
+      </area>
+      <area>
+        <name>Tradeston</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3407,34 +3913,42 @@
     <pattern>kinning street</pattern>
     <street>Kinning Street</street>
     <areas>
-      <area>Kingston</area>
+      <area>
+        <name>Kingston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kirk street</pattern>
     <street>Kirk Street</street>
     <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Gorbals</area>
-    </areas>
-    <areas>
-      <area>Townhead</area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Gorbals</name>
+      </area>
+      <area>
+        <name>Townhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kirklee gardens</pattern>
     <street>Kirklee Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>kirklee road</pattern>
     <street>Kirklee Road</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3449,7 +3963,9 @@
     <pattern>knowe terrace</pattern>
     <street>Knowe Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3460,7 +3976,9 @@
     <pattern>la belle place</pattern>
     <street>La Belle Place</street>
     <areas>
-      <area>Kelvingrove</area>
+      <area>
+        <name>Kelvingrove</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3479,7 +3997,9 @@
     <pattern>lamlash place</pattern>
     <street>Lamlash Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3490,7 +4010,9 @@
     <pattern>lancaster terrace</pattern>
     <street>Lancaster Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3505,14 +4027,18 @@
     <pattern>lancelot place</pattern>
     <street>Lancelot Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>landore terrace</pattern>
     <street>Landore Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3523,10 +4049,12 @@
     <pattern>langside road</pattern>
     <street>Langside Road</street>
     <areas>
-      <area>Crosshill</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3541,42 +4069,54 @@
     <pattern>laurel bank</pattern>
     <street>Laurel Bank</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>lawrence place</pattern>
     <street>Lawrence Place</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>lendel terrace</pattern>
     <street>Lendel Terrace</street>
     <areas>
-      <area>Govan</area>
+      <area>
+        <name>Govan</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>leslie road</pattern>
     <street>Leslie Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>leslie street</pattern>
     <street>Leslie Street</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>leven street</pattern>
     <street>Leven Street</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3591,7 +4131,9 @@
     <pattern>lillybank terrace</pattern>
     <street>Lillybank Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3602,14 +4144,18 @@
     <pattern>linden terrace</pattern>
     <street>Linden Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>lindsay terrace</pattern>
     <street>Lindsay Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3620,7 +4166,9 @@
     <pattern>linwood terrace</pattern>
     <street>Linwood Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3635,10 +4183,12 @@
     <pattern>lochinver terrace</pattern>
     <street>Lochinver Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3649,7 +4199,9 @@
     <pattern>lomond street</pattern>
     <street>Lomond Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3664,31 +4216,39 @@
     <pattern>lorne place</pattern>
     <street>Lorne Place</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>lorne terrace</pattern>
     <street>Lorne Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>loudon place</pattern>
     <street>Loudon Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>loudon terrace</pattern>
     <street>Loudon Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3699,7 +4259,9 @@
     <pattern>lugar place</pattern>
     <street>Lugar Place</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3710,7 +4272,9 @@
     <pattern>luton place</pattern>
     <street>Luton Place</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3741,7 +4305,9 @@
     <pattern>mcculloch street</pattern>
     <street>McCulloch Street</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3756,7 +4322,9 @@
     <pattern>mcintyre street</pattern>
     <street>McIntyre Street</street>
     <areas>
-      <area>Anderston</area>
+      <area>
+        <name>Anderston</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3787,20 +4355,22 @@
     <pattern>main street</pattern>
     <street>Main Street</street>
     <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Gorbals</area>
-    </areas>
-    <areas>
       <area>
-         
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Gorbals</name>
+      </area>
+      <area>
+        <name>
+           
+        </name>
       </area>
     </areas>
   </address>
@@ -3816,17 +4386,21 @@
     <pattern>maitland place</pattern>
     <street>Maitland Place</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>mallsmire place</pattern>
     <street>Mallsmire Place</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3837,45 +4411,57 @@
     <pattern>mansfield street</pattern>
     <street>Mansfield Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>mansion house road</pattern>
     <street>Mansion House Road</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>mansion street</pattern>
     <street>Mansion Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>marchmont terrace</pattern>
     <street>Marchmont Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>margaret street</pattern>
     <street>Margaret Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Laurieston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Laurieston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>marjory place</pattern>
     <street>Marjory Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3886,7 +4472,9 @@
     <pattern>markland terrace</pattern>
     <street>Markland Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -3917,80 +4505,102 @@
     <pattern>matilda place</pattern>
     <street>Matilda Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>matilda terrace</pattern>
     <street>Matilda Terrace</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>matilda road</pattern>
     <street>Matilda Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>maule terrace</pattern>
     <street>Maule Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>maxwell road</pattern>
     <street>Maxwell Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>maxwell street</pattern>
     <street>Maxwell Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>maxwell terrace</pattern>
     <street>Maxwell Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>may terrace</pattern>
     <street>May Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>maybank terrace</pattern>
     <street>Maybank Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>meadowbank crescent</pattern>
     <street>Meadowbank Crescent</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>meadowbank place</pattern>
     <street>Meadowbank Place</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4001,7 +4611,9 @@
     <pattern>meadowvale</pattern>
     <street>Meadowvale</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4028,17 +4640,21 @@
     <pattern>melville street</pattern>
     <street>Melville Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>melville terrace</pattern>
     <street>Melville Terrace</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4049,7 +4665,9 @@
     <pattern>merkland street</pattern>
     <street>Merkland Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4064,35 +4682,45 @@
     <pattern>millarbank street</pattern>
     <street>Millarbank Street</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>millbrae crescent</pattern>
     <street>Millbrae Crescent</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>millbrae road</pattern>
     <street>Millbrae Road</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>millbrae terrace</pattern>
     <street>Millbrae Terrace</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>millburn street</pattern>
     <street>Millburn Street</street>
     <areas>
-      <area>Garngadhill</area>
+      <area>
+        <name>Garngadhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4123,28 +4751,36 @@
     <pattern>milton terrace</pattern>
     <street>Milton Terrace</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>minard avenue</pattern>
     <street>Minard Avenue</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>minard road</pattern>
     <street>Minard Road</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>minard terrace</pattern>
     <street>Minard Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4183,14 +4819,18 @@
     <pattern>montgomerie crescent</pattern>
     <street>Montgomerie Crescent</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>montgomerie drive</pattern>
     <street>Montgomerie Drive</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4201,7 +4841,9 @@
     <pattern>montgomerie terrace</pattern>
     <street>Montgomerie Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4220,7 +4862,9 @@
     <pattern>moray place</pattern>
     <street>Moray Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4239,14 +4883,18 @@
     <pattern>mosesfield terrace</pattern>
     <street>Mosesfield Terrace</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>mossview </pattern>
     <street>Mossview </street>
     <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4269,21 +4917,27 @@
     <pattern>muse lane</pattern>
     <street>Muse Lane</street>
     <areas>
-      <area>Cowcaddens</area>
+      <area>
+        <name>Cowcaddens</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>muslin street</pattern>
     <street>Muslin Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>myrtle park</pattern>
     <street>Myrtle Park</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4306,17 +4960,21 @@
     <pattern>nelson street</pattern>
     <street>Nelson Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Tradeston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Tradeston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>nelson terrace</pattern>
     <street>Nelson Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4335,7 +4993,9 @@
     <pattern>new street</pattern>
     <street>New Street</street>
     <areas>
-      <area>Calton</area>
+      <area>
+        <name>Calton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4370,10 +5030,12 @@
     <pattern>nithsdale road</pattern>
     <street>Nithsdale Road</street>
     <areas>
-      <area>Pollockshields</area>
-    </areas>
-    <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4392,14 +5054,18 @@
     <pattern>north street</pattern>
     <street>North Street</street>
     <areas>
-      <area>Anderston</area>
+      <area>
+        <name>Anderston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>north-east park street</pattern>
     <street>North-East Park Street</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4426,7 +5092,9 @@
     <pattern>oakfield terrace</pattern>
     <street>Oakfield Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4457,10 +5125,12 @@
     <pattern>orchard street</pattern>
     <street>Orchard Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4471,21 +5141,25 @@
     <pattern>oswald place</pattern>
     <street>Oswald Place</street>
     <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>oswald street</pattern>
     <street>Oswald Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Bridgeton</area>
-    </areas>
-    <areas>
       <area>
-         
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>
+           
+        </name>
       </area>
     </areas>
   </address>
@@ -4493,7 +5167,9 @@
     <pattern>otago street</pattern>
     <street>Otago Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4540,20 +5216,22 @@
     <pattern>park street</pattern>
     <street>Park Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kelvinhaugh</area>
-    </areas>
-    <areas>
-      <area>Kinning Park</area>
-    </areas>
-    <areas>
-      <area>Plantation</area>
-    </areas>
-    <areas>
       <area>
-         
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kelvinhaugh</name>
+      </area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
+      <area>
+        <name>Plantation</name>
+      </area>
+      <area>
+        <name>
+           
+        </name>
       </area>
     </areas>
   </address>
@@ -4561,13 +5239,15 @@
     <pattern>park terrace</pattern>
     <street>Park Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4586,7 +5266,9 @@
     <pattern>parkview</pattern>
     <street>Parkview</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4601,20 +5283,24 @@
     <pattern>partickhill road</pattern>
     <street>Partickhill Road</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>paterson street</pattern>
     <street>Paterson Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Kingaton</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Kingaton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4625,14 +5311,18 @@
     <pattern>paxton terrace</pattern>
     <street>Paxton Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>peel street</pattern>
     <street>Peel Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4651,7 +5341,9 @@
     <pattern>percy terrace</pattern>
     <street>Percy Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4698,17 +5390,21 @@
     <pattern>pollockshaws road</pattern>
     <street>Pollockshaws Road</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>polmadie street</pattern>
     <street>Polmadie Street</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4727,14 +5423,18 @@
     <pattern>portman place</pattern>
     <street>Portman Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>portman street</pattern>
     <street>Portman Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4745,24 +5445,30 @@
     <pattern>preston street</pattern>
     <street>Preston Street</street>
     <areas>
-      <area>Bridgetonm Govanhill</area>
+      <area>
+        <name>Bridgetonm Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>prince edward street</pattern>
     <street>Prince Edward Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>prince's square</pattern>
     <street>Prince's Square</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4773,17 +5479,21 @@
     <pattern>prince's terrace</pattern>
     <street>Prince's Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>prince of wales terrace</pattern>
     <street>Prince of Wales Terrace</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4798,7 +5508,9 @@
     <pattern>queensberry terrace</pattern>
     <street>Queensberry Terrace</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4809,14 +5521,18 @@
     <pattern>queen's drive</pattern>
     <street>Queen's Drive</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>queen mary avenue</pattern>
     <street>Queen Mary Avenue</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4827,7 +5543,9 @@
     <pattern>queen's park place</pattern>
     <street>Queen's Park Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4842,7 +5560,9 @@
     <pattern>queen square</pattern>
     <street>Queen Square</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4865,7 +5585,9 @@
     <pattern>rae street</pattern>
     <street>Rae Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4880,14 +5602,18 @@
     <pattern>randolph place</pattern>
     <street>Randolph Place</street>
     <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>randolph terrace</pattern>
     <street>Randolph Terrace</street>
     <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4898,14 +5624,18 @@
     <pattern>regent park square</pattern>
     <street>Regent Park Square</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>regent park terrace</pattern>
     <street>Regent Park Terrace</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4920,7 +5650,9 @@
     <pattern>reid street</pattern>
     <street>Reid Street</street>
     <areas>
-      <area>Bridgeton</area>
+      <area>
+        <name>Bridgeton</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4951,14 +5683,18 @@
     <pattern>renton terrace</pattern>
     <street>Renton Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>renwick street</pattern>
     <street>Renwick Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -4989,21 +5725,27 @@
     <pattern>rockbank </pattern>
     <street>Rockbank </street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>rocklea terrace</pattern>
     <street>Rocklea Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>rokeby terrace</pattern>
     <street>Rokeby Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5018,13 +5760,15 @@
     <pattern>rose street</pattern>
     <street>Rose Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Garnethill</area>
-    </areas>
-    <areas>
-      <area>Hutchesontown</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Garnethill</name>
+      </area>
+      <area>
+        <name>Hutchesontown</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5035,10 +5779,12 @@
     <pattern>roseberry terrace</pattern>
     <street>Roseberry Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5057,7 +5803,9 @@
     <pattern>roslea drive</pattern>
     <street>Roslea Drive</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5068,31 +5816,39 @@
     <pattern>rosevale street</pattern>
     <street>Rosevale Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>rosevale terrace</pattern>
     <street>Rosevale Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>rosslyn place</pattern>
     <street>Rosslyn Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>rosslyn terrace</pattern>
     <street>Rosslyn Terrace</street>
     <areas>
-      <area>Kelvinside</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5103,7 +5859,9 @@
     <pattern>roxburgh street</pattern>
     <street>Roxburgh Street</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5118,10 +5876,12 @@
     <pattern>royal crescent</pattern>
     <street>Royal Crescent</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5140,10 +5900,12 @@
     <pattern>royal terrace</pattern>
     <street>Royal Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5178,7 +5940,9 @@
     <pattern>ruthven street</pattern>
     <street>Ruthven Street</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5193,7 +5957,9 @@
     <pattern>alban's terrace</pattern>
     <street>Alban's Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5204,7 +5970,9 @@
     <pattern>st andrew's road</pattern>
     <street>St Andrew's Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5219,7 +5987,9 @@
     <pattern>st bernard's place</pattern>
     <street>St Bernard's Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5246,34 +6016,42 @@
     <pattern>st james' street</pattern>
     <street>St James' Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Kingston</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Kingston</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>st james' terrace</pattern>
     <street>St James' Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>st john's road</pattern>
     <street>St John's Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>st john's terrace</pattern>
     <street>St John's Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5312,7 +6090,9 @@
     <pattern>salisbury quadrant</pattern>
     <street>Salisbury Quadrant</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5323,7 +6103,9 @@
     <pattern>salisbury terrace</pattern>
     <street>Salisbury Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5338,14 +6120,18 @@
     <pattern>sanbank</pattern>
     <street>Sanbank</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>sandringham terrace</pattern>
     <street>Sandringham Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5368,14 +6154,18 @@
     <pattern>saracen street</pattern>
     <street>Saracen Street</street>
     <areas>
-      <area>Possilpark</area>
+      <area>
+        <name>Possilpark</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>sardinia terrace</pattern>
     <street>Sardinia Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5394,20 +6184,24 @@
     <pattern>scotland street</pattern>
     <street>Scotland Street</street>
     <areas>
-      <area>Tradeston</area>
-    </areas>
-    <areas>
-      <area>Woodlands</area>
+      <area>
+        <name>Tradeston</name>
+      </area>
+      <area>
+        <name>Woodlands</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>scott street</pattern>
     <street>Scott Street</street>
     <areas>
-      <area>Garnethill</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Garnethill</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5422,14 +6216,18 @@
     <pattern>seton terrace </pattern>
     <street>Seton Terrace </street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>seyton avenue</pattern>
     <street>Seyton Avenue</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5456,17 +6254,21 @@
     <pattern>shields road</pattern>
     <street>Shields Road</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>shields terrace</pattern>
     <street>Shields Terrace</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5497,7 +6299,9 @@
     <pattern>skirbing street</pattern>
     <street>Skirbing Street</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5508,16 +6312,18 @@
     <pattern>smith street</pattern>
     <street>Smith Street</street>
     <areas>
-      <area>Govanhill</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Kinning Park</area>
-    </areas>
-    <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5536,14 +6342,18 @@
     <pattern>somerville drive</pattern>
     <street>Somerville Drive</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>south park terrace</pattern>
     <street>South Park Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5566,21 +6376,27 @@
     <pattern>spoutmouth</pattern>
     <street>Spoutmouth</street>
     <areas>
-      <area>Gallowgate</area>
+      <area>
+        <name>Gallowgate</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>spring gardens</pattern>
     <street>Spring Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>spring place</pattern>
     <street>Spring Place</street>
     <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5603,7 +6419,9 @@
     <pattern>springhill terrace</pattern>
     <street>Springhill Terrace</street>
     <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5634,17 +6452,21 @@
     <pattern>stanley street</pattern>
     <street>Stanley Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>stanmore terrace</pattern>
     <street>Stanmore Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5655,14 +6477,18 @@
     <pattern>stella place</pattern>
     <street>Stella Place</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>stevenson drive</pattern>
     <street>Stevenson Drive</street>
     <areas>
-      <area>Langside</area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5681,14 +6507,18 @@
     <pattern>stuart street</pattern>
     <street>Stuart Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>stewartville street</pattern>
     <street>Stewartville Street</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5699,10 +6529,12 @@
     <pattern>stirling street</pattern>
     <street>Stirling Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5737,10 +6569,12 @@
     <pattern>struan terrace</pattern>
     <street>Struan Terrace</street>
     <areas>
-      <area>Crosshill</area>
-    </areas>
-    <areas>
-      <area>Gvanhill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Gvanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5751,14 +6585,18 @@
     <pattern>summerfield cottages</pattern>
     <street>Summerfield Cottages</street>
     <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>summerfield place</pattern>
     <street>Summerfield Place</street>
     <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5789,14 +6627,18 @@
     <pattern>sutherland terrace</pattern>
     <street>Sutherland Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>swan street</pattern>
     <street>Swan Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5835,7 +6677,9 @@
     <pattern>teviot terrace</pattern>
     <street>Teviot Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5846,10 +6690,12 @@
     <pattern>thistle street</pattern>
     <street>Thistle Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Garnethill</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Garnethill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5860,10 +6706,12 @@
     <pattern>thomson's lane</pattern>
     <street>Thomson's Lane</street>
     <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Mile-end</area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Mile-end</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5878,7 +6726,9 @@
     <pattern>thornville terrace</pattern>
     <street>Thornville Terrace</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5889,7 +6739,9 @@
     <pattern>titwood place</pattern>
     <street>Titwood Place</street>
     <areas>
-      <area>Strathbungo</area>
+      <area>
+        <name>Strathbungo</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5904,7 +6756,9 @@
     <pattern>towerhill terrace</pattern>
     <street>Towerhill Terrace</street>
     <areas>
-      <area>Springburn</area>
+      <area>
+        <name>Springburn</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5935,7 +6789,9 @@
     <pattern>university avenue</pattern>
     <street>University Avenue</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5950,7 +6806,9 @@
     <pattern>valeview terrace</pattern>
     <street>Valeview Terrace</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -5961,84 +6819,102 @@
     <pattern>victoria buildings</pattern>
     <street>Victoria Buildings</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria crescent</pattern>
     <street>Victoria Crescent</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria cross</pattern>
     <street>Victoria Cross</street>
     <areas>
-      <area>Grosshill</area>
+      <area>
+        <name>Grosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria drive</pattern>
     <street>Victoria Drive</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria place</pattern>
     <street>Victoria Place</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria road</pattern>
     <street>Victoria Road</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria street</pattern>
     <street>Victoria Street</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Port Eglinton</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Port Eglinton</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>victoria terrace</pattern>
     <street>Victoria Terrace</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Mount Florida</area>
-    </areas>
-    <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>viewfield terrace</pattern>
     <street>Viewfield Terrace</street>
     <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6049,7 +6925,9 @@
     <pattern>vinicombe street</pattern>
     <street>Vinicombe Street</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6068,10 +6946,12 @@
     <pattern>walker street</pattern>
     <street>Walker Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6118,7 +6998,9 @@
     <pattern>water street</pattern>
     <street>Water Street</street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6133,7 +7015,9 @@
     <pattern>watt street</pattern>
     <street>Watt Street</street>
     <areas>
-      <area>Kinning Park</area>
+      <area>
+        <name>Kinning Park</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6176,7 +7060,9 @@
     <pattern>wellpark place</pattern>
     <street>Wellpark Place</street>
     <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6195,14 +7081,18 @@
     <pattern>wendover crescent</pattern>
     <street>Wendover Crescent</street>
     <areas>
-      <area>Mount Florida</area>
+      <area>
+        <name>Mount Florida</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>wesleyan street</pattern>
     <street>Wesleyan Street</street>
     <areas>
-      <area>Mile-end</area>
+      <area>
+        <name>Mile-end</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6213,7 +7103,9 @@
     <pattern>westbank place</pattern>
     <street>Westbank Place</street>
     <areas>
-      <area>Hillhead</area>
+      <area>
+        <name>Hillhead</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6228,21 +7120,27 @@
     <pattern>westbourne gardens</pattern>
     <street>Westbourne Gardens</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>westbourne terrace</pattern>
     <street>Westbourne Terrace</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>westburn place</pattern>
     <street>Westburn Place</street>
     <areas>
-      <area>Whiteinch</area>
+      <area>
+        <name>Whiteinch</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6253,7 +7151,9 @@
     <pattern>westfield terrace</pattern>
     <street>Westfield Terrace</street>
     <areas>
-      <area>Partick</area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6276,7 +7176,9 @@
     <pattern>west view gardens</pattern>
     <street>West View Gardens</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6291,7 +7193,9 @@
     <pattern>westmoreland street</pattern>
     <street>Westmoreland Street</street>
     <areas>
-      <area>Govanhill</area>
+      <area>
+        <name>Govanhill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6302,28 +7206,36 @@
     <pattern>wharf </pattern>
     <street>Wharf </street>
     <areas>
-      <area>Port Dundas</area>
+      <area>
+        <name>Port Dundas</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>whitehall place</pattern>
     <street>Whitehall Place</street>
     <areas>
-      <area>Ganethill</area>
+      <area>
+        <name>Ganethill</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>whitehill street</pattern>
     <street>Whitehill Street</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>whitehill gardens</pattern>
     <street>Whitehill Gardens</street>
     <areas>
-      <area>Dennistoun</area>
+      <area>
+        <name>Dennistoun</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6338,16 +7250,18 @@
     <pattern>william street</pattern>
     <street>William Street</street>
     <areas>
-      <area>Anderston</area>
-    </areas>
-    <areas>
-      <area>Calton</area>
-    </areas>
-    <areas>
-      <area>Cowcaddens</area>
-    </areas>
-    <areas>
-      <area>Mile-end</area>
+      <area>
+        <name>Anderston</name>
+      </area>
+      <area>
+        <name>Calton</name>
+      </area>
+      <area>
+        <name>Cowcaddens</name>
+      </area>
+      <area>
+        <name>Mile-end</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6362,13 +7276,15 @@
     <pattern>wilson street</pattern>
     <street>Wilson Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Hillhead</area>
-    </areas>
-    <areas>
-      <area>Partick</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Hillhead</name>
+      </area>
+      <area>
+        <name>Partick</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6383,21 +7299,27 @@
     <pattern>windsor circus</pattern>
     <street>Windsor Circus</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>windsor place</pattern>
     <street>Windsor Place</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>windsor quadrant</pattern>
     <street>Windsor Quadrant</street>
     <areas>
-      <area>Kelvinside</area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6408,20 +7330,24 @@
     <pattern>windsor terrace</pattern>
     <street>Windsor Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Kelvinside</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Kelvinside</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>winton terrace</pattern>
     <street>Winton Terrace</street>
     <areas>
-      <area>Crosshill</area>
+      <area>
+        <name>Crosshill</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6440,17 +7366,21 @@
     <pattern>woodlands terrace</pattern>
     <street>Woodlands Terrace</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Langside</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Langside</name>
+      </area>
     </areas>
   </address>
   <address>
     <pattern>woodrow road</pattern>
     <street>Woodrow Road</street>
     <areas>
-      <area>Pollockshields</area>
+      <area>
+        <name>Pollockshields</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6461,10 +7391,12 @@
     <pattern>woodside place</pattern>
     <street>Woodside Place</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Crossmyloof</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Crossmyloof</name>
+      </area>
     </areas>
   </address>
   <address>
@@ -6483,10 +7415,12 @@
     <pattern>york street</pattern>
     <street>York Street</street>
     <areas>
-      <area>Glasgow</area>
-    </areas>
-    <areas>
-      <area>Little Govan</area>
+      <area>
+        <name>Glasgow</name>
+      </area>
+      <area>
+        <name>Little Govan</name>
+      </area>
     </areas>
   </address>
   <address>
