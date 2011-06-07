@@ -16,6 +16,8 @@ class Google(object):
 
     def get_location(self, address):
         location = None
+
+        # send to google in ascii
         self.params['address'] = address.encode('utf-8')
 
         url = self._get_url()
@@ -25,19 +27,23 @@ class Google(object):
 
         #print output
 
-        result = json.loads(output)
+        try:
+            result = json.loads(output)
 
-        if result['status'] == 'OK':
-            geom = result['results'][0]['geometry']            
-            location = Location(address, geom['location'],  geom['location_type'])
-        else:
-            if result['status'] == 'ZERO_RESULTS':
-                pass
-            elif result['status'] == 'OVER_QUERY_LIMIT':
-                print 'Google limit quota reached'
-            elif result['status'] == "REQUEST_DENIED" or  result['status'] == "INVALID_REQUEST":
-                print 'Fetch rejected: %s' % result['status']
-                print url
+            if result['status'] == 'OK':
+                geom = result['results'][0]['geometry']            
+                location = Location(address, geom['location'],  geom['location_type'])
+            else:
+                if result['status'] == 'ZERO_RESULTS':
+                    pass
+                elif result['status'] == 'OVER_QUERY_LIMIT':
+                    print 'Google limit quota reached'
+                elif result['status'] == "REQUEST_DENIED" or  result['status'] == "INVALID_REQUEST":
+                    print 'Fetch rejected: %s' % result['status']
+                    print url
+        except ValueError as e:
+            # can happen if URL is too large
+            print e
 
         # enforce 1/2 second sleep after each fetch otherwise will be
         # blacklisted by google
@@ -136,7 +142,7 @@ if __name__ == "__main__":
     
     if args.client_id and args.key:
         google = GooglePremium(args.key, args.client_id)
+        print 'Encode using Google Premium'
     else:
         google = Google()
-        
-    print google.get_location(args.address)
+        print 'Encode using Google'

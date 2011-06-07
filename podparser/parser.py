@@ -2,6 +2,7 @@ from time            import time
 from xml.dom.minidom import parse
 
 import argparse
+import codecs
 import os
 import sys
 
@@ -54,7 +55,7 @@ class Parser:
 
         # read meta data
         self.directory = directory.Directory(self.directory);
-
+     
         # create checker object
         checker = checker.EntryChecker(self.directory, self.config)
 
@@ -64,6 +65,9 @@ class Parser:
         self._get_listing();
 
         for page in self.directory.pages:
+
+            print '\nParsing %s ' % page.path
+
             lines = self._fix_line_returns(self._parse_page(page))
 
             if self.verbose:
@@ -114,6 +118,9 @@ class Parser:
                                 print fpath
                     break
 
+            # sort files alphabetically by path
+            self.directory.pages.sort(key=lambda x: x.path)
+
         else:
             self.directory.pages.append(directory.Page(path, get_page_from_file(path)))
 
@@ -126,8 +133,7 @@ class Parser:
         lines = dom.getElementsByTagName('LINE')
 
         for line in lines:
-            entries.append(line.firstChild.nodeValue); 
-
+            entries.append(line.firstChild.nodeValue);
         return entries
 
     def _fix_line_returns(self, lines):
@@ -214,7 +220,7 @@ class Parser:
             elif len(entry.profession) > 0 and len(entry.category) == 0:
                 print '*** No profession category'
 
-        print entry
+        print unicode(entry)
 
 def read_page(directory, page):
 
@@ -232,19 +238,19 @@ def read_page(directory, page):
             elif entry.get_geo_status() == 1:
                 bad_geo = bad_geo + 1
 
-        if len(entry.profession) > 0:
-            profession = profession + 1
+            if len(entry.profession) > 0:
+                profession = profession + 1
 
-            if len(entry.category) == 0:
-                no_category = no_category + 1
+                if len(entry.category) == 0:
+                    no_category = no_category + 1
 
         total = total + 1
 
     rejected_per    = float(rejected) / total * 100
     good_entries    = total - rejected
-    no_geo_per      = float(no_geo) / good_entries * 100
-    bad_geo_per     = float(bad_geo) / good_entries * 100
-    profession_per  = float(profession) / good_entries * 100
+    no_geo_per      = float(no_geo)      / good_entries * 100
+    bad_geo_per     = float(bad_geo)     / good_entries * 100
+    profession_per  = float(profession)  / good_entries * 100
     no_category_per = float(no_category) / good_entries * 100
 
     print '\n%-20s%d' % ('Total Entries:', total)
@@ -255,6 +261,8 @@ def read_page(directory, page):
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
 if __name__ == "__main__":
+    # print unicode to std out
+    sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
     # get the pod parser directory
     cur_dir = os.path.dirname(sys.argv[0])

@@ -168,7 +168,7 @@ class Entry():
 
         return status
 
-    def __str__(self):
+    def __unicode__(self):
        
         if self.error:
             str = 'Rejected: %s. Reason: %s\n' % (self.line, self.error)
@@ -187,4 +187,9 @@ class Entry():
                                                                 location.type)
                 str = '%s%s\n' % (str, loc_str)
 
-        return str.encode( "utf-8" )
+        return str
+
+    def __str__(self):
+        return unicode(self).encode('utf-8')
+
+    
