@@ -59,11 +59,20 @@ class GooglePremium(Google):
     Use premium google geocode with premium key and client id
     """
 
-    def __init__(self, key, client_id):
+    def __init__(self, key, client_id, db=None):
         super(GooglePremium, self).__init__()
 
         self.key              = key
         self.params['client'] = client_id
+        self.db               = db
+
+    def get_location(self, address):
+        location = super(GooglePremium, self).get_location(address)
+
+        if self.db:
+            self.db.record_google_lookup();
+
+        return location
 
     def _get_url(self):
 
@@ -131,12 +140,12 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(description='Wrapper for Google geo-encoder')
 
     arg_parser.add_argument('-a', '--address',
-                            help='Address to encode',
-                            required=True)
-    arg_parser.add_argument('-c', '--client_id',
-                            help='Google client id')
+                            help     = 'Address to encode',
+                            required = True)
     arg_parser.add_argument('-k', '--key',
-                            help='Google private key')
+                            help='Google premium private key')
+    arg_parser.add_argument('-i', '--client_id',
+                            help = 'Google premium client identifier')
 
     args = arg_parser.parse_args()
 
@@ -147,3 +156,4 @@ if __name__ == "__main__":
         google = Google()
         print 'Encode using Google'
 
+    print google.get_location(args.address)

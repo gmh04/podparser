@@ -30,6 +30,9 @@ class Parser:
                  db              = None):
         """
         Initialise the parser.
+
+        config    - The full path to the parser configuration files.
+        directory - POD directory object
         """
         self.config          = config
         self.directory       = directory
@@ -41,7 +44,7 @@ class Parser:
 
         import podparser.geo.encoder
         if encoder_key and client_id:
-            self.geoencoder = podparser.geo.encoder.GooglePremium(encoder_key, client_id)
+            self.geoencoder = podparser.geo.encoder.GooglePremium(encoder_key, client_id, self.db)
         else:
             self.geoencoder = podparser.geo.encoder.Google()
 
@@ -293,9 +296,9 @@ if __name__ == "__main__":
                             nargs = 1,
                             help  = 'postcode directory to be parsed')
     arg_parser.add_argument('-e', '--end',
-                            default=9999,
-                            type = int,
-                            help = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
+                            default = 9999,
+                            type    = int,
+                            help    = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
     arg_parser.add_argument('-k', '--key',
                             help = 'Google premium private key')
     arg_parser.add_argument('-i', '--client_id',

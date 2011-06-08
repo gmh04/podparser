@@ -29,14 +29,18 @@ class PodConnection(object):
                                          user     = db_user,
                                          password = db_password,
                                          host     = db_host,
-                                         port     = '5432')
+                                         port     = db_port)
 
         except psycopg2.OperationalError as e:
             print 'Failed to create DB connection %s' % e
             sys.exit(1)
 
     def set_directory(self, directory):
+        """
+        Set directory to use for following commits.
 
+        directory -- POD directory object.
+        """
         self.pod_id = self._fetch_pod_id(directory)
 
         if not self.pod_id:
@@ -48,38 +52,54 @@ class PodConnection(object):
             self.pod_id = cur.fetchone()[0]
 
     def commit(self, page):
+        """
+        Commit a page and its contents to the database.
+
+        page -- POD directory page object.
+        """
         page_id = self._fetch_page_id(page)
+        cur = self.conn.cursor()
 
         if not page_id:
-            cur = self.conn.cursor()
+            # no page exists insert it
+            #cur = self.conn.cursor()
             sql = "INSERT INTO page(directory, section, number) VALUES (%s, %s, %s) RETURNING id";
             data = (self.pod_id, page.section, page.number)
             cur.execute(sql, data)
-            self.conn.commit()
+
+            # get the id of the page inserted above
             page_id = cur.fetchone()[0]
 
         for entry in page.entries:
-            cur = self.conn.cursor()
-            sql = """INSERT INTO entry(page, surname, forename, profession, profession_category, address, line)
-                     VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"""
+            # insert entry
+            sql = """INSERT INTO entry(page, line) VALUES (%s, %s) RETURNING id"""
             data = (page_id,
+                    entry.line)
+            cur.execute(sql, data)
+
+            # get the id of the entry inserted above
+            entry_id = cur.fetchone()[0]
+
+            # insert entry details
+            sql = """INSERT INTO entry_detail(entry_id, surname, forename, profession, profession_category, address, userid_mod, current)
+                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
+            data = (entry_id,
                     entry.surname,
                     entry.forename,
                     entry.profession,
                     entry.category,
                     entry.address,
-                    entry.line)
-
+                    'parser',
+                    'y')
             cur.execute(sql, data)
-            entry_id = cur.fetchone()[0]
 
             for location in entry.locations:
-                print location.point
+                # insert each location for a given entry
                 sql = """INSERT INTO location(entry_id, address, accuracy, type, geom)
-                         VALUES (%s, %s, %s, %s, ST_GeomFromText('POINT(%s %s)', 4326))"""
+                         VALUES (%s, %s, (SELECT id FROM  location_accuracy where name = %s), %s, ST_GeomFromText('POINT(%s %s)', 4326))"""
                 data = (entry_id,
                         location.address,
-                        1,
+                        location.accuracy,
                         location.type,
                         location.point['lng'],
                         location.point['lat'])
@@ -87,29 +107,33 @@ class PodConnection(object):
 
         self.conn.commit()
 
-    def _fetch_entry_id(self, directory):
-        sql = "SELECT id FROM entry WHERE country = %s AND town = %s AND year = %s"
-        data = (directory.country, directory.town, directory.year)
-        return self._fetch_id(sql, data)
+    def record_google_lookup(self):
+        """
+        Increment the google premium lookup count.
+        """
+        cur = self.conn.cursor()
+        cur.execute("""SELECT nextval('google_lookup_count')""")
 
     def _fetch_page_id(self, page):
+        # fetch page id for a given page object
         cur = self.conn.cursor()
         sql = "SELECT id FROM page WHERE directory = %s AND number = %s"
         data = (self.pod_id, page.number)
         return self._fetch_id(sql, data)
 
     def _fetch_pod_id(self, directory):
+        # fetch POD id for a given directory object
         sql = "SELECT id FROM directory WHERE country = %s AND town = %s AND year = %s"
         data = (directory.country, directory.town, directory.year)
         return self._fetch_id(sql, data)
 
     def _fetch_id(self, sql, data):
+        # fetch helper function
         id = None
         cur = self.conn.cursor()
         cur.execute(sql, data)
         row = cur.fetchone()
         if row:
-            print row
             id = row[0]
 
         return id

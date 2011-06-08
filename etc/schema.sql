@@ -1,5 +1,7 @@
+DROP SEQUENCE google_lookup_count;
 DROP TABLE location;
 DROP TABLE location_accuracy;
+DROP TABLE entry_detail;
 DROP TABLE entry;
 DROP TABLE profession_category;
 DROP TABLE page;
@@ -25,20 +27,30 @@ CREATE TABLE profession_category (code     char PRIMARY KEY,
 
 CREATE TABLE entry (id                  SERIAL  PRIMARY KEY,
                     page                integer REFERENCES page(id),
-                    surname             text,
-                    forename            text,
-                    profession          text,
-                    profession_category char    REFERENCES profession_category(code),
-                    address             text,
                     line                text
 );
 
-CREATE INDEX surname_idx    ON entry (surname);
-CREATE INDEX forname_idx    ON entry (forename);
-CREATE INDEX profession_idx ON entry (profession);
+COMMENT ON TABLE  entry      IS 'entry representing a line in a POD';
+COMMENT ON COLUMN entry.line IS 'original line entry of text in djvu xml';
 
-COMMENT ON COLUMN entry.address IS 'address as seen in POD';
-COMMENT ON COLUMN entry.line    IS 'original line entry of text in djvu xml';
+CREATE TABLE entry_detail (id                  SERIAL  PRIMARY KEY,
+                           entry_id            integer REFERENCES entry(id),
+                           surname             text,
+                           forename            text,
+                           profession          text,
+                           profession_category char    REFERENCES profession_category(code),
+                           address             text,
+                           userid_mod          text,
+                           date_mod            timestamp with time zone DEFAULT CURRENT_TIMESTAMP,
+                           current             boolean
+);
+
+CREATE INDEX surname_idx    ON entry_detail (surname);
+CREATE INDEX forname_idx    ON entry_detail (forename);
+CREATE INDEX profession_idx ON entry_detail (profession);
+
+COMMENT ON TABLE  entry_detail         IS 'entry representing a the details of a POD entry';
+COMMENT ON COLUMN entry_detail.address IS 'address as seen in POD';
 
 CREATE TABLE location_accuracy (id   integer PRIMARY KEY,
                                 name text
@@ -53,6 +65,8 @@ SELECT AddGeometryColumn('public', 'location', 'geom', 4326, 'POINT', 2);
 CREATE INDEX location_idx ON location USING GIST (geom);
 
 COMMENT ON COLUMN location.address IS 'address used in geo tagging';
+
+CREATE SEQUENCE google_lookup_count;
 
 INSERT INTO directory(country, town, year) VALUES ('Scotland', 'Edinburgh', 1784);
 INSERT INTO directory(country, town, year) VALUES ('Scotland', 'Edinburgh', 1865);
