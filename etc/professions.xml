@@ -24,7 +24,7 @@
     <replace>
       <pattern>fhoemaker</pattern>
       <value>shoemaker</value>
-    </replace> 
+    </replace>
     <replace>
       <pattern>filk dyer</pattern>
       <value>silk dyer</value>
@@ -99,14 +99,14 @@
       <code>A</code>
       <list>
         <pattern>dairy</pattern>
-        <pattern>farmer</pattern>        
+        <pattern>farmer</pattern>
       </list>
     </category>
     <category>
       <name>Mining and quarrying</name>
       <code>B</code>
       <list>
-        
+        <pattern>miner</pattern>
       </list>
     </category>
     <category>
@@ -118,7 +118,7 @@
         <pattern>boot and shoemaker</pattern>
         <pattern>bootmaker</pattern>
         <pattern>cabinetmaker</pattern>
-        <pattern>cabinetmakers</pattern>        
+        <pattern>cabinetmakers</pattern>
         <pattern>civil engineer</pattern>
         <pattern>clockmaker</pattern>
         <pattern>clothier</pattern>
@@ -141,7 +141,7 @@
       <name>Electricity, gas, steam and air conditioning supply</name>
       <code>D</code>
       <list>
-        <pattern>gasfitter</pattern>        
+        <pattern>gasfitter</pattern>
       </list>
     </category>
     <category>
@@ -155,7 +155,7 @@
       <name>Construction</name>
       <code>F</code>
       <list>
-        <pattern>architect</pattern>        
+        <pattern>architect</pattern>
         <pattern>builder</pattern>
         <pattern>carpenter</pattern>
         <pattern>carver</pattern>
@@ -185,7 +185,7 @@
         <pattern>merchant</pattern>
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
-        <pattern>provision dealer</pattern> 
+        <pattern>provision dealer</pattern>
         <pattern>spirit merchant</pattern>
         <pattern>traveller</pattern>
         <pattern>travelling</pattern>
@@ -202,7 +202,7 @@
       <name>Accommodation and food service activities</name>
       <code>I</code>
       <list>
-        
+
       </list>
     </category>
     <category>
@@ -233,7 +233,7 @@
       <name>Real estate activities</name>
       <code>L</code>
       <list>
-        
+
       </list>
     </category>
     <category>
@@ -248,13 +248,13 @@
       <name>Administrative and support service activities</name>
       <code>N</code>
       <list>
-        
+
       </list>
     </category>
     <category>
       <name>Public administration and defence; compulsory social security</name>
       <code>O</code>
-      <list>        
+      <list>
         <pattern>police</pattern>
       </list>
     </category>
@@ -265,7 +265,7 @@
         <pattern>professor</pattern>
         <pattern>rector</pattern>
         <pattern>teacher</pattern>
-        <pattern>teachers</pattern>        
+        <pattern>teachers</pattern>
       </list>
     </category>
     <category>
@@ -280,7 +280,7 @@
         <pattern>optician</pattern>
         <pattern>pathology</pattern>
         <pattern>physician</pattern>
-        <pattern>surgeon-dentist</pattern>        
+        <pattern>surgeon-dentist</pattern>
       </list>
     </category>
     <category>
@@ -288,7 +288,7 @@
       <code>R</code>
       <list>
         <pattern>engraver</pattern>
-        <pattern>engravers</pattern>        
+        <pattern>engravers</pattern>
         <pattern>photographer</pattern>
         <pattern>photographic</pattern>
         <pattern>photographist</pattern>
@@ -301,7 +301,7 @@
       <list>
         <pattern>artistic hair worker</pattern>
         <pattern>draper</pattern>
-        <pattern>hairdresser</pattern>        
+        <pattern>hairdresser</pattern>
         <pattern>upholsterer</pattern>
         <pattern>upholsteress</pattern>
       </list>
@@ -317,7 +317,7 @@
       <name>Activities of extraterritorial organisations and bodies</name>
       <code>U</code>
       <list>
-        
+
       </list>
     </category>
 

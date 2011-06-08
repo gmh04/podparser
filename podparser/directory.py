@@ -14,7 +14,7 @@ class Directory():
         self.pages   = []
         self.path    = path;
         self.read_from_meta();
-        
+
     def read_from_meta(self):
         """
         read metadata from POD meta file
@@ -28,17 +28,17 @@ class Directory():
         else:
             print '*** Cannot read directory: %s ***' % self.path
             sys.exit(1)
-            
+
         # find meta file in directory
         for f in os.listdir(ddir):
             if f.endswith('_meta.xml'):
                 meta_file = '%s%c%s' % (ddir, os.sep, f)
                 break
-             
+
         if meta_file:
             # parse meta file
             dom = parse(meta_file)
-             
+
             # use publisher field for town
             publisher = dom.getElementsByTagName('publisher')[0].firstChild.nodeValue
             self.town = publisher.split(':')[0].strip()
@@ -57,6 +57,7 @@ class Page():
 
     def __init__(self, path, number):
         self.path    = path
+        self.section = 'General Directory'
         self.number  = number
         self.entries = []
 
@@ -106,7 +107,7 @@ class Entry():
                         remaining = column
 
                 match = self. _get_address_match(remaining)
-          
+
                 if match:
                     # there is an address match get the index
                     num_index = remaining.find(match.group(1))
@@ -116,7 +117,7 @@ class Entry():
                 else:
                     # no address match just assign the third column to profession and the rest to the address
                     comma_index = remaining.find(',')
-                    
+
                 self.profession = remaining[0: comma_index]
                 self.address    = remaining[comma_index + 1: len(remaining)]
 
@@ -124,7 +125,7 @@ class Entry():
             self.address    = self.address.strip()
         else:
             # anything with less than 3 columns is invalid
-            self.error = 'Not enough columns' 
+            self.error = 'Not enough columns'
 
     def _get_address_match(self, text):
         # match number
@@ -145,7 +146,7 @@ class Entry():
 
     def get_geo_status(self):
         """
-        Get geo status of an entry. This will return 
+        Get geo status of an entry. This will return
 
         0 - there is no geo tag
         1 - there is a poor geo tag
@@ -169,7 +170,7 @@ class Entry():
         return status
 
     def __unicode__(self):
-       
+
         if self.error:
             str = 'Rejected: %s. Reason: %s\n' % (self.line, self.error)
         else:
@@ -192,4 +193,4 @@ class Entry():
     def __str__(self):
         return unicode(self).encode('utf-8')
 
-    
+

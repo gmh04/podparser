@@ -31,7 +31,7 @@ class Google(object):
             result = json.loads(output)
 
             if result['status'] == 'OK':
-                geom = result['results'][0]['geometry']            
+                geom = result['results'][0]['geometry']
                 location = Location(address, geom['location'],  geom['location_type'])
             else:
                 if result['status'] == 'ZERO_RESULTS':
@@ -102,7 +102,7 @@ class Location():
 
     def get_geo_status(self):
         """
-        Get geo status of an entry. This will return 
+        Get geo status of an entry. This will return
 
         0 - there is no geo tag
         1 - there is a poor geo tag
@@ -112,14 +112,14 @@ class Location():
         above that (ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, see
         http://code.google.com/apis/maps/documentation/geocoding/#Results).
         """
-       
+
         if not self.accuracy:
             status = 0
         elif self.accuracy == 'APPROXIMATE':
             status = 1
         else:
             status = 2
-        
+
         return status
 
     def __str__(self):
@@ -137,12 +137,13 @@ if __name__ == "__main__":
                             help='Google client id')
     arg_parser.add_argument('-k', '--key',
                             help='Google private key')
- 
+
     args = arg_parser.parse_args()
-    
+
     if args.client_id and args.key:
         google = GooglePremium(args.key, args.client_id)
         print 'Encode using Google Premium'
     else:
         google = Google()
         print 'Encode using Google'
+

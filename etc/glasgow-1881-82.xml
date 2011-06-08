@@ -1,15 +1,6 @@
 <?xml version="1.0" ?>
 <addresses>
   <address>
-    <pattern>street name</pattern>
-    <street>STREET NAME</street>
-    <areas>
-      <area>
-        <name>TOWN IF NOT GLASGOW</name>
-      </area>
-    </areas>
-  </address>
-  <address>
     <pattern>abbotsford lane</pattern>
     <street>Abbotsford Lane</street>
   </address>
@@ -55,6 +46,7 @@
     <areas>
       <area>
         <name>Bridgeton</name>
+        <modern_name>Poplin Street</modern_name>
       </area>
     </areas>
   </address>
@@ -135,13 +127,15 @@
     <street>Albert Road</street>
     <areas>
       <area>
-        <name>(East) Crosshill</name>
+        <name>Crosshill</name>
       </area>
       <area>
         <name>Langside</name>
+        <modern_name>Dowanside Road</modern_name>
       </area>
       <area>
-        <name>(North) Pollockshields</name>
+        <name>Pollockshields</name>
+        <modern_name>Albert Drive</modern_name>
       </area>
     </areas>
   </address>
@@ -151,6 +145,7 @@
     <areas>
       <area>
         <name>Townhead</name>
+        <modern_name>McAslin Street</modern_name>
       </area>
       <area>
         <name>Pollockshields</name>
@@ -189,8 +184,8 @@
     </areas>
   </address>
   <address>
-    <pattern>albion street </pattern>
-    <street>Albion Street </street>
+    <pattern>albion street</pattern>
+    <street>Albion Street</street>
   </address>
   <address>
     <pattern>albyn street</pattern>
@@ -203,6 +198,7 @@
   <address>
     <pattern>alexander street</pattern>
     <street>Alexander Street</street>
+    <modern_name>Brechin Street</modern_name>
   </address>
   <address>
     <pattern>alexandra parade</pattern>
@@ -223,6 +219,7 @@
     <areas>
       <area>
         <name>Partick</name>
+        <modern_name>Elie Street</modern_name>
       </area>
     </areas>
   </address>
@@ -296,6 +293,7 @@
       </area>
       <area>
         <name>Kinningpark</name>
+        <modern_name>Sleads Street>/modern_name>
       </area>
     </areas>
   </address>
@@ -312,9 +310,11 @@
       </area>
       <area>
         <name>Bridgeton</name>
+        <modern_name>Laird Street</modern_name>
       </area>
       <area>
         <name>Hillhead</name>
+        <modern_name>Southpark Avenue</modern_name>
       </area>
       <area>
         <name>Port-Dundas</name>
@@ -340,12 +340,14 @@
     <areas>
       <area>
         <name>Partick</name>
+        <modern_name>Banavie Road<modern_name>
       </area>
     </areas>
   </address>
   <address>
     <pattern>annfield street</pattern>
     <street>Annfield Street</street>
+    <modern_name>Annbank Street</modern_name>
   </address>
   <address>
     <pattern>annfield terrace</pattern>
@@ -359,6 +361,7 @@
   <address>
     <pattern>apsley place</pattern>
     <street>Apsley Place</street>
+    <modern_name>Warwick Street</modern_name>
   </address>
   <address>
     <pattern>arden street</pattern>
@@ -398,8 +401,8 @@
     <street>Argyle Arcade</street>
   </address>
   <address>
-    <pattern>argyle plase</pattern>
-    <street>Argyle Plase</street>
+    <pattern>argyle place</pattern>
+    <street>Argyle Place</street>
     <areas>
       <area>
         <name>Springburn</name>
@@ -512,6 +515,7 @@
     <areas>
       <area>
         <name>Springburn</name>
+        <modern_name>Northeroft Road</modern_name>
       </area>
     </areas>
   </address>
@@ -2610,6 +2614,7 @@
   </address>
   <address>
     <pattern>firpark terrace</pattern>
+    <pattern>fir park terrace</pattern>
     <street>Firpark Terrace</street>
     <areas>
       <area>

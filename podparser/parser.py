@@ -27,7 +27,7 @@ class Parser:
                  client_id       = None,
                  verbose         = False,
                  pre_post_office = False,
-                 commit          = False):
+                 db              = None):
         """
         Initialise the parser.
         """
@@ -37,15 +37,14 @@ class Parser:
         self.end             = int(end)
         self.verbose         = verbose
         self.pre_post_office = pre_post_office
-        self.commit          = commit
+        self.db              = db
 
         import podparser.geo.encoder
         if encoder_key and client_id:
             self.geoencoder = podparser.geo.encoder.GooglePremium(encoder_key, client_id)
         else:
             self.geoencoder = podparser.geo.encoder.Google()
-            #self.geoencoder = None
- 
+
     def run_parser(self, callback):
         """
         Parse post office directory
@@ -55,7 +54,10 @@ class Parser:
 
         # read meta data
         self.directory = directory.Directory(self.directory);
-     
+
+        if self.db:
+            self.db.set_directory(self.directory)
+
         # create checker object
         checker = checker.EntryChecker(self.directory, self.config)
 
@@ -78,7 +80,7 @@ class Parser:
 
             for line in lines:
                 pod_entry = directory.Entry(line)
-                
+
                 if pod_entry.valid():
                     # clean up valid entries
                     checker.clean_up(pod_entry)
@@ -89,15 +91,20 @@ class Parser:
 
                 self._print_entry(pod_entry)
                 page.entries.append(pod_entry)
-                
+
+            # envoke callback function
             callback(self.directory, page);
+
+            # commit page to database
+            if self.db:
+                self.db.commit(page)
 
         return directory
 
     def _get_listing(self):
         #  get list of djvu xml files
         from podparser import directory
-        
+
         def get_page_from_file(file):
             return int(file[len(file) -9: len(file) -5])
 
@@ -133,7 +140,9 @@ class Parser:
         lines = dom.getElementsByTagName('LINE')
 
         for line in lines:
-            entries.append(line.firstChild.nodeValue);
+            if line.firstChild:
+                entries.append(line.firstChild.nodeValue);
+
         return entries
 
     def _fix_line_returns(self, lines):
@@ -149,7 +158,7 @@ class Parser:
             # find the most commonly occurring first character
             chars = {}
             char_val = 0
-            
+
             for line in lst:
                 if line[0] in chars:
                     chars[line[0]] = chars[line[0]] + 1
@@ -163,15 +172,15 @@ class Parser:
 
             return top_char
 
-        top_char = get_top_char(lines)  
+        top_char = get_top_char(lines)
         current_alpha = None
-   
+
         for entry in lines:
             if current_alpha is None:
                 # if the first character is a character and uppercase
                 # and entry contains a comma, then it looks like the first real entry
                 if entry[0].isalpha() and entry[0].istitle() and len(entry.split(',')) > 2 and abs(ord(entry[0]) - ord(top_char)) < 2:
-                   
+
                     current_alpha = entry[0]
                     entries.append(entry)
             else:
@@ -191,7 +200,7 @@ class Parser:
                         # check remaining entries have the same character
                         remaining = lines[lines.index(entry): len(lines)]
                         top_remaining = get_top_char(remaining)
-                        
+
                         if entry[0] == top_remaining:
                             current_alpha = top_remaining
                             entries.append(entry)
@@ -229,7 +238,7 @@ def read_page(directory, page):
 
     # tally up out some stats
     for entry in page.entries:
-        
+
         if entry.error:
             rejected = rejected + 1
         else:
@@ -277,34 +286,50 @@ if __name__ == "__main__":
     # parse commandline arguments
     arg_parser = argparse.ArgumentParser(description='Tool for parsing postcode directories')
 
-    arg_parser.add_argument('-c', '--commit',
-                            action='store_true',
-                            help='commit to database')
     arg_parser.add_argument('-C', '--config',
-                            nargs=1,
-                            help='configuration directory')
+                            nargs = 1,
+                            help  = 'configuration directory')
     arg_parser.add_argument('-d', '--directory',
-                            nargs=1,
-                            help='postcode directory to be parsed')
+                            nargs = 1,
+                            help  = 'postcode directory to be parsed')
     arg_parser.add_argument('-e', '--end',
                             default=9999,
-                            type=int,
-                            help='End page to be parsed (only applies to -d), If no end page given parse until last.')
+                            type = int,
+                            help = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
     arg_parser.add_argument('-k', '--key',
-                            help='Google premium private key')
+                            help = 'Google premium private key')
     arg_parser.add_argument('-i', '--client_id',
-                            help='Google premium client identifier')
+                            help = 'Google premium client identifier')
     arg_parser.add_argument('-p', '--page',
-                            help='single postcode directory page to be parsed')
+                            help = 'single postcode directory page to be parsed')
     arg_parser.add_argument('-s', '--start',
-                            default=0,
-                            help='Start page to be parsed (only applies to -d). If no start page given start from 0.')
+                            default = 0,
+                            help    = 'Start page to be parsed (only applies to -d). If no start page given start from 0.')
     arg_parser.add_argument('-v', '--verbose',
-                            action='store_true',
-                            help='print detailed output')
+                            action = 'store_true',
+                            help   = 'print detailed output')
     arg_parser.add_argument('-w', '--williamson',
-                            action='store_false',
-                            help="parse williamson's directory")    
+                            action = 'store_false',
+                            help   = "parse williamson's directory")
+    arg_parser.add_argument('-c', '--commit',
+                            action = 'store_true',
+                            help   = 'commit to database')
+    arg_parser.add_argument('-H', '--dbhost',
+                            default = 'localhost',
+                            help    ='database host')
+    arg_parser.add_argument('-D', '--dbname',
+                            default = 'ahistory',
+                            help    = 'database name')
+    arg_parser.add_argument('-P', '--dbport',
+                            type    = int,
+                            default = 5432,
+                            help    = 'database port')
+    arg_parser.add_argument('-U', '--dbuser',
+                            default = 'ahistory',
+                            help    = 'database user name')
+    arg_parser.add_argument('-W', '--dbpassword',
+                            help = 'database password')
+
     args = arg_parser.parse_args()
 
     if args.config:
@@ -315,7 +340,7 @@ if __name__ == "__main__":
             print arg_parser.print_help()
             sys.exit(1)
     else:
-        config_dir = '%s/etc' % podparser_dir 
+        config_dir = '%s/etc' % podparser_dir
 
     if args.directory:
         directory = args.directory[0]
@@ -325,6 +350,20 @@ if __name__ == "__main__":
         print '*** No directory given ***'
         print arg_parser.print_help()
         sys.exit(1)
+
+    db = None
+    if args.commit:
+        if args.dbpassword:
+            from podparser.db.connection import PodConnection
+            db = PodConnection(db_password = args.dbpassword,
+                               db_name     = args.dbname,
+                               db_user     = args.dbuser,
+                               db_host     = args.dbhost,
+                               db_port     = args.dbport)
+        else:
+            print 'You must provide a password for the database'
+            sys.exit(1)
+
 
     t = time()
 
@@ -337,6 +376,7 @@ if __name__ == "__main__":
                   encoder_key     = args.key,
                   client_id       = args.client_id,
                   verbose         = args.verbose,
-                  pre_post_office = args.williamson).run_parser(read_page)
+                  pre_post_office = args.williamson,
+                  db              = db).run_parser(read_page)
 
     print '\nParse took %.2f mins' % ((time() - t) / 60)

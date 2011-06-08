@@ -32,7 +32,7 @@ class EntryChecker():
         self.address_replaces = {}
         self._populate_global_replace("addresses.xml", self.address_replaces)
         self._populate_address_lookup(directory)
-        
+
     def _populate_global_replace(self, file_name, map):
         dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
 
@@ -45,7 +45,7 @@ class EntryChecker():
 
             if valueNode:
                 value = valueNode.nodeValue
-            
+
             map[pattern] = value
         #print '%s : %d' % (file_name, len(map))
 
@@ -116,7 +116,7 @@ class EntryChecker():
                     if len(list_node) > 0:
                         for lnode in list_node:
                             pattern = lnode.firstChild.nodeValue
-                            self.categories[pattern] = code                        
+                            self.categories[pattern] = code
 
     def clean_up(self, entry):
 
@@ -137,7 +137,7 @@ class EntryChecker():
             if entry.profession.find(category) != -1:
                 entry.category = self.categories[category]
                 break
-              
+
         for address in self.address_replaces:
             if entry.address.find(address) != -1:
                 entry.address = entry.address.replace(address, self.address_replaces[address])
@@ -151,7 +151,7 @@ class EntryChecker():
             addrs = entry.address.split(';')
         else:
             addrs.append(entry.address)
-        
+
         for addr in addrs:
             addr = addr.strip()
 
@@ -159,7 +159,7 @@ class EntryChecker():
             location = encoder.get_location('%s, %s, %s' % (addr,
                                                             self.directory.town,
                                                             self.directory.country))
-        
+
             if location:
 
                 # TODO: this is here for debugging - only append if good geo tag
@@ -171,7 +171,7 @@ class EntryChecker():
                     self._get_derived_location(addr, encoder, entry)
             else:
                 # no location returned try derived
-                self._get_derived_location(addr, encoder, entry)    
+                self._get_derived_location(addr, encoder, entry)
 
     def _get_derived_location(self, addr, encoder, entry):
 
@@ -190,7 +190,7 @@ class EntryChecker():
             for match in matches:
                 if len(match) > len(best_match):
                     best_match = match
-                    
+
         if len(best_match) > 0:
             derived_address = self.addresses[best_match]['street']
             areas           = self.addresses[best_match]['areas']
