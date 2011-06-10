@@ -22,12 +22,13 @@ class EntryChecker():
         self.globals = {}
         self._populate_global_replace('global.xml', self.globals)
 
+        #
+        self.names = {}
+        #self._populate_global_replace('forenames.xml', self.forenames)
 
-        self.forenames = {}
-        self._populate_global_replace('forenames.xml', self.forenames)
-
-        self.surname_stop_words = []
-        self._populate_stop_words('surnames.xml', self.surname_stop_words)
+        self.name_stop_words = []
+        self._populate_global_replace('names.xml', self.names)
+        self._populate_stop_words('names.xml', self.name_stop_words)
 
         self.professions = {}
         self._populate_global_replace('professions.xml', self.professions)
@@ -143,12 +144,19 @@ class EntryChecker():
         Fix OCR problems with an individual entry.
         """
 
-        if entry.forename in self.forenames:
-            entry.forename = self.forenames[entry.forename]
+        # forename / surname name replaces
+        for name in self.names:
+            if entry.surname.find(name) != -1:
+                entry.surname = entry.surnam.replace(name, self.names[name])
+            if entry.forename.find(name) != -1:
+                entry.forename = self.names[name]
 
-        for word in self.surname_stop_words:
+        # name stop words
+        for word in self.name_stop_words:
             if entry.surname.find(word) != -1:
                 entry.error = 'Surname contains stop word: %s' % word
+            elif entry.forename.find(word) != -1:
+                entry.error = 'Forename contains stop word: %s' % word
 
         # do profession global replaces
         for profession in self.professions:
@@ -161,6 +169,7 @@ class EntryChecker():
                 entry.category = self.categories[category]
                 break
 
+        # address global replaces
         for address in self.address_replaces:
             if entry.address.find(address) != -1:
                 entry.address = entry.address.replace(address, self.address_replaces[address])
@@ -268,11 +277,17 @@ class EntryChecker():
                         # append area to derived address
                         derived_address = '%s, %s' % (derived_address, area)
                     break
+            """
             location = encoder.get_location('%s, %s, %s' % (derived_address,
                                                             self.directory.town,
-                                                            self.directory.country))
+                                                         self.directory.country))
+            """
+            location = encoder.get_location(derived_address,
+                                            self.directory.town,
+                                            self.directory.country)
+
             if location:
                 location.type = 'derived'
                 entry.locations.append(location)
 
-    return location
+        return location

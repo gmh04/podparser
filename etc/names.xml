@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<names>
+
+  <stopWords>
+    <word>Co.</word>
+    <word>Insurance</word>
+    <word>Parish Church</word>
+    <word> &amp; </word>
+  </stopWords>
+
+  <!-- J -->
+  <replace>
+    <pattern>Jobn</pattern>
+    <value>John</value>
+  </replace>
+
+</names>

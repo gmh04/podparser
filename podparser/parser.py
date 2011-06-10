@@ -61,7 +61,9 @@ class Parser:
 
         import podparser.geo.encoder
         if encoder_key and client_id:
-            self.geoencoder = podparser.geo.encoder.GooglePremium(encoder_key, client_id, self.db)
+            self.geoencoder = podparser.geo.encoder.GooglePremium(key       = encoder_key,
+                                                                  client_id = client_id,
+                                                                  db        = self.db)
         else:
             self.geoencoder = podparser.geo.encoder.Google()
 

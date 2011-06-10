@@ -1,4 +1,7 @@
 <?xml version="1.0" ?>
+
+<!-- glasgow source for changed street names: http://www.glasgowguide.co.uk/info-streetschanged1.html -->
+
 <addresses>
   <address>
     <pattern>abbotsford lane</pattern>
@@ -1172,6 +1175,10 @@
   <address>
     <pattern>broompark terrace</pattern>
     <street>Broompark Terrace</street>
+  </address>
+  <address>
+    <pattern>broomielaw</pattern>
+    <street>Broomielaw</street>
   </address>
   <address>
     <pattern>brougham terrace</pattern>
@@ -2916,6 +2923,10 @@
   <address>
     <pattern>garscube lane</pattern>
     <street>Garscube Lane</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>McPhater Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>garscube road</pattern>
@@ -2933,7 +2944,11 @@
   </address>
   <address>
     <pattern>garthland street</pattern>
-    <street>Garthland Street</street>
+    <street>Garthland Street</street> 
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Garth Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>garturk street</pattern>
@@ -3062,6 +3077,10 @@
   <address>
     <pattern>govan street</pattern>
     <street>Govan Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Ballater Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>govanhill street</pattern>
@@ -3090,6 +3109,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Sanda Street</modern_name>
       </area>
     </town>
   </address>
@@ -3219,6 +3239,10 @@
   <address>
     <pattern>great wellington street</pattern>
     <street>Great Wellington Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Admiral Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>great western road</pattern>
@@ -3261,8 +3285,8 @@
     </town>
   </address>
   <address>
-    <pattern>greenbank </pattern>
-    <street>Greenbank </street>
+    <pattern>greenbank street</pattern>
+    <street>Greenbank Street</street>
     <town>
       <name>Glasgow</name>
       <area>
@@ -3357,6 +3381,7 @@
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
+        <modern_name>Queen Margaret Drive</modern_name>
       </area>
     </town>
   </address>
@@ -3381,6 +3406,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Fortrose Street</modern_name>
       </area>
     </town>
   </address>
@@ -3390,10 +3416,7 @@
     <town>
       <name>Glasgow</name>
       <area>
-        <name>(East</name>
-      </area>
-      <area>
-        <name>West) Partick</name>
+        <name>Partick</name>
       </area>
     </town>
   </address>
@@ -3502,12 +3525,6 @@
   <address>
     <pattern>henderson street</pattern>
     <street>Henderson Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kinning Park</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>henrietta street</pattern>
@@ -3550,6 +3567,7 @@
       <name>Glasgow</name>
       <area>
         <name>Springburn</name>
+        <modern_name>Hillkirk Street</modern_name>
       </area>
     </town>
   </address>
@@ -3651,6 +3669,7 @@
       <name>Glasgow</name>
       <area>
         <name>Anderston</name>
+        <modern_name>Anthony Street</modern_name>
       </area>
     </town>
   </address>
@@ -3795,6 +3814,10 @@
   <address>
     <pattern>jail square</pattern>
     <street>Jail Square</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Jocelyn Square</modern_name>
+    </town>
   </address>
   <address>
     <pattern>jamaica street</pattern>
@@ -3802,20 +3825,23 @@
   </address>
   <address>
     <pattern>james' street</pattern>
-    <street>James' Street</street>
+    <street>James Street</street>
     <town>
       <name>Glasgow</name>
       <area>
         <name>Calton</name>
+        <modern_name>Bryce Avenue</modern_name>
       </area>
       <area>
         <name>Greenhead</name>
       </area>
       <area>
         <name>Mile-end</name>
+        <modern_name>Gemmel Place</modern_name>
       </area>
       <area>
         <name>Port Dundas</name>
+        <modern_name>Kessock Place</modern_name>
       </area>
     </town>
   </address>
@@ -3858,6 +3884,7 @@
       <name>Glasgow</name>
       <area>
         <name>Bridgeton</name>
+        <modern_name>Tullis Street</modern_name>
       </area>
     </town>
   </address>
@@ -3922,6 +3949,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Keith Street</modern_name>
       </area>
     </town>
   </address>
@@ -4068,9 +4096,11 @@
       <name>Glasgow</name>
       <area>
         <name>Calton</name>
+        <modern_name>Millroad Street</modern_name>
       </area>
       <area>
         <name>Mile-end</name>
+        <modern_name>Redan Street</modern_name>
       </area>
       <area>
         <name>Tradeston</name>
@@ -4098,6 +4128,7 @@
       <name>Glasgow</name>
       <area>
         <name>Calton</name>
+        <modern_name>Stevenson Street</modern_name>
       </area>
       <area>
         <name>Gorbals</name>
@@ -4182,8 +4213,8 @@
     </town>
   </address>
   <address>
-    <pattern>lanarck street</pattern>
-    <street>Lanarck Street</street>
+    <pattern>lanark street</pattern>
+    <street>Lanark Street</street>
   </address>
   <address>
     <pattern>lancaster terrace</pattern>
@@ -4311,6 +4342,10 @@
   <address>
     <pattern>lillybank road</pattern>
     <street>Lillybank Road</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Gourock Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>lillybank street</pattern>
@@ -4403,6 +4438,10 @@
   <address>
     <pattern>london street</pattern>
     <street>London Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>London Road</modern_name>
+    </town>
   </address>
   <address>
     <pattern>lorne place</pattern>
@@ -4564,12 +4603,17 @@
       </area>
       <area>
         <name>Gorbals</name>
+        <modern_name>Gorbals Street</modern_name>
       </area>
     </town>
   </address>
   <address>
     <pattern>mains street</pattern>
     <street>Mains Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Blythswood Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>mair street</pattern>
@@ -4662,6 +4706,10 @@
   <address>
     <pattern>market street</pattern>
     <street>Market Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Mart Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>markland terrace</pattern>
@@ -4676,6 +4724,10 @@
   <address>
     <pattern>marlborough street</pattern>
     <street>Marlborough Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Hughenden Drive</modern_name>
+    </town>
   </address>
   <address>
     <pattern>marlow street</pattern>
@@ -4754,6 +4806,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Burgh Hall Street</modern_name>
       </area>
     </town>
   </address>
@@ -4836,6 +4889,10 @@
   <address>
     <pattern>melville lane</pattern>
     <street>Melville Lane</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Union Place</modern_name>
+    </town>
   </address>
   <address>
     <pattern>melville place</pattern>
@@ -4940,6 +4997,10 @@
   <address>
     <pattern>miller's place</pattern>
     <street>Miller's Place</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Saltmarket Place</modern_name>
+    </town>
   </address>
   <address>
     <pattern>miller street</pattern>
@@ -4974,6 +5035,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Turnberry Avenue</modern_name>
       </area>
     </town>
   </address>
@@ -4984,6 +5046,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Turnberry Road</modern_name>
       </area>
     </town>
   </address>
@@ -5036,6 +5099,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Cleveden Crescent</modern_name>
       </area>
     </town>
   </address>
@@ -5046,6 +5110,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Cleveden Drive</modern_name>
       </area>
     </town>
   </address>
@@ -5060,6 +5125,7 @@
       <name>Glasgow</name>
       <area>
         <name>Mount Florida</name>
+        <modern_name>Bolivar Terrace</modern_name>
       </area>
     </town>
   </address>
@@ -5108,8 +5174,8 @@
     </town>
   </address>
   <address>
-    <pattern>mossview </pattern>
-    <street>Mossview </street>
+    <pattern>mossview</pattern>
+    <street>Mossview</street>
     <town>
       <name>Glasgow</name>
       <area>
@@ -5138,9 +5204,7 @@
     <street>Muse Lane</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Cowcaddens</name>
-      </area>
+      <modern_name>Larbert Street</modern_name>
     </town>
   </address>
   <address>
@@ -6232,7 +6296,7 @@
     <street>St Clair Street</street>
   </address>
   <address>
-    <pattern>st enoch square</pattern>
+    <pattern>enoch sq</pattern>
     <street>St Enoch Square</street>
   </address>
   <address>
@@ -6604,6 +6668,10 @@
         <name>Hillhead</name>
       </area>
     </town>
+  </address>
+  <address>
+    <pattern>south portland street</pattern>
+    <street>South Portland Street</street>
   </address>
   <address>
     <pattern>south shamrock street</pattern>
@@ -7174,6 +7242,10 @@
         <name>Crosshill</name>
       </area>
     </town>
+  </address>
+  <address>
+    <pattern>viewfield place</pattern>
+    <street>Viewfield Place</street>
   </address>
   <address>
     <pattern>viewfield terrace</pattern>

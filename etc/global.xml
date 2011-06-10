@@ -6,6 +6,10 @@
 
     <!-- R -->
     <replace>
+      <pattern>Eando'ph</pattern>
+      <value>Randolph</value>
+    </replace>
+    <replace>
       <pattern>Eobert</pattern>
       <value>Robert</value>
     </replace>
