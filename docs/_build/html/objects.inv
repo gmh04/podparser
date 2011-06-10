@@ -1,0 +1,6 @@
+# Sphinx inventory version 1
+# Project: podparser
+# Version: 0.1
+podparser.parser mod index.html
+podparser.parser.Parser class index.html
+podparser.parser.Parser.run_parser method index.html

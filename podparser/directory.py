@@ -118,8 +118,12 @@ class Entry():
                     # no address match just assign the third column to profession and the rest to the address
                     comma_index = remaining.find(',')
 
-                self.profession = remaining[0: comma_index]
-                self.address    = remaining[comma_index + 1: len(remaining)]
+                if comma_index == -1:
+                    # if no comma index means an address is probably in the third column
+                    self.address = remaining
+                else:
+                    self.profession = remaining[0: comma_index]
+                    self.address    = remaining[comma_index + 1: len(remaining)]
 
             self.profession = self.profession.strip()
             self.address    = self.address.strip()
@@ -130,10 +134,11 @@ class Entry():
     def _get_address_match(self, text):
         # match number
         match = re.search('(\d)', text)
-
         if not match:
+
             # if no number in address try some common street strings
-            match = re.search('(street)', text, flags=re.IGNORECASE)
+            # TODO add more
+            match = re.search('(street|house)', text, flags=re.IGNORECASE)
 
         return match
 
@@ -169,28 +174,30 @@ class Entry():
 
         return status
 
+    def get_location_stats(self):
+        no_of_locations = len(self.locations)
+        exact_locations = 0
+
+        for location in self.locations:
+            if location.exact:
+                exact_locations = exact_locations + 1
+
+        return no_of_locations, exact_locations
+
     def __unicode__(self):
 
         if self.error:
             str = 'Rejected: %s. Reason: %s\n' % (self.line, self.error)
         else:
-            str = '| %-20s | %-20s | %-20s | %-1s | %-40s\n' % (self.surname,
-                                                                self.forename,
-                                                                self.profession,
-                                                                self.category,
-                                                                self.address)
-
+            str = '  | %-20s | %-20s | %-20s | %-1s | %-40s\n' % (self.surname,
+                                                                  self.forename,
+                                                                  self.profession,
+                                                                  self.category,
+                                                                  self.address)
             for location in self.locations:
-                loc_str = '| %-60s | %f | %f | %-20s | %-5s' % (location.address,
-                                                                location.point['lat'],
-                                                                location.point['lng'],
-                                                                location.accuracy,
-                                                                location.type)
-                str = '%s%s\n' % (str, loc_str)
+                str = '%s%s\n' % (str, '> %s' % location)
 
         return str
 
     def __str__(self):
         return unicode(self).encode('utf-8')
-
-

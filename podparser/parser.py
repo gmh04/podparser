@@ -6,12 +6,29 @@ import codecs
 import os
 import sys
 
-total       = 0
-rejected    = 0
-no_geo      = 0
-bad_geo     = 0
-profession  = 0
-no_category = 0
+"""
+class Timerx(object):
+
+    def __init__(self, f):
+        print "inside myDecorator.__init__()"
+        self.f = f
+        self.t = time()
+
+
+    def __call__(self, *args):
+        print "__call__ start"
+        self.f(*args)
+        print '\nParse took %.2f mins' % ((time() - self.t) / 60)
+        print "__call__ finished"
+
+@Timerx
+def test(arg1):
+    pass
+
+print '*'
+test('test')
+print '**'
+"""
 
 class Parser:
     """
@@ -48,6 +65,7 @@ class Parser:
         else:
             self.geoencoder = podparser.geo.encoder.Google()
 
+    #@Timerx
     def run_parser(self, callback):
         """
         Parse post office directory
@@ -76,16 +94,17 @@ class Parser:
             lines = self._fix_line_returns(self._parse_page(page))
 
             if self.verbose:
-                print '\n'
-                for line in lines:
-                    print line
-                print '\n'
+                self._print_page(lines)
 
             for line in lines:
+                # fix OCR problems with global replaces
+                line = checker.clean_up_global(line)
+
+                # create entry with cleanup line
                 pod_entry = directory.Entry(line)
 
                 if pod_entry.valid():
-                    # clean up valid entries
+                    # again, clean up valid entries
                     checker.clean_up(pod_entry)
 
                     # geo encode address if encoder set up
@@ -95,7 +114,7 @@ class Parser:
                 self._print_entry(pod_entry)
                 page.entries.append(pod_entry)
 
-            # envoke callback function
+            # envoke callback function for a page
             callback(self.directory, page);
 
             # commit page to database
@@ -219,9 +238,7 @@ class Parser:
         return entries
 
     def _print_entry(self, entry):
-
         # print entry details to stdout
-
         if entry.valid():
             geo_status = entry.get_geo_status()
 
@@ -234,10 +251,28 @@ class Parser:
 
         print unicode(entry)
 
+    def _print_page(self, lines):
+        # print raw entries to std out
+        print '\n'
+        for line in lines:
+            print line
+        print '\n'
+
+total       = 0
+rejected    = 0
+no_geo      = 0
+bad_geo     = 0
+
+total_locations = 0
+exact_locations = 0
+
+profession  = 0
+no_category = 0
+
 def read_page(directory, page):
 
     print 'Page Number: %d\n' % page.number
-    global total, rejected, no_geo, bad_geo, bad_geo_derived, profession, no_category
+    global total, rejected, no_geo, bad_geo, bad_geo_derived, profession, no_category, total_locations, exact_locations
 
     # tally up out some stats
     for entry in page.entries:
@@ -249,6 +284,11 @@ def read_page(directory, page):
                 no_geo = no_geo + 1
             elif entry.get_geo_status() == 1:
                 bad_geo = bad_geo + 1
+            else:
+                # good geo tag, but is it exact?
+                loc_stats = entry.get_location_stats()
+                total_locations = total_locations + loc_stats[0]
+                exact_locations = exact_locations + loc_stats[1]
 
             if len(entry.profession) > 0:
                 profession = profession + 1
@@ -260,15 +300,17 @@ def read_page(directory, page):
 
     rejected_per    = float(rejected) / total * 100
     good_entries    = total - rejected
-    no_geo_per      = float(no_geo)      / good_entries * 100
-    bad_geo_per     = float(bad_geo)     / good_entries * 100
-    profession_per  = float(profession)  / good_entries * 100
-    no_category_per = float(no_category) / good_entries * 100
+    no_geo_per      = float(no_geo)          / good_entries * 100
+    bad_geo_per     = float(bad_geo)         / good_entries * 100
+    exact_geo_per   = 0 if exact_locations == 0 else float(exact_locations) / total_locations * 100
+    profession_per  = float(profession)      / good_entries * 100
+    no_category_per = float(no_category)     / good_entries * 100
 
     print '\n%-20s%d' % ('Total Entries:', total)
     print '%-20s%5d%5d%%' % ('Rejected:',    rejected,    rejected_per)
     print '%-20s%5d%5d%%' % ('No Geo Tag:',  no_geo,      no_geo_per)
     print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo,     bad_geo_per)
+    print '%-20s%10d%%'     % ('Exact Tags:', exact_geo_per)
     print '%-20s%5d%5d%%' % ('Professions:', profession,  profession_per)
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 

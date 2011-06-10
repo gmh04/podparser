@@ -19,6 +19,10 @@ class EntryChecker():
         self.directory  = directory
         self.config_dir = config_dir
 
+        self.globals = {}
+        self._populate_global_replace('global.xml', self.globals)
+
+
         self.forenames = {}
         self._populate_global_replace('forenames.xml', self.forenames)
 
@@ -31,7 +35,7 @@ class EntryChecker():
 
         self.address_replaces = {}
         self._populate_global_replace("addresses.xml", self.address_replaces)
-        self._populate_address_lookup(directory)
+        self._populate_address_lookup('streets.xml')
 
     def _populate_global_replace(self, file_name, map):
         dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
@@ -47,7 +51,6 @@ class EntryChecker():
                 value = valueNode.nodeValue
 
             map[pattern] = value
-        #print '%s : %d' % (file_name, len(map))
 
     def _populate_stop_words(self, file_name, lst):
         dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
@@ -56,47 +59,64 @@ class EntryChecker():
         for word in words:
             lst.append(word.firstChild.nodeValue)
 
-    def _populate_address_lookup(self, directory):
+    def _populate_address_lookup(self, file_name):
+        # parse and populate address/street lookup
         self.addresses = {}
-
-        # directory specific addresses
-        fname = '%s%c%s-%s.xml' % (self.config_dir, os.sep, directory.town.lower(), directory.year)
+        fname = '%s%c%s' % (self.config_dir, os.sep, file_name)
 
         if os.path.isfile(fname):
             dom = parse(fname)
             addrs = dom.getElementsByTagName('address')
 
             for addr_node in addrs:
+                street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
                 patterns = addr_node.getElementsByTagName('pattern')
+
+                # get town specific configuration for this address
+                town = None
+                town_nodes = addr_node.getElementsByTagName('town')
+
+                for town_node in town_nodes:
+                    name = None
+                    modern_name = ''
+
+                    for c in town_nodes[0].childNodes:
+                        if c.nodeName == 'name':
+                            name = c.firstChild.nodeValue
+                        elif c.nodeName == 'modern_name':
+                            modern_name = c.firstChild.nodeValue
+                    if name and name.lower() == self.directory.town.lower():
+                        town = {'modern_name': modern_name, 'areas': {}}
+
+                        area_nodes = town_node.getElementsByTagName('area')
+                        for area_node in area_nodes:
+                            area_name_node = area_node.getElementsByTagName('name')
+                            if area_name_node:
+                                area_name   = area_name_node[0].firstChild.nodeValue
+                                modern_name = ''
+
+                                modern_node = area_node.getElementsByTagName('modern_name')
+                                if modern_node:
+                                    modern_name = modern_node[0].firstChild.nodeValue
+
+                                town['areas'][area_name] = modern_name
+                    break
+
                 for patternNode in patterns:
                     pattern = patternNode.firstChild.nodeValue
-                    street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
 
-                    modern_name = ''
-                    modern_name_node = addr_node.getElementsByTagName('modern_name')
-                    if len(modern_name_node) > 0:
-                        modern_name =  modern_name_node[0].firstChild.nodeValue
+                    self.addresses[pattern] = {'street': street,
+                                               'modern_name': '',
+                                               'areas': {}}
 
-                    self.addresses[pattern] = {'areas': {},
-                                               'street': street,
-                                               'modern_name': modern_name}
+                    if town:
+                        self.addresses[pattern]['modern_name'] = town['modern_name']
 
-                    areas_node = addr_node.getElementsByTagName('areas')
-
-                    if len(areas_node) > 0:
-                        area_nodes = areas_node[0].getElementsByTagName('area')
-                        for area_node in area_nodes:
-                            nameNode = area_node.getElementsByTagName('name')
-                            name = nameNode[0].firstChild.nodeValue
-
-                            area_modern_name = ''
-                            modNode = area_node.getElementsByTagName('modern_name')
-                            if len(modNode) > 0:
-                                area_modern_name = modNode[0].firstChild.nodeValue
-
-                            self.addresses[pattern]['areas'][name] = area_modern_name
+                        for area in town['areas']:
+                            self.addresses[pattern]['areas'][area] = town['areas'][area]
 
     def _populate_categories(self):
+        # parse and populate profession categories
         self.categories = {}
 
         # directory specific addresses
@@ -119,6 +139,9 @@ class EntryChecker():
                             self.categories[pattern] = code
 
     def clean_up(self, entry):
+        """
+        Fix OCR problems with an individual entry.
+        """
 
         if entry.forename in self.forenames:
             entry.forename = self.forenames[entry.forename]
@@ -142,20 +165,49 @@ class EntryChecker():
             if entry.address.find(address) != -1:
                 entry.address = entry.address.replace(address, self.address_replaces[address])
 
+    def clean_up_global(self, line):
+        """
+        TODO
+        """
+
+        for replace in self.globals:
+            if line.find(replace) != -1:
+                line = line.replace(replace, self.globals[replace])
+
+        return line
+
     def geo_encode(self, encoder, entry):
+        """
+        TODO
+        """
 
         entry.locations = []
         addrs = []
 
+        # process multiple addresses divided by a semi-colon
         if entry.address.find(';'):
             addrs = entry.address.split(';')
         else:
             addrs.append(entry.address)
 
+        # process multiple addresses divided by ' and '
+        for addr in addrs:
+            if addr.find(' and '):
+                more = addr.split(' and ')
+                addrs.remove(addr)
+                for a in more:
+                    addrs.append(a)
+
         for addr in addrs:
             addr = addr.strip()
 
             # encode address as is
+            location = self._get_derived_location(addr, encoder, entry)
+
+            #if not location or not location.exact:
+            #
+
+            """
             location = encoder.get_location('%s, %s, %s' % (addr,
                                                             self.directory.town,
                                                             self.directory.country))
@@ -172,9 +224,9 @@ class EntryChecker():
             else:
                 # no location returned try derived
                 self._get_derived_location(addr, encoder, entry)
-
+            """
     def _get_derived_location(self, addr, encoder, entry):
-
+        location = None
         matches = []
         best_match = ''
 
@@ -207,7 +259,8 @@ class EntryChecker():
             # check if area is associated with entry
             for area in areas:
                 if area.lower() in addr.lower():
-                    # modern name is stored as a value
+                    # address stored as key
+                    # modern name stored as a value
                     if areas[area]:
                         # replace address with modern name (note: drop area and door number)
                         derived_address = areas[area]
@@ -221,3 +274,5 @@ class EntryChecker():
             if location:
                 location.type = 'derived'
                 entry.locations.append(location)
+
+    return location

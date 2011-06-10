@@ -8,4 +8,12 @@
     <word>Parish Church</word>
   </stopWords>
 
+  <!--
+  <replaces>
+
+    <replace>
+      <pattern></pattern>
+      <value></value>
+    </replace>
+    -->
 </surnames>

@@ -3,6 +3,7 @@ import base64
 import hashlib
 import hmac
 import json
+import re
 import sys
 import time
 import urllib
@@ -14,7 +15,7 @@ class Google(object):
                        'sensor': 'false'}
         self.url = 'http://maps.googleapis.com/maps/api/geocode/json'
 
-    def get_location(self, address):
+    def get_location(self, address, verbose=False):
         location = None
 
         # send to google in ascii
@@ -25,14 +26,27 @@ class Google(object):
         f = urllib.urlopen(url)
         output = f.read()
 
-        #print output
+        if verbose:
+            print output
 
         try:
             result = json.loads(output)
 
             if result['status'] == 'OK':
-                geom = result['results'][0]['geometry']
-                location = Location(address, geom['location'],  geom['location_type'])
+                found_address = None
+                entry = result['results'][0]
+                geom = entry['geometry']
+                type = geom['location_type']
+                if type != 'APPROXIMATE':
+                    # get the name of the street returned by google
+                    for comp in entry['address_components']:
+                        if comp['types'][0] == 'route':
+                            found_address = comp['long_name']
+                            break
+
+                location = Location(address, geom['location'],
+                                    type,
+                                    found_address)
             else:
                 if result['status'] == 'ZERO_RESULTS':
                     pass
@@ -66,8 +80,8 @@ class GooglePremium(Google):
         self.params['client'] = client_id
         self.db               = db
 
-    def get_location(self, address):
-        location = super(GooglePremium, self).get_location(address)
+    def get_location(self, address, verbose=False):
+        location = super(GooglePremium, self).get_location(address, verbose)
 
         if self.db:
             self.db.record_google_lookup();
@@ -102,12 +116,25 @@ class GooglePremium(Google):
 class Location():
     """
     Stores location information related to an address
+
+    address       - address used in search
+    found_address - address returned by google
+    point         - the latlon returned by google for address
+    accuracy      - accuracy returned by google:
+                    ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, APPROXIMATE
+                    see http://code.google.com/apis/maps/documentation/geocoding/#Results
+    type          - raw:     address is sent as found in the POD
+                    derived: address is built using pattern matching
     """
-    def __init__(self, address, point, accuracy):
-        self.address  = address
-        self.point    = point
-        self.accuracy = accuracy
-        self.type     = ''
+    def __init__(self, address, point, accuracy, found_address=None):
+        self.address       = address
+        self.found_address = found_address
+        self.point         = point
+        self.accuracy      = accuracy
+        self.type          = ''
+        self.exact         = False
+
+        self._exact()
 
     def get_geo_status(self):
         """
@@ -131,9 +158,41 @@ class Location():
 
         return status
 
+    def _exact(self):
+        # does the street returned by google match the search term?
+        if self.found_address:
+            s_addr = self.address.lower()
+            g_addr = self.found_address.lower()
+
+            s_addr = s_addr.replace(' road',   ' rd')
+            s_addr = s_addr.replace(' street', ' st')
+            s_addr = s_addr.replace(' st.',    ' st')
+
+            # if street returned buy google starts or ends with a single
+            # character (e.g N, E, S or W) remove it
+            if re.match('\w ', g_addr):
+                g_addr = g_addr[2: len(g_addr)]
+            if re.search(' \w$', g_addr):
+                g_addr = g_addr[0: len(g_addr) - 2]
+                print g_addr
+
+            if s_addr.find(g_addr) != -1:
+                self.exact = True
+
     def __str__(self):
         latlon = '%(lat)f : %(lng)f ' % (self.point)
-        return '%s : %s : %s' % (self.address, latlon, self.accuracy)
+        str = '| %-60s | %s | %-20s | %-10s' % (self.address,
+                                                latlon,
+                                                self.accuracy,
+                                                self.type)
+
+        if self.found_address:
+            if not self.exact:
+                str = '%s (*** %s ***)' % (str, self.found_address)
+            else:
+                str = '%s (%s)' % (str, self.found_address)
+
+        return str
 
 if __name__ == "__main__":
 
@@ -146,6 +205,9 @@ if __name__ == "__main__":
                             help='Google premium private key')
     arg_parser.add_argument('-i', '--client_id',
                             help = 'Google premium client identifier')
+    arg_parser.add_argument('-v', '--verbose',
+                            action = 'store_true',
+                            help = 'Print detailed output')
 
     args = arg_parser.parse_args()
 
@@ -156,4 +218,5 @@ if __name__ == "__main__":
         google = Google()
         print 'Encode using Google'
 
-    print google.get_location(args.address)
+    #print args.verbose
+    print google.get_location(args.address, args.verbose)

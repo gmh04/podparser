@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<forenames>
+
+<global>
+
   <replaces>
 
-    <!-- J -->
+    <!-- R -->
     <replace>
-      <pattern>Jobn</pattern>
-      <value>John</value>
+      <pattern>Eobert</pattern>
+      <value>Robert</value>
     </replace>
 
   </replaces>
 
-</forenames>
+</global>
