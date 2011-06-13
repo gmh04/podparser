@@ -22,10 +22,7 @@ class EntryChecker():
         self.globals = {}
         self._populate_global_replace('global.xml', self.globals)
 
-        #
         self.names = {}
-        #self._populate_global_replace('forenames.xml', self.forenames)
-
         self.name_stop_words = []
         self._populate_global_replace('names.xml', self.names)
         self._populate_stop_words('names.xml', self.name_stop_words)

@@ -5274,6 +5274,7 @@
   <address>
     <pattern>newhall terrace</pattern>
     <street>Newhall Terrace</street>
+    <modern_name>Greenhead Street</modern_name>
   </address>
   <address>
     <pattern>new street</pattern>
@@ -5419,6 +5420,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Vine Street</modern_name>
       </area>
     </town>
   </address>
@@ -5506,6 +5508,7 @@
       </area>
       <area>
         <name>Kinning Park</name>
+        <modern_name>Milnpark Street</modern_name>
       </area>
       <area>
         <name>Plantation</name>
@@ -5574,7 +5577,7 @@
         <name>Anderston</name>
       </area>
       <area>
-        <name>Kingaton</name>
+        <name>Kingston</name>
       </area>
     </town>
   </address>
@@ -5693,8 +5696,9 @@
     <street>Port Dundas Road</street>
   </address>
   <address>
-    <pattern>prtland street</pattern>
-    <street>Prtland Street</street>
+    <pattern>portland street</pattern>
+    <street>Portland Street</street>
+    <modern_name>North Portland Street</modern_name>
   </address>
   <address>
     <pattern>portman place</pattern>
@@ -5726,7 +5730,10 @@
     <town>
       <name>Glasgow</name>
       <area>
-        <name>Bridgetonm Govanhill</name>
+        <name>Bridgeton</name>
+      </area>
+      <area>
+        <name>Govanhill</name>
       </area>
     </town>
   </address>
@@ -5747,6 +5754,7 @@
       <name>Glasgow</name>
       <area>
         <name>Strathbungo</name>
+        <modern_name>Marywood Square</modern_name>
       </area>
     </town>
   </address>
@@ -5936,6 +5944,10 @@
   <address>
     <pattern>regent street</pattern>
     <street>Regent Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Regwood Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>reid street</pattern>
@@ -6075,9 +6087,7 @@
     <street>Roseberry Terrace</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Pollockshields</name>
-      </area>
+      <modern_name>North Woodside Road</modern_name>
     </town>
   </address>
   <address>
@@ -6178,6 +6188,7 @@
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
+        <modern_name>Queen's Dr</modern_name>
       </area>
     </town>
   </address>
@@ -6298,6 +6309,10 @@
   <address>
     <pattern>enoch sq</pattern>
     <street>St Enoch Square</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>St Enoch Pl</modern_name>
+    </town>
   </address>
   <address>
     <pattern>st enoch qynd</pattern>
@@ -6318,6 +6333,7 @@
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
+        <modern_name>Hamilton Park Avenue</modern_name>
       </area>
       <area>
         <name>Kingston</name>
@@ -6331,6 +6347,7 @@
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
+        <modern_name>Ruskin Terrace</modern_name>
       </area>
     </town>
   </address>
@@ -6509,6 +6526,7 @@
       </area>
       <area>
         <name>Port Dundas</name>
+        <modern_name>Tyndrum Street</modern_name>
       </area>
     </town>
   </address>
@@ -6537,6 +6555,7 @@
       <name>Glasgow</name>
       <area>
         <name>Langside</name>
+        <modern_name>Blairhall Avenue</modern_name>
       </area>
     </town>
   </address>
@@ -6577,6 +6596,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kinning Park</name>
+        <modern_name>Marlow Terrace</modern_name>
       </area>
     </town>
   </address>
@@ -6599,6 +6619,10 @@
   <address>
     <pattern>sister street</pattern>
     <street>Sister Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Orr Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>skiphall place</pattern>
@@ -6625,9 +6649,11 @@
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
+        <modern_name>Inglefield Street</modern_name>
       </area>
       <area>
         <name>Hillhead</name>
+        <modern_name>Otago Street</modern_name>
       </area>
       <area>
         <name>Kinning Park</name>
@@ -6648,6 +6674,10 @@
   <address>
     <pattern>somerville place</pattern>
     <street>Somerville Place</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Monteith Place</modern_name>
+    </town>
   </address>
   <address>
     <pattern>somerville drive</pattern>
@@ -6810,6 +6840,7 @@
       <name>Glasgow</name>
       <area>
         <name>Langside</name>
+        <modern_name>Deanston Drive</modern_name>
       </area>
     </town>
   </address>
@@ -6832,6 +6863,7 @@
       <name>Glasgow</name>
       <area>
         <name>Partick</name>
+        <modern_name>Moy Street</modern_name>
       </area>
     </town>
   </address>
@@ -6856,6 +6888,7 @@
       <name>Glasgow</name>
       <area>
         <name>Port Dundas</name>
+        <modern_name>Dunblane Street</modern_name>
       </area>
     </town>
   </address>
@@ -6903,6 +6936,10 @@
   <address>
     <pattern>struthers street</pattern>
     <street>Struthers Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Tobago Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>summerfield cottages</pattern>
@@ -7044,6 +7081,10 @@
   <address>
     <pattern>thomson street</pattern>
     <street>Thomson Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Torness Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>thorne place</pattern>
@@ -7128,6 +7169,10 @@
   <address>
     <pattern>university street</pattern>
     <street>University Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Hastie Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>ure place</pattern>
@@ -7371,10 +7416,18 @@
   <address>
     <pattern>well road</pattern>
     <street>Well Road</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Trossachs Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>well street</pattern>
     <street>Well Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Cooper's Well Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>wellcroft place</pattern>
@@ -7511,6 +7564,10 @@
   <address>
     <pattern>west garden street</pattern>
     <street>West Garden Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Burnbank Terrace</modern_name>
+    </town>
   </address>
   <address>
     <pattern>west george lane</pattern>
@@ -7614,9 +7671,11 @@
       </area>
       <area>
         <name>Calton</name>
+        <modern_name>Templeton Street></modern_name>
       </area>
       <area>
         <name>Cowcaddens</name>
+        <modern_name>Glenmavis Street</modern_name>
       </area>
       <area>
         <name>Mile-end</name>
@@ -7638,9 +7697,11 @@
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
+        <modern_name>Oakfield Avenue</modern_name>
       </area>
       <area>
         <name>Partick</name>
+        <modern_name>Gullane Street</modern_name>
       </area>
     </town>
   </address>
@@ -7659,6 +7720,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Kirklee Circus</modern_name>
       </area>
     </town>
   </address>
@@ -7679,6 +7741,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Kirklee Quadrant</modern_name>
       </area>
     </town>
   </address>
@@ -7696,6 +7759,7 @@
       </area>
       <area>
         <name>Langside</name>
+        <street>Kirklee Terrace</street>
       </area>
     </town>
   </address>
@@ -7784,5 +7848,9 @@
   <address>
     <pattern>young street</pattern>
     <street>Young Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Tobago Street</modern_name>
+    </town>
   </address>
 </addresses>

@@ -6,29 +6,16 @@ import codecs
 import os
 import sys
 
-"""
-class Timerx(object):
+import checker, geo, directory, parser
+from geo import encoder
 
-    def __init__(self, f):
-        print "inside myDecorator.__init__()"
-        self.f = f
-        self.t = time()
-
-
-    def __call__(self, *args):
-        print "__call__ start"
-        self.f(*args)
-        print '\nParse took %.2f mins' % ((time() - self.t) / 60)
-        print "__call__ finished"
-
-@Timerx
-def test(arg1):
-    pass
-
-print '*'
-test('test')
-print '**'
-"""
+def timer(f):
+    # timer decorator
+    def deco(self, *args):
+        t = time()
+        f(self, *args)
+        print '\nParse took %.1f mins' % ((time() - t) / 60)
+    return deco
 
 class Parser:
     """
@@ -59,21 +46,18 @@ class Parser:
         self.pre_post_office = pre_post_office
         self.db              = db
 
-        import podparser.geo.encoder
         if encoder_key and client_id:
-            self.geoencoder = podparser.geo.encoder.GooglePremium(key       = encoder_key,
-                                                                  client_id = client_id,
-                                                                  db        = self.db)
+            self.geoencoder = geo.encoder.GooglePremium(key       = encoder_key,
+                                                        client_id = client_id,
+                                                        db        = self.db)
         else:
-            self.geoencoder = podparser.geo.encoder.Google()
+            self.geoencoder = geo.encoder.Google()
 
-    #@Timerx
+    @timer
     def run_parser(self, callback):
         """
         Parse post office directory
         """
-
-        from podparser import checker, directory
 
         # read meta data
         self.directory = directory.Directory(self.directory);
@@ -82,8 +66,7 @@ class Parser:
             self.db.set_directory(self.directory)
 
         # create checker object
-        checker = checker.EntryChecker(self.directory, self.config)
-
+        entry_checker = checker.EntryChecker(self.directory, self.config)
         print 'Parsing %s for %s\n' % (self.directory.town, self.directory.year)
 
         # get list of files to parse
@@ -100,18 +83,18 @@ class Parser:
 
             for line in lines:
                 # fix OCR problems with global replaces
-                line = checker.clean_up_global(line)
+                line = entry_checker.clean_up_global(line)
 
                 # create entry with cleanup line
                 pod_entry = directory.Entry(line)
 
                 if pod_entry.valid():
                     # again, clean up valid entries
-                    checker.clean_up(pod_entry)
+                    entry_checker.clean_up(pod_entry)
 
                     # geo encode address if encoder set up
                     if self.geoencoder:
-                        checker.geo_encode(self.geoencoder, pod_entry)
+                        entry_checker.geo_encode(self.geoencoder, pod_entry)
 
                 self._print_entry(pod_entry)
                 page.entries.append(pod_entry)
@@ -127,8 +110,6 @@ class Parser:
 
     def _get_listing(self):
         #  get list of djvu xml files
-        from podparser import directory
-
         def get_page_from_file(file):
             return int(file[len(file) -9: len(file) -5])
 
@@ -248,7 +229,8 @@ class Parser:
                 print '*** No geo tag'
             elif geo_status == 1:
                 print '*** Poor geo tag'
-            elif len(entry.profession) > 0 and len(entry.category) == 0:
+
+            if len(entry.profession) > 0 and len(entry.category) == 0:
                 print '*** No profession category'
 
         print unicode(entry)
@@ -327,9 +309,6 @@ if __name__ == "__main__":
     os.chdir('%s%c..' % (cur_dir, os.sep))
     podparser_dir = os.getcwd()
 
-    # add parent directory of the podparser to the sys path
-    sys.path.append(os.getcwd())
-
     # parse commandline arguments
     arg_parser = argparse.ArgumentParser(description='Tool for parsing postcode directories')
 
@@ -401,7 +380,6 @@ if __name__ == "__main__":
     db = None
     if args.commit:
         if args.dbpassword:
-            from podparser.db.connection import PodConnection
             db = PodConnection(db_password = args.dbpassword,
                                db_name     = args.dbname,
                                db_user     = args.dbuser,
@@ -412,10 +390,7 @@ if __name__ == "__main__":
             sys.exit(1)
 
 
-    t = time()
-
     # kick off parsing
-    from podparser import parser
     parser.Parser(config          = config_dir,
                   directory       = directory,
                   start           = args.start,
@@ -425,5 +400,3 @@ if __name__ == "__main__":
                   verbose         = args.verbose,
                   pre_post_office = args.williamson,
                   db              = db).run_parser(read_page)
-
-    print '\nParse took %.2f mins' % ((time() - t) / 60)

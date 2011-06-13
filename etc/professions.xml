@@ -113,6 +113,7 @@
       <name>Manufacturing</name>
       <code>C</code>
       <list>
+        <pattern>anchor makers</pattern>
         <pattern>boot and shoe maker</pattern>
         <pattern>boot and shoe manufacturer</pattern>
         <pattern>boot and shoemaker</pattern>
