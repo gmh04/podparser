@@ -194,6 +194,10 @@
       <value>street</value>
     </replace>
     <replace>
+      <pattern>Lome ter</pattern>
+      <value>Lorne ter</value>
+    </replace>
+    <replace>
       <pattern>ltreet</pattern>
       <value>street</value>
     </replace>
@@ -236,6 +240,10 @@
     <replace>
       <pattern>Shakefpeare</pattern>
       <value>Shakespeare</value>
+    </replace>
+    <replace>
+      <pattern>St. George's pi</pattern>
+      <value>St. George's pl</value>
     </replace>
 
     <!-- T -->

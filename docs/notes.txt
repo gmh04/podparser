@@ -1,9 +1,18 @@
-no google entry:
+# no google entry:
 
 Afton Crescent
+Caprera place
 Frederick Lane
+Hospital Street
+Linden ter., Pollokshields
+Partick hill
+Randolph terrace, Garnehill
 St Enoch Square
+
 Viewfield Place, Pollokshields
+Viewfield ter., Pollokshield
 
+Wesleyan Street
 
-
+# APPROXIMATE google entry
+St Andrew's Road, Pollokshields

@@ -163,6 +163,7 @@
         <pattern>contractor</pattern>
         <pattern>decorator</pattern>
         <pattern>glazier</pattern>
+        <pattern>joiner</pattern>
         <pattern>mason</pattern>
         <pattern>painter</pattern>
         <pattern>slater</pattern>
@@ -183,11 +184,13 @@
         <pattern>furniture dealer</pattern>
         <pattern>greengrocer</pattern>
         <pattern>grocer</pattern>
+        <pattern>meat salesman</pattern>
         <pattern>merchant</pattern>
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
         <pattern>provision dealer</pattern>
         <pattern>spirit merchant</pattern>
+        <pattern>tobacconist</pattern>
         <pattern>traveller</pattern>
         <pattern>travelling</pattern>
       </list>
@@ -197,6 +200,8 @@
       <code>H</code>
       <list>
         <pattern>shipmaster</pattern>
+        <pattern>ship master</pattern>
+        <pattern>warehousemen</pattern>
       </list>
     </category>
     <category>
@@ -225,7 +230,10 @@
         <pattern>bank</pattern>
         <pattern>bookkeeper</pattern>
         <pattern>broker</pattern>
+        <pattern>cashier</pattern>
+        <pattern>commission agent</pattern>
         <pattern>insurance</pattern>
+        <pattern>money exchangers</pattern>
         <pattern>pawnbroker</pattern>
         <pattern>stockbroker</pattern>
       </list>
@@ -234,7 +242,7 @@
       <name>Real estate activities</name>
       <code>L</code>
       <list>
-
+        <pattern>house factor</pattern>
       </list>
     </category>
     <category>
@@ -256,6 +264,7 @@
       <name>Public administration and defence; compulsory social security</name>
       <code>O</code>
       <list>
+        <pattern>drill instructor</pattern>
         <pattern>police</pattern>
       </list>
     </category>
@@ -263,6 +272,7 @@
       <name>Education</name>
       <code>P</code>
       <list>
+        <pattern>head master </pattern>
         <pattern>professor</pattern>
         <pattern>rector</pattern>
         <pattern>teacher</pattern>
@@ -288,8 +298,9 @@
       <name>Arts, entertainment and recreation</name>
       <code>R</code>
       <list>
+        <pattern>artist</pattern>
         <pattern>engraver</pattern>
-        <pattern>engravers</pattern>
+        <pattern>gilder</pattern>
         <pattern>photographer</pattern>
         <pattern>photographic</pattern>
         <pattern>photographist</pattern>

@@ -1,4 +1,4 @@
-from time            import time
+from datetime        import datetime
 from xml.dom.minidom import parse
 
 import argparse
@@ -6,15 +6,24 @@ import codecs
 import os
 import sys
 
-import checker, geo, directory, parser
+import checker, db, directory, geo, parser
 from geo import encoder
+from db import connection
 
 def timer(f):
     # timer decorator
     def deco(self, *args):
-        t = time()
+        then = datetime.now()
         f(self, *args)
-        print '\nParse took %.1f mins' % ((time() - t) / 60)
+
+        td = datetime.now() - then
+
+        if  td.seconds < 60:
+            print '\nParse took: %d secs' % td.seconds
+        else:
+            print '\nParse took: %d hour(s): %d mins: %d secs' % (td.seconds / 3600,
+                                                                  (td.seconds / 60) % 60,
+                                                                  td.seconds % 60)
     return deco
 
 class Parser:
@@ -31,7 +40,8 @@ class Parser:
                  client_id       = None,
                  verbose         = False,
                  pre_post_office = False,
-                 db              = None):
+                 db              = None,
+                 commit          = False):
         """
         Initialise the parser.
 
@@ -45,6 +55,7 @@ class Parser:
         self.verbose         = verbose
         self.pre_post_office = pre_post_office
         self.db              = db
+        self.commit          = commit
 
         if encoder_key and client_id:
             self.geoencoder = geo.encoder.GooglePremium(key       = encoder_key,
@@ -103,7 +114,7 @@ class Parser:
             callback(self.directory, page);
 
             # commit page to database
-            if self.db:
+            if self.db and self.commit:
                 self.db.commit(page)
 
         return directory
@@ -242,10 +253,11 @@ class Parser:
             print line
         print '\n'
 
-total       = 0
-rejected    = 0
-no_geo      = 0
-bad_geo     = 0
+total         = 0
+rejected      = 0
+no_geo        = 0
+bad_geo       = 0
+unmatched_geo = 0
 
 total_locations = 0
 exact_locations = 0
@@ -256,7 +268,7 @@ no_category = 0
 def read_page(directory, page):
 
     print 'Page Number: %d\n' % page.number
-    global total, rejected, no_geo, bad_geo, bad_geo_derived, profession, no_category, total_locations, exact_locations
+    global total, rejected, no_geo, bad_geo, unmatched_geo, profession, no_category, total_locations, exact_locations
 
     # tally up out some stats
     for entry in page.entries:
@@ -274,6 +286,10 @@ def read_page(directory, page):
                 total_locations = total_locations + loc_stats[0]
                 exact_locations = exact_locations + loc_stats[1]
 
+                """
+                if exact_locations == 0:
+                    unmatched_geo = unmatched_geo + 1
+                """
             if len(entry.profession) > 0:
                 profession = profession + 1
 
@@ -282,19 +298,21 @@ def read_page(directory, page):
 
         total = total + 1
 
-    rejected_per    = float(rejected) / total * 100
-    good_entries    = total - rejected
-    no_geo_per      = float(no_geo)          / good_entries * 100
-    bad_geo_per     = float(bad_geo)         / good_entries * 100
+    rejected_per      = float(rejected) / total * 100
+    good_entries      = total - rejected
+    no_geo_per        = float(no_geo)          / good_entries * 100
+    bad_geo_per       = float(bad_geo)         / good_entries * 100
     exact_geo_per   = 0 if exact_locations == 0 else float(exact_locations) / total_locations * 100
-    profession_per  = float(profession)      / good_entries * 100
-    no_category_per = float(no_category)     / good_entries * 100
+    #unmatched_geo_per = float(unmatched_geo)   / good_entries * 100
+    profession_per    = float(profession)      / good_entries * 100
+    no_category_per   = float(no_category)     / good_entries * 100
 
-    print '\n%-20s%d' % ('Total Entries:', total)
+    print '\n%-20s%5d' % ('Total Entries:', total)
     print '%-20s%5d%5d%%' % ('Rejected:',    rejected,    rejected_per)
     print '%-20s%5d%5d%%' % ('No Geo Tag:',  no_geo,      no_geo_per)
     print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo,     bad_geo_per)
-    print '%-20s%10d%%'     % ('Exact Tags:', exact_geo_per)
+    #print '%-20s%5d%5d%%' % ('Unmatched Geo Tag:', unmatched_geo,     unmatched_geo_per)
+    print '%-20s%10d%%'   % ('Exact Tags:', exact_geo_per)
     print '%-20s%5d%5d%%' % ('Professions:', profession,  profession_per)
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
@@ -339,7 +357,7 @@ if __name__ == "__main__":
                             help   = "parse williamson's directory")
     arg_parser.add_argument('-c', '--commit',
                             action = 'store_true',
-                            help   = 'commit to database')
+                            help   = 'commit parsed results to database')
     arg_parser.add_argument('-H', '--dbhost',
                             default = 'localhost',
                             help    ='database host')
@@ -377,18 +395,19 @@ if __name__ == "__main__":
         print arg_parser.print_help()
         sys.exit(1)
 
-    db = None
-    if args.commit:
-        if args.dbpassword:
-            db = PodConnection(db_password = args.dbpassword,
-                               db_name     = args.dbname,
-                               db_user     = args.dbuser,
-                               db_host     = args.dbhost,
-                               db_port     = args.dbport)
-        else:
-            print 'You must provide a password for the database'
-            sys.exit(1)
+    db_conn = None
+    if args.dbpassword:
+        db_conn = connection.PodConnection(db_password = args.dbpassword,
+                                           db_name     = args.dbname,
+                                           db_user     = args.dbuser,
+                                           db_host     = args.dbhost,
+                                           db_port     = args.dbport)
+    else:
+        print 'No database defined'
 
+    if not db and args.key:
+        print 'To use google premium a database must be defined'
+        args.key = None
 
     # kick off parsing
     parser.Parser(config          = config_dir,
@@ -399,4 +418,8 @@ if __name__ == "__main__":
                   client_id       = args.client_id,
                   verbose         = args.verbose,
                   pre_post_office = args.williamson,
-                  db              = db).run_parser(read_page)
+                  db              = db_conn,
+                  commit          = args.commit).run_parser(read_page)
+
+    sys.exit(0)
+

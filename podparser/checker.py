@@ -3,6 +3,8 @@ from xml.dom.minidom import parse
 import os
 import re
 
+COMMA_REPLACEMEMT = '#&44';
+
 class EntryChecker():
     """
     Checks and repairs OCR errors based on configuration
@@ -171,6 +173,12 @@ class EntryChecker():
             if entry.address.find(address) != -1:
                 entry.address = entry.address.replace(address, self.address_replaces[address])
 
+        # put commas back
+        entry.forename   = entry.forename.replace(COMMA_REPLACEMEMT, ',')
+        entry.surname    = entry.surname.replace(COMMA_REPLACEMEMT, ',')
+        entry.profession = entry.profession.replace(COMMA_REPLACEMEMT, ',')
+        entry.address    = entry.address.replace(COMMA_REPLACEMEMT, ',')
+
     def clean_up_global(self, line):
         """
         TODO
@@ -179,6 +187,10 @@ class EntryChecker():
         for replace in self.globals:
             if line.find(replace) != -1:
                 line = line.replace(replace, self.globals[replace])
+
+        # replace any comma within brackets with '&#44;'
+        while re.search("(\(.+?)(,)(.+?\))", line):
+            line = re.sub("(\(.+?)(,)(.+?\))", r"\1%s\3" % COMMA_REPLACEMEMT, line)
 
         return line
 
@@ -210,8 +222,11 @@ class EntryChecker():
             # encode address as is
             location = self._get_derived_location(addr, encoder, entry)
 
-            #if not location or not location.exact:
-            #
+            if not location:
+                location = encoder.get_location(addr, self.directory.town)
+                if location:
+                    location.type = 'raw'
+                    entry.locations.append(location)
 
             """
             location = encoder.get_location('%s, %s, %s' % (addr,
@@ -274,14 +289,9 @@ class EntryChecker():
                         # append area to derived address
                         derived_address = '%s, %s' % (derived_address, area)
                     break
-            """
-            location = encoder.get_location('%s, %s, %s' % (derived_address,
-                                                            self.directory.town,
-                                                         self.directory.country))
-            """
+
             location = encoder.get_location(derived_address,
-                                            self.directory.town,
-                                            self.directory.country)
+                                            self.directory.town)
 
             if location:
                 location.type = 'derived'

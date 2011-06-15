@@ -3411,7 +3411,7 @@
     </town>
   </address>
   <address>
-    <pattern>hamilton terrace</pattern>
+    <pattern>hamilton ter</pattern>
     <street>Hamilton Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -6276,11 +6276,12 @@
   </address>
   <address>
     <pattern>st andrew's road</pattern>
+    <pattern>st. andrew's road</pattern>
     <street>St Andrew's Road</street>
     <town>
       <name>Glasgow</name>
       <area>
-        <name>Pollockshields</name>
+        <name>Pollokshields</name>
       </area>
     </town>
   </address>
@@ -6751,6 +6752,7 @@
   </address>
   <address>
     <pattern>springburn road</pattern>
+    <pattern>spring-burn road</pattern>
     <street>Springburn Road</street>
   </address>
   <address>

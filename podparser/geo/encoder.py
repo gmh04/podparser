@@ -11,7 +11,7 @@ import urlparse
 
 class Google(object):
 
-    def __init__(self, verbose):
+    def __init__(self, verbose=False):
         """
         TODO
         """
