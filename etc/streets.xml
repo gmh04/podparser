@@ -307,7 +307,7 @@
     </town>
   </address>
   <address>
-    <pattern>anderson street</pattern>
+    <pattern>anderson st</pattern>
     <street>Anderson Street</street>
     <town>
       <name>Glasgow</name>
@@ -1331,12 +1331,12 @@
   <address>
     <pattern>calder street</pattern>
     <street>Calder Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>calter terrace</pattern>
@@ -1902,8 +1902,8 @@
     <street>Commerce Street</street>
   </address>
   <address>
-    <pattern>ciommercial road</pattern>
-    <street>Ciommercial Road</street>
+    <pattern>commercial road</pattern>
+    <street>Commercial Road</street>
   </address>
   <address>
     <pattern>cook street</pattern>
@@ -1942,6 +1942,18 @@
   <address>
     <pattern>cowcaddens</pattern>
     <street>Cowcaddens</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Cowcaddens Rd</modern_name>
+    </town>
+  </address>
+  <address>
+    <pattern>cowcaddens st</pattern>
+    <street>Cowcaddens Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Cowcaddens Rd</modern_name>
+    </town>
   </address>
   <address>
     <pattern>cowlairs road</pattern>
@@ -2981,6 +2993,10 @@
     <street>Gibson Street</street>
   </address>
   <address>
+    <pattern>gilmore street</pattern>
+    <street>Gilmore Street</street>
+  </address>
+  <address>
     <pattern>gilmour street</pattern>
     <street>Gilmour Street</street>
   </address>
@@ -3234,6 +3250,15 @@
       <area>
         <name>Hillhead</name>
       </area>
+    </town>
+  </address>
+  <address>
+    <pattern>great hamilton street</pattern>
+    <pattern>gt. hamilton st</pattern>
+    <street>Great Hamilton Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>London Road</modern_name>
     </town>
   </address>
   <address>
@@ -4742,8 +4767,16 @@
     <street>Marshall Place</street>
   </address>
   <address>
-    <pattern>mason stret</pattern>
-    <street>Mason Stret</street>
+    <pattern>mason street</pattern>
+    <street>Mason Street</street>
+  </address>
+  <address>
+    <pattern>mathieson road</pattern>
+    <street>Mathieson Road</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Grovepark Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>mathieson street</pattern>
@@ -5175,13 +5208,8 @@
   </address>
   <address>
     <pattern>mossview</pattern>
+    <pattern>moss view</pattern>
     <street>Mossview</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crossmyloof</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>mount street</pattern>
@@ -6105,12 +6133,6 @@
   <address>
     <pattern>roslea drive</pattern>
     <street>Roslea Drive</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Dennistoun</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>rosemount street</pattern>
@@ -6343,6 +6365,7 @@
   </address>
   <address>
     <pattern>st james' terrace</pattern>
+    <pattern>st. james' terrace</pattern>
     <street>St James' Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -6395,6 +6418,14 @@
   <address>
     <pattern>st vincent crescent</pattern>
     <street>St Vincent Crescent</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Saint Vincent Crescent</modern_name>
+    </town>
+  </address>
+  <address>
+    <pattern>st. vincent pl</pattern>
+    <street>Saint Vincent Place</street>
   </address>
   <address>
     <pattern>st vincent lane</pattern>
@@ -6402,7 +6433,13 @@
   </address>
   <address>
     <pattern>st vincent street</pattern>
+    <pattern>st. vin. st</pattern>
+    <pattern>st. vincent st</pattern>
     <street>St Vincent Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Saint Vincent Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>salisbury quadrant</pattern>
@@ -6534,6 +6571,10 @@
   <address>
     <pattern>seamour street</pattern>
     <street>Seamour Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Seamore Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>sedan place</pattern>
@@ -7752,7 +7793,7 @@
     <street>Windsor Street</street>
   </address>
   <address>
-    <pattern>windsor terrace</pattern>
+    <pattern>windsor ter</pattern>
     <street>Windsor Terrace</street>
     <town>
       <name>Glasgow</name>

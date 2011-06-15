@@ -4,7 +4,9 @@
 
   <stopWords>
     <word>Co.</word>
+    <word>Glasgow</word>
     <word>Insurance</word>
+    <word>Monthly</word>
     <word>Parish Church</word>
     <word> &amp; </word>
   </stopWords>

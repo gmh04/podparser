@@ -106,6 +106,7 @@
       <name>Mining and quarrying</name>
       <code>B</code>
       <list>
+        <pattern>coalmasters</pattern>
         <pattern>miner</pattern>
       </list>
     </category>
@@ -128,9 +129,12 @@
         <pattern>gunmaker</pattern>
         <pattern>hatter</pattern>
         <pattern>hosier</pattern>
+        <pattern>ironmasters</pattern>
+        <pattern>machinist</pattern>
         <pattern>manufacturer</pattern>
         <pattern>milliner</pattern>
         <pattern>millwright</pattern>
+        <pattern>saddler</pattern>
         <pattern>shirt maker</pattern>
         <pattern>shoemaker</pattern>
         <pattern>shoemakers</pattern>
@@ -143,6 +147,7 @@
       <code>D</code>
       <list>
         <pattern>gasfitter</pattern>
+        <pattern>gas inspector</pattern>
       </list>
     </category>
     <category>
@@ -167,6 +172,7 @@
         <pattern>mason</pattern>
         <pattern>painter</pattern>
         <pattern>slater</pattern>
+        <pattern>varnish</pattern>
       </list>
     </category>
     <category>
@@ -179,17 +185,21 @@
         <pattern>butcher</pattern>
         <pattern>chemist</pattern>
         <pattern>confectioner</pattern>
+        <pattern>flesher</pattern>
         <pattern>fruit salesman</pattern>
         <pattern>fruiterer</pattern>
         <pattern>furniture dealer</pattern>
         <pattern>greengrocer</pattern>
         <pattern>grocer</pattern>
+        <pattern>machinery agent</pattern>
         <pattern>meat salesman</pattern>
         <pattern>merchant</pattern>
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
         <pattern>provision dealer</pattern>
         <pattern>spirit merchant</pattern>
+        <pattern>spirit dealer</pattern>
+        <pattern>storekeeper</pattern>
         <pattern>tobacconist</pattern>
         <pattern>traveller</pattern>
         <pattern>travelling</pattern>
@@ -199,6 +209,7 @@
       <name>Transport and storage</name>
       <code>H</code>
       <list>
+        <pattern>G.P.O</pattern>
         <pattern>shipmaster</pattern>
         <pattern>ship master</pattern>
         <pattern>warehousemen</pattern>
@@ -208,16 +219,19 @@
       <name>Accommodation and food service activities</name>
       <code>I</code>
       <list>
-
+        <pattern>lodgings</pattern>
+        <pattern>restaurant</pattern>
       </list>
     </category>
     <category>
       <name>Information and communication</name>
       <code>J</code>
       <list>
-        <pattern>bookbinders</pattern>
+        <pattern>advertising</pattern>
+        <pattern>bookbinder</pattern>
         <pattern>printer</pattern>
         <pattern>publishers</pattern>
+        <pattern>stationer</pattern>
         <pattern>typefounders</pattern>
       </list>
     </category>
@@ -251,13 +265,15 @@
       <list>
         <pattern>advocate</pattern>
         <pattern>manager</pattern>
+        <pattern>solicitor</pattern>
       </list>
     </category>
     <category>
       <name>Administrative and support service activities</name>
       <code>N</code>
       <list>
-
+        <pattern>clerk</pattern>
+        <pattern>secretary</pattern>
       </list>
     </category>
     <category>
@@ -275,6 +291,7 @@
         <pattern>head master </pattern>
         <pattern>professor</pattern>
         <pattern>rector</pattern>
+        <pattern>student</pattern>
         <pattern>teacher</pattern>
         <pattern>teachers</pattern>
       </list>
@@ -291,7 +308,7 @@
         <pattern>optician</pattern>
         <pattern>pathology</pattern>
         <pattern>physician</pattern>
-        <pattern>surgeon-dentist</pattern>
+        <pattern>surgeon</pattern>
       </list>
     </category>
     <category>
@@ -315,6 +332,7 @@
         <pattern>dining</pattern>
         <pattern>draper</pattern>
         <pattern>hairdresser</pattern>
+        <pattern>missionary</pattern>
         <pattern>upholsterer</pattern>
         <pattern>upholsteress</pattern>
       </list>

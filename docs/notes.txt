@@ -1,12 +1,38 @@
-# no google entry:
+# no google entry (probably doesn't exist):
 
 Afton Crescent
+Argyle Arcade
+
+Blythswood terrace
+
 Caprera place
+Chatham place
+Crookston hall
+
+Downie Place
+
+Elmbank Place
+
+Franklin Terrace
 Frederick Lane
+
+Granby ter
+
+Hillhead gardens
 Hospital Street
+
+Kelvingrove terrace
+
 Linden ter., Pollokshields
+
 Partick hill
+Pollok street
+Princes Square
+
 Randolph terrace, Garnehill
+Rutherglen Loan
+
+Sardinia terrace, Hillhead
 St Enoch Square
 
 Viewfield Place, Pollokshields
@@ -16,3 +42,6 @@ Wesleyan Street
 
 # APPROXIMATE google entry
 St Andrew's Road, Pollokshields
+
+# use with number returns bad result
+Renfrew Street

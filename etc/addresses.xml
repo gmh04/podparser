@@ -154,6 +154,10 @@
       <value>Highschool</value>
     </replace>
     <replace>
+      <pattern>Hillliead</pattern>
+      <value>Hillhead</value>
+    </replace> 
+    <replace>
       <pattern>houfes</pattern>
       <value>houses</value>
     </replace>
@@ -235,6 +239,11 @@
       <pattern>Ramfay</pattern>
       <value>Ramsay</value>
     </replace>
+    <replace>
+      <pattern> Eose</pattern>
+      <value> Rose</value>
+    </replace>
+
 
     <!-- S -->
     <replace>
@@ -244,6 +253,10 @@
     <replace>
       <pattern>St. George's pi</pattern>
       <value>St. George's pl</value>
+    </replace>
+    <replace>
+      <pattern>St. Vincent pi</pattern>
+      <value>St. Vincent pl</value>
     </replace>
 
     <!-- T -->
