@@ -330,49 +330,56 @@ if __name__ == "__main__":
     # parse commandline arguments
     arg_parser = argparse.ArgumentParser(description='Tool for parsing postcode directories')
 
-    arg_parser.add_argument('-C', '--config',
-                            nargs = 1,
-                            help  = 'configuration directory')
-    arg_parser.add_argument('-d', '--directory',
-                            nargs = 1,
-                            help  = 'postcode directory to be parsed')
-    arg_parser.add_argument('-e', '--end',
-                            default = 9999,
-                            type    = int,
-                            help    = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
-    arg_parser.add_argument('-k', '--key',
-                            help = 'Google premium private key')
-    arg_parser.add_argument('-i', '--client_id',
-                            help = 'Google premium client identifier')
-    arg_parser.add_argument('-p', '--page',
-                            help = 'single postcode directory page to be parsed')
-    arg_parser.add_argument('-s', '--start',
-                            default = 0,
-                            help    = 'Start page to be parsed (only applies to -d). If no start page given start from 0.')
+    parse_group = arg_parser.add_argument_group('Parse Options')
+    parse_group.add_argument('-p', '--page',
+                             help = 'single postcode directory page to be parsed')
+
+    parse_group.add_argument('-d', '--directory',
+                             nargs = 1,
+                             help  = 'postcode directory to be parsed')
+    parse_group.add_argument('-s', '--start',
+                             default = 0,
+                             help    = 'Start page to be parsed (only applies to -d). If no start page given start from 0.')
+    parse_group.add_argument('-e', '--end',
+                             default = 9999,
+                             type    = int,
+                             help    = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
+    parse_group.add_argument('-C', '--config',
+                             nargs = 1,
+                             help  = 'configuration directory')
+    parse_group.add_argument('-w', '--williamson',
+                             action = 'store_false',
+                             help   = "parse williamson's directory")
+
     arg_parser.add_argument('-v', '--verbose',
                             action = 'store_true',
                             help   = 'print detailed output')
-    arg_parser.add_argument('-w', '--williamson',
-                            action = 'store_false',
-                            help   = "parse williamson's directory")
-    arg_parser.add_argument('-c', '--commit',
-                            action = 'store_true',
-                            help   = 'commit parsed results to database')
-    arg_parser.add_argument('-H', '--dbhost',
+
+    google_group = arg_parser.add_argument_group('Google Options')
+    google_group.add_argument('-k', '--key',
+                              help = 'Google premium private key')
+    google_group.add_argument('-i', '--client_id',
+                              help = 'Google premium client identifier')
+
+    db_group = arg_parser.add_argument_group('Database Options')
+    db_group.add_argument('-H', '--dbhost',
                             default = 'localhost',
                             help    ='database host')
-    arg_parser.add_argument('-D', '--dbname',
+    db_group.add_argument('-D', '--dbname',
                             default = 'ahistory',
                             help    = 'database name')
-    arg_parser.add_argument('-P', '--dbport',
+    db_group.add_argument('-P', '--dbport',
                             type    = int,
                             default = 5432,
                             help    = 'database port')
-    arg_parser.add_argument('-U', '--dbuser',
+    db_group.add_argument('-U', '--dbuser',
                             default = 'ahistory',
                             help    = 'database user name')
-    arg_parser.add_argument('-W', '--dbpassword',
+    db_group.add_argument('-W', '--dbpassword',
                             help = 'database password')
+    db_group.add_argument('-c', '--commit',
+                            action = 'store_true',
+                            help   = 'commit parsed results to database')
 
     args = arg_parser.parse_args()
 
