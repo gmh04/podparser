@@ -100,6 +100,7 @@
       <list>
         <pattern>dairy</pattern>
         <pattern>farmer</pattern>
+        <pattern>game dealer</pattern>
       </list>
     </category>
     <category>
@@ -118,6 +119,7 @@
         <pattern>boot and shoe maker</pattern>
         <pattern>boot and shoe manufacturer</pattern>
         <pattern>boot and shoemaker</pattern>
+        <pattern>boot maker</pattern>
         <pattern>bootmaker</pattern>
         <pattern>cabinetmaker</pattern>
         <pattern>cabinetmakers</pattern>
@@ -126,10 +128,13 @@
         <pattern>clothier</pattern>
         <pattern>dressmaker</pattern>
         <pattern>engineer</pattern>
+        <pattern>engine packing maker</pattern>
         <pattern>gunmaker</pattern>
         <pattern>hatter</pattern>
         <pattern>hosier</pattern>
+        <pattern>ironfounder</pattern>
         <pattern>ironmasters</pattern>
+        <pattern>machine maker</pattern>
         <pattern>machinist</pattern>
         <pattern>manufacturer</pattern>
         <pattern>milliner</pattern>
@@ -140,6 +145,7 @@
         <pattern>shoemakers</pattern>
         <pattern>tailor</pattern>
         <pattern>watchmaker</pattern>
+        <pattern>wheel makers</pattern>
       </list>
     </category>
     <category>
@@ -162,6 +168,7 @@
       <code>F</code>
       <list>
         <pattern>architect</pattern>
+        <pattern>brickmaker</pattern>
         <pattern>builder</pattern>
         <pattern>carpenter</pattern>
         <pattern>carver</pattern>
@@ -173,6 +180,7 @@
         <pattern>painter</pattern>
         <pattern>slater</pattern>
         <pattern>varnish</pattern>
+        <pattern>wright</pattern>
       </list>
     </category>
     <category>
@@ -188,9 +196,11 @@
         <pattern>flesher</pattern>
         <pattern>fruit salesman</pattern>
         <pattern>fruiterer</pattern>
+        <pattern>furnishings</pattern>
         <pattern>furniture dealer</pattern>
         <pattern>greengrocer</pattern>
         <pattern>grocer</pattern>
+        <pattern>horse dealer</pattern>
         <pattern>machinery agent</pattern>
         <pattern>meat salesman</pattern>
         <pattern>merchant</pattern>
@@ -209,9 +219,12 @@
       <name>Transport and storage</name>
       <code>H</code>
       <list>
+        <pattern>carrier</pattern>
         <pattern>G.P.O</pattern>
-        <pattern>shipmaster</pattern>
         <pattern>ship master</pattern>
+        <pattern>shipmaster</pattern>
+        <pattern>ship owner</pattern>
+        <pattern>shipowner</pattern>
         <pattern>warehousemen</pattern>
       </list>
     </category>
@@ -230,7 +243,8 @@
         <pattern>advertising</pattern>
         <pattern>bookbinder</pattern>
         <pattern>printer</pattern>
-        <pattern>publishers</pattern>
+        <pattern>printing</pattern>
+        <pattern>publisher</pattern>
         <pattern>stationer</pattern>
         <pattern>typefounders</pattern>
       </list>
@@ -257,6 +271,7 @@
       <code>L</code>
       <list>
         <pattern>house factor</pattern>
+        <pattern>portioner</pattern>
       </list>
     </category>
     <category>
@@ -274,13 +289,16 @@
       <list>
         <pattern>clerk</pattern>
         <pattern>secretary</pattern>
+        <pattern>taxes</pattern>
       </list>
     </category>
     <category>
       <name>Public administration and defence; compulsory social security</name>
       <code>O</code>
       <list>
+        <pattern>constable</pattern>
         <pattern>drill instructor</pattern>
+        <pattern>government</pattern>
         <pattern>police</pattern>
       </list>
     </category>
@@ -288,8 +306,11 @@
       <name>Education</name>
       <code>P</code>
       <list>
-        <pattern>head master </pattern>
+        <pattern>english master</pattern>
+        <pattern>head master</pattern>
+        <pattern>principal</pattern>
         <pattern>professor</pattern>
+        <pattern>prof, of</pattern>
         <pattern>rector</pattern>
         <pattern>student</pattern>
         <pattern>teacher</pattern>
@@ -316,11 +337,13 @@
       <code>R</code>
       <list>
         <pattern>artist</pattern>
+        <pattern>dancing</pattern>
         <pattern>engraver</pattern>
         <pattern>gilder</pattern>
         <pattern>photographer</pattern>
         <pattern>photographic</pattern>
         <pattern>photographist</pattern>
+        <pattern>picture frame maker</pattern>
         <pattern>writer</pattern>
       </list>
     </category>
@@ -329,9 +352,15 @@
       <code>S</code>
       <list>
         <pattern>artistic hair worker</pattern>
+        <pattern>church officer</pattern>
         <pattern>dining</pattern>
         <pattern>draper</pattern>
+        <pattern>hair cutter</pattern>
+        <pattern>hair dresser</pattern>
+        <pattern>hair-dresser</pattern>
         <pattern>hairdresser</pattern>
+        <pattern>jeweller</pattern>
+        <pattern>minister</pattern>
         <pattern>missionary</pattern>
         <pattern>upholsterer</pattern>
         <pattern>upholsteress</pattern>
@@ -341,6 +370,7 @@
       <name>Activities of households as employers; undifferentiated goods-and services-producing activities of households for own use</name>
       <code>T</code>
       <list>
+        <pattern>scourer</pattern>
         <pattern>waiter</pattern>
       </list>
     </category>
@@ -348,7 +378,7 @@
       <name>Activities of extraterritorial organisations and bodies</name>
       <code>U</code>
       <list>
-
+        <pattern>consul</pattern>
       </list>
     </category>
 

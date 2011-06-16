@@ -1,14 +1,19 @@
 # no google entry (probably doesn't exist):
 
+Abercorn Street
 Afton Crescent
+Anderson Quay
 Argyle Arcade
 
 Blythswood terrace
 
 Caprera place
+Cathcart street, Rutherglen
 Chatham place
+Craignestock Place
 Crookston hall
 
+Dowanhill Gardens
 Downie Place
 
 Elmbank Place
@@ -18,30 +23,59 @@ Frederick Lane
 
 Granby ter
 
+Hampden Place
 Hillhead gardens
+Holmhead st
 Hospital Street
+
+Ibrox Place
+
+Jackson St
 
 Kelvingrove terrace
 
+Lawrence place, Partick
 Linden ter., Pollokshields
 
+Margaret Street
+Melville Terrace
+
+Parliamentary Road
 Partick hill
+Parliamentary Road
 Pollok street
 Princes Square
 
+Queen's square, Strathbungo
+
 Randolph terrace, Garnehill
+Ronald Street
 Rutherglen Loan
 
 Sardinia terrace, Hillhead
+Soho street
 St Enoch Square
+Stanhope street
+Stonefield Terrace
 
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 
+Walworth Terrace
 Wesleyan Street
+Woodside quadrant
+
 
 # APPROXIMATE google entry
 St Andrew's Road, Pollokshields
 
-# use with number returns bad result
+
+# use with number returns bad result (to do with providing numbers greater than current highest number)
+Cathcart Road
 Renfrew Street
+Morrison Street
+
+
+# ambiguous
+Ann St
+Catherine St

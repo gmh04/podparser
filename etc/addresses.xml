@@ -65,6 +65,16 @@
       <pattern>Crofscaufeway</pattern>
       <value>Crosscauseway</value>
     </replace>
+    <replace>
+      <pattern> Crossbill</pattern>
+      <value> Crosshill</value>
+    </replace>
+
+    <!-- D -->
+    <replace>
+      <pattern> diive</pattern>
+      <value> drive</value>
+    </replace>
 
     <!-- E -->
     <replace>
@@ -132,6 +142,15 @@
 
     <!-- G -->
     <replace>
+      <pattern>Garnethili</pattern>
+      <value>Garnethill</value>
+    </replace>
+
+    <replace>
+      <pattern>Garscnbe</pattern>
+      <value>Garscube</value>
+    </replace>
+    <replace>
       <pattern>Gcorge</pattern>
       <value>George</value>
     </replace>
@@ -156,7 +175,7 @@
     <replace>
       <pattern>Hillliead</pattern>
       <value>Hillhead</value>
-    </replace> 
+    </replace>
     <replace>
       <pattern>houfes</pattern>
       <value>houses</value>
@@ -206,6 +225,12 @@
       <value>street</value>
     </replace>
 
+    <!-- M -->
+    <replace>
+      <pattern> Mainst</pattern>
+      <value> Main st</value>
+    </replace>
+
     <!-- N -->
     <replace>
       <pattern>Nicolfon</pattern>
@@ -243,7 +268,10 @@
       <pattern> Eose</pattern>
       <value> Rose</value>
     </replace>
-
+    <replace>
+      <pattern> Eutherglen</pattern>
+      <value> Rutherglen</value>
+    </replace>
 
     <!-- S -->
     <replace>
@@ -295,16 +323,5 @@
     </replace>
 
   </replaces>
-
-  <changes>
-
-    <place id="Glasgow">
-      <change>
-        <old>Main street, Gorbals</old>
-        <new>Gorbals Street</new>
-      </change>
-    </place>
-
-  </changes>
 
 </addresses>
