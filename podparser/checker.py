@@ -164,7 +164,7 @@ class EntryChecker():
 
         # determine profession category
         for category in self.categories:
-            if entry.profession.find(category) != -1:
+            if entry.profession.lower().find(category) != -1:
                 entry.category = self.categories[category]
                 break
 
@@ -218,6 +218,9 @@ class EntryChecker():
 
         for addr in addrs:
             addr = addr.strip()
+
+            if addr.isalnum():
+                continue
 
             # encode address as is
             location = self._get_derived_location(addr, encoder, entry)
