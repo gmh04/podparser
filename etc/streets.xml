@@ -395,10 +395,10 @@
   <address>
     <pattern>apsley place</pattern>
     <street>Apsley Place</street>
-    <town>
-      <name>Glasgow</name>
-      <modern_name>Warwick Street</modern_name>
-    </town>
+    <!-- <town> -->
+    <!--   <name>Glasgow</name> -->
+    <!--   <modern_name>Warwick Street</modern_name> -->
+    <!-- </town> -->
   </address>
   <address>
     <pattern>arden street</pattern>
@@ -796,6 +796,10 @@
   <address>
     <pattern>belgrave street</pattern>
     <street>Belgrave Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Beltane Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>belgrave terrace</pattern>
@@ -3761,7 +3765,7 @@
     </town>
   </address>
   <address>
-    <pattern>hunter street</pattern>
+    <pattern>hunter st</pattern>
     <street>Hunter Street</street>
   </address>
   <address>
@@ -3872,9 +3876,14 @@
   </address>
   <address>
     <pattern>james' street</pattern>
+    <pattern>james street</pattern>
     <street>James Street</street>
     <town>
       <name>Glasgow</name>
+      <area>
+        <name>Bridgeton</name>
+        <modern_name>Bryce Avenue</modern_name>
+      </area>
       <area>
         <name>Calton</name>
         <modern_name>Bryce Avenue</modern_name>
@@ -4312,9 +4321,6 @@
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
-      </area>
-      <area>
-        <name>Langside</name>
       </area>
     </town>
   </address>
@@ -6205,6 +6211,7 @@
     </town>
   </address>
   <address>
+    <pattern>roslyn ter</pattern>
     <pattern>rosslyn terrace</pattern>
     <street>Rosslyn Terrace</street>
     <town>
@@ -7232,7 +7239,7 @@
     <street>Tylefield Street</street>
   </address>
   <address>
-    <pattern>union street</pattern>
+    <pattern>union st</pattern>
     <street>Union Street</street>
   </address>
   <address>
@@ -7659,6 +7666,10 @@
   <address>
     <pattern>west george lane</pattern>
     <street>West George Lane</street>
+  </address>
+  <address>
+    <pattern>west graham street</pattern>
+    <street>West Graham street</street>
   </address>
   <address>
     <pattern>west scotland street</pattern>

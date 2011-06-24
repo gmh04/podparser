@@ -126,6 +126,7 @@
         <pattern>civil engineer</pattern>
         <pattern>clockmaker</pattern>
         <pattern>clothier</pattern>
+        <pattern>coke maker</pattern>
         <pattern>dressmaker</pattern>
         <pattern>engineer</pattern>
         <pattern>engine packing maker</pattern>
@@ -143,6 +144,7 @@
         <pattern>shirt maker</pattern>
         <pattern>shoemaker</pattern>
         <pattern>shoemakers</pattern>
+        <pattern>stand maker</pattern>
         <pattern>tailor</pattern>
         <pattern>watchmaker</pattern>
         <pattern>wheel makers</pattern>
@@ -172,6 +174,7 @@
         <pattern>builder</pattern>
         <pattern>carpenter</pattern>
         <pattern>carver</pattern>
+        <pattern>cement work</pattern>
         <pattern>contractor</pattern>
         <pattern>decorator</pattern>
         <pattern>glazier</pattern>
@@ -221,6 +224,7 @@
       <list>
         <pattern>carrier</pattern>
         <pattern>G.P.O</pattern>
+        <pattern>mariner</pattern>
         <pattern>ship master</pattern>
         <pattern>shipmaster</pattern>
         <pattern>ship owner</pattern>
@@ -232,6 +236,7 @@
       <name>Accommodation and food service activities</name>
       <code>I</code>
       <list>
+        <pattern>cook</pattern>
         <pattern>lodgings</pattern>
         <pattern>restaurant</pattern>
       </list>
@@ -271,6 +276,7 @@
       <code>L</code>
       <list>
         <pattern>house factor</pattern>
+        <pattern> factor </pattern>
         <pattern>portioner</pattern>
       </list>
     </category>
@@ -353,6 +359,7 @@
       <list>
         <pattern>artistic hair worker</pattern>
         <pattern>church officer</pattern>
+        <pattern>clergyman</pattern>
         <pattern>dining</pattern>
         <pattern>draper</pattern>
         <pattern>hair cutter</pattern>

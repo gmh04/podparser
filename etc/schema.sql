@@ -1,4 +1,4 @@
-DROP SEQUENCE google_lookup_count;
+gmDROP SEQUENCE google_lookup_count;
 DROP TABLE location;
 DROP TABLE location_accuracy;
 DROP TABLE entry_detail;
@@ -56,11 +56,15 @@ CREATE TABLE location_accuracy (id   integer PRIMARY KEY,
                                 name text
 );
 
-CREATE TABLE location (entry_id  integer REFERENCES entry(id),
-                       address   text,
-                       accuracy  integer REFERENCES location_accuracy(id),
-                       type      text
+CREATE TABLE location (entry_id   integer REFERENCES entry(id),
+                       address    text,
+                       accuracy   integer REFERENCES location_accuracy(id),
+                       type       text,
+                       userid_mod text,
+                       date_mod   timestamp with time zone DEFAULT CURRENT_TIMESTAMP,
+                       current    boolean
 );
+
 SELECT AddGeometryColumn('public', 'location', 'geom', 4326, 'POINT', 2);
 CREATE INDEX location_idx ON location USING GIST (geom);
 

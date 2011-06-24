@@ -177,6 +177,10 @@
       <value>Hillhead</value>
     </replace>
     <replace>
+      <pattern> Hillst </pattern>
+      <value> Hill st </value>
+    </replace>
+    <replace>
       <pattern>houfes</pattern>
       <value>houses</value>
     </replace>

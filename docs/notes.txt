@@ -3,8 +3,11 @@
 Abercorn Street
 Afton Crescent
 Anderson Quay
+Annfield terrace, Partick
+Apsley Place(Warwick Street)
 Argyle Arcade
 
+Bishop street, Anderston
 Blythswood terrace
 
 Caprera place
@@ -13,10 +16,12 @@ Chatham place
 Craignestock Place
 Crookston hall
 
+Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
 
 Elmbank Place
+Eton place, Hillhead
 
 Franklin Terrace
 Frederick Lane
@@ -24,7 +29,9 @@ Frederick Lane
 Granby ter
 
 Hampden Place
+Hayburn ct
 Hillhead gardens
+Hillside gardens, Partickhill
 Holmhead st
 Hospital Street
 
@@ -38,7 +45,11 @@ Lawrence place, Partick
 Linden ter., Pollokshields
 
 Margaret Street
+Matilda place
 Melville Terrace
+Morris Place
+
+North Ure place
 
 Parliamentary Road
 Partick hill
@@ -48,11 +59,13 @@ Princes Square
 
 Queen's square, Strathbungo
 
+Radnor terrace
 Randolph terrace, Garnehill
 Ronald Street
 Rutherglen Loan
 
 Sardinia terrace, Hillhead
+Scotia Street
 Soho street
 St Enoch Square
 Stanhope street
@@ -63,6 +76,7 @@ Viewfield ter., Pollokshield
 
 Walworth Terrace
 Wesleyan Street
+Westbourne terrace Kelvinside
 Woodside quadrant
 
 
@@ -72,9 +86,10 @@ St Andrew's Road, Pollokshields
 
 # use with number returns bad result (to do with providing numbers greater than current highest number)
 Cathcart Road
+Paisley Road
 Renfrew Street
 Morrison Street
-
+West Graham Street
 
 # ambiguous
 Ann St
