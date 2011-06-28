@@ -1,4 +1,4 @@
-gmDROP SEQUENCE google_lookup_count;
+DROP SEQUENCE google_lookup_count;
 DROP TABLE location;
 DROP TABLE location_accuracy;
 DROP TABLE entry_detail;
@@ -56,7 +56,8 @@ CREATE TABLE location_accuracy (id   integer PRIMARY KEY,
                                 name text
 );
 
-CREATE TABLE location (entry_id   integer REFERENCES entry(id),
+CREATE TABLE location (id         SERIAL  PRIMARY KEY,
+                       entry_id   integer REFERENCES entry(id),
                        address    text,
                        accuracy   integer REFERENCES location_accuracy(id),
                        type       text,
@@ -69,6 +70,7 @@ SELECT AddGeometryColumn('public', 'location', 'geom', 4326, 'POINT', 2);
 CREATE INDEX location_idx ON location USING GIST (geom);
 
 COMMENT ON COLUMN location.address IS 'address used in geo tagging';
+COMMENT ON COLUMN location.type IS 'Is the location address derived from configuration or sent raw?';
 
 CREATE SEQUENCE google_lookup_count;
 
