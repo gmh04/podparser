@@ -30,6 +30,7 @@ class Directory():
             sys.exit(1)
 
         # find meta file in directory
+        meta_file = None
         for f in os.listdir(ddir):
             if f.endswith('_meta.xml'):
                 meta_file = '%s%c%s' % (ddir, os.sep, f)

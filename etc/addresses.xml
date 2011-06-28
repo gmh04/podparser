@@ -16,6 +16,10 @@
 
     <!-- B -->
     <replace>
+      <pattern>Botbwell</pattern>
+      <value>Bothwell</value>
+    </replace>
+    <replace>
       <pattern>Brifio</pattern>
       <value>Bristo</value>
     </replace>
@@ -40,6 +44,10 @@
     <replace>
       <pattern>Canongatc</pattern>
       <value>Canongate</value>
+    </replace>
+    <replace>
+      <pattern>Catlicart</pattern>
+      <value>Cathcart</value>
     </replace>
     <replace>
       <pattern>ciofe</pattern>
@@ -271,6 +279,10 @@
     <replace>
       <pattern> Eose</pattern>
       <value> Rose</value>
+    </replace>
+    <replace>
+      <pattern> Eoyal</pattern>
+      <value> Royal</value>
     </replace>
     <replace>
       <pattern> Eutherglen</pattern>

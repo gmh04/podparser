@@ -98,6 +98,7 @@
       <name>Agriculture, forestry and fishing</name>
       <code>A</code>
       <list>
+        <pattern>cowfeeder</pattern>
         <pattern>dairy</pattern>
         <pattern>farmer</pattern>
         <pattern>game dealer</pattern>
@@ -121,6 +122,7 @@
         <pattern>boot and shoemaker</pattern>
         <pattern>boot maker</pattern>
         <pattern>bootmaker</pattern>
+        <pattern>brassfounder</pattern>
         <pattern>cabinetmaker</pattern>
         <pattern>cabinetmakers</pattern>
         <pattern>civil engineer</pattern>
@@ -130,6 +132,7 @@
         <pattern>dressmaker</pattern>
         <pattern>engineer</pattern>
         <pattern>engine packing maker</pattern>
+        <pattern>fishing tackle maker</pattern>
         <pattern>gunmaker</pattern>
         <pattern>hatter</pattern>
         <pattern>hosier</pattern>
@@ -196,6 +199,7 @@
         <pattern>butcher</pattern>
         <pattern>chemist</pattern>
         <pattern>confectioner</pattern>
+        <pattern>corn factor</pattern>
         <pattern>flesher</pattern>
         <pattern>fruit salesman</pattern>
         <pattern>fruiterer</pattern>
@@ -225,11 +229,13 @@
         <pattern>carrier</pattern>
         <pattern>G.P.O</pattern>
         <pattern>mariner</pattern>
+        <pattern>packer</pattern>
+        <pattern>railway</pattern>
         <pattern>ship master</pattern>
         <pattern>shipmaster</pattern>
         <pattern>ship owner</pattern>
         <pattern>shipowner</pattern>
-        <pattern>warehousemen</pattern>
+        <pattern>warehouse</pattern>
       </list>
     </category>
     <category>
@@ -286,7 +292,9 @@
       <list>
         <pattern>advocate</pattern>
         <pattern>manager</pattern>
+        <pattern>messenger-at-arms</pattern>
         <pattern>solicitor</pattern>
+        <pattern>sheriff</pattern>
       </list>
     </category>
     <category>

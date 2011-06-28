@@ -7,8 +7,14 @@ Annfield terrace, Partick
 Apsley Place(Warwick Street)
 Argyle Arcade
 
+Ballochmyle terrace, Kelvinside
+Berkeley terrace
 Bishop street, Anderston
 Blythswood terrace
+Buchan Street
+Burnbank
+Burnside street
+Bute terrace, Strathbungo
 
 Caprera place
 Cathcart street, Rutherglen
@@ -26,6 +32,7 @@ Eton place, Hillhead
 Franklin Terrace
 Frederick Lane
 
+Govan Rd
 Granby ter
 
 Hampden Place
@@ -51,6 +58,8 @@ Morris Place
 
 North Ure place
 
+Oakfield terrace, Hillhead.
+
 Parliamentary Road
 Partick hill
 Parliamentary Road
@@ -61,13 +70,16 @@ Queen's square, Strathbungo
 
 Radnor terrace
 Randolph terrace, Garnehill
+Regent park terrace
 Ronald Street
 Rutherglen Loan
 
+Sandyford place
 Sardinia terrace, Hillhead
 Scotia Street
 Soho street
 St Enoch Square
+St Mungo street
 Stanhope street
 Stonefield Terrace
 
@@ -76,6 +88,8 @@ Viewfield ter., Pollokshield
 
 Walworth Terrace
 Wesleyan Street
+West Howard street
+Westbank pl, Hillhead
 Westbourne terrace Kelvinside
 Woodside quadrant
 
@@ -88,6 +102,7 @@ St Andrew's Road, Pollokshields
 Cathcart Road
 Paisley Road
 Renfrew Street
+Stirling Road
 Morrison Street
 West Graham Street
 

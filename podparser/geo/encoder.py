@@ -189,11 +189,11 @@ class Location():
             s_addr = self.address.lower()
             g_addr = self.found_address.lower()
 
-            s_addr = s_addr.replace(' lane',   ' ln')
-            s_addr = s_addr.replace(' road',   ' rd')
-            s_addr = s_addr.replace(' street', ' st')
-            s_addr = s_addr.replace(' st.',    ' st')
-            s_addr = s_addr.replace('saint',   'st')
+            s_addr = s_addr.replace(' lane',     ' ln')
+            s_addr = s_addr.replace(' road',     ' rd')
+            s_addr = s_addr.replace('saint',     'st')
+            s_addr = s_addr.replace(' street',   ' st')
+            s_addr = s_addr.replace(' st.',      ' st')
 
             # if street returned buy google starts or ends with a single
             # character (e.g N, E, S or W) remove it

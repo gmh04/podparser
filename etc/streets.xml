@@ -336,6 +336,7 @@
     <street>Ann Street</street>
     <town>
       <name>Glasgow</name>
+      <modern_name>Midland Street</modern_name>
       <area>
         <name>Bridgeton</name>
         <modern_name>Laird Street</modern_name>
@@ -352,12 +353,12 @@
   <address>
     <pattern>annette street</pattern>
     <street>Annette Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>annfield place</pattern>
@@ -802,7 +803,7 @@
     </town>
   </address>
   <address>
-    <pattern>belgrave terrace</pattern>
+    <pattern>belgrave ter</pattern>
     <street>Belgrave Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -1306,7 +1307,7 @@
     <street>Burnbank Place</street>
   </address>
   <address>
-    <pattern>burnbank terrace</pattern>
+    <pattern>burnbank ter</pattern>
     <street>Burnbank Terrace</street>
   </address>
   <address>
@@ -1606,7 +1607,7 @@
     <street>Cathedral Street</street>
   </address>
   <address>
-    <pattern>catherine street</pattern>
+    <pattern>catherine st</pattern>
     <street>Catherine Street</street>
     <town>
       <name>Glasgow</name>
@@ -3755,7 +3756,7 @@
     <street>Houston Street</street>
   </address>
   <address>
-    <pattern>howard street</pattern>
+    <pattern>howard st</pattern>
     <street>Howard Street</street>
     <town>
       <name>Glasgow</name>
@@ -4327,6 +4328,10 @@
   <address>
     <pattern>landsdowne crescent</pattern>
     <street>Landsdowne Crescent</street>
+  </address>
+  <address>
+    <pattern>lansdowne cres</pattern>
+    <street>Lansdowne Crescent</street>
   </address>
   <address>
     <pattern>largo place</pattern>
@@ -6140,9 +6145,9 @@
     <street>Rose Street</street>
     <town>
       <name>Glasgow</name>
-      <area>
+      <!--<area>
         <name>Garnethill</name>
-      </area>
+      </area>-->
       <area>
         <name>Hutchesontown</name>
       </area>
@@ -6546,6 +6551,7 @@
   </address>
   <address>
     <pattern>sandyford place</pattern>
+    <pattern>sandy ford place</pattern>
     <street>Sandyford Place</street>
   </address>
   <address>
@@ -7754,6 +7760,10 @@
   <address>
     <pattern>whitevale</pattern>
     <street>Whitevale</street>
+  </address>
+  <address>
+    <pattern>whitevale st</pattern>
+    <street>Whitevale Street</street>
   </address>
   <address>
     <pattern>wigton street</pattern>
