@@ -117,8 +117,8 @@
       <code>C</code>
       <list>
         <pattern>anchor makers</pattern>
-        <pattern>boot and shoe maker</pattern>
-        <pattern>boot and shoe manufacturer</pattern>
+        <pattern>basketmaker</pattern>
+        <pattern>boot and shoe ma</pattern>
         <pattern>boot and shoemaker</pattern>
         <pattern>boot maker</pattern>
         <pattern>bootmaker</pattern>
@@ -185,6 +185,7 @@
         <pattern>mason</pattern>
         <pattern>painter</pattern>
         <pattern>slater</pattern>
+        <pattern>stair railer</pattern>
         <pattern>varnish</pattern>
         <pattern>wright</pattern>
       </list>
@@ -195,6 +196,7 @@
       <list>
         <pattern>auctioneer</pattern>
         <pattern>baker</pattern>
+        <pattern>bottle agent</pattern>
         <pattern>brewer</pattern>
         <pattern>butcher</pattern>
         <pattern>chemist</pattern>
@@ -253,6 +255,7 @@
       <list>
         <pattern>advertising</pattern>
         <pattern>bookbinder</pattern>
+        <pattern>bookseller</pattern>
         <pattern>printer</pattern>
         <pattern>printing</pattern>
         <pattern>publisher</pattern>
@@ -310,6 +313,7 @@
       <name>Public administration and defence; compulsory social security</name>
       <code>O</code>
       <list>
+        <pattern>captain</pattern>
         <pattern>constable</pattern>
         <pattern>drill instructor</pattern>
         <pattern>government</pattern>
@@ -338,6 +342,7 @@
         <pattern>chiropodist</pattern>
         <pattern>dentist</pattern>
         <pattern>druggist</pattern>
+        <pattern>matron</pattern>
         <pattern>midwife</pattern>
         <pattern>nurse</pattern>
         <pattern>optician</pattern>

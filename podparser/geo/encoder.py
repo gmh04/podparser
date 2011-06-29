@@ -192,6 +192,7 @@ class Location():
             s_addr = s_addr.replace(' lane',     ' ln')
             s_addr = s_addr.replace(' road',     ' rd')
             s_addr = s_addr.replace('saint',     'st')
+            s_addr = s_addr.replace(' sq',       ' square')
             s_addr = s_addr.replace(' street',   ' st')
             s_addr = s_addr.replace(' st.',      ' st')
 

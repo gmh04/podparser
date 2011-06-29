@@ -32,9 +32,11 @@ Eton place, Hillhead
 Franklin Terrace
 Frederick Lane
 
+George Square
 Govan Rd
 Granby ter
 
+Hamilton park ter, hillhead
 Hampden Place
 Hayburn ct
 Hillhead gardens
@@ -51,7 +53,9 @@ Kelvingrove terrace
 Lawrence place, Partick
 Linden ter., Pollokshields
 
+Main street, Anderston
 Margaret Street
+Maryland street
 Matilda place
 Melville Terrace
 Morris Place
@@ -83,14 +87,18 @@ St Mungo street
 Stanhope street
 Stonefield Terrace
 
+Tennent street
+
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 
 Walworth Terrace
+Wellpark terrace
 Wesleyan Street
-West Howard street
+W(est) Howard street
 Westbank pl, Hillhead
 Westbourne terrace Kelvinside
+Westminster terrace
 Woodside quadrant
 
 

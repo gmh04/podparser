@@ -1489,6 +1489,13 @@
   <address>
     <pattern>canning street</pattern>
     <street>Canning Street</street>
+    <town>
+      <name>Glasgow</name>
+      <area>
+        <name>Calton</name>
+        <modern_name>London road</modern_name>
+      </area>
+    </town>
   </address>
   <address>
     <pattern>canon street</pattern>
@@ -2055,6 +2062,7 @@
     <street>Crookston Street</street>
     <town>
       <name>Glasgow</name>
+      <modern_name>Carnoustie Street</modern_name>
       <area>
         <name>Kingston</name>
       </area>
@@ -4763,7 +4771,7 @@
     </town>
   </address>
   <address>
-    <pattern>market street</pattern>
+    <pattern>market st</pattern>
     <street>Market Street</street>
     <town>
       <name>Glasgow</name>
@@ -5190,7 +5198,7 @@
     <street>Montgomery Street</street>
   </address>
   <address>
-    <pattern>montgomerie terrace</pattern>
+    <pattern>montgomerie ter</pattern>
     <street>Montgomerie Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -7055,6 +7063,7 @@
   </address>
   <address>
     <pattern>summer street</pattern>
+    <pattern>summers street</pattern>
     <street>Summer Street</street>
   </address>
   <address>
