@@ -1487,7 +1487,7 @@
     <street>Cammomg Place</street>
   </address>
   <address>
-    <pattern>canning street</pattern>
+    <pattern>canning st</pattern>
     <street>Canning Street</street>
     <town>
       <name>Glasgow</name>
@@ -1797,8 +1797,8 @@
     <street>Cleveland Street</street>
   </address>
   <address>
-    <pattern>cliffort street</pattern>
-    <street>Cliffort Street</street>
+    <pattern>clifford street</pattern>
+    <street>Clifford Street</street>
   </address>
   <address>
     <pattern>clifton place</pattern>
@@ -2530,6 +2530,14 @@
   <address>
     <pattern>eaglesham street</pattern>
     <street>Eaglesham Street</street>
+  </address>
+  <address>
+    <pattern>east miller st</pattern>
+    <street>East Miller Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Millerston Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>eastfield place</pattern>
@@ -5482,6 +5490,10 @@
     <street>Oakvale</street>
   </address>
   <address>
+    <pattern>Observatory road</pattern>
+    <street>Observatory Road</street>
+  </address>
+  <address>
     <pattern>old kelvinhaugh road</pattern>
     <street>Old Kelvinhaugh Road</street>
   </address>
@@ -6415,6 +6427,10 @@
     <street>St George's Road</street>
   </address>
   <address>
+    <pattern>st. james' road</pattern>
+    <street>Saint James Road</street>
+  </address>
+  <address>
     <pattern>st james' street</pattern>
     <street>St James' Street</street>
     <town>
@@ -7071,12 +7087,8 @@
     </town>
   </address>
   <address>
-<<<<<<< Updated upstream
-    <pattern>summer street</pattern>
-    <pattern>summers street</pattern>
-=======
     <pattern>summer st</pattern>
->>>>>>> Stashed changes
+    <pattern>summers street</pattern>
     <street>Summer Street</street>
   </address>
   <address>
@@ -7446,7 +7458,8 @@
     <street>Vulcan Street</street>
   </address>
   <address>
-    <pattern>waddell street</pattern>
+    <pattern>waddell st</pattern>
+    <pattern>waddel st</pattern>
     <street>Waddell Street</street>
   </address>
   <address>

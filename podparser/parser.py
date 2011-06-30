@@ -8,7 +8,6 @@ import sys
 
 import checker, db, directory, geo, parser
 from geo import encoder
-from db import connection
 
 def timer(f):
     # timer decorator
@@ -29,6 +28,10 @@ def timer(f):
 class Parser:
     """
     Post office directory parser.
+
+    config    - The full path to the parser configuration files.\n
+    directory - The full path to either an individual POD file or the POD directory
+    start
     """
 
     def __init__(self,
@@ -42,12 +45,6 @@ class Parser:
                  pre_post_office = False,
                  db              = None,
                  commit          = False):
-        """
-        Initialise the parser.
-
-        config    - The full path to the parser configuration files.
-        directory - POD directory object
-        """
         self.config          = config
         self.directory       = directory
         self.start           = int(start)
@@ -303,7 +300,6 @@ def read_page(directory, page):
     no_geo_per        = float(no_geo)          / good_entries * 100
     bad_geo_per       = float(bad_geo)         / good_entries * 100
     exact_geo_per   = 0 if exact_locations == 0 else float(exact_locations) / total_locations * 100
-    #unmatched_geo_per = float(unmatched_geo)   / good_entries * 100
     profession_per    = float(profession)      / good_entries * 100
     no_category_per   = float(no_category)     / good_entries * 100
 
@@ -311,12 +307,14 @@ def read_page(directory, page):
     print '%-20s%5d%5d%%' % ('Rejected:',    rejected,    rejected_per)
     print '%-20s%5d%5d%%' % ('No Geo Tag:',  no_geo,      no_geo_per)
     print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo,     bad_geo_per)
-    #print '%-20s%5d%5d%%' % ('Unmatched Geo Tag:', unmatched_geo,     unmatched_geo_per)
     print '%-20s%10d%%'   % ('Exact Tags:', exact_geo_per)
     print '%-20s%5d%5d%%' % ('Professions:', profession,  profession_per)
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
 if __name__ == "__main__":
+    """
+    jings
+    """
     # print unicode to std out
     sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
@@ -404,6 +402,9 @@ if __name__ == "__main__":
 
     db_conn = None
     if args.dbpassword:
+        # putting import here ensures that there is no
+        # database library dependency unless needed
+        from db import connection
         db_conn = connection.PodConnection(db_password = args.dbpassword,
                                            db_name     = args.dbname,
                                            db_user     = args.dbuser,

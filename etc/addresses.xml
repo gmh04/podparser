@@ -281,8 +281,16 @@
       <value>Ramsay</value>
     </replace>
     <replace>
+      <pattern>Eegent</pattern>
+      <value>Regent</value>
+    </replace>
+    <replace>
       <pattern> Eose</pattern>
       <value> Rose</value>
+    </replace>
+    <replace>
+      <pattern>Eoslea</pattern>
+      <value>Roslea</value>
     </replace>
     <replace>
       <pattern> Eoyal</pattern>

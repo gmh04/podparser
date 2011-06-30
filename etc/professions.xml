@@ -127,7 +127,9 @@
         <pattern>brassfounder</pattern>
         <pattern>cabinetmaker</pattern>
         <pattern>cabinetmakers</pattern>
+        <pattern>chain maker</pattern>
         <pattern>civil engineer</pattern>
+        <pattern>cloak maker</pattern>
         <pattern>clockmaker</pattern>
         <pattern>clothier</pattern>
         <pattern>coke maker</pattern>
@@ -146,6 +148,8 @@
         <pattern>manufacturer</pattern>
         <pattern>milliner</pattern>
         <pattern>millwright</pattern>
+        <pattern>pipe maker</pattern>
+        <pattern>rope spinner</pattern>
         <pattern>saddler</pattern>
         <pattern>shawl fringer</pattern>
         <pattern>shirt maker</pattern>
@@ -187,6 +191,7 @@
         <pattern>glazier</pattern>
         <pattern>joiner</pattern>
         <pattern>mason</pattern>
+        <pattern>monumental builder</pattern>
         <pattern>painter</pattern>
         <pattern>slater</pattern>
         <pattern>stair railer</pattern>
@@ -375,6 +380,7 @@
       <code>S</code>
       <list>
         <pattern>artistic hair worker</pattern>
+        <pattern>church-officer</pattern>
         <pattern>church officer</pattern>
         <pattern>clergyman</pattern>
         <pattern>dining</pattern>
@@ -382,6 +388,7 @@
         <pattern>hair cutter</pattern>
         <pattern>hair dresser</pattern>
         <pattern>hair-dresser</pattern>
+        <pattern>haircutter</pattern>
         <pattern>hairdresser</pattern>
         <pattern>jeweller</pattern>
         <pattern>minister</pattern>

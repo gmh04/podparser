@@ -38,26 +38,31 @@ class EntryChecker():
         self._populate_address_lookup('streets.xml')
 
     def _populate_global_replace(self, file_name, map):
-        dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
+        fname = '%s%c%s' % (self.config_dir, os.sep, file_name)
 
-        replaces = dom.getElementsByTagName('replace')
+        if os.path.isfile(fname):
+            dom = parse(fname)
+            replaces = dom.getElementsByTagName('replace')
 
-        for replace in replaces:
-            pattern = replace.getElementsByTagName('pattern')[0].firstChild.nodeValue
-            value = ''
-            valueNode = replace.getElementsByTagName('value')[0].firstChild
+            for replace in replaces:
+                pattern = replace.getElementsByTagName('pattern')[0].firstChild.nodeValue
+                value = ''
+                valueNode = replace.getElementsByTagName('value')[0].firstChild
 
-            if valueNode:
-                value = valueNode.nodeValue
+                if valueNode:
+                    value = valueNode.nodeValue
 
             map[pattern] = value
 
     def _populate_stop_words(self, file_name, lst):
-        dom = parse('%s%c%s' % (self.config_dir, os.sep, file_name))
+        fname = '%s%c%s' % (self.config_dir, os.sep, file_name)
 
-        words = dom.getElementsByTagName('word')
-        for word in words:
-            lst.append(word.firstChild.nodeValue)
+        if os.path.isfile(fname):
+            dom = parse(fname)
+
+            words = dom.getElementsByTagName('word')
+            for word in words:
+                lst.append(word.firstChild.nodeValue)
 
     def _populate_address_lookup(self, file_name):
         # parse and populate address/street lookup
@@ -137,6 +142,8 @@ class EntryChecker():
                         for lnode in list_node:
                             pattern = lnode.firstChild.nodeValue
                             self.categories[pattern] = code
+
+    #_get_conf_file():
 
     def clean_up(self, entry):
         """

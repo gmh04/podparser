@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.1.2'
 
 setup(name='podparser',
       version=version,
@@ -26,7 +26,7 @@ The podparser is a tool for parsing Scotlands post office directories""",
         'Topic :: Text Processing :: Indexing',
         ],
       install_requires=[
-          # -*- Extra requirements: -*-
+        'argparse'
       ],
       entry_points="""
       # -*- Entry points: -*-

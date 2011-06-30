@@ -8,10 +8,12 @@ Apsley Place(Warwick Street)
 Argyle Arcade
 
 Ballochmyle terrace, Kelvinside
+Beaufort Gardens, Govanhill
 Berkeley terrace
 Berlin place
 Bishop street, Anderston
 Blythswood terrace
+Bridgeton Cross
 Buchan Street
 Burnbank
 Burnside street
@@ -27,6 +29,7 @@ Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
 
+Eaglesham Street
 Elmbank Place
 Eton place, Hillhead
 
@@ -36,6 +39,7 @@ Frederick Lane
 George Square
 Govan Rd
 Granby ter
+Greenhead terrace
 
 Hamilton park ter, hillhead
 Hampden Place
@@ -59,6 +63,7 @@ Main street, Anderston
 Margaret Street
 Maryland street
 Matilda place
+Mavisbank Quay
 Melville Terrace
 Morris Place
 Moss view, Crossmyloof
@@ -122,6 +127,7 @@ St. Vincent crescent
 Stirling Road
 
 West Graham Street
+Windsor terrace
 
 # ambiguous
 Ann St
@@ -132,9 +138,10 @@ Catherine St
 
 
 
-
 # parser changes
 
-* Category uses UK Standard Industrial Classification of Economic Activities 
+* Category uses UK Standard Industrial Classification of Economic Activities
 
  http://www.google.com/url?sa=t&source=web&cd=1&ved=0CE8QFjAA&url=http%3A%2F%2Fwww.statistics.gov.uk%2Fmethods_quality%2Fsic%2Fdownloads%2Fsic2007explanatorynotes.pdf&rct=j&q=professional%20category%20uk%20Wholesale%20and%20retail%20trade%3B%20repair%20of%20motor%20vehicles%20and%20motor%20cycles&ei=t5kJTu7VFs6KhQepoKDnDw&usg=AFQjCNG7JIkJyXBNV49I3Z5i1gMkMGiGww&sig2=Wq0Y9oqUmNt5JUtzmog3BA&cad=rja
+
+# problems with Great Eastern Road -> Gallowgate, Camlachie Street, Tollcross Road
