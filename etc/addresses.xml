@@ -83,6 +83,10 @@
       <pattern> diive</pattern>
       <value> drive</value>
     </replace>
+    <replace>
+      <pattern>Dison st</pattern>
+      <value>Dixon st</value>
+    </replace>
 
     <!-- E -->
     <replace>

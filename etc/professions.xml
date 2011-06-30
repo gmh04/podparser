@@ -225,10 +225,11 @@
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
         <pattern>provision dealer</pattern>
+        <pattern>saleroom</pattern>
         <pattern>spirit merchant</pattern>
         <pattern>spirit dealer</pattern>
         <pattern>storekeeper</pattern>
-        <pattern>tobacconist</pattern>
+        <pattern>tobacco</pattern>
         <pattern>traveller</pattern>
         <pattern>travelling</pattern>
       </list>
