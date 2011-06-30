@@ -242,6 +242,10 @@
       <pattern> Mainst</pattern>
       <value> Main st</value>
     </replace>
+    <replace>
+      <pattern>McLcan</pattern>
+      <value>McLean</value>
+    </replace>
 
     <!-- N -->
     <replace>

@@ -1491,9 +1491,10 @@
     <street>Canning Street</street>
     <town>
       <name>Glasgow</name>
+      <modern_name>London road</modern_name>
       <area>
-        <name>Calton</name>
-        <modern_name>London road</modern_name>
+        <name>Anderston</name>
+        <modern_name>North Place</modern_name>
       </area>
     </town>
   </address>
@@ -2227,6 +2228,14 @@
   <address>
     <pattern>dalmarnock road</pattern>
     <street>Dalmarnock Road</street>
+  </address>
+  <address>
+    <pattern>dalmarnock st</pattern>
+    <street>Dalmarnock Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Springfield Road</modern_name>
+    </town>
   </address>
   <address>
     <pattern>darnley street</pattern>
@@ -2987,7 +2996,7 @@
   </address>
   <address>
     <pattern>garthland street</pattern>
-    <street>Garthland Street</street> 
+    <street>Garthland Street</street>
     <town>
       <name>Glasgow</name>
       <modern_name>Garth Street</modern_name>
@@ -4940,8 +4949,8 @@
     </town>
   </address>
   <address>
-    <pattern>meadowpart street</pattern>
-    <street>Meadowpart Street</street>
+    <pattern>meadowpark street</pattern>
+    <street>Meadowpark Street</street>
   </address>
   <address>
     <pattern>meadowvale</pattern>
@@ -5346,7 +5355,7 @@
     <street>Newhall Street</street>
   </address>
   <address>
-    <pattern>newhall terrace</pattern>
+    <pattern>newhall ter</pattern>
     <street>Newhall Terrace</street>
     <modern_name>Greenhead Street</modern_name>
   </address>
@@ -7062,8 +7071,12 @@
     </town>
   </address>
   <address>
+<<<<<<< Updated upstream
     <pattern>summer street</pattern>
     <pattern>summers street</pattern>
+=======
+    <pattern>summer st</pattern>
+>>>>>>> Stashed changes
     <street>Summer Street</street>
   </address>
   <address>

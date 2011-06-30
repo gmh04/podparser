@@ -3,13 +3,28 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to podparser's documentation!
-=====================================
+Post Office Directory Parser (podparser)
+========================================
 
-Contents:
+This document refers to version |release|
 
-.. toctree::
-   :maxdepth: 2
+The podparser is a tool for parsing Scotland's Post Office directories.
+
+*****
+Introduction
+*****
+
+*****
+Usage
+*****
+
+******
+Config
+******
+
+*****
+API
+*****
 
 .. automodule:: podparser.parser
    :members:

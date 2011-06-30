@@ -102,12 +102,14 @@
         <pattern>dairy</pattern>
         <pattern>farmer</pattern>
         <pattern>game dealer</pattern>
+        <pattern>stables</pattern>
       </list>
     </category>
     <category>
       <name>Mining and quarrying</name>
       <code>B</code>
       <list>
+        <pattern>coal agent</pattern>
         <pattern>coalmasters</pattern>
         <pattern>miner</pattern>
       </list>
@@ -140,10 +142,12 @@
         <pattern>ironmasters</pattern>
         <pattern>machine maker</pattern>
         <pattern>machinist</pattern>
+        <pattern>mantle makers</pattern>
         <pattern>manufacturer</pattern>
         <pattern>milliner</pattern>
         <pattern>millwright</pattern>
         <pattern>saddler</pattern>
+        <pattern>shawl fringer</pattern>
         <pattern>shirt maker</pattern>
         <pattern>shoemaker</pattern>
         <pattern>shoemakers</pattern>
@@ -391,6 +395,7 @@
       <code>T</code>
       <list>
         <pattern>scourer</pattern>
+        <pattern>servant</pattern>
         <pattern>waiter</pattern>
       </list>
     </category>

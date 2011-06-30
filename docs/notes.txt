@@ -9,6 +9,7 @@ Argyle Arcade
 
 Ballochmyle terrace, Kelvinside
 Berkeley terrace
+Berlin place
 Bishop street, Anderston
 Blythswood terrace
 Buchan Street
@@ -43,6 +44,7 @@ Hillhead gardens
 Hillside gardens, Partickhill
 Holmhead st
 Hospital Street
+Hutcheson square
 
 Ibrox Place
 
@@ -59,7 +61,9 @@ Maryland street
 Matilda place
 Melville Terrace
 Morris Place
+Moss view, Crossmyloof
 
+Naburn street
 North Ure place
 
 Oakfield terrace, Hillhead.
@@ -76,6 +80,7 @@ Radnor terrace
 Randolph terrace, Garnehill
 Regent park terrace
 Ronald Street
+Rosevale ter., Partick
 Rutherglen Loan
 
 Sandyford place
@@ -94,6 +99,7 @@ Viewfield ter., Pollokshield
 
 Walworth Terrace
 Wellpark terrace
+Wellington arcade
 Wesleyan Street
 W(est) Howard street
 Westbank pl, Hillhead
@@ -108,14 +114,18 @@ St Andrew's Road, Pollokshields
 
 # use with number returns bad result (to do with providing numbers greater than current highest number)
 Cathcart Road
+Morrison Street
 Paisley Road
 Renfrew Street
+
+St. Vincent crescent
 Stirling Road
-Morrison Street
+
 West Graham Street
 
 # ambiguous
 Ann St
+Canning Street
 Catherine St
 
 
