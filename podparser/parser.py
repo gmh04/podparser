@@ -283,10 +283,6 @@ def read_page(directory, page):
                 total_locations = total_locations + loc_stats[0]
                 exact_locations = exact_locations + loc_stats[1]
 
-                """
-                if exact_locations == 0:
-                    unmatched_geo = unmatched_geo + 1
-                """
             if len(entry.profession) > 0:
                 profession = profession + 1
 

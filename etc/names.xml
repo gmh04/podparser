@@ -3,13 +3,16 @@
 <names>
 
   <stopWords>
+    <word>Association</word>
+    <word>Asylum</word>
     <word>Co.</word>
+    <word>Free Church</word>
     <word>Glasgow</word>
     <word>Insurance</word>
     <word>Monthly</word>
     <word>Parish Church</word>
     <word> Society </word>
-    <word> Works </word>
+    <word> Works</word>
     <word> &amp; </word>
   </stopWords>
 

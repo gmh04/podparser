@@ -13,6 +13,7 @@ Berkeley terrace
 Berlin place
 Bishop street, Anderston
 Blythswood terrace
+Boswell ter., Kelvinside
 Bridgeton Cross
 Buchan Street
 Burnbank
@@ -36,6 +37,7 @@ Eton place, Hillhead
 Franklin Terrace
 Frederick Lane
 
+Garngad Hill
 George Square
 Govan Rd
 Granby ter
@@ -46,6 +48,7 @@ Hamilton park ter, hillhead
 Hampden Place
 Hayburn ct
 Hillhead gardens
+Hillsborough ter
 Hillside gardens, Partickhill
 Holmhead st
 Hospital Street
@@ -93,7 +96,9 @@ Rutherglen Loan
 Sandyford place
 Sardinia terrace, Hillhead
 Scotia Street
+Shinir bank, Crosshill
 Soho street
+South St. Mungo street
 St Enoch Square
 St Mungo street
 Stanhope street

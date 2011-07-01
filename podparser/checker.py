@@ -143,8 +143,6 @@ class EntryChecker():
                             pattern = lnode.firstChild.nodeValue
                             self.categories[pattern] = code
 
-    #_get_conf_file():
-
     def clean_up(self, entry):
         """
         Fix OCR problems with an individual entry.
@@ -160,9 +158,9 @@ class EntryChecker():
         # name stop words
         for word in self.name_stop_words:
             if entry.surname.find(word) != -1:
-                entry.error = 'Surname contains stop word: %s' % word
+                entry.error = "Surname contains stop word: '%s'" % word
             elif entry.forename.find(word) != -1:
-                entry.error = 'Forename contains stop word: %s' % word
+                entry.error = "Forename contains stop word: '%s'" % word
 
         # do profession global replaces
         for profession in self.professions:

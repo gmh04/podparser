@@ -1228,7 +1228,7 @@
     </town>
   </address>
   <address>
-    <pattern>bruce street</pattern>
+    <pattern>bruce st</pattern>
     <street>Bruce Street</street>
     <town>
       <name>Glasgow</name>

@@ -193,6 +193,7 @@
         <pattern>mason</pattern>
         <pattern>monumental builder</pattern>
         <pattern>painter</pattern>
+        <pattern>silversmith</pattern>
         <pattern>slater</pattern>
         <pattern>stair railer</pattern>
         <pattern>varnish</pattern>
@@ -212,7 +213,6 @@
         <pattern>confectioner</pattern>
         <pattern>corn factor</pattern>
         <pattern>flesher</pattern>
-        <pattern>fruit salesman</pattern>
         <pattern>fruiterer</pattern>
         <pattern>furnishings</pattern>
         <pattern>furniture dealer</pattern>
@@ -220,12 +220,12 @@
         <pattern>grocer</pattern>
         <pattern>horse dealer</pattern>
         <pattern>machinery agent</pattern>
-        <pattern>meat salesman</pattern>
         <pattern>merchant</pattern>
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
         <pattern>provision dealer</pattern>
         <pattern>saleroom</pattern>
+        <pattern>salesman</pattern>
         <pattern>spirit merchant</pattern>
         <pattern>spirit dealer</pattern>
         <pattern>storekeeper</pattern>
@@ -255,6 +255,7 @@
       <code>I</code>
       <list>
         <pattern>cook</pattern>
+        <pattern>fish curer</pattern>
         <pattern>lodgings</pattern>
         <pattern>restaurant</pattern>
       </list>

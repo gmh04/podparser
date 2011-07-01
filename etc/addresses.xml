@@ -74,6 +74,10 @@
       <value>Crosscauseway</value>
     </replace>
     <replace>
+      <pattern>CrosshiU</pattern>
+      <value>Crosshill</value>
+    </replace>
+    <replace>
       <pattern> Crossbill</pattern>
       <value> Crosshill</value>
     </replace>
