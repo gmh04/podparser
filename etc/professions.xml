@@ -110,7 +110,9 @@
       <code>B</code>
       <list>
         <pattern>coal agent</pattern>
-        <pattern>coalmasters</pattern>
+        <pattern>coal master</pattern>
+        <pattern>coalmaster</pattern>
+        <pattern>colliery</pattern>
         <pattern>miner</pattern>
       </list>
     </category>
@@ -155,6 +157,7 @@
         <pattern>shirt maker</pattern>
         <pattern>shoemaker</pattern>
         <pattern>shoemakers</pattern>
+        <pattern>silver beater</pattern>
         <pattern>stand maker</pattern>
         <pattern>tailor</pattern>
         <pattern>watchmaker</pattern>
@@ -212,6 +215,7 @@
         <pattern>chemist</pattern>
         <pattern>confectioner</pattern>
         <pattern>corn factor</pattern>
+        <pattern>fishmonger</pattern>
         <pattern>flesher</pattern>
         <pattern>fruiterer</pattern>
         <pattern>furnishings</pattern>
@@ -223,6 +227,7 @@
         <pattern>merchant</pattern>
         <pattern>merchants</pattern>
         <pattern>mercht.</pattern>
+        <pattern>port shipper</pattern>
         <pattern>provision dealer</pattern>
         <pattern>saleroom</pattern>
         <pattern>salesman</pattern>
@@ -247,6 +252,7 @@
         <pattern>shipmaster</pattern>
         <pattern>ship owner</pattern>
         <pattern>shipowner</pattern>
+        <pattern>ship rigger</pattern>
         <pattern>warehouse</pattern>
       </list>
     </category>
@@ -278,6 +284,7 @@
       <name>Financial and insurance activities</name>
       <code>K</code>
       <list>
+        <pattern>assurance agent</pattern>
         <pattern>actuary</pattern>
         <pattern>accountant</pattern>
         <pattern>bank</pattern>
@@ -316,6 +323,7 @@
       <code>N</code>
       <list>
         <pattern>clerk</pattern>
+        <pattern>office keeper</pattern>
         <pattern>secretary</pattern>
         <pattern>taxes</pattern>
       </list>
@@ -353,6 +361,7 @@
         <pattern>chiropodist</pattern>
         <pattern>dentist</pattern>
         <pattern>druggist</pattern>
+        <pattern>inspector of poor</pattern>
         <pattern>matron</pattern>
         <pattern>midwife</pattern>
         <pattern>nurse</pattern>
@@ -381,7 +390,6 @@
       <name>Other service activities</name>
       <code>S</code>
       <list>
-        <pattern>artistic hair worker</pattern>
         <pattern>church-officer</pattern>
         <pattern>church officer</pattern>
         <pattern>clergyman</pattern>
@@ -389,6 +397,7 @@
         <pattern>draper</pattern>
         <pattern>hair cutter</pattern>
         <pattern>hair dresser</pattern>
+        <pattern>hair worker</pattern>
         <pattern>hair-dresser</pattern>
         <pattern>haircutter</pattern>
         <pattern>hairdresser</pattern>

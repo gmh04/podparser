@@ -1384,6 +1384,7 @@
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
+        <modern_name>Fergus Drive</modern_name>
       </area>
     </town>
   </address>
@@ -1923,8 +1924,9 @@
     <street>Comely Park Place</street>
   </address>
   <address>
-    <pattern>comely park street</pattern>
-    <street>Comely Park Street</street>
+    <pattern>comely park st</pattern>
+    <pattern>comelypark st</pattern>
+    <street>Comelypark Street</street>
   </address>
   <address>
     <pattern>commerce street</pattern>
@@ -2160,8 +2162,8 @@
     <street>Croy Place</street>
   </address>
   <address>
-    <pattern>cubic street</pattern>
-    <street>Cubic Street</street>
+    <pattern>cubie street</pattern>
+    <street>Cubie Street</street>
   </address>
   <address>
     <pattern>cumberland lane</pattern>
@@ -5356,6 +5358,7 @@
   </address>
   <address>
     <pattern>new city road</pattern>
+    <pattern>n. city rd</pattern>
     <street>New City Road</street>
   </address>
   <address>
@@ -5420,7 +5423,7 @@
     </town>
   </address>
   <address>
-    <pattern>norfolk street</pattern>
+    <pattern>norfolk st</pattern>
     <street>Norfolk Street</street>
   </address>
   <address>
@@ -5631,6 +5634,10 @@
   <address>
     <pattern>park grove terrace</pattern>
     <street>Park Grove Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Tolcross Road</modern_name>
+    </town>
   </address>
   <address>
     <pattern>parkhouse lane</pattern>
@@ -6306,12 +6313,12 @@
   <address>
     <pattern>royal terrace</pattern>
     <street>Royal Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>royal street</pattern>

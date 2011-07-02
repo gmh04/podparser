@@ -52,7 +52,7 @@ class EntryChecker():
                 if valueNode:
                     value = valueNode.nodeValue
 
-            map[pattern] = value
+                map[pattern] = value
 
     def _populate_stop_words(self, file_name, lst):
         fname = '%s%c%s' % (self.config_dir, os.sep, file_name)

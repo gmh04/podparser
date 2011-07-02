@@ -6,6 +6,7 @@ Anderson Quay
 Annfield terrace, Partick
 Apsley Place(Warwick Street)
 Argyle Arcade
+Argyle Terrace, Crosshill
 
 Ballochmyle terrace, Kelvinside
 Beaufort Gardens, Govanhill
@@ -22,9 +23,11 @@ Bute terrace, Strathbungo
 
 Caprera place
 Cathcart street, Rutherglen
+Charlotte lane
 Chatham place
 Craignestock Place
 Crookston hall
+Cubie street. Mile-end
 
 Doune ter, North Woodside
 Dowanhill Gardens
@@ -37,16 +40,21 @@ Eton place, Hillhead
 Franklin Terrace
 Frederick Lane
 
+Garden street
 Garngad Hill
 George Square
 Govan Rd
+Grove street
 Granby ter
+Grange Terrace
 Greenhead terrace
 
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
 Hampden Place
 Hayburn ct
+Herriot street, Pollokshields
+Hope terrace, Govanhill.
 Hillhead gardens
 Hillsborough ter
 Hillside gardens, Partickhill
@@ -59,6 +67,7 @@ Ibrox Place
 Jackson St
 
 Kelvingrove terrace
+Kenmure Place
 
 Lawrence place, Partick
 Linden ter., Pollokshields
@@ -73,6 +82,7 @@ Morris Place
 Moss view, Crossmyloof
 
 Naburn street
+Northpark ter, Hillhead
 North Ure place
 
 Oakfield terrace, Hillhead.
@@ -80,6 +90,7 @@ Oakfield terrace, Hillhead.
 Parliamentary Road
 Partick hill
 Parliamentary Road
+Plantation st
 Pollok street
 Prince of Wales Terrace
 Princes Square
@@ -91,25 +102,31 @@ Randolph terrace, Garnehill
 Regent park terrace
 Ronald Street
 Rosevale ter., Partick
+Royal arcade
 Rutherglen Loan
 
 Sandyford place
+Sandringham terrace
 Sardinia terrace, Hillhead
 Scotia Street
+Sedan place
 Shinir bank, Crosshill
 Soho street
 South St. Mungo street
 St Enoch Square
 St Mungo street
 Stanhope street
+Stewartville Place
 Stonefield Terrace
-
+Steven street
 Tennent street
 
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 
 Walworth Terrace
+Well st
+Wellpark pl
 Wellpark terrace
 Wellington arcade
 Wesleyan Street
@@ -125,6 +142,7 @@ St Andrew's Road, Pollokshields
 
 
 # use with number returns bad result (to do with providing numbers greater than current highest number)
+
 Cathcart Road
 Morrison Street
 Paisley Road
@@ -132,6 +150,8 @@ Renfrew Street
 
 St. Vincent crescent
 Stirling Road
+
+Taylor St
 
 West Graham Street
 Windsor terrace
