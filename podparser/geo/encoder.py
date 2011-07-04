@@ -131,17 +131,23 @@ class GooglePremium(Google):
 class Location():
     """
     Stores location information related to an address
-
-    address       - address used in search
-    TODO
-    found_address - address returned by google
-    point         - the latlon returned by google for address
-    accuracy      - accuracy returned by google:
-                    ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, APPROXIMATE
-                    see http://code.google.com/apis/maps/documentation/geocoding/#Results
-    type          - raw:     address is sent as found in the POD
-                    derived: address is built using pattern matching
     """
+
+    address = None
+    """
+    Address used in google search.
+    """
+
+    point = None
+    """
+    The latlon returned by google for address.
+    """
+
+    accuracy = None
+    """
+    Accuracy returned by google: ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER or APPROXIMATE
+    """
+
     def __init__(self,
                  address,
                  town,
@@ -150,14 +156,24 @@ class Location():
                  type,
                  found_address=None,
                  found_locality=None):
-        self.address       = address
-        self.town          = town
-        self.found_address = found_address
+        """
+        address        - Address used in search.
+        town           - Directory town.
+        point          - The latlon returned by google for address.
+        accuracy       - Accuracy returned by google: ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER or APPROXIMATE see `Google Geocoding API results`_.
+        type           - raw: address is sent as found in the POD. derived: address is built using pattern matching.
+        found_address  - Address returned by google.
+        found_locality - Locality (town) returned by google.
+        """
+
+        self.address        = address
+        self.town           = town
+        self.found_address  = found_address
         self.found_locality = found_locality
-        self.point         = point
-        self.accuracy      = accuracy
-        self.type          = ''
-        self.exact         = False
+        self.point          = point
+        self.accuracy       = accuracy
+        self.type           = ''
+        self.exact          = False
 
         self._exact()
 

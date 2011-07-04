@@ -4,6 +4,7 @@ import sys, os
 version = '0.1.2'
 
 if len(sys.argv) == 2 and sys.argv[1] != 'build_docs':
+    print find_packages(exclude=['ez_setup', 'examples', 'tests'])
     setup(name='podparser',
           version=version,
           description="Post Office Directory Parser",
@@ -14,6 +15,8 @@ if len(sys.argv) == 2 and sys.argv[1] != 'build_docs':
           url='https://github.com/gmh04/podparser',
           license='GPL',
           packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+          package_data = {'': ['etc']},
+          #package_dir = { 'podparser.etc': '' },
           include_package_data=True,
           zip_safe=True,
           classifiers=[
@@ -28,4 +31,5 @@ if len(sys.argv) == 2 and sys.argv[1] != 'build_docs':
           install_requires=[
             'argparse'
             ],
+          #package_dir = {'':'etc'},
           )
