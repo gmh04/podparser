@@ -6,12 +6,23 @@ import sys
 
 class Directory():
     """
-    POD metadata
+    Post Office Directory
+
+    path - full path to the post directory
+    """
+
+    country = 'Scotland'
+    """
+    Post Office Directory country, default Scotland.
+    """
+
+    pages = []
+    """
+    List of parsed `Pages`_.
     """
 
     def __init__(self, path):
-        self.country = 'Scotland'
-        self.pages   = []
+        #self.pages   = []
         self.path    = path;
         self.read_from_meta();
 
@@ -53,26 +64,66 @@ class Directory():
 
 class Page():
     """
-    Represents a single page in the POD
+    Represents a single page in the POD.
+
+    path - full path to the post directory
+    number - Directory page number.
+    """
+
+    number = None
+    """
+    Directory page number
+    """
+
+    entries = []
+    """
+    List of parsed `Entries`_.
     """
 
     def __init__(self, path, number):
         self.path    = path
         self.section = 'General Directory'
         self.number  = number
-        self.entries = []
+        #self.entries = []
 
 class Entry():
     """
-    Represents a single POD entry.
+    A single POD entry.
+
+    line - the raw line being parsed into an entry.
+    """
+
+    surname = None
+    """
+    Occupant's surname.
+    """
+
+    forename = None
+    """
+    Occupant's forname.
+    """
+
+    profession = ''
+    """
+    Occupant's profession.
+    """
+
+    address = None
+    """
+    Raw address field parsed from the POD.
+    """
+
+    locations = []
+    """
+    List of `Locations`_ successfully geotagged.
     """
 
     def __init__(self, line):
         self.line       = line
-        self.profession = ''
+        #self.profession = ''
         self.category   = ''
         self.error      = None
-        self.locations  = []
+        #self.locations  = []
 
         # parse individual entry values from pod
         self._parse()

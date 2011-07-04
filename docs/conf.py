@@ -193,3 +193,16 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_use_modindex = True
+
+
+def maybe_skip_member(app, what, name, obj, skip, options):
+    skip = False
+
+    if name == 'read_from_meta':
+        skip = False;
+
+    return skip
+
+def setup(app):
+    #app.connect('autodoc-skip-member', maybe_skip_member)
+    pass

@@ -29,9 +29,16 @@ class Parser:
     """
     Post office directory parser.
 
-    config    - The full path to the parser configuration files.\n
-    directory - The full path to either an individual POD file or the POD directory
-    start
+    | config      - The full path to the parser configuration files.
+    | directory   - The full path to either an individual POD file or the POD directory.
+    | start       - Start directory page to be parsed, only applies to for directory parse. If no start page given start from 0.
+    | end         - End directory page to be parsed, only applies to for directory parse. If no end page given parse until last.'
+    | encoder_key - Google premium private key
+    | client_id   - Google premium client identifier
+    | verbose     - Print detailed output
+    | pre_post_office - parse williamson's directory?
+    | db          - `PODconnection`_ instance
+    | commit      - commit results to database?
     """
 
     def __init__(self,
