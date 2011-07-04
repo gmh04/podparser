@@ -2,6 +2,7 @@
 
 Abercorn Street
 Afton Crescent
+Albion crescent, Dowanhill
 Anderson Quay
 Annfield terrace, Partick
 Apsley Place(Warwick Street)
@@ -29,11 +30,13 @@ Craignestock Place
 Crookston hall
 Cubie street. Mile-end
 
+Darnley terrace, Shawlands
 Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
 
 Eaglesham Street
+Elba lane, Parkhead
 Elmbank Place
 Eton place, Hillhead
 
@@ -42,15 +45,20 @@ Frederick Lane
 
 Garden street
 Garngad Hill
+Garngad rd
 George Square
+Glenavon terrace, Partick
 Govan Rd
 Grove street
+Grafton street
 Granby ter
 Grange Terrace
+Granville place
 Greenhead terrace
 
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
+Hamilton place
 Hampden Place
 Hayburn ct
 Herriot street, Pollokshields
@@ -63,11 +71,13 @@ Hospital Street
 Hutcheson square
 
 Ibrox Place
+Iona place, Mount Florida
 
 Jackson St
 
 Kelvingrove terrace
 Kenmure Place
+Kew terrace
 
 Lawrence place, Partick
 Linden ter., Pollokshields
@@ -82,6 +92,7 @@ Morris Place
 Moss view, Crossmyloof
 
 Naburn street
+Newgate street
 Northpark ter, Hillhead
 North Ure place
 
@@ -103,22 +114,27 @@ Regent park terrace
 Ronald Street
 Rosevale ter., Partick
 Royal arcade
+Royal Exchange place
 Rutherglen Loan
 
 Sandyford place
 Sandringham terrace
 Sardinia terrace, Hillhead
+Schipka pass
 Scotia Street
 Sedan place
 Shinir bank, Crosshill
 Soho street
 South St. Mungo street
+Spiers wharf, PortDundas
 St Enoch Square
 St Mungo street
 Stanhope street
+Steven street
 Stewartville Place
 Stonefield Terrace
-Steven street
+
+Tollcross
 Tennent street
 
 Viewfield Place, Pollokshields
@@ -143,9 +159,14 @@ St Andrew's Road, Pollokshields
 
 # use with number returns bad result (to do with providing numbers greater than current highest number)
 
+Alexandra parade
+
 Cathcart Road
+
 Morrison Street
+
 Paisley Road
+
 Renfrew Street
 
 St. Vincent crescent
@@ -160,8 +181,6 @@ Windsor terrace
 Ann St
 Canning Street
 Catherine St
-
-
 
 
 

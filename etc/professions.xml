@@ -134,7 +134,9 @@
         <pattern>cloak maker</pattern>
         <pattern>clockmaker</pattern>
         <pattern>clothier</pattern>
+        <pattern>cooper</pattern>
         <pattern>coke maker</pattern>
+        <pattern>cutler</pattern>
         <pattern>dressmaker</pattern>
         <pattern>engineer</pattern>
         <pattern>engine packing maker</pattern>
@@ -146,6 +148,7 @@
         <pattern>ironmasters</pattern>
         <pattern>machine maker</pattern>
         <pattern>machinist</pattern>
+        <pattern> maker </pattern>
         <pattern>mantle makers</pattern>
         <pattern>manufacturer</pattern>
         <pattern>milliner</pattern>
@@ -160,6 +163,7 @@
         <pattern>silver beater</pattern>
         <pattern>stand maker</pattern>
         <pattern>tailor</pattern>
+        <pattern>umbrella maker</pattern>
         <pattern>watchmaker</pattern>
         <pattern>wheel makers</pattern>
       </list>
@@ -231,6 +235,7 @@
         <pattern>provision dealer</pattern>
         <pattern>saleroom</pattern>
         <pattern>salesman</pattern>
+        <pattern> shop </pattern>
         <pattern>spirit merchant</pattern>
         <pattern>spirit dealer</pattern>
         <pattern>storekeeper</pattern>
@@ -291,6 +296,7 @@
         <pattern>bookkeeper</pattern>
         <pattern>broker</pattern>
         <pattern>cashier</pattern>
+        <pattern>coin exchange</pattern>
         <pattern>commission agent</pattern>
         <pattern>insurance</pattern>
         <pattern>money exchangers</pattern>
@@ -305,6 +311,7 @@
         <pattern>house factor</pattern>
         <pattern> factor </pattern>
         <pattern>portioner</pattern>
+        <pattern>surveyor</pattern>
       </list>
     </category>
     <category>
@@ -349,6 +356,7 @@
         <pattern>professor</pattern>
         <pattern>prof, of</pattern>
         <pattern>rector</pattern>
+        <pattern>school</pattern>
         <pattern>student</pattern>
         <pattern>teacher</pattern>
         <pattern>teachers</pattern>
@@ -404,14 +412,17 @@
         <pattern>jeweller</pattern>
         <pattern>minister</pattern>
         <pattern>missionary</pattern>
-        <pattern>upholsterer</pattern>
-        <pattern>upholsteress</pattern>
+        <pattern>pastor</pattern>
+        <pattern>undertaker</pattern>
+        <pattern>upholstere</pattern>
       </list>
     </category>
     <category>
       <name>Activities of households as employers; undifferentiated goods-and services-producing activities of households for own use</name>
       <code>T</code>
       <list>
+        <pattern>butler</pattern>
+        <pattern>refreshment</pattern>
         <pattern>scourer</pattern>
         <pattern>servant</pattern>
         <pattern>waiter</pattern>

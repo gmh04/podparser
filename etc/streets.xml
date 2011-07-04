@@ -711,7 +711,7 @@
     <street>Bartholomew Street</street>
   </address>
   <address>
-    <pattern>bath street</pattern>
+    <pattern>bath st</pattern>
     <street>Bath Street</street>
   </address>
   <address>
@@ -1683,7 +1683,7 @@
     <street>Charing Cross</street>
   </address>
   <address>
-    <pattern>charles street</pattern>
+    <pattern>charles st</pattern>
     <street>Charles Street</street>
     <town>
       <name>Glasgow</name>
@@ -3931,6 +3931,7 @@
   </address>
   <address>
     <pattern>james morrison street</pattern>
+    <pattern>j morrison street</pattern>
     <street>James Morrison Street</street>
   </address>
   <address>
@@ -4206,7 +4207,7 @@
     </town>
   </address>
   <address>
-    <pattern>kirk street</pattern>
+    <pattern>kirk st</pattern>
     <street>Kirk Street</street>
     <town>
       <name>Glasgow</name>
@@ -4706,6 +4707,14 @@
   <address>
     <pattern>mair street</pattern>
     <street>Mair Street</street>
+  </address>
+  <address>
+    <pattern>maitland lane</pattern>
+    <street>Maitland Lane</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Maitland Place</modern_name>
+    </town>
   </address>
   <address>
     <pattern>maitland place</pattern>
@@ -5423,6 +5432,11 @@
     </town>
   </address>
   <address>
+    <pattern>norfolk ct</pattern>
+    <pattern>norfolk court</pattern>
+    <street>Norfolk Ct</street>
+  </address>
+  <address>
     <pattern>norfolk st</pattern>
     <street>Norfolk Street</street>
   </address>
@@ -5796,6 +5810,7 @@
   </address>
   <address>
     <pattern>port dundas road</pattern>
+    <pattern>portdundas road</pattern>
     <street>Port Dundas Road</street>
   </address>
   <address>

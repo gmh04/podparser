@@ -346,6 +346,11 @@
       <pattern>St. Vincent pi</pattern>
       <value>St. Vincent pl</value>
     </replace>
+    <replace>
+      <pattern>StMing</pattern>
+      <value>Stirling</value>
+    </replace>
+
 
     <!-- T -->
     <replace>
