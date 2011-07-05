@@ -46,6 +46,10 @@
       <value>Canongate</value>
     </replace>
     <replace>
+      <pattern>Carlton pi</pattern>
+      <value>Carlton pl</value>
+    </replace>
+    <replace>
       <pattern>Catlicart</pattern>
       <value>Cathcart</value>
     </replace>
@@ -220,6 +224,10 @@
       <pattern>Kelvinhangh</pattern>
       <value>Kelvinhaugh</value>
     </replace>
+    <replace>
+      <pattern>Kenmnre</pattern>
+      <value>Kenmure</value>
+    </replace>
 
 
     <!-- L -->
@@ -337,6 +345,10 @@
     <replace>
       <pattern>Shakefpeare</pattern>
       <value>Shakespeare</value>
+    </replace>
+    <replace>
+      <pattern>Somerville pi</pattern>
+      <value>Somerville pl</value>
     </replace>
     <replace>
       <pattern>St. George's pi</pattern>

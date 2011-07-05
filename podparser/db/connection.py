@@ -17,11 +17,11 @@ class PodConnection(object):
         """
         Constructor
 
-        db_password -- database password, the only mandatory field
-        db_name     -- database name (default ahistory)
-        db_user     -- database user name (default ahistory)
-        db_host     -- database hostname(default localhost)
-        db_port     -- database port(default 5432)
+        db_password - database password, the only mandatory field
+        db_name     - database name (default ahistory)
+        db_user     - database user name (default ahistory)
+        db_host     - database hostname(default localhost)
+        db_port     - database port(default 5432)
         """
 
         try:
@@ -91,18 +91,20 @@ class PodConnection(object):
                     entry.address,
                     'parser',
                     'y')
+            #print sql, data
             cur.execute(sql, data)
 
             for location in entry.locations:
                 # insert each location for a given entry
-                sql = """INSERT INTO location(entry_id, address, accuracy, type, geom)
-                         VALUES (%s, %s, (SELECT id FROM  location_accuracy where name = %s), %s, ST_GeomFromText('POINT(%s %s)', 4326))"""
+                sql = """INSERT INTO location(entry_id, address, accuracy, type, geom, exact)
+                         VALUES (%s, %s, (SELECT id FROM  location_accuracy where name = %s), %s, ST_GeomFromText('POINT(%s %s)', 4326), %s)"""
                 data = (entry_id,
                         location.address,
                         location.accuracy,
                         location.type,
                         location.point['lng'],
-                        location.point['lat'])
+                        location.point['lat'],
+                        location.exact)
                 cur.execute(sql, data)
 
         self.conn.commit()

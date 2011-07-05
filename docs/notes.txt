@@ -1,9 +1,13 @@
 # no google entry (probably doesn't exist):
+# AMB - ambiguous
+# NUM use with number returns bad result (to do with providing numbers greater than current highest number)
 
 Abercorn Street
 Afton Crescent
 Albion crescent, Dowanhill
+Alexandra parade (NUM)
 Anderson Quay
+Ann St (AMB)
 Annfield terrace, Partick
 Apsley Place(Warwick Street)
 Argyle Arcade
@@ -22,8 +26,11 @@ Burnbank
 Burnside street
 Bute terrace, Strathbungo
 
+Canning Street (AMB)
 Caprera place
+Cathcart Road (NUM)
 Cathcart street, Rutherglen
+Catherine St (AMB)
 Charlotte lane
 Chatham place
 Craignestock Place
@@ -48,7 +55,7 @@ Garngad Hill
 Garngad rd
 George Square
 Glenavon terrace, Partick
-Govan Rd
+Govan st
 Grove street
 Grafton street
 Granby ter
@@ -79,11 +86,14 @@ Kelvingrove terrace
 Kenmure Place
 Kew terrace
 
+Lancefield Street (NUM)
 Lawrence place, Partick
 Linden ter., Pollokshields
 
 Main street, Anderston
+Mansfield place
 Margaret Street
+Morrison Street (NUM)
 Maryland street
 Matilda place
 Mavisbank Quay
@@ -93,11 +103,13 @@ Moss view, Crossmyloof
 
 Naburn street
 Newgate street
+Newton ter
 Northpark ter, Hillhead
 North Ure place
 
 Oakfield terrace, Hillhead.
 
+Paisley Road (NUM)
 Parliamentary Road
 Partick hill
 Parliamentary Road
@@ -111,15 +123,17 @@ Queen's square, Strathbungo
 Radnor terrace
 Randolph terrace, Garnehill
 Regent park terrace
+Renfrew Street (NUM)
 Ronald Street
 Rosevale ter., Partick
 Royal arcade
 Royal Exchange place
 Rutherglen Loan
 
-Sandyford place
 Sandringham terrace
+Sandyford place
 Sardinia terrace, Hillhead
+Scarlow st. , Port Glasgow
 Schipka pass
 Scotia Street
 Sedan place
@@ -129,11 +143,15 @@ South St. Mungo street
 Spiers wharf, PortDundas
 St Enoch Square
 St Mungo street
+St. Vincent crescent (NUM)
 Stanhope street
 Steven street
+Stewart street
 Stewartville Place
+Stirling Road (NUM)
 Stonefield Terrace
 
+Taylor St (NUM)
 Tollcross
 Tennent street
 
@@ -146,41 +164,14 @@ Wellpark pl
 Wellpark terrace
 Wellington arcade
 Wesleyan Street
+West Graham Street
 W(est) Howard street
 Westbank pl, Hillhead
 Westbourne terrace Kelvinside
 Westminster terrace
+Windsor terrace (NUM)
 Woodside quadrant
 
-
-# APPROXIMATE google entry
-St Andrew's Road, Pollokshields
-
-
-# use with number returns bad result (to do with providing numbers greater than current highest number)
-
-Alexandra parade
-
-Cathcart Road
-
-Morrison Street
-
-Paisley Road
-
-Renfrew Street
-
-St. Vincent crescent
-Stirling Road
-
-Taylor St
-
-West Graham Street
-Windsor terrace
-
-# ambiguous
-Ann St
-Canning Street
-Catherine St
 
 
 

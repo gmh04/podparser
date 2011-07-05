@@ -120,10 +120,9 @@ class Entry():
 
     def __init__(self, line):
         self.line       = line
-        #self.profession = ''
-        self.category   = ''
+        #self.category   = ''
+        self.category   = None
         self.error      = None
-        #self.locations  = []
 
         # parse individual entry values from pod
         self._parse()
@@ -186,11 +185,13 @@ class Entry():
     def _get_address_match(self, text):
         # match number
         match = re.search('(\d)', text)
+        """
         if not match:
 
             # if no number in address try some common street strings
             # TODO add more
             match = re.search('(street|house)', text, flags=re.IGNORECASE)
+        """
 
         return match
 

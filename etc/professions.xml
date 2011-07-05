@@ -66,6 +66,10 @@
       <value>goldsmith</value>
     </replace>
     <replace>
+      <pattern>gi-ocer</pattern>
+      <value>grocer</value>
+    </replace>
+    <replace>
       <pattern>hair dreffer</pattern>
       <value>hair dresser</value>
     </replace>
@@ -200,6 +204,7 @@
         <pattern>mason</pattern>
         <pattern>monumental builder</pattern>
         <pattern>painter</pattern>
+        <pattern>plasterer</pattern>
         <pattern>silversmith</pattern>
         <pattern>slater</pattern>
         <pattern>stair railer</pattern>
@@ -278,6 +283,7 @@
         <pattern>advertising</pattern>
         <pattern>bookbinder</pattern>
         <pattern>bookseller</pattern>
+        <pattern>librarian</pattern>
         <pattern>printer</pattern>
         <pattern>printing</pattern>
         <pattern>publisher</pattern>
@@ -422,6 +428,7 @@
       <code>T</code>
       <list>
         <pattern>butler</pattern>
+        <pattern>housekeeper</pattern>
         <pattern>refreshment</pattern>
         <pattern>scourer</pattern>
         <pattern>servant</pattern>

@@ -227,33 +227,16 @@ class EntryChecker():
             if addr.isalnum():
                 continue
 
-            # encode address as is
+            # encode address using derived address
             location = self._get_derived_location(addr, encoder, entry)
 
             if not location:
+                # derived failed, encode it raw
                 location = encoder.get_location(addr, self.directory.town)
                 if location:
                     location.type = 'raw'
                     entry.locations.append(location)
 
-            """
-            location = encoder.get_location('%s, %s, %s' % (addr,
-                                                            self.directory.town,
-                                                            self.directory.country))
-
-            if location:
-
-                # TODO: this is here for debugging - only append if good geo tag
-                location.type = 'raw'
-                entry.locations.append(location)
-
-                if location.get_geo_status() < 2:
-                    # poor location try getting a derived location
-                    self._get_derived_location(addr, encoder, entry)
-            else:
-                # no location returned try derived
-                self._get_derived_location(addr, encoder, entry)
-            """
     def _get_derived_location(self, addr, encoder, entry):
         location = None
         matches = []

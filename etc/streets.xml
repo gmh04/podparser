@@ -3959,6 +3959,14 @@
     </town>
   </address>
   <address>
+    <pattern>jane st</pattern>
+    <street>Jane Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>West George Street</modern_name>
+    </town>
+  </address>
+  <address>
     <pattern>jardine street</pattern>
     <street>Jardine Street</street>
   </address>
@@ -4175,7 +4183,7 @@
     <street>Kingston Place</street>
   </address>
   <address>
-    <pattern>king street</pattern>
+    <pattern>king st</pattern>
     <street>King Street</street>
     <town>
       <name>Glasgow</name>
@@ -4211,16 +4219,7 @@
     <street>Kirk Street</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Calton</name>
-        <modern_name>Stevenson Street</modern_name>
-      </area>
-      <area>
-        <name>Gorbals</name>
-      </area>
-      <area>
-        <name>Townhead</name>
-      </area>
+      <modern_name>Stevenson Street</modern_name>
     </town>
   </address>
   <address>
@@ -5060,12 +5059,12 @@
   <address>
     <pattern>millbrae crescent</pattern>
     <street>Millbrae Crescent</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Langside</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>millbrae road</pattern>
@@ -5527,7 +5526,7 @@
     <street>Onslow Square</street>
   </address>
   <address>
-    <pattern>orchard street</pattern>
+    <pattern>orchard st</pattern>
     <street>Orchard Street</street>
     <town>
       <name>Glasgow</name>
@@ -5586,6 +5585,10 @@
   <address>
     <pattern>paisley road</pattern>
     <street>Paisley Road</street>
+  </address>
+  <address>
+    <pattern>paisley road, west</pattern>
+    <street>Paisley Road West</street>
   </address>
   <address>
     <pattern>park circus</pattern>
@@ -6818,7 +6821,8 @@
     <street>Somerset Place</street>
   </address>
   <address>
-    <pattern>somerville place</pattern>
+    <pattern>somerville pl</pattern>
+    <pattern>sommerville pl</pattern>
     <street>Somerville Place</street>
     <town>
       <name>Glasgow</name>

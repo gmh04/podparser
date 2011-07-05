@@ -1,8 +1,3 @@
-.. podparser documentation master file, created by
-   sphinx-quickstart on Wed Jun  8 16:48:23 2011.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Post Office Directory Parser (podparser)
 ========================================
 
@@ -66,7 +61,7 @@ For a full list of parser command-line options see help options::
 
 Python Library
 --------------
-The following example demonstrates executing the parser and retreiving the results.
+The following example demonstrates envoking the parser and retrieving the results from within a python script.
 
 ::
 
@@ -142,7 +137,7 @@ Statistics of the parse are collected and a summary is displayed after each page
 
 Problems
 ~~~~~~~~
-The parser will attempt to alert the user when the is a problem with an entry:
+The parser will alert the user when there is a problem with an entry:
 
 .. table::
 
@@ -150,9 +145,14 @@ The parser will attempt to alert the user when the is a problem with an entry:
    No geo tag             No valid location could be found in the address column.
    Poor Geo tag           There is no address in the entry with a geo tag better than APPROXIMATE, see  location_type in `Google Geocoding API results`_
    No profession category Entry has a profession but no pattern is matched in `Professions config`_.
-   Inexact tag            In parenthethis after the type column is the address returned by the google geocoding service. If the address returned does not match the query, it is marked as inexact with three asterixes.
+   Inexact tag            In parentheses after the type column is the address returned by the google geocoding service. If the address returned does not match the query, it is marked as inexact with three asterixes.
    Rejected               If an entry has less than 3 columns or contains a `stop word`_, the entry is not processed.
    ====================== ===
+
+********
+Database
+********
+Currently only Postgis is supported. The schema can be found in </path/to/site-packages>/podparser/etc.
 
 ******
 Config
@@ -232,7 +232,7 @@ In addition to containing replace elements to fix OCR errors and misspellings fo
 
 Addresses
 ---------
-addresses.xml contains replace elements to fix Optical Character Recogintion(OCR) errors and misspellings for the address field. E.g.::
+addresses.xml contains replace elements to fix OCR errors and misspellings for the address field. E.g.::
 
   <?xml version="1.0" encoding="UTF-8"?>
   <addresses>
@@ -362,6 +362,6 @@ Indices and tables
 .. _postgis: http://postgis.refractions.net/
 .. _Professions config: #professions
 .. _Scottish Post Office directories: http://www.nls.uk/family-history/directories/post-office
-.. _stop word: #stop
+.. _stop word: #names
 .. _Streets config: #streets
 .. _UK Standard Industrial Classification: http://www.google.com/url?sa=t&source=web&cd=4&ved=0CDsQFjAD&url=http%3A%2F%2Fwww.statistics.gov.uk%2Fmethods_quality%2Fsic%2Fdownloads%2Fsic2007explanatorynotes.pdf&rct=j&q=sic&ei=eqoNTpTEA8LRhAfJp4nnDQ&usg=AFQjCNG7JIkJyXBNV49I3Z5i1gMkMGiGww&sig2=_e5xBAyCYwqGh_qH8cEkMg&cad=rja

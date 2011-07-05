@@ -32,7 +32,7 @@ class Parser:
     | config      - The full path to the parser configuration files.
     | directory   - The full path to either an individual POD file or the POD directory.
     | start       - Start directory page to be parsed, only applies to for directory parse. If no start page given start from 0.
-    | end         - End directory page to be parsed, only applies to for directory parse. If no end page given parse until last.'
+    | end         - End directory page to be parsed, only applies to for directory parse. If no end page given parse until last.
     | encoder_key - Google premium private key
     | client_id   - Google premium client identifier
     | verbose     - Print detailed output
@@ -245,7 +245,7 @@ class Parser:
             elif geo_status == 1:
                 print '*** Poor geo tag'
 
-            if len(entry.profession) > 0 and len(entry.category) == 0:
+            if len(entry.profession) > 0 and entry.category == None:
                 print '*** No profession category'
 
         print unicode(entry)
@@ -293,7 +293,7 @@ def read_page(directory, page):
             if len(entry.profession) > 0:
                 profession = profession + 1
 
-                if len(entry.category) == 0:
+                if entry.category == None:
                     no_category = no_category + 1
 
         total = total + 1

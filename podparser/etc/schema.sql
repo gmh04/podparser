@@ -63,14 +63,16 @@ CREATE TABLE location (id         SERIAL  PRIMARY KEY,
                        type       text,
                        userid_mod text,
                        date_mod   timestamp with time zone DEFAULT CURRENT_TIMESTAMP,
-                       current    boolean
+                       current    boolean,
+                       exact      boolean
 );
 
 SELECT AddGeometryColumn('public', 'location', 'geom', 4326, 'POINT', 2);
 CREATE INDEX location_idx ON location USING GIST (geom);
 
 COMMENT ON COLUMN location.address IS 'address used in geo tagging';
-COMMENT ON COLUMN location.type IS 'Is the location address derived from configuration or sent raw?';
+COMMENT ON COLUMN location.type IS    'the location address derived from configuration or sent raw?';
+COMMENT ON COLUMN location.exact IS   'does the search result match the query';
 
 CREATE SEQUENCE google_lookup_count;
 
