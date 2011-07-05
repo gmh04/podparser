@@ -1286,9 +1286,9 @@
     <street>Buckingham Terrace</street>
     <town>
       <name>Glasgow</name>
-      <area>
+      <!--<area>
         <name>Hillhead</name>
-      </area>
+      </area>-->
       <area>
         <name>Partick</name>
       </area>
@@ -1972,6 +1972,7 @@
   </address>
   <address>
     <pattern>cowcaddens</pattern>
+    <pattern>cowcads</pattern>
     <street>Cowcaddens</street>
     <town>
       <name>Glasgow</name>
@@ -3031,7 +3032,7 @@
     <street>George Square</street>
   </address>
   <address>
-    <pattern>george street</pattern>
+    <pattern>george st</pattern>
     <street>George Street</street>
   </address>
   <address>
@@ -4726,6 +4727,14 @@
     </town>
   </address>
   <address>
+    <pattern>marlborough st</pattern>
+    <street>Marlborough Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Orr Street</modern_name>
+    </town>
+  </address>
+  <address>
     <pattern>mallsmire place</pattern>
     <street>Mallsmire Place</street>
     <town>
@@ -5486,6 +5495,10 @@
   <address>
     <pattern>oakbank street</pattern>
     <street>Oakbank Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Oakbank</modern_name>
+    </town>
   </address>
   <address>
     <pattern>oakfield terrace</pattern>
@@ -6637,7 +6650,7 @@
     </town>
   </address>
   <address>
-    <pattern>sauchiehall lane</pattern>
+    <pattern>sauchiehall l</pattern>
     <street>Sauchiehall Lane</street>
   </address>
   <address>
@@ -7210,6 +7223,7 @@
       <name>Glasgow</name>
       <area>
         <name>Garnethill</name>
+        <modern_name>Garnet Street</modern_name>
       </area>
     </town>
   </address>

@@ -21,9 +21,11 @@ Bishop street, Anderston
 Blythswood terrace
 Boswell ter., Kelvinside
 Bridgeton Cross
+Brougham ter, Crosshill
 Buchan Street
 Burnbank
 Burnside street
+Buckingham buildings, Hillhead
 Bute terrace, Strathbungo
 
 Canning Street (AMB)
@@ -47,13 +49,16 @@ Elba lane, Parkhead
 Elmbank Place
 Eton place, Hillhead
 
+Fisher St, Dennistoun.
 Franklin Terrace
 Frederick Lane
 
+      
 Garden street
 Garngad Hill
 Garngad rd
 George Square
+Glebe street
 Glenavon terrace, Partick
 Govan st
 Grove street
@@ -89,6 +94,7 @@ Kew terrace
 Lancefield Street (NUM)
 Lawrence place, Partick
 Linden ter., Pollokshields
+Loudon ter, Kelvinside
 
 Main street, Anderston
 Mansfield place
@@ -146,6 +152,7 @@ St Mungo street
 St. Vincent crescent (NUM)
 Stanhope street
 Steven street
+Stevenson drive, Crossmyloof
 Stewart street
 Stewartville Place
 Stirling Road (NUM)
