@@ -207,6 +207,7 @@ class Location():
 
             # attempt to modify search term to fit google
             s_addr = s_addr.replace(' cres',     ' crescent')
+            s_addr = s_addr.replace(' court',    ' ct')
             s_addr = s_addr.replace(' lane',     ' ln')
             s_addr = s_addr.replace(' road',     ' rd')
             s_addr = s_addr.replace('saint',     'st')

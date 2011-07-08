@@ -14,7 +14,9 @@ Argyle Arcade
 Argyle Terrace, Crosshill
 
 Ballochmyle terrace, Kelvinside
+Bath crescent
 Beaufort Gardens, Govanhill
+Bellahouston ter
 Berkeley terrace
 Berlin place
 Bishop street, Anderston
@@ -30,6 +32,7 @@ Bute terrace, Strathbungo
 
 Canning Street (AMB)
 Caprera place
+Castle Street (NUM)
 Cathcart Road (NUM)
 Cathcart street, Rutherglen
 Catherine St (AMB)
@@ -43,17 +46,19 @@ Darnley terrace, Shawlands
 Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
+Dundas Street (NUM)
 
 Eaglesham Street
 Elba lane, Parkhead
 Elmbank Place
 Eton place, Hillhead
 
-Fisher St, Dennistoun.
+Finnieston st (NUM)
+Fisher St, Dennistoun
+Fitzroy Place
 Franklin Terrace
 Frederick Lane
 
-      
 Garden street
 Garngad Hill
 Garngad rd
@@ -75,6 +80,7 @@ Hampden Place
 Hayburn ct
 Herriot street, Pollokshields
 Hope terrace, Govanhill.
+Holland place
 Hillhead gardens
 Hillsborough ter
 Hillside gardens, Partickhill
@@ -90,15 +96,19 @@ Jackson St
 Kelvingrove terrace
 Kenmure Place
 Kew terrace
+Kidston street
 
 Lancefield Street (NUM)
 Lawrence place, Partick
 Linden ter., Pollokshields
+Lorne terrace, Pollokshields
 Loudon ter, Kelvinside
 
 Main street, Anderston
+Mallsmire Place
 Mansfield place
 Margaret Street
+Marquis street, Bridgeton
 Morrison Street (NUM)
 Maryland street
 Matilda place
@@ -130,6 +140,7 @@ Radnor terrace
 Randolph terrace, Garnehill
 Regent park terrace
 Renfrew Street (NUM)
+Risk street
 Ronald Street
 Rosevale ter., Partick
 Royal arcade
@@ -143,6 +154,7 @@ Scarlow st. , Port Glasgow
 Schipka pass
 Scotia Street
 Sedan place
+Shaftesbury terrace
 Shinir bank, Crosshill
 Soho street
 South St. Mungo street
@@ -159,9 +171,12 @@ Stirling Road (NUM)
 Stonefield Terrace
 
 Taylor St (NUM)
+Titwood place, Strathbungo
 Tollcross
 Tennent street
 
+Victoria street, Dowanhill
+Victoria St., Hillhead
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 
@@ -170,6 +185,7 @@ Well st
 Wellpark pl
 Wellpark terrace
 Wellington arcade
+Wemyss Place
 Wesleyan Street
 West Graham Street
 W(est) Howard street
@@ -177,9 +193,8 @@ Westbank pl, Hillhead
 Westbourne terrace Kelvinside
 Westminster terrace
 Windsor terrace (NUM)
+Wood lane
 Woodside quadrant
-
-
 
 
 # parser changes
