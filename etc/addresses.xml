@@ -256,6 +256,10 @@
       <value>street</value>
     </replace>
     <replace>
+      <pattern>Lome pl</pattern>
+      <value>Lorne pl</value>
+    </replace>
+    <replace>
       <pattern>Lome ter</pattern>
       <value>Lorne ter</value>
     </replace>

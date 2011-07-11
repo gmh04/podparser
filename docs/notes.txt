@@ -4,7 +4,7 @@
 
 Abercorn Street
 Afton Crescent
-Albion crescent, Dowanhill
+Albion crescent
 Alexandra parade (NUM)
 Anderson Quay
 Ann St (AMB)
@@ -22,6 +22,7 @@ Berlin place
 Bishop street, Anderston
 Blythswood terrace
 Boswell ter., Kelvinside
+Bothwell terrace, Shawlands
 Bridgeton Cross
 Brougham ter, Crosshill
 Buchan Street
@@ -50,6 +51,7 @@ Dundas Street (NUM)
 
 Eaglesham Street
 Elba lane, Parkhead
+Elgin terrace
 Elmbank Place
 Eton place, Hillhead
 
@@ -94,6 +96,7 @@ Iona place, Mount Florida
 Jackson St
 
 Kelvingrove terrace
+Kelvinside terrace, N. Hillhead
 Kenmure Place
 Kew terrace
 Kidston street
@@ -134,6 +137,7 @@ Pollok street
 Prince of Wales Terrace
 Princes Square
 
+Queen's drive, Crosshill.
 Queen's square, Strathbungo
 
 Radnor terrace
@@ -144,6 +148,7 @@ Risk street
 Ronald Street
 Rosevale ter., Partick
 Royal arcade
+Royal Exchange
 Royal Exchange place
 Rutherglen Loan
 
@@ -157,6 +162,7 @@ Sedan place
 Shaftesbury terrace
 Shinir bank, Crosshill
 Soho street
+South Kinning place
 South St. Mungo street
 Spiers wharf, PortDundas
 St Enoch Square
@@ -175,6 +181,8 @@ Titwood place, Strathbungo
 Tollcross
 Tennent street
 
+Ure Place
+
 Victoria street, Dowanhill
 Victoria St., Hillhead
 Viewfield Place, Pollokshields
@@ -192,7 +200,10 @@ W(est) Howard street
 Westbank pl, Hillhead
 Westbourne terrace Kelvinside
 Westminster terrace
+Whitfield place, Govan
+Wilton Crescent
 Windsor terrace (NUM)
+Winton terrace, Govanhill
 Wood lane
 Woodside quadrant
 

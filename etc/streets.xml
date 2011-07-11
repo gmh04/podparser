@@ -1027,7 +1027,8 @@
   </address>
   <address>
     <pattern>bowmont gardens</pattern>
-    <street>Bowmont Gardens</street>
+    <pattern>bowmount gardens</pattern>
+    <street>Bowmount Gardens</street>
     <town>
       <name>Glasgow</name>
       <area>
@@ -1329,6 +1330,14 @@
     <street>Bute Terrace</street>
   </address>
   <address>
+    <pattern>butterbiggings r</pattern>
+    <street>Butterbiggins Road</street>
+    <town>
+      <name>Glagow</name>
+      <modern_name>Butterfield Place</modern_name>
+    </town>
+  </address>
+  <address>
     <pattern>byars' road</pattern>
     <street>Byars' Road</street>
     <town>
@@ -1598,7 +1607,7 @@
     </town>
   </address>
   <address>
-    <pattern>cathcart road</pattern>
+    <pattern>cathcart r</pattern>
     <street>Cathcart Road</street>
     <!--<town>
       <name>Glasgow</name>
@@ -4069,6 +4078,10 @@
     </town>
   </address>
   <address>
+    <pattern>kelvinside ter</pattern>
+    <street>Kelvinside Terrace</street>
+  </address>
+  <address>
     <pattern>kenmure place</pattern>
     <street>Kenmure Place</street>
     <town>
@@ -4664,6 +4677,10 @@
   <address>
     <pattern>mclean st</pattern>
     <street>McLean Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Maclean Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>mclellan st</pattern>
@@ -5258,6 +5275,10 @@
   <address>
     <pattern>moore st</pattern>
     <street>Moore Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Dunchattan Place</modern_name>
+    </town>
   </address>
   <address>
     <pattern>moray place</pattern>
