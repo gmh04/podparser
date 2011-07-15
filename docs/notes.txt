@@ -3,15 +3,19 @@
 # NUM use with number returns bad result (to do with providing numbers greater than current highest number)
 
 Abercorn Street
+Abington street
 Afton Crescent
 Albion crescent
 Alexandra parade (NUM)
+Allanton terrace, Govanhill
 Anderson Quay
 Ann St (AMB)
 Annfield terrace, Partick
 Apsley Place(Warwick Street)
 Argyle Arcade
 Argyle Terrace, Crosshill
+Ashton Terrace
+Avon St
 
 Ballochmyle terrace, Kelvinside
 Bath crescent
@@ -37,16 +41,19 @@ Castle Street (NUM)
 Cathcart Road (NUM)
 Cathcart street, Rutherglen
 Catherine St (AMB)
+Catherine street, north
 Charlotte lane
 Chatham place
 Craignestock Place
 Crookston hall
 Cubie street. Mile-end
+Cumberland Lane
 
 Darnley terrace, Shawlands
 Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
+Dunchattan Place (NUM)
 Dundas Street (NUM)
 
 Eaglesham Street
@@ -94,6 +101,7 @@ Ibrox Place
 Iona place, Mount Florida
 
 Jackson St
+Jane Place
 
 Kelvingrove terrace
 Kelvinside terrace, N. Hillhead
@@ -115,6 +123,7 @@ Marquis street, Bridgeton
 Morrison Street (NUM)
 Maryland street
 Matilda place
+Matilda terrace
 Mavisbank Quay
 Melville Terrace
 Morris Place
@@ -151,8 +160,11 @@ Royal arcade
 Royal Exchange
 Royal Exchange place
 Rutherglen Loan
+Rutherglen Road (NUM)
 
+Salisbury ter Hillhead
 Sandringham terrace
+Sandyfaulds Street
 Sandyford place
 Sardinia terrace, Hillhead
 Scarlow st. , Port Glasgow
@@ -166,6 +178,7 @@ South Kinning place
 South St. Mungo street
 Spiers wharf, PortDundas
 St Enoch Square
+St George's Terrace
 St Mungo street
 St. Vincent crescent (NUM)
 Stanhope street
@@ -185,6 +198,7 @@ Ure Place
 
 Victoria street, Dowanhill
 Victoria St., Hillhead
+Victoria terrace, Dowanhill
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 

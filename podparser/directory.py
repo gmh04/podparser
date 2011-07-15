@@ -22,7 +22,7 @@ class Directory():
     """
 
     def __init__(self, path):
-        #self.pages   = []
+        self.pages   = []
         self.path    = path;
         self.read_from_meta();
 
@@ -60,7 +60,7 @@ class Directory():
             self.year = volume.split('-')[0].strip()
         else:
             print '*** Cannot find metadata file in : %s ***' % ddir
-            sys.exit(1)
+            self.town = None
 
 class Page():
     """
@@ -84,7 +84,7 @@ class Page():
         self.path    = path
         self.section = 'General Directory'
         self.number  = number
-        #self.entries = []
+        self.entries = []
 
 class Entry():
     """

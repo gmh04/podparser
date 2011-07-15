@@ -13,7 +13,7 @@ def timer(f):
     # timer decorator
     def deco(self, *args):
         then = datetime.now()
-        f(self, *args)
+        d = f(self, *args)
 
         td = datetime.now() - then
 
@@ -23,6 +23,7 @@ def timer(f):
             print '\nParse took: %d hour(s): %d mins: %d secs' % (td.seconds / 3600,
                                                                   (td.seconds / 60) % 60,
                                                                   td.seconds % 60)
+        return d
     return deco
 
 class Parser:
@@ -43,7 +44,7 @@ class Parser:
 
     def __init__(self,
                  config,
-                 directory,
+                 dir_path,
                  start           = 0,
                  end             = 9999,
                  encoder_key     = None,
@@ -53,7 +54,7 @@ class Parser:
                  db              = None,
                  commit          = False):
         self.config          = config
-        self.directory       = directory
+        self.dir_path        = dir_path
         self.start           = int(start)
         self.end             = int(end)
         self.verbose         = verbose
@@ -69,16 +70,21 @@ class Parser:
             self.geoencoder = geo.encoder.Google()
 
     @timer
-    def run_parser(self, callback):
+    def run_parser(self, callback=None):
         """
         Parse post office directory
+
+        callback - function to be executed after each page parse
         """
 
         # read meta data
-        self.directory = directory.Directory(self.directory);
+        self.directory = directory.Directory(self.dir_path)
+
+        if self.directory.town == None:
+            return None
 
         if self.db:
-            self.db.set_directory(self.directory)
+            self.db.set_directory(self.dir_path)
 
         # create checker object
         entry_checker = checker.EntryChecker(self.directory, self.config)
@@ -115,13 +121,14 @@ class Parser:
                 page.entries.append(pod_entry)
 
             # envoke callback function for a page
-            callback(self.directory, page);
+            if callback:
+                callback(self.directory, page);
 
             # commit page to database
             if self.db and self.commit:
                 self.db.commit(page)
 
-        return directory
+        return self.directory
 
     def _get_listing(self):
         #  get list of djvu xml files
@@ -134,15 +141,20 @@ class Parser:
                 if d.endswith('djvu_xml'):
                     pod_path = '%s%c%s' % (path, os.sep, d)
                     for f in os.listdir(pod_path):
-                        if((f.startswith("postoffice") or f.startswith("williamsonsdirect")) and f.endswith(".djvu")):
-                            page_no = get_page_from_file(f);
-                        if page_no >= self.start and page_no <= self.end:
-                            fpath = '%s%c%s' % (pod_path,
-                                                os.sep,
-                                                f)
-                            self.directory.pages.append(directory.Page(fpath, page_no));
-                            if self.verbose:
-                                print fpath
+                        if f.endswith(".djvu"):
+                            if(f.startswith("postoffice") or f.startswith("williamsonsdirect")):
+                                page_no = get_page_from_file(f);
+                            else:
+                                print '*** No page number found for %s ***' % f
+                                continue
+
+                            if page_no >= self.start and page_no <= self.end:
+                                fpath = '%s%c%s' % (pod_path,
+                                                    os.sep,
+                                                    f)
+                                self.directory.pages.append(directory.Page(fpath, page_no));
+                                if self.verbose:
+                                    print fpath
                     break
 
             # sort files alphabetically by path
@@ -176,8 +188,9 @@ class Parser:
 
         def get_top_char(lst):
             # find the most commonly occurring first character
-            chars = {}
+            chars    = {}
             char_val = 0
+            top_char = None
 
             for line in lst:
                 if line[0] in chars:
@@ -271,6 +284,9 @@ no_category = 0
 
 def read_page(directory, page):
 
+    if len(page.entries) == 0:
+        return
+
     print 'Page Number: %d\n' % page.number
     global total, rejected, no_geo, bad_geo, unmatched_geo, profession, no_category, total_locations, exact_locations
 
@@ -316,7 +332,7 @@ def read_page(directory, page):
 
 if __name__ == "__main__":
     """
-    jings
+    Execute parser as command line process
     """
     # print unicode to std out
     sys.stdout = codecs.getwriter('utf8')(sys.stdout)
@@ -422,7 +438,7 @@ if __name__ == "__main__":
 
     # kick off parsing
     parser.Parser(config          = config_dir,
-                  directory       = directory,
+                  dir_path        = directory,
                   start           = args.start,
                   end             = args.end,
                   encoder_key     = args.key,

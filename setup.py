@@ -8,7 +8,7 @@ if len(sys.argv) == 2 and sys.argv[1] != 'build_docs':
     setup(name='podparser',
           version=version,
           description="Post Office Directory Parser",
-          long_description="""The podparser is a tool for parsing Scotlands post office directories""",
+          long_description="""The podparser is a tool for parsing Scotland's post office directories""",
           keywords='post-office pod directory geneology history scotland',
           author='George Hamilton',
           author_email='george.hamilton@ed.ac.uk',

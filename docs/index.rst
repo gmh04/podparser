@@ -67,7 +67,7 @@ The following example demonstrates envoking the parser and retrieving the result
 
     from podparser.parser import Parser
 
-    p = Parser(config='/path/to/conf', directory='/path/to/pod')
+    p = Parser(config='/path/to/conf', dir_path='/path/to/pod')
     dir = p.run_parser()
     for page in dir.pages:
         for entry in page.entries:
@@ -85,7 +85,7 @@ Post Office directories can contain many pages, leading to parse times of many h
             # do something with the entry
             print entry
 
-    p = parser.Parser(config='/path/to/conf', directory='/path/to/pod')
+    p = parser.Parser(config='/path/to/conf', dir_path='/path/to/pod')
     p.run_parser(read_page)
 
 Output

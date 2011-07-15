@@ -13,6 +13,10 @@
       <pattern>AV</pattern>
       <value></value>
     </replace>
+    <replace>
+      <pattern>Ai-gyle</pattern>
+      <value>Argyle</value>
+    </replace>
 
     <!-- B -->
     <replace>
@@ -223,6 +227,10 @@
     <replace>
       <pattern>Kelvinhangh</pattern>
       <value>Kelvinhaugh</value>
+    </replace>
+    <replace>
+      <pattern>Kelviuside</pattern>
+      <value>Kelvinside</value>
     </replace>
     <replace>
       <pattern>Kenmnre</pattern>

@@ -280,12 +280,12 @@
   <address>
     <pattern>allanton terrace</pattern>
     <street>Allanton Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>allison st</pattern>
@@ -1952,6 +1952,11 @@
     <street>Commercial Road</street>
   </address>
   <address>
+    <pattern>copeland r</pattern>
+    <pattern>copland r</pattern>
+    <street>Copland Road</street>
+  </address>
+  <address>
     <pattern>cook st</pattern>
     <street>Cook Street</street>
   </address>
@@ -3334,9 +3339,9 @@
     </town>
   </address>
   <address>
-    <pattern>great western road</pattern>
+    <pattern>great western r</pattern>
     <street>Great Western Road</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
@@ -3344,7 +3349,7 @@
       <area>
         <name>Kelvinside</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>great western terrace</pattern>
@@ -3502,32 +3507,14 @@
   <address>
     <pattern>hamilton ter</pattern>
     <street>Hamilton Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hampden place</pattern>
     <street>Hampden Place</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>-->
   </address>
   <address>
     <pattern>hampden terrace</pattern>
     <street>Hampden Terrace</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>-->
   </address>
   <address>
     <pattern>hampton court terrace</pattern>
@@ -5154,7 +5141,7 @@
     <street>Milton Street</street>
   </address>
   <address>
-    <pattern>milton terrace</pattern>
+    <pattern>milton ter</pattern>
     <street>Milton Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -6501,7 +6488,7 @@
     <street>St George's Terrace</street>
   </address>
   <address>
-    <pattern>st. james' road</pattern>
+    <pattern>st. james' r</pattern>
     <street>Saint James Road</street>
   </address>
   <address>
@@ -6700,7 +6687,7 @@
   <address>
     <pattern>scotland st</pattern>
     <street>Scotland Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Tradeston</name>
@@ -6708,7 +6695,7 @@
       <area>
         <name>Woodlands</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>scott st</pattern>
@@ -7740,12 +7727,10 @@
   <address>
     <pattern>westbourne gardens</pattern>
     <street>Westbourne Gardens</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
+  </address>
+  <address>
+    <pattern>westbourne gardens, w</pattern>
+    <street>Westbourne Gardens West</street>
   </address>
   <address>
     <pattern>westbourne terrace</pattern>
@@ -7826,12 +7811,10 @@
   <address>
     <pattern>westmoreland st</pattern>
     <street>Westmoreland Street</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Govanhill</name>
-      </area>
-    </town>-->
+  </address>
+  <address>
+    <pattern>westmuir st</pattern>
+    <street>Westmuir Street</street>
   </address>
   <address>
     <pattern>weymouth terrace</pattern>
@@ -7895,18 +7878,12 @@
     <town>
       <name>Glasgow</name>
       <area>
-        <name>Anderston</name>
-      </area>
-      <area>
         <name>Calton</name>
         <modern_name>Templeton Street></modern_name>
       </area>
       <area>
         <name>Cowcaddens</name>
         <modern_name>Glenmavis Street</modern_name>
-      </area>
-      <area>
-        <name>Mile-end</name>
       </area>
     </town>
   </address>
