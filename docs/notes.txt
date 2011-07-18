@@ -14,11 +14,14 @@ Annfield terrace, Partick
 Apsley Place(Warwick Street)
 Argyle Arcade
 Argyle Terrace, Crosshill
+Ashfield pl
+Ashfield terrace
 Ashton Terrace
 Avon St
 
 Ballochmyle terrace, Kelvinside
 Bath crescent
+Battlefield crescent, Langside
 Beaufort Gardens, Govanhill
 Bellahouston ter
 Berkeley terrace
@@ -27,9 +30,11 @@ Bishop street, Anderston
 Blythswood terrace
 Boswell ter., Kelvinside
 Bothwell terrace, Shawlands
+Branford place
 Bridgeton Cross
 Brougham ter, Crosshill
 Buchan Street
+Buchanan gardens, Mt. Vernon
 Burnbank
 Burnside street
 Buckingham buildings, Hillhead
@@ -57,6 +62,7 @@ Dunchattan Place (NUM)
 Dundas Street (NUM)
 
 Eaglesham Street
+Edmund street
 Elba lane, Parkhead
 Elgin terrace
 Elmbank Place
@@ -85,11 +91,14 @@ Greenhead terrace
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
 Hamilton place
+Hamilton ter. west, Partick
 Hampden Place
+Hampden Terrace (NUM)
 Hayburn ct
 Herriot street, Pollokshields
 Hope terrace, Govanhill.
 Holland place
+Holmhead Street (Cunningham Street)
 Hillhead gardens
 Hillsborough ter
 Hillside gardens, Partickhill
@@ -106,11 +115,13 @@ Jane Place
 Kelvingrove terrace
 Kelvinside terrace, N. Hillhead
 Kenmure Place
+Kersland terrace, Hillhead
 Kew terrace
 Kidston street
 
 Lancefield Street (NUM)
 Lawrence place, Partick
+Lincoln place, Partick
 Linden ter., Pollokshields
 Lorne terrace, Pollokshields
 Loudon ter, Kelvinside
@@ -125,6 +136,7 @@ Maryland street
 Matilda place
 Matilda terrace
 Mavisbank Quay
+Maxwell terrace, Pollokshields
 Melville Terrace
 Morris Place
 Moss view, Crossmyloof
@@ -152,6 +164,7 @@ Queen's square, Strathbungo
 Radnor terrace
 Randolph terrace, Garnehill
 Regent park terrace
+Regent terrace
 Renfrew Street (NUM)
 Risk street
 Ronald Street
@@ -193,6 +206,8 @@ Taylor St (NUM)
 Titwood place, Strathbungo
 Tollcross
 Tennent street
+Tureen street, Calton
+Tylefield street
 
 Ure Place
 
@@ -203,6 +218,7 @@ Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
 
 Walworth Terrace
+Water st., Port-Dundas
 Well st
 Wellpark pl
 Wellpark terrace
@@ -216,10 +232,13 @@ Westbourne terrace Kelvinside
 Westminster terrace
 Whitfield place, Govan
 Wilton Crescent
+Wilton Terrace
 Windsor terrace (NUM)
 Winton terrace, Govanhill
 Wood lane
 Woodside quadrant
+
+Young's land, Strathbungo
 
 
 # parser changes

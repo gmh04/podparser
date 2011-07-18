@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<names>
+
+  <stopWords>
+    <word>Association</word>
+    <word>Insurance</word>
+  </stopWords>
+
+  <replace>
+    <pattern>Jobn</pattern>
+    <value>John</value>
+  </replace>
+  <replace>
+    <pattern>Smlth</pattern>
+    <value>Smith</value>
+  </replace>
+
+</names>

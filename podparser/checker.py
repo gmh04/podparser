@@ -151,7 +151,7 @@ class EntryChecker():
         # forename / surname name replaces
         for name in self.names:
             if entry.surname.find(name) != -1:
-                entry.surname = entry.surnam.replace(name, self.names[name])
+                entry.surname = entry.surname.replace(name, self.names[name])
             if entry.forename.find(name) != -1:
                 entry.forename = self.names[name]
 
@@ -224,7 +224,10 @@ class EntryChecker():
         for addr in addrs:
             addr = addr.strip()
 
-            if addr.isalnum():
+            # don't process address if:
+            # its a number
+            # it contains the string do. (or dito)
+            if addr.isalnum() or addr.find(' do.') != -1:
                 continue
 
             # encode address using derived address

@@ -106,6 +106,10 @@
 
     <!-- E -->
     <replace>
+      <pattern>Eghnton</pattern>
+      <value>Eglinton</value>
+    </replace>
+    <replace>
       <pattern>Elackfriars</pattern>
       <value>Blackfriars</value>
     </replace>
@@ -237,7 +241,6 @@
       <value>Kenmure</value>
     </replace>
 
-
     <!-- L -->
     <replace>
       <pattern>Lawnniarkct</pattern>
@@ -355,6 +358,10 @@
 
     <!-- S -->
     <replace>
+      <pattern>Sauchieliall</pattern>
+      <value>Sauchiehall</value>
+    </replace>
+    <replace>
       <pattern>Shakefpeare</pattern>
       <value>Shakespeare</value>
     </replace>
@@ -369,6 +376,10 @@
     <replace>
       <pattern>St. Vincent pi</pattern>
       <value>St. Vincent pl</value>
+    </replace>
+    <replace>
+      <pattern>Vincentst</pattern>
+      <value>Vincent st</value>
     </replace>
     <replace>
       <pattern>StMing</pattern>

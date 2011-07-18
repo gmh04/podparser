@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses>
+  <replaces>
+    <replace>
+      <pattern>Caftle</pattern>
+      <value>Castle</value>
+    </replace>
+    <replace>
+      <pattern>Calton-hiil</pattern>
+      <value>Calton hill</value>
+    </replace>
+  </replaces>
+</addresses>

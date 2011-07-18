@@ -259,7 +259,7 @@ streets.xml helps the parser improve google geoencoding by cleaning the address 
       <pattern>st. james terrace</pattern>
       <street>St James' Terrace</street>
     </address>
-  <addresses>
+  </addresses>
 
 The next example shows how by providing a town element, a modern street name can be defined::
 

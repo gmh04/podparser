@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<global>
+
+  <replaces>
+
+    <!-- R -->
+    <replace>
+      <pattern>Eando'ph</pattern>
+      <value>Randolph</value>
+    </replace>
+    <replace>
+      <pattern>Eobert</pattern>
+      <value>Robert</value>
+    </replace>
+
+  </replaces>
+
+</global>

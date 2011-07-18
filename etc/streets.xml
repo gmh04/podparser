@@ -510,6 +510,10 @@
     </town>
   </address>
   <address>
+    <pattern>ashfield ter</pattern>
+    <street>Ashfield terrace</street>
+  </address>
+  <address>
     <pattern>ashgrove terrace</pattern>
     <street>Ashgrove Terrace</street>
   </address>
@@ -1839,26 +1843,14 @@
   <address>
     <pattern>clyde st</pattern>
     <street>Clyde Street</street>
+  </address>
+  <address>
+    <pattern>clyde ter</pattern>
+    <street>Clyde Terrace</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Anderston</name>
-      </area>
-      <area>
-        <name>Calton</name>
-      </area>
-      <area>
-        <name>Port Dundas</name>
-      </area>
+      <modern_name>Carlton Place</modern_name>
     </town>
-  </address>
-  <address>
-    <pattern>great clyde st</pattern>
-    <street>Great Clyde Street</street>
-  </address>
-  <address>
-    <pattern>clyde terrace</pattern>
-    <street>Clyde Terrace</street>
   </address>
   <address>
     <pattern>clydeview</pattern>
@@ -2994,8 +2986,9 @@
     <street>Garnkirk Street</street>
   </address>
   <address>
-    <pattern>garrioch mill road</pattern>
-    <street>Garrioch Mill Road</street>
+    <pattern>garrioch mill r</pattern>
+    <pattern>garriochmill r</pattern>
+    <street>Garriochmill Road</street>
   </address>
   <address>
     <pattern>garscadden st</pattern>
@@ -3302,6 +3295,10 @@
     <street>Gray Street</street>
   </address>
   <address>
+    <pattern>great clyde st</pattern>
+    <street>Great Clyde Street</street>
+  </address>
+  <address>
     <pattern>great george st</pattern>
     <street>Great George Street</street>
     <town>
@@ -3341,15 +3338,6 @@
   <address>
     <pattern>great western r</pattern>
     <street>Great Western Road</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>-->
   </address>
   <address>
     <pattern>great western terrace</pattern>
@@ -3565,14 +3553,8 @@
     </town>
   </address>
   <address>
-    <pattern>hayburn crescent</pattern>
+    <pattern>hayburn cres</pattern>
     <street>Hayburn Crescent</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hayburn terrace</pattern>
@@ -3724,6 +3706,10 @@
   <address>
     <pattern>holmhead st</pattern>
     <street>Holmhead Street</street>
+    <!--<town>
+      <name>Glasgow</name>
+      <modern_name>Cunningham Street</modern_name>
+    </town>-->
   </address>
   <address>
     <pattern>holyrood crescent</pattern>
@@ -4111,14 +4097,9 @@
     <street>Kent Square</street>
   </address>
   <address>
-    <pattern>keppochhill road</pattern>
+    <pattern>keppochhill r</pattern>
+    <pattern>keppoch hill r</pattern>
     <street>Keppochhill Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Springburn</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>kerr st</pattern>
@@ -4143,12 +4124,6 @@
   <address>
     <pattern>kersland terrace</pattern>
     <street>Kersland Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>kew terrace</pattern>
@@ -4818,7 +4793,7 @@
     <street>Market Street</street>
     <town>
       <name>Glasgow</name>
-      <modern_name>Mart Street</modern_name>
+      <modern_name>Mart St</modern_name>
     </town>
   </address>
   <address>
@@ -5331,12 +5306,12 @@
   <address>
     <pattern>muslin st</pattern>
     <street>Muslin Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Bridgeton</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>myrtle park</pattern>
@@ -5367,12 +5342,12 @@
   <address>
     <pattern>nelson st</pattern>
     <street>Nelson Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Tradeston</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>nelson terrace</pattern>
@@ -5839,8 +5814,9 @@
     <street>Port Street</street>
   </address>
   <address>
-    <pattern>port dundas road</pattern>
-    <pattern>portdundas road</pattern>
+    <pattern>port dundas r</pattern>
+    <pattern>portdundas r</pattern>
+    <pattern>port-dundas r</pattern>
     <street>Port Dundas Road</street>
   </address>
   <address>
@@ -5912,6 +5888,7 @@
   </address>
   <address>
     <pattern>prince's street, west</pattern>
+    <pattern>west Princes st</pattern>
     <street>Prince's Street West</street>
     <town>
       <name>Glasgow</name>
@@ -6876,6 +6853,10 @@
     </town>-->
   </address>
   <address>
+    <pattern>south albion st</pattern>
+    <street>South Albion Street</street>
+  </address>
+  <address>
     <pattern>south park terrace</pattern>
     <street>South Park Terrace</street>
     <town>
@@ -6887,6 +6868,7 @@
   </address>
   <address>
     <pattern>south portland st</pattern>
+    <pattern>s portland st</pattern>
     <street>South Portland Street</street>
   </address>
   <address>
@@ -7587,12 +7569,12 @@
   <address>
     <pattern>water st</pattern>
     <street>Water Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Port Dundas</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>waterloo st</pattern>

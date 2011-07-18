@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<professions>
+  <replaces>
+    <replace>
+      <pattern>bookfeller</pattern>
+      <value>bookseller</value>
+    </replace>
+    ...
+  </replaces>
+  <categories>
+    <category>
+      <name>Agriculture, forestry and fishing</name>
+      <code>A</code>
+      <list>
+        <pattern>cowfeeder</pattern>
+        <pattern>dairy</pattern>
+        <pattern>farmer</pattern>
+        <pattern>game dealer</pattern>
+      </list>
+    </category>
+  </categories>
+</professions>
