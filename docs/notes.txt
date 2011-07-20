@@ -74,6 +74,7 @@ Fitzroy Place
 Franklin Terrace
 Frederick Lane
 
+Gallowflat pl, Rutherglen
 Garden street
 Garngad Hill
 Garngad rd
@@ -81,6 +82,7 @@ George Square
 Glebe street
 Glenavon terrace, Partick
 Govan st
+Govan View terrace, Govanhill
 Grove street
 Grafton street
 Granby ter
@@ -112,6 +114,7 @@ Iona place, Mount Florida
 Jackson St
 Jane Place
 
+Kelburn terrace, Govanhill
 Kelvingrove terrace
 Kelvinside terrace, N. Hillhead
 Kenmure Place
@@ -150,6 +153,7 @@ North Ure place
 Oakfield terrace, Hillhead.
 
 Paisley Road (NUM)
+Park View terrace, Hillhead
 Parliamentary Road
 Partick hill
 Parliamentary Road
@@ -169,6 +173,8 @@ Renfrew Street (NUM)
 Risk street
 Ronald Street
 Rosevale ter., Partick
+Rosslyn place, Pollokshields
+Rottenrow Street
 Royal arcade
 Royal Exchange
 Royal Exchange place

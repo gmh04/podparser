@@ -4172,6 +4172,7 @@
       </area>
       <area>
         <name>Tradeston</name>
+	<modern_name>Kingston Street</modern_name>
       </area>
     </town>
   </address>
@@ -7681,8 +7682,16 @@
     </town>
   </address>
   <address>
-    <pattern>west Campbell st</pattern>
+    <pattern>west campbell st</pattern>
     <street>West Campbell street</street>
+  </address>
+  <address>
+    <pattern>west college st</pattern>
+    <street>West Colege Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Crimea Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>west st</pattern>
@@ -7691,12 +7700,12 @@
   <address>
     <pattern>westbank place</pattern>
     <street>Westbank Place</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>westbank quadrant</pattern>

@@ -344,6 +344,10 @@
       <value> Rose</value>
     </replace>
     <replace>
+      <pattern>Eottenrow</pattern>
+      <value>Rottenrow</value>
+    </replace>
+    <replace>
       <pattern>Eoslea</pattern>
       <value>Roslea</value>
     </replace>
