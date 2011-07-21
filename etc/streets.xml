@@ -70,7 +70,7 @@
   <address>
     <pattern>agnew place</pattern>
     <street>Agnew Place</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
@@ -78,7 +78,7 @@
       <area>
         <name>Garnethill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>ailsa terrace</pattern>
@@ -91,14 +91,14 @@
     </town>
   </address>
   <address>
-    <pattern>airlie terrace</pattern>
+    <pattern>airlie ter</pattern>
     <street>Airlie Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Pollockshields</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>albany place</pattern>
@@ -1383,6 +1383,10 @@
     <street>Calderwood Street</street>
   </address>
   <address>
+    <pattern>caledonian cres</pattern>
+    <street>Caledonian Crescent</street>
+  </address>
+  <address>
     <pattern>caledonian road</pattern>
     <street>Caledonian Road</street>
   </address>
@@ -2271,6 +2275,10 @@
     <street>Dean Street</street>
   </address>
   <address>
+    <pattern>dean ter</pattern>
+    <street>Dean terrace</street>
+  </address>
+  <address>
     <pattern>deanside lane</pattern>
     <street>Deanside Lane</street>
   </address>
@@ -2604,14 +2612,8 @@
     <street>Eglinton Street</street>
   </address>
   <address>
-    <pattern>eglinton terrace</pattern>
+    <pattern>eglinton ter</pattern>
     <street>Eglinton Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>eildon villas</pattern>
@@ -2746,6 +2748,10 @@
         <name>Kelvinside</name>
       </area>
     </town>
+  </address>
+  <address>
+    <pattern>exchange sq</pattern>
+    <street>Exchange Square</street>
   </address>
   <address>
     <pattern>fairlie bank</pattern>
@@ -4858,14 +4864,8 @@
     </town>
   </address>
   <address>
-    <pattern>matilda terrace</pattern>
+    <pattern>matilda ter</pattern>
     <street>Matilda Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Strathbungo</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>matilda road</pattern>
@@ -6846,16 +6846,18 @@
   <address>
     <pattern>somerville drive</pattern>
     <street>Somerville Drive</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>-->
+  </address>
+  <address>
+    <pattern>south albion pl</pattern>
+    <street>South Albion Place</street>
   </address>
   <address>
     <pattern>south albion st</pattern>
     <street>South Albion Street</street>
+  </address>
+  <address>
+    <pattern>South Kinning pl</pattern>
+    <street>South Kinning Place</street>
   </address>
   <address>
     <pattern>south park terrace</pattern>
@@ -7433,14 +7435,14 @@
     </town>
   </address>
   <address>
-    <pattern>victoria road</pattern>
+    <pattern>victoria r</pattern>
     <street>Victoria Road</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>victoria st</pattern>
@@ -7931,7 +7933,7 @@
     </town>
   </address>
   <address>
-    <pattern>windsor quadrant</pattern>
+    <pattern>windsor quad</pattern>
     <street>Windsor Quadrant</street>
     <town>
       <name>Glasgow</name>

@@ -96,6 +96,10 @@
       <value>Dalmarnock rd</value>
     </replace>
     <replace>
+      <pattern>Dahnarnock</pattern>
+      <value>Dalmarnock</value>
+    </replace>
+    <replace>
       <pattern> diive</pattern>
       <value> drive</value>
     </replace>
@@ -334,6 +338,10 @@
     <replace>
       <pattern>Eenfield</pattern>
       <value>Renfield</value>
+    </replace>
+    <replace>
+      <pattern>Eenfrew</pattern>
+      <value>Renfrew</value>
     </replace>
     <replace>
       <pattern>Eopework</pattern>

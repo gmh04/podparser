@@ -5,6 +5,7 @@
 Abercorn Street
 Abington street
 Afton Crescent
+Airlie ter., Pollokshields
 Albion crescent
 Alexandra parade (NUM)
 Allanton terrace, Govanhill
@@ -17,6 +18,7 @@ Argyle Terrace, Crosshill
 Ashfield pl
 Ashfield terrace
 Ashton Terrace
+Athole terrace, Govanhill
 Avon St
 
 Ballochmyle terrace, Kelvinside
@@ -55,6 +57,7 @@ Cubie street. Mile-end
 Cumberland Lane
 
 Darnley terrace, Shawlands
+Dean terrace
 Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
@@ -63,10 +66,12 @@ Dundas Street (NUM)
 
 Eaglesham Street
 Edmund street
+Eglinton ter, Govanhil
 Elba lane, Parkhead
 Elgin terrace
 Elmbank Place
 Eton place, Hillhead
+Exchange sq
 
 Finnieston st (NUM)
 Fisher St, Dennistoun
@@ -145,9 +150,12 @@ Morris Place
 Moss view, Crossmyloof
 
 Naburn street
+<<<<<<< Updated upstream
 Newgate street
 Newton ter
 Northpark ter, Hillhead
+=======
+>>>>>>> Stashed changes
 North Ure place
 
 Oakfield terrace, Hillhead.
@@ -193,6 +201,7 @@ Sedan place
 Shaftesbury terrace
 Shinir bank, Crosshill
 Soho street
+South Albion Place
 South Kinning place
 South St. Mungo street
 Spiers wharf, PortDundas
@@ -217,6 +226,7 @@ Tylefield street
 
 Ure Place
 
+Victoria buildings
 Victoria street, Dowanhill
 Victoria St., Hillhead
 Victoria terrace, Dowanhill
@@ -230,6 +240,7 @@ Wellpark pl
 Wellpark terrace
 Wellington arcade
 Wemyss Place
+Wellington arcade
 Wesleyan Street
 West Graham Street
 W(est) Howard street

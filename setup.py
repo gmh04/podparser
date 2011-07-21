@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.2'
+import podparser
+version = podparser.get_version()
 
 if len(sys.argv) == 2 and sys.argv[1] != 'build_docs':
     print find_packages(exclude=['ez_setup', 'examples', 'tests'])

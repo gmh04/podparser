@@ -115,6 +115,7 @@
       <list>
         <pattern>coal agent</pattern>
         <pattern>coal master</pattern>
+        <pattern>coalmasters</pattern>
         <pattern>coalmaster</pattern>
         <pattern>colliery</pattern>
         <pattern>miner</pattern>

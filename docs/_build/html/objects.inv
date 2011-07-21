@@ -1,0 +1,20 @@
+# Sphinx inventory version 1
+# Project: podparser
+# Version: 0.1
+podparser.geo.encoder.Location.point attribute index.html
+podparser.directory.Page.entries attribute index.html
+podparser.directory.Page.number attribute index.html
+podparser.parser.Parser class index.html
+podparser.directory.Entry.profession attribute index.html
+podparser.directory.Entry class index.html
+podparser.directory.Directory.pages attribute index.html
+podparser.directory.Page class index.html
+podparser.directory.Entry.surname attribute index.html
+Parser.run_parser method index.html
+podparser.directory.Entry.forename attribute index.html
+podparser.geo.encoder.Location.address attribute index.html
+podparser.directory.Directory class index.html
+podparser.db.connection.PodConnection class index.html
+podparser.directory.Directory.country attribute index.html
+podparser.geo.encoder.Location class index.html
+podparser.directory.Entry.locations attribute index.html
