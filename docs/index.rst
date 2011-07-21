@@ -272,7 +272,18 @@ The next example shows how by providing a town element, a modern street name can
     </town>
   </address>
 
-Furthermore, areas withing particular towns can have the same street name but different modern names::
+Alternatively, latlon co-ordinates can be given. This is useful is google doesn't find the address::
+
+  <address>
+    <pattern>alexander street</pattern>
+    <street>Alexander Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.864210 -4.281235</latlon>
+    </town>
+  </address>
+
+Furthermore, areas withing particular towns can have the same street name but different modern names or latlon co-ordinates::
 
   <address>
     <pattern>albert road</pattern>
@@ -288,12 +299,12 @@ Furthermore, areas withing particular towns can have the same street name but di
       </area>
       <area>
         <name>Pollockshields</name>
-        <modern_name>Albert Drive</modern_name>
+        <latlon>55.864210 -4.281235</latlon>
       </area>
     </town>
   </address>
 
-A full example of streets can be found at `github`_.
+If both town and area level location details are defined, the area details take precence. A full example of streets can be found at `github`_.
 
 *****
 API

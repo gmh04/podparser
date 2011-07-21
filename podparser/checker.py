@@ -1,3 +1,4 @@
+from geo.encoder import Location
 from xml.dom.minidom import parse
 
 import os
@@ -82,43 +83,52 @@ class EntryChecker():
                 town_nodes = addr_node.getElementsByTagName('town')
 
                 for town_node in town_nodes:
-                    name = None
-                    modern_name = ''
+                    name        = None
+                    modern_name = None
+                    latlon      = None
 
                     for c in town_nodes[0].childNodes:
                         if c.nodeName == 'name':
                             name = c.firstChild.nodeValue
                         elif c.nodeName == 'modern_name':
                             modern_name = c.firstChild.nodeValue
+                        elif c.nodeName == 'latlon':
+                            latlon = c.firstChild.nodeValue
+
                     if name and name.lower() == self.directory.town.lower():
-                        town = {'modern_name': modern_name, 'areas': {}}
+                        town = {'modern_name': modern_name,
+                                'latlon': latlon,
+                                'areas': {}}
 
                         area_nodes = town_node.getElementsByTagName('area')
                         for area_node in area_nodes:
                             area_name_node = area_node.getElementsByTagName('name')
                             if area_name_node:
                                 area_name   = area_name_node[0].firstChild.nodeValue
-                                modern_name = ''
+                                town['areas'][area_name] = {'modern_name': None,
+                                                            'latlon'     : None}
 
                                 modern_node = area_node.getElementsByTagName('modern_name')
                                 if modern_node:
-                                    modern_name = modern_node[0].firstChild.nodeValue
-
-                                town['areas'][area_name] = modern_name
+                                    town['areas'][area_name]['modern_name'] = modern_node[0].firstChild.nodeValue
+                                else:
+                                    latlon_node = area_node.getElementsByTagName('latlon')
+                                    if latlon_node:
+                                        town['areas'][area_name]['latlon'] = latlon_node[0].firstChild.nodeValue
                     break
 
                 for patternNode in patterns:
                     pattern = patternNode.firstChild.nodeValue
 
                     self.addresses[pattern] = {'street': street,
-                                               'modern_name': '',
+                                               'latlon': None,
+                                               'modern_name': None,
                                                'areas': {}}
 
                     if town:
                         self.addresses[pattern]['modern_name'] = town['modern_name']
-
-                        for area in town['areas']:
-                            self.addresses[pattern]['areas'][area] = town['areas'][area]
+                        self.addresses[pattern]['latlon']      = town['latlon']
+                        self.addresses[pattern]['areas']       = town['areas']
 
     def _populate_categories(self):
         # parse and populate profession categories
@@ -226,12 +236,12 @@ class EntryChecker():
 
             # don't process address if:
             # its a number
-            # it contains the string do. (or dito)
+            # it contains the string ' do.' (or dito)
             if addr.isalnum() or addr.find(' do.') != -1:
                 continue
 
             # encode address using derived address
-            location = self._get_derived_location(addr, encoder, entry)
+            location = self._get_derived_location(addr, encoder)
 
             if not location:
                 # derived failed, encode it raw
@@ -239,8 +249,11 @@ class EntryChecker():
                 if location:
                     location.type = 'raw'
                     entry.locations.append(location)
+            else:
+                entry.locations.append(location)
 
-    def _get_derived_location(self, addr, encoder, entry):
+    def _get_derived_location(self, addr, encoder):
+        # a derived location is an address defined in streets.xml
         location = None
         matches = []
         best_match = ''
@@ -259,12 +272,16 @@ class EntryChecker():
                     best_match = match
 
         if len(best_match) > 0:
-            derived_address = self.addresses[best_match]['street']
-            areas           = self.addresses[best_match]['areas']
-            modern_name     = self.addresses[best_match]['modern_name']
+            derived_address = None
+            latlon          = None
 
-            if modern_name:
-                derived_address = modern_name
+            address         = self.addresses[best_match]
+            derived_address = address['street']
+
+            if address['latlon']:
+                latlon = address['latlon']
+            elif address['modern_name']:
+                derived_address = address['modern_name']
 
             # try and get house number from original
             match = re.search('(\d+)', addr)
@@ -272,23 +289,39 @@ class EntryChecker():
                 derived_address = '%s %s' % (match.group(1), derived_address)
 
             # check if area is associated with entry
+            areas = address['areas']
             for area in areas:
                 if area.lower() in addr.lower():
-                    # address stored as key
-                    # modern name stored as a value
-                    if areas[area]:
+                    if areas[area]['latlon']:
+                        latlon =  areas[area]['latlon']
+                    elif areas[area]['modern_name']:
                         # replace address with modern name (note: drop area and door number)
-                        derived_address = areas[area]
+                        derived_address = areas[area]['modern_name']
                     else:
-                        # append area to derived address
+                        # no modern address defined append area to derived address
                         derived_address = '%s, %s' % (derived_address, area)
                     break
 
-            location = encoder.get_location(derived_address,
-                                            self.directory.town)
+            if latlon:
+                # latlon has beed explicity set
+                points = latlon.split(' ')
 
-            if location:
+                try:
+                    lat = float(points[0])
+                    lon = float(points[1])
+
+                    location = Location(address  = address['street'],
+                                        town     = self.directory.town,
+                                        point    = {'lat': lat,
+                                                    'lng': lon},
+                                        accuracy = 'GEOMETRIC_CENTER')
+                    location.type = 'explicit'
+                except Exception as e:
+                    print '*** Error invalid latlon: %s: %s' % (points, e)
+            else:
+                # get location from google
+                location = encoder.get_location(address = derived_address,
+                                                town    = self.directory.town)
                 location.type = 'derived'
-                entry.locations.append(location)
 
         return location

@@ -290,12 +290,12 @@
   <address>
     <pattern>allison st</pattern>
     <street>Allison Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>alva terrace</pattern>
@@ -2583,17 +2583,17 @@
   <address>
     <pattern>edgefauld terrace</pattern>
     <street>Edgefauld Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Springburn</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>edmund st</pattern>
     <street>Edmund Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Dennistoun</name>
@@ -2601,7 +2601,7 @@
       <area>
         <name>Overnewton</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>eglinton lane</pattern>
@@ -2610,6 +2610,10 @@
   <address>
     <pattern>eglinton st</pattern>
     <street>Eglinton Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Eglinton St</modern_name>
+    </town>
   </address>
   <address>
     <pattern>eglinton ter</pattern>
@@ -2618,22 +2622,22 @@
   <address>
     <pattern>eildon villas</pattern>
     <street>Eildon Villas</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Mount Florida</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>elcho place</pattern>
     <street>Elcho Place</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Strathbungo</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>elderslie place</pattern>
@@ -3015,12 +3019,6 @@
   <address>
     <pattern>garthland drive</pattern>
     <street>Garthland Drive</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Dennistoun</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>garthland st</pattern>
@@ -3033,12 +3031,6 @@
   <address>
     <pattern>garturk st</pattern>
     <street>Garturk Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Govanhill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>gayfield st</pattern>
@@ -3063,6 +3055,10 @@
   <address>
     <pattern>gilmore st</pattern>
     <street>Gilmore Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Midlock Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>gilmour st</pattern>
@@ -3075,12 +3071,12 @@
   <address>
     <pattern>glasgow st</pattern>
     <street>Glasgow Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>glassford st</pattern>
@@ -3285,12 +3281,12 @@
   <address>
     <pattern>granville place</pattern>
     <street>Granville Place</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>granville st</pattern>
@@ -3305,24 +3301,32 @@
     <street>Great Clyde Street</street>
   </address>
   <address>
+    <pattern>great eastern rd</pattern>
+    <street>Great Eastern Road</street>
+    <town>
+      <name>Glasgow</name>
+      <modern>Gallowgate</modern>
+    </town>
+  </address>
+  <address>
     <pattern>great george st</pattern>
     <street>Great George Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>great kelvin terrace</pattern>
     <street>Great Kelvin Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Hillhead</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>great hamilton st</pattern>
@@ -3996,32 +4000,30 @@
   <address>
     <pattern>kelbourne st</pattern>
     <street>Kelbourne Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Kelvinside</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>kelburn terrace</pattern>
     <street>Kelburn Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Govanhill</name>
       </area>
-    </town>
+    </town>-->
+  </address>
+  <address>
+    <pattern>kelvin bank ter</pattern>
+    <street>Kelvin Bank Terrace</street>
   </address>
   <address>
     <pattern>kelvin drive</pattern>
     <street>Kelvin Drive</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>kelvin st</pattern>
@@ -4045,6 +4047,10 @@
   <address>
     <pattern>kelvinhaugh st</pattern>
     <street>Kelvinhaugh Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern>Kelvinhaugh St</modern>
+    </town>
   </address>
   <address>
     <pattern>kelvinside gardens</pattern>
@@ -6291,6 +6297,10 @@
   <address>
     <pattern>rottenrow</pattern>
     <street>Rottenrow</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.861438 -4.237225</latlon>
+    </town>
   </address>
   <address>
     <pattern>roxburgh st</pattern>

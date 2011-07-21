@@ -108,8 +108,14 @@ class StringReplaceTest(unittest.TestCase):
           p = Parser(config=self.replace_test_dir, dir_path=pod)
           d = p.run_parser()
 
-          print d.pages[0]
+          #print d.pages[0]
           self.assertEquals(d.pages[0].entries[0].address, '10 Castle Street')
+
+class GeoLookupTest(unittest.TestCase):
+     def setUp(self):
+          #self.test_resources_dir = get_resource_dir()
+          self.replace_test_dir = '%s%c%s' % (get_resource_dir(), os.sep, 'replace_test')
+          sleep(0.5)
 
      def test_street(self):
           # test street lookup
@@ -119,11 +125,34 @@ class StringReplaceTest(unittest.TestCase):
 
           page = d.pages[0]
 
-          self.assertEquals(page.entries[0].locations[0].address, "1 Rosslyn Terrace, Glasgow, Scotland")
-          self.assertEquals(page.entries[1].locations[0].address, "2 Rosslyn Terrace, Glasgow, Scotland")
-          self.assertEquals(page.entries[2].locations[0].address, "1 Brechin Street, Glasgow, Scotland")
+          self.assertEquals(page.entries[0].locations[0].address, "Rosslyn Terrace, Glasgow, Scotland")
+          self.assertEquals(page.entries[0].locations[0].type,    "derived")
+          self.assertEquals(page.entries[1].locations[0].address, "Rosslyn Terrace, Glasgow, Scotland")
+          self.assertEquals(page.entries[2].locations[0].address, "Brechin Street, Glasgow, Scotland")
           self.assertEquals(page.entries[3].locations[0].address, "Dowanside Road, Glasgow, Scotland")
           self.assertEquals(page.entries[4].locations[0].address, "Albert Drive, Glasgow, Scotland")
+
+     def test_latlon(self):
+          # test ability to give latlon coords
+          pod = '%s%ctest_djvu_xml%cpostofficetest_0205.djvu' % (self.replace_test_dir, os.sep, os.sep)
+          p = Parser(config=self.replace_test_dir, dir_path=pod)
+          d = p.run_parser()
+
+          page = d.pages[0]
+
+          self.assertEquals(page.entries[0].locations[0].point['lat'], 55.864210)
+          self.assertEquals(page.entries[0].locations[0].address,      "Smith Street")
+          self.assertEquals(page.entries[0].locations[0].point['lng'], -4.281235)
+          self.assertEquals(page.entries[0].locations[0].type,         "explicit")
+          self.assertEquals(page.entries[0].locations[0].accuracy,     "GEOMETRIC_CENTER")
+
+          self.assertEquals(page.entries[1].locations[0].point['lat'], 55.111111)
+          self.assertEquals(page.entries[1].locations[0].address,      "Smith Street")
+          self.assertEquals(page.entries[1].locations[0].point['lng'], -4.111111)
+          self.assertEquals(page.entries[1].locations[0].type,         "explicit")
+          self.assertEquals(page.entries[1].locations[0].accuracy,     "GEOMETRIC_CENTER")
+
+          self.assertNotEquals(page.entries[2].locations[0].type, "explicit")
 
 if __name__ == '__main__':
     unittest.main()

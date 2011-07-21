@@ -17,6 +17,7 @@ Argyle Arcade
 Argyle Terrace, Crosshill
 Ashfield pl
 Ashfield terrace
+Ashgrove terrace
 Ashton Terrace
 Athole terrace, Govanhill
 Avon St
@@ -89,6 +90,7 @@ Glenavon terrace, Partick
 Govan st
 Govan View terrace, Govanhill
 Grove street
+Grafton square
 Grafton street
 Granby ter
 Grange Terrace
@@ -120,6 +122,7 @@ Jackson St
 Jane Place
 
 Kelburn terrace, Govanhill
+Kelvin bank ter., Kelvinside
 Kelvingrove terrace
 Kelvinside terrace, N. Hillhead
 Kenmure Place
@@ -150,12 +153,9 @@ Morris Place
 Moss view, Crossmyloof
 
 Naburn street
-<<<<<<< Updated upstream
 Newgate street
 Newton ter
 Northpark ter, Hillhead
-=======
->>>>>>> Stashed changes
 North Ure place
 
 Oakfield terrace, Hillhead.
@@ -172,6 +172,7 @@ Princes Square
 
 Queen's drive, Crosshill.
 Queen's square, Strathbungo
+Queen's terrace
 
 Radnor terrace
 Randolph terrace, Garnehill
@@ -186,6 +187,7 @@ Rottenrow Street
 Royal arcade
 Royal Exchange
 Royal Exchange place
+Royal terrace (NUM)
 Rutherglen Loan
 Rutherglen Road (NUM)
 

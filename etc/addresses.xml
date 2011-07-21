@@ -367,6 +367,10 @@
       <pattern> Eutherglen</pattern>
       <value> Rutherglen</value>
     </replace>
+    <replace>
+      <pattern>Rutberglen</pattern>
+      <value>Rutherglen</value>
+    </replace>
 
     <!-- S -->
     <replace>

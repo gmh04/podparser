@@ -153,7 +153,7 @@ class Location():
                  town,
                  point,
                  accuracy,
-                 type,
+                 type=None,
                  found_address=None,
                  found_locality=None):
         """
