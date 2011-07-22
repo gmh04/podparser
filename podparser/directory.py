@@ -123,7 +123,6 @@ class Entry():
 
     def __init__(self, line):
         self.line       = line
-        #self.category   = ''
         self.category   = None
         self.error      = None
 

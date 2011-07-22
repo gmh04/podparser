@@ -12,7 +12,7 @@ Allanton terrace, Govanhill
 Anderson Quay
 Ann St (AMB)
 Annfield terrace, Partick
-Apsley Place(Warwick Street)
+Apsley Place (Warwick Street)
 Argyle Arcade
 Argyle Terrace, Crosshill
 Ashfield pl
@@ -45,7 +45,7 @@ Bute terrace, Strathbungo
 
 Canning Street (AMB)
 Caprera place
-Castle Street (NUM)
+Castle Street (NUM - 55.842789 -4.124894)
 Cathcart Road (NUM)
 Cathcart street, Rutherglen
 Catherine St (AMB)
@@ -64,6 +64,7 @@ Dowanhill Gardens
 Downie Place
 Dunchattan Place (NUM)
 Dundas Street (NUM)
+Dunlop st (NUM - 55.820519 -4.136696)
 
 Eaglesham Street
 Edmund street
@@ -126,6 +127,7 @@ Kelvin bank ter., Kelvinside
 Kelvingrove terrace
 Kelvinside terrace, N. Hillhead
 Kenmure Place
+Kennedy street (NUM)
 Kersland terrace, Hillhead
 Kew terrace
 Kidston street
@@ -159,12 +161,12 @@ Northpark ter, Hillhead
 North Ure place
 
 Oakfield terrace, Hillhead.
+Oswald pl.,Whiteinch
 
 Paisley Road (NUM)
 Park View terrace, Hillhead
 Parliamentary Road
 Partick hill
-Parliamentary Road
 Plantation st
 Pollok street
 Prince of Wales Terrace
@@ -189,7 +191,7 @@ Royal Exchange
 Royal Exchange place
 Royal terrace (NUM)
 Rutherglen Loan
-Rutherglen Road (NUM)
+Rutherglen Road (NUM 55.838346, -4.231603)
 
 Salisbury ter Hillhead
 Sandringham terrace

@@ -29,13 +29,13 @@ class Google(object):
 
         url = self._get_url()
 
-        f = urllib.urlopen(url)
-        output = f.read()
-
-        if self.verbose:
-            print output
-
         try:
+            f = urllib.urlopen(url)
+            output = f.read()
+
+            if self.verbose:
+                print output
+
             result = json.loads(output)
 
             if result['status'] == 'OK':
@@ -70,9 +70,10 @@ class Google(object):
                 elif result['status'] == "REQUEST_DENIED" or  result['status'] == "INVALID_REQUEST":
                     print 'Fetch rejected: %s' % result['status']
                     print url
-        except ValueError as e:
-            # can happen if URL is too large
-            print e
+        #except ValueError as e:
+        except Exception as e:
+            # can happen if URL is too large or if connection problems with google
+            print '*** %s' % e
 
         # enforce 1/2 second sleep after each fetch otherwise will be
         # blacklisted by google

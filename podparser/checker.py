@@ -326,6 +326,7 @@ class EntryChecker():
                 # get location from google
                 location = encoder.get_location(address = derived_address,
                                                 town    = self.directory.town)
-                location.type = 'derived'
+                if location:
+                    location.type = 'derived'
 
         return location

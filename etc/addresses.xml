@@ -360,6 +360,10 @@
       <value>Roslea</value>
     </replace>
     <replace>
+      <pattern>Eosslyn</pattern>
+      <value>Rosslyn</value>
+    </replace>
+    <replace>
       <pattern> Eoyal</pattern>
       <value> Royal</value>
     </replace>

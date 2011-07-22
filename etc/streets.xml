@@ -1428,6 +1428,10 @@
     <street>Cameron Street</street>
   </address>
   <address>
+    <pattern>camlachie st</pattern>
+    <street>Camlachie Street</street>
+  </address>
+  <address>
     <pattern>campbell st</pattern>
     <street>Campbell Street</street>
   </address>
@@ -1442,12 +1446,6 @@
   <address>
     <pattern>camphill avenue</pattern>
     <street>Camphill Avenue</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>camphill quadrant</pattern>
@@ -1603,6 +1601,10 @@
   <address>
     <pattern>castle st</pattern>
     <street>Castle Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.842789 -4.124894</latlon>
+    </town>
   </address>
   <address>
     <pattern>castlebank st</pattern>
@@ -1617,12 +1619,6 @@
   <address>
     <pattern>cathcart r</pattern>
     <street>Cathcart Road</street>
-    <!--<town>
-      <name>Glasgow</name>
-      <area>
-        <name>Govanhill</name>
-      </area>
-    </town>-->
   </address>
   <address>
     <pattern>Cathcart st</pattern>
@@ -2513,16 +2509,14 @@
   <address>
     <pattern>dunkelt place</pattern>
     <street>Dunkelt Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead </name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>dunlop st</pattern>
     <street>Dunlop Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.820519 -4.136696</latlon>
+    </town>
   </address>
   <address>
     <pattern>dunmore place</pattern>
@@ -3063,6 +3057,10 @@
   <address>
     <pattern>gilmour st</pattern>
     <street>Gilmour Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Midlock Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>gladstone st</pattern>
@@ -4099,6 +4097,10 @@
   <address>
     <pattern>kennedy st</pattern>
     <street>Kennedy Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.866627 -4.243791</latlon>
+    </town>
   </address>
   <address>
     <pattern>kent road</pattern>
@@ -4116,12 +4118,6 @@
   <address>
     <pattern>kerr st</pattern>
     <street>Kerr Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Calton</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>kersland st</pattern>
@@ -6350,12 +6346,10 @@
   <address>
     <pattern>royal terrace</pattern>
     <street>Royal Terrace</street>
-    <!--<town>
+    <town>
       <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>-->
+      <latlon>55.866652 -4.282072</latlon>
+    </town>
   </address>
   <address>
     <pattern>royal st</pattern>
@@ -6384,6 +6378,10 @@
   <address>
     <pattern>rutherglen road</pattern>
     <street>Rutherglen Road</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.838346 -4.231603</latlon>
+    </town>
   </address>
   <address>
     <pattern>ruthven st</pattern>
@@ -7070,6 +7068,10 @@
   <address>
     <pattern>stirling road</pattern>
     <street>Stirling Road</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.863726 -4.239049</latlon>
+    </town>
   </address>
   <address>
     <pattern>stirling st</pattern>
