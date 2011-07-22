@@ -282,11 +282,12 @@ class EntryChecker():
                 latlon = address['latlon']
             elif address['modern_name']:
                 derived_address = address['modern_name']
-
-            # try and get house number from original
-            match = re.search('(\d+)', addr)
-            if match:
-                derived_address = '%s %s' % (match.group(1), derived_address)
+            else:
+                # only try and get house number from original if
+                # entry has no modern name or latlon defined
+                match = re.search('(\d+)', addr)
+                if match:
+                    derived_address = '%s %s' % (match.group(1), derived_address)
 
             # check if area is associated with entry
             areas = address['areas']
@@ -297,6 +298,9 @@ class EntryChecker():
                     elif areas[area]['modern_name']:
                         # replace address with modern name (note: drop area and door number)
                         derived_address = areas[area]['modern_name']
+
+                        # ensure town level latlon is over-ridden
+                        latlon = None
                     else:
                         # no modern address defined append area to derived address
                         derived_address = '%s, %s' % (derived_address, area)

@@ -125,12 +125,17 @@ class GeoLookupTest(unittest.TestCase):
 
           page = d.pages[0]
 
-          self.assertEquals(page.entries[0].locations[0].address, "Rosslyn Terrace, Glasgow, Scotland")
+          self.assertEquals(page.entries[0].locations[0].address, "1 Rosslyn Terrace, Glasgow, Scotland")
           self.assertEquals(page.entries[0].locations[0].type,    "derived")
-          self.assertEquals(page.entries[1].locations[0].address, "Rosslyn Terrace, Glasgow, Scotland")
+          self.assertEquals(page.entries[1].locations[0].address, "2 Rosslyn Terrace, Glasgow, Scotland")
           self.assertEquals(page.entries[2].locations[0].address, "Brechin Street, Glasgow, Scotland")
           self.assertEquals(page.entries[3].locations[0].address, "Dowanside Road, Glasgow, Scotland")
           self.assertEquals(page.entries[4].locations[0].address, "Albert Drive, Glasgow, Scotland")
+
+          # ensure area level modern name overrides town level latlon
+          self.assertEquals(page.entries[5].locations[0].address, "New Tennant St, Glasgow, Scotland")
+
+          print page.entries[5].locations[0]
 
      def test_latlon(self):
           # test ability to give latlon coords

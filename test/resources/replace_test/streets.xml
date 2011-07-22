@@ -56,4 +56,24 @@
     </town>
   </address>
 
+  <address>
+    <pattern>tennant st</pattern>
+    <street>Smith Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.864210 -4.281235</latlon>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Langside</name>
+        <latlon>55.111111 -4.111111</latlon>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+        <modern_name>New Tennant St</modern_name>
+      </area>
+    </town>
+  </address>
+
 </addresses>

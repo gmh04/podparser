@@ -22,9 +22,11 @@ class Directory():
     """
 
     def __init__(self, path):
-        self.pages   = []
-        self.path    = path;
-        self.read_from_meta();
+        self.pages = []
+        self.path  = path
+        self.town  = None
+
+        self.read_from_meta()
 
     def read_from_meta(self):
         """
@@ -38,7 +40,8 @@ class Directory():
             ddir = ddir[0: ddir.rfind(os.sep)]
         else:
             print '*** Cannot read directory: %s ***' % self.path
-            sys.exit(1)
+            #sys.exit(1)
+            return
 
         # find meta file in directory
         meta_file = None
