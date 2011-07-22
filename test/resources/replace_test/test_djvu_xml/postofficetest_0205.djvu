@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT>
+  <LINE>Smith, Bob, farmer, 10 Smith Street</LINE>
+  <LINE>Smith, Jim, farmer, 20 Smith Street, Langside</LINE>
+  <LINE>Smith, Zed, farmer, 30 Smith Street, Pollockshields</LINE>
+  <LINE>Smith, Zed, farmer, 360 Eglinton st.</LINE>
+  <LINE>Smith, Zed, farmer, 360 Eglinton street.</LINE>
+</OBJECT>
