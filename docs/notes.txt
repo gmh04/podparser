@@ -33,25 +33,32 @@ Bishop street, Anderston
 Blythswood terrace
 Boswell ter., Kelvinside
 Bothwell terrace, Shawlands
+Brandon place
 Branford place
 Bridgeton Cross
+Broomhill Street
 Brougham ter, Crosshill
 Buchan Street
 Buchanan gardens, Mt. Vernon
 Burnbank
+Burnbank Gardens
 Burnside street
 Buckingham buildings, Hillhead
 Bute terrace, Strathbungo
 
+Camden street
 Canning Street (AMB)
+Carlton ter.. North Woodside
 Caprera place
-Castle Street (NUM - 55.842789 -4.124894)
+Castle Street (NUM)
 Cathcart Road (NUM)
+Cathcart street, Kinning park
 Cathcart street, Rutherglen
 Catherine St (AMB)
 Catherine street, north
 Charlotte lane
 Chatham place
+Coustonholm, Pollokshaws
 Craignestock Place
 Crookston hall
 Cubie street. Mile-end
@@ -63,7 +70,7 @@ Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
 Dunchattan Place (NUM)
-Dundas Street (NUM)
+ Dundas Street (NUM)
 Dunlop st (NUM - 55.820519 -4.136696)
 
 Eaglesham Street
@@ -93,10 +100,12 @@ Govan View terrace, Govanhill
 Grove street
 Grafton square
 Grafton street
+Grafton terrace
 Granby ter
 Grange Terrace
 Granville place
 Greenhead terrace
+Greenhill street
 
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
@@ -138,6 +147,7 @@ Lincoln place, Partick
 Linden ter., Pollokshields
 Lorne terrace, Pollokshields
 Loudon ter, Kelvinside
+Lyon street
 
 Main street, Anderston
 Mallsmire Place
@@ -205,14 +215,17 @@ Sedan place
 Shaftesbury terrace
 Shinir bank, Crosshill
 Soho street
+S. Apsley place.
 South Albion Place
 South Kinning place
 South St. Mungo street
 Spiers wharf, PortDundas
+St Andrew's road, Pollokshields
 St Enoch Square
 St George's Terrace
 St Mungo street
-St. Vincent crescent (NUM)
+St Ninian st
+St Vincent crescent (NUM)
 Stanhope street
 Steven street
 Stevenson drive, Crossmyloof
@@ -246,15 +259,19 @@ Wellington arcade
 Wemyss Place
 Wellington arcade
 Wesleyan Street
+West Bank, Hillhead
+West Bank place, Hillhead.
 West Graham Street
 W(est) Howard street
 Westbank pl, Hillhead
 Westbourne terrace Kelvinside
 Westminster terrace
 Whitfield place, Govan
+Wigton Street
 Wilton Crescent
 Wilton Terrace
 Windsor terrace (NUM)
+Winton street, Crosshill
 Winton terrace, Govanhill
 Wood lane
 Woodside quadrant

@@ -219,7 +219,7 @@ class Parser:
             else:
                 previous = entries[len(entries) -1];
 
-                if previous.endswith(',') or previous.endswith(',') or previous.endswith(' and') or previous[len(previous) - 1].isdigit():
+                if previous.endswith(',') or previous.endswith('-') or previous.endswith(' and') or previous[len(previous) - 1].isdigit():
                     add_to_last(entry);
                 elif previous.endswith('-'):
                     # take off last character first

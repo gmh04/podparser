@@ -15,8 +15,8 @@ class EntryChecker():
         """
         Contructor.
 
-        directory  -- POD directory object
-        config_dir -- full path to the config direcory
+        directory  - POD directory object
+        config_dir - full path to the config direcory
         """
 
         self.directory  = directory

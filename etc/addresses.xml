@@ -390,6 +390,10 @@
       <value>Somerville pl</value>
     </replace>
     <replace>
+      <pattern>Springbm-n</pattern>
+      <value>Springburn</value>
+    </replace>
+    <replace>
       <pattern>St. George's pi</pattern>
       <value>St. George's pl</value>
     </replace>

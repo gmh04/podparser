@@ -159,5 +159,27 @@ class GeoLookupTest(unittest.TestCase):
 
           self.assertNotEquals(page.entries[2].locations[0].type, "explicit")
 
+class LineWrapping(unittest.TestCase):
+
+     def test_wrap(self):
+          line1 = 'Aname, fname, pro'
+          line2 = 'Aname, fname, pro'
+          line3 = 'Bname, fname, pro'
+          line4 = 'Bname, fname, pro'
+          lines = [line1, line2, line3, line4]
+
+          p = Parser(config=None, dir_path=None)
+          res = p._fix_line_returns(lines)
+          self.assertEquals(4, len(res))
+
+          lines[2] = 'Bname, fname, pro-'
+          res = p._fix_line_returns(lines)
+          self.assertEquals(3, len(res))
+
+          lines[2] = 'bname, fname, pro'
+          res = p._fix_line_returns(lines)
+          self.assertEquals(3, len(res))
+
+
 if __name__ == '__main__':
     unittest.main()
