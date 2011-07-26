@@ -26,6 +26,7 @@ Ballochmyle terrace, Kelvinside
 Bath crescent
 Battlefield crescent, Langside
 Beaufort Gardens, Govanhill
+Belhaven Terrace (NUM)
 Bellahouston ter
 Berkeley terrace
 Berlin place
@@ -70,8 +71,8 @@ Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
 Dunchattan Place (NUM)
- Dundas Street (NUM)
-Dunlop st (NUM - 55.820519 -4.136696)
+Dundas Street (NUM)
+Dunlop st (NUM)
 
 Eaglesham Street
 Edmund street
@@ -110,6 +111,7 @@ Greenhill street
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
 Hamilton place
+Hamilton place, Hillhead
 Hamilton ter. west, Partick
 Hampden Place
 Hampden Terrace (NUM)
@@ -193,6 +195,7 @@ Regent terrace
 Renfrew Street (NUM)
 Risk street
 Ronald Street
+Rosehall street
 Rosevale ter., Partick
 Rosslyn place, Pollokshields
 Rottenrow Street
@@ -230,9 +233,11 @@ Stanhope street
 Steven street
 Stevenson drive, Crossmyloof
 Stewart street
+Stewart street, Cowcaddens
 Stewartville Place
 Stirling Road (NUM)
 Stonefield Terrace
+Struan terrace, Crosshill.
 
 Taylor St (NUM)
 Titwood place, Strathbungo

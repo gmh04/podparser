@@ -15,7 +15,7 @@ CREATE TABLE directory (id      SERIAL PRIMARY KEY,
 );
 
 CREATE TABLE page (id        SERIAL  PRIMARY KEY,
-                   directory integer REFERENCES directory(id),
+                   directory integer REFERENCES directory(id) ON DELETE CASCADE,
                    section   text,
                    number    integer,
                    UNIQUE (directory, number)
@@ -26,7 +26,7 @@ CREATE TABLE profession_category (code     char PRIMARY KEY,
 );
 
 CREATE TABLE entry (id                  SERIAL  PRIMARY KEY,
-                    page                integer REFERENCES page(id),
+                    page                integer REFERENCES page(id) ON DELETE CASCADE,
                     line                text
 );
 
@@ -34,7 +34,7 @@ COMMENT ON TABLE  entry      IS 'entry representing a line in a POD';
 COMMENT ON COLUMN entry.line IS 'original line entry of text in djvu xml';
 
 CREATE TABLE entry_detail (id                  SERIAL  PRIMARY KEY,
-                           entry_id            integer REFERENCES entry(id),
+                           entry_id            integer REFERENCES entry(id) ON DELETE CASCADE,
                            surname             text,
                            forename            text,
                            profession          text,
@@ -57,7 +57,7 @@ CREATE TABLE location_accuracy (id   integer PRIMARY KEY,
 );
 
 CREATE TABLE location (id         SERIAL  PRIMARY KEY,
-                       entry_id   integer REFERENCES entry(id),
+                       entry_id   integer REFERENCES entry(id) ON DELETE CASCADE,
                        address    text,
                        accuracy   integer REFERENCES location_accuracy(id),
                        type       text,

@@ -1,12 +1,22 @@
 from fabric.api import cd, local, settings
 
+import fabfile
 import os
 import sys
+import types
+
 
 def upload():
-    local('python setup.py sdist upload', capture=False) 
+    """Upload new package to pypi"""
+
+    code_check()
+    run_tests()
+
+    local('python setup.py sdist upload', capture=False)
+
 
 def build_docs():
+    """Create parser documentation"""
 
     # set up environment
     sys.path.append(local('pwd').strip())
@@ -27,11 +37,17 @@ def build_docs():
         local('cp -rf _build/html .')
 
         with cd('html'):
-            #print local('pwd')
             local('zip -r ../%s .' % fname)
-            pass
 
-def help():
-    print 'fab help'
-    print 'fab build_docs - build HTML documentation'
-    print 'fab upload - upload to pypi'
+
+def code_check():
+    """Run code style checker"""
+
+    local('find . -name "*.py" | xargs pep8 --ignore=E221 --exclude=tests.py,conf.py,fabfile.py,',
+          capture=False)
+    #local('find . -name "fabfile.py" | xargs pep8', capture=False)
+
+
+def run_tests():
+    """Run parser tests"""
+    local('python -m unittest test.tests', capture=False)

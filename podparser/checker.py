@@ -4,7 +4,8 @@ from xml.dom.minidom import parse
 import os
 import re
 
-COMMA_REPLACEMEMT = '#&44';
+COMMA_REPLACEMEMT = '#&44'
+
 
 class EntryChecker():
     """
@@ -46,7 +47,8 @@ class EntryChecker():
             replaces = dom.getElementsByTagName('replace')
 
             for replace in replaces:
-                pattern = replace.getElementsByTagName('pattern')[0].firstChild.nodeValue
+                elem = replace.getElementsByTagName('pattern')[0]
+                pattern = elem.firstChild.nodeValue
                 value = ''
                 valueNode = replace.getElementsByTagName('value')[0].firstChild
 
@@ -75,7 +77,8 @@ class EntryChecker():
             addrs = dom.getElementsByTagName('address')
 
             for addr_node in addrs:
-                street = addr_node.getElementsByTagName('street')[0].firstChild.nodeValue
+                elem = addr_node.getElementsByTagName('street')[0]
+                street = elem.firstChild.nodeValue
                 patterns = addr_node.getElementsByTagName('pattern')
 
                 # get town specific configuration for this address
@@ -102,19 +105,26 @@ class EntryChecker():
 
                         area_nodes = town_node.getElementsByTagName('area')
                         for area_node in area_nodes:
-                            area_name_node = area_node.getElementsByTagName('name')
+                            area_name_node = \
+                                area_node.getElementsByTagName('name')
                             if area_name_node:
-                                area_name   = area_name_node[0].firstChild.nodeValue
-                                town['areas'][area_name] = {'modern_name': None,
-                                                            'latlon'     : None}
+                                area_name = \
+                                    area_name_node[0].firstChild.nodeValue
+                                town['areas'][area_name] = \
+                                    {'modern_name': None,
+                                     'latlon': None}
 
-                                modern_node = area_node.getElementsByTagName('modern_name')
+                                modern_node = area_node.getElementsByTagName(
+                                    'modern_name')
                                 if modern_node:
-                                    town['areas'][area_name]['modern_name'] = modern_node[0].firstChild.nodeValue
+                                    town['areas'][area_name]['modern_name'] = \
+                                        modern_node[0].firstChild.nodeValue
                                 else:
-                                    latlon_node = area_node.getElementsByTagName('latlon')
-                                    if latlon_node:
-                                        town['areas'][area_name]['latlon'] = latlon_node[0].firstChild.nodeValue
+                                    ll_node = area_node.getElementsByTagName(
+                                        'latlon')
+                                    if ll_node:
+                                        town['areas'][area_name]['latlon'] = \
+                                            ll_node[0].firstChild.nodeValue
                     break
 
                 for patternNode in patterns:
@@ -126,7 +136,8 @@ class EntryChecker():
                                                'areas': {}}
 
                     if town:
-                        self.addresses[pattern]['modern_name'] = town['modern_name']
+                        self.addresses[pattern]['modern_name'] = \
+                            town['modern_name']
                         self.addresses[pattern]['latlon']      = town['latlon']
                         self.addresses[pattern]['areas']       = town['areas']
 
@@ -175,7 +186,9 @@ class EntryChecker():
         # do profession global replaces
         for profession in self.professions:
             if entry.profession.find(profession) != -1:
-                entry.profession = entry.profession.replace(profession, self.professions[profession])
+                entry.profession = entry.profession.replace(
+                    profession,
+                    self.professions[profession])
 
         # determine profession category
         for category in self.categories:
@@ -186,7 +199,9 @@ class EntryChecker():
         # address global replaces
         for address in self.address_replaces:
             if entry.address.find(address) != -1:
-                entry.address = entry.address.replace(address, self.address_replaces[address])
+                entry.address = entry.address.replace(
+                    address,
+                    self.address_replaces[address])
 
         # put commas back
         entry.forename   = entry.forename.replace(COMMA_REPLACEMEMT, ',')
@@ -205,7 +220,8 @@ class EntryChecker():
 
         # replace any comma within brackets with '&#44;'
         while re.search("(\(.+?)(,)(.+?\))", line):
-            line = re.sub("(\(.+?)(,)(.+?\))", r"\1%s\3" % COMMA_REPLACEMEMT, line)
+            line = re.sub("(\(.+?)(,)(.+?\))",
+                          r"\1%s\3" % COMMA_REPLACEMEMT, line)
 
         return line
 
@@ -287,22 +303,25 @@ class EntryChecker():
                 # entry has no modern name or latlon defined
                 match = re.search('(\d+)', addr)
                 if match:
-                    derived_address = '%s %s' % (match.group(1), derived_address)
+                    derived_address = '%s %s' % (match.group(1),
+                                                 derived_address)
 
             # check if area is associated with entry
             areas = address['areas']
             for area in areas:
                 if area.lower() in addr.lower():
                     if areas[area]['latlon']:
-                        latlon =  areas[area]['latlon']
+                        latlon = areas[area]['latlon']
                     elif areas[area]['modern_name']:
-                        # replace address with modern name (note: drop area and door number)
+                        # replace address with modern name
+                        # (note: drop area and door number)
                         derived_address = areas[area]['modern_name']
 
                         # ensure town level latlon is over-ridden
                         latlon = None
                     else:
-                        # no modern address defined append area to derived address
+                        # no modern address defined append
+                        # area to derived address
                         derived_address = '%s, %s' % (derived_address, area)
                     break
 
@@ -314,18 +333,18 @@ class EntryChecker():
                     lat = float(points[0])
                     lon = float(points[1])
 
-                    location = Location(address  = address['street'],
-                                        town     = self.directory.town,
-                                        point    = {'lat': lat,
-                                                    'lng': lon},
-                                        accuracy = 'GEOMETRIC_CENTER')
+                    location = Location(address=address['street'],
+                                        town=self.directory.town,
+                                        point={'lat': lat,
+                                               'lng': lon},
+                                        accuracy='GEOMETRIC_CENTER')
                     location.type = 'explicit'
                 except Exception as e:
                     print '*** Error invalid latlon: %s: %s' % (points, e)
             else:
                 # get location from google
-                location = encoder.get_location(address = derived_address,
-                                                town    = self.directory.town)
+                location = encoder.get_location(address=derived_address,
+                                                town=self.directory.town)
                 if location:
                     location.type = 'derived'
 

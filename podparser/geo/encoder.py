@@ -9,6 +9,7 @@ import time
 import urllib
 import urlparse
 
+
 class Google(object):
 
     def __init__(self, verbose=False):
@@ -50,29 +51,33 @@ class Google(object):
                         if comp['types'][0] == 'route':
                             found_address = comp['long_name']
 
-                            # locality is return in the next element
-                            found_locality = entry['address_components'][entry['address_components'].index(comp) + 1]['long_name']
+                            # locality is returned in the next element
+                            ac = entry['address_components']
+                            idx = ac.index(comp) + 1
+                            found_locality = ac[idx]['long_name']
 
                             break
 
-                location = Location(address        = address,
-                                    town           = town,
-                                    point          = geom['location'],
-                                    type           = type,
-                                    accuracy       = accuracy,
-                                    found_address  = found_address,
-                                    found_locality = found_locality)
+                location = Location(address=address,
+                                    town=town,
+                                    point=geom['location'],
+                                    type=type,
+                                    accuracy=accuracy,
+                                    found_address=found_address,
+                                    found_locality=found_locality)
             else:
                 if result['status'] == 'ZERO_RESULTS':
                     pass
                 elif result['status'] == 'OVER_QUERY_LIMIT':
                     print 'Google limit quota reached'
-                elif result['status'] == "REQUEST_DENIED" or  result['status'] == "INVALID_REQUEST":
+                elif result['status'] == "REQUEST_DENIED" or \
+                        result['status'] == "INVALID_REQUEST":
                     print 'Fetch rejected: %s' % result['status']
                     print url
         #except ValueError as e:
         except Exception as e:
-            # can happen if URL is too large or if connection problems with google
+            # can happen if URL is too large or if
+            # connection problems with google
             print '*** %s' % e
 
         # enforce 1/2 second sleep after each fetch otherwise will be
@@ -83,6 +88,7 @@ class Google(object):
 
     def _get_url(self):
         return '%s?%s' % (self.url, urllib.urlencode(self.params))
+
 
 class GooglePremium(Google):
     """
@@ -100,14 +106,13 @@ class GooglePremium(Google):
         location = super(GooglePremium, self).get_location(address, town)
 
         if self.db:
-            self.db.record_google_lookup();
+            self.db.record_google_lookup()
 
         return location
 
     def _get_url(self):
 
-        # for google's URL signing process see
-        # http://code.google.com/apis/maps/documentation/webservices/#SignatureProcess
+        # for google's URL signing process see http://tiny.cc/i6r0t
 
         # encode url
         url              = '%s?%s' % (self.url, urllib.urlencode(self.params))
@@ -126,8 +131,10 @@ class GooglePremium(Google):
         signature        = hmac.new(decodedKey, urlToSign, hashlib.sha1)
         encodedSignature = base64.urlsafe_b64encode(signature.digest())
 
-        originalUrl      = url.scheme + "://" + url.netloc + url.path + "?" + url.query
+        originalUrl      = url.scheme + "://" + url.netloc + url.path + \
+            "?" + url.query
         return '%s&signature=%s' % (originalUrl, encodedSignature)
+
 
 class Location():
     """
@@ -146,7 +153,8 @@ class Location():
 
     accuracy = None
     """
-    Accuracy returned by google: ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER or APPROXIMATE
+    Accuracy returned by google: ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER
+    or APPROXIMATE
     """
 
     def __init__(self,
@@ -161,8 +169,11 @@ class Location():
         address        - Address used in search.
         town           - Directory town.
         point          - The latlon returned by google for address.
-        accuracy       - Accuracy returned by google: ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER or APPROXIMATE see `Google Geocoding API results`_.
-        type           - raw: address is sent as found in the POD. derived: address is built using pattern matching.
+        accuracy       - Accuracy returned by google: ROOFTOP,
+                         RANGE_INTERPOLATED, GEOMETRIC_CENTER or APPROXIMATE
+                         see `Google Geocoding API results`_.
+        type           - raw: address is sent as found in the POD.
+                         derived: address is built using pattern matching.
         found_address  - Address returned by google.
         found_locality - Locality (town) returned by google.
         """
@@ -207,14 +218,14 @@ class Location():
             g_addr = self.found_address.lower()
 
             # attempt to modify search term to fit google
-            s_addr = s_addr.replace(' cres',     ' crescent')
-            s_addr = s_addr.replace(' court',    ' ct')
-            s_addr = s_addr.replace(' lane',     ' ln')
-            s_addr = s_addr.replace(' road',     ' rd')
-            s_addr = s_addr.replace('saint',     'st')
-            s_addr = s_addr.replace(' sq',       ' square')
-            s_addr = s_addr.replace(' street',   ' st')
-            s_addr = s_addr.replace(' st.',      ' st')
+            s_addr = s_addr.replace(' cres', ' crescent')
+            s_addr = s_addr.replace(' court', ' ct')
+            s_addr = s_addr.replace(' lane', ' ln')
+            s_addr = s_addr.replace(' road', ' rd')
+            s_addr = s_addr.replace('saint', 'st')
+            s_addr = s_addr.replace(' sq', ' square')
+            s_addr = s_addr.replace(' street', ' st')
+            s_addr = s_addr.replace(' st.', ' st')
 
             #print s_addr
             #print g_addr
@@ -239,7 +250,8 @@ class Location():
 
         if self.found_address:
             if not self.exact:
-                str = '%s (*** %s, %s ***)' % (str, self.found_address, self.found_locality)
+                str = '%s (*** %s, %s ***)' % (
+                    str, self.found_address, self.found_locality)
             else:
                 str = '%s (%s)' % (str, self.found_address)
 
@@ -247,21 +259,22 @@ class Location():
 
 if __name__ == "__main__":
 
-    arg_parser = argparse.ArgumentParser(description='Wrapper for Google geo-encoder')
+    arg_parser = argparse.ArgumentParser(
+        description='Wrapper for Google geo-encoder')
 
     arg_parser.add_argument('-a', '--address',
-                            help     = 'Address to encode',
-                            required = True)
+                            help='Address to encode',
+                            required=True)
     arg_parser.add_argument('-t', '--town',
-                            help     = 'Address city or town',
-                            required = True)
+                            help='Address city or town',
+                            required=True)
     arg_parser.add_argument('-k', '--key',
                             help='Google premium private key')
     arg_parser.add_argument('-i', '--client_id',
-                            help = 'Google premium client identifier')
+                            help='Google premium client identifier')
     arg_parser.add_argument('-v', '--verbose',
-                            action = 'store_true',
-                            help = 'Print detailed output')
+                            action='store_true',
+                            help='Print detailed output')
 
     args = arg_parser.parse_args()
 

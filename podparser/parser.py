@@ -6,8 +6,15 @@ import codecs
 import os
 import sys
 
-import checker, db, directory, geo, parser
+# parser imports
+import db
+import checker
+import directory
+import geo
+import parser
+
 from geo import encoder
+
 
 def timer(f):
     # timer decorator
@@ -20,20 +27,25 @@ def timer(f):
         if  td.seconds < 60:
             print '\nParse took: %d secs' % td.seconds
         else:
-            print '\nParse took: %d hour(s): %d mins: %d secs' % (td.seconds / 3600,
-                                                                  (td.seconds / 60) % 60,
-                                                                  td.seconds % 60)
+            print '\nParse took: %d hour(s): %d mins: %d secs' % (
+                td.seconds / 3600,
+                (td.seconds / 60) % 60,
+                td.seconds % 60)
         return d
     return deco
+
 
 class Parser:
     """
     Post office directory parser.
 
     | config      - The full path to the parser configuration files.
-    | directory   - The full path to either an individual POD file or the POD directory.
-    | start       - Start directory page to be parsed, only applies to for directory parse. If no start page given start from 0.
-    | end         - End directory page to be parsed, only applies to for directory parse. If no end page given parse until last.
+    | directory   - The full path to either an individual POD file or the POD
+                    directory.
+    | start       - Start directory page to be parsed, only applies to for
+                    directory parse. If no start page given start from 0.
+    | end         - End directory page to be parsed, only applies to for
+                    directory parse. If no end page given parse until last.
     | encoder_key - Google premium private key
     | client_id   - Google premium client identifier
     | verbose     - Print detailed output
@@ -45,14 +57,14 @@ class Parser:
     def __init__(self,
                  config,
                  dir_path,
-                 start           = 0,
-                 end             = 9999,
-                 encoder_key     = None,
-                 client_id       = None,
-                 verbose         = False,
-                 pre_post_office = False,
-                 db              = None,
-                 commit          = False):
+                 start=0,
+                 end=9999,
+                 encoder_key=None,
+                 client_id=None,
+                 verbose=False,
+                 pre_post_office=False,
+                 db=None,
+                 commit=False):
         self.config          = config
         self.dir_path        = dir_path
         self.start           = int(start)
@@ -63,9 +75,10 @@ class Parser:
         self.commit          = commit
 
         if encoder_key and client_id:
-            self.geoencoder = geo.encoder.GooglePremium(key       = encoder_key,
-                                                        client_id = client_id,
-                                                        db        = self.db)
+            self.geoencoder = geo.encoder.GooglePremium(
+                key=encoder_key,
+                client_id=client_id,
+                db=self.db)
         else:
             self.geoencoder = geo.encoder.Google()
 
@@ -84,14 +97,16 @@ class Parser:
             return None
 
         if self.db:
-            self.db.set_directory(self.dir_path)
+            #self.db.set_directory(self.dir_path)
+            self.db.set_directory(self.directory, self.commit)
 
         # create checker object
         entry_checker = checker.EntryChecker(self.directory, self.config)
-        print 'Parsing %s for %s\n' % (self.directory.town, self.directory.year)
+        print 'Parsing %s for %s\n' % (self.directory.town,
+                                       self.directory.year)
 
         # get list of files to parse
-        self._get_listing();
+        self._get_listing()
 
         for page in self.directory.pages:
 
@@ -122,7 +137,7 @@ class Parser:
 
             # envoke callback function for a page
             if callback:
-                callback(self.directory, page);
+                callback(self.directory, page)
 
             # commit page to database
             if self.db and self.commit:
@@ -131,9 +146,10 @@ class Parser:
         return self.directory
 
     def _get_listing(self):
-        #  get list of djvu xml files
+
         def get_page_from_file(file):
-            return int(file[len(file) -9: len(file) -5])
+            #  get list of djvu xml files
+            return int(file[len(file) - 9: len(file) - 5])
 
         path = self.directory.path
         if os.path.isdir(path):
@@ -142,8 +158,9 @@ class Parser:
                     pod_path = '%s%c%s' % (path, os.sep, d)
                     for f in os.listdir(pod_path):
                         if f.endswith(".djvu"):
-                            if(f.startswith("postoffice") or f.startswith("williamsonsdirect")):
-                                page_no = get_page_from_file(f);
+                            if(f.startswith("postoffice") or
+                               f.startswith("williamsonsdirect")):
+                                page_no = get_page_from_file(f)
                             else:
                                 print '*** No page number found for %s ***' % f
                                 continue
@@ -152,7 +169,8 @@ class Parser:
                                 fpath = '%s%c%s' % (pod_path,
                                                     os.sep,
                                                     f)
-                                self.directory.pages.append(directory.Page(fpath, page_no));
+                                self.directory.pages.append(
+                                    directory.Page(fpath, page_no))
                                 if self.verbose:
                                     print fpath
                     break
@@ -161,7 +179,8 @@ class Parser:
             self.directory.pages.sort(key=lambda x: x.path)
 
         else:
-            self.directory.pages.append(directory.Page(path, get_page_from_file(path)))
+            self.directory.pages.append(
+                directory.Page(path, get_page_from_file(path)))
 
     def _parse_page(self, page):
         entries = []
@@ -173,7 +192,7 @@ class Parser:
 
         for line in lines:
             if line.firstChild:
-                entries.append(line.firstChild.nodeValue);
+                entries.append(line.firstChild.nodeValue)
 
         return entries
 
@@ -184,7 +203,8 @@ class Parser:
 
         def add_to_last(entry):
             # append an entry with previous
-            entries[len(entries) - 1] = '%s %s' % (entries[len(entries) - 1], entry)
+            entries[len(entries) - 1] = '%s %s' % (
+                entries[len(entries) - 1], entry)
 
         def get_top_char(lst):
             # find the most commonly occurring first character
@@ -200,7 +220,7 @@ class Parser:
 
             for char in chars:
                 if chars[char] > char_val:
-                    top_char = char;
+                    top_char = char
                     char_val = chars[char]
 
             return top_char
@@ -210,17 +230,20 @@ class Parser:
 
         for entry in lines:
             if current_alpha is None:
-                # if the first character is a character and uppercase
-                # and entry contains a comma, then it looks like the first real entry
-                if entry[0].isalpha() and entry[0].istitle() and len(entry.split(',')) > 2 and abs(ord(entry[0]) - ord(top_char)) < 2:
-
+                # if the first character is a character and uppercase and entry
+                # contains a comma, then it looks like the first real entry
+                if entry[0].isalpha() and entry[0].istitle() and \
+                        len(entry.split(',')) > 2 and \
+                        abs(ord(entry[0]) - ord(top_char)) < 2:
                     current_alpha = entry[0]
                     entries.append(entry)
             else:
-                previous = entries[len(entries) -1];
+                previous = entries[len(entries) - 1]
 
-                if previous.endswith(',') or previous.endswith('-') or previous.endswith(' and') or previous[len(previous) - 1].isdigit():
-                    add_to_last(entry);
+                if previous.endswith(',') or \
+                        previous.endswith(' and') or \
+                        previous[len(previous) - 1].isdigit():
+                    add_to_last(entry)
                 elif previous.endswith('-'):
                     # take off last character first
                     previous = previous[0: len(previous) - 1]
@@ -238,10 +261,11 @@ class Parser:
                             current_alpha = top_remaining
                             entries.append(entry)
                         else:
-                            add_to_last(entry);
+                            add_to_last(entry)
                     else:
-                        # first character isn't in alphabetical order - append to previous entry
-                        add_to_last(entry);
+                        # first character isn't in alphabetical order
+                        # - append to previous entry
+                        add_to_last(entry)
                 else:
                     # new entry
                     entries.append(entry)
@@ -282,13 +306,15 @@ exact_locations = 0
 profession  = 0
 no_category = 0
 
+
 def read_page(directory, page):
 
     if len(page.entries) == 0:
         return
 
     print 'Page Number: %d\n' % page.number
-    global total, rejected, no_geo, bad_geo, unmatched_geo, profession, no_category, total_locations, exact_locations
+    global total, rejected, no_geo, bad_geo, unmatched_geo, profession, \
+        no_category, total_locations, exact_locations
 
     # tally up out some stats
     for entry in page.entries:
@@ -318,16 +344,22 @@ def read_page(directory, page):
     good_entries      = total - rejected
     no_geo_per        = float(no_geo)          / good_entries * 100
     bad_geo_per       = float(bad_geo)         / good_entries * 100
-    exact_geo_per   = 0 if exact_locations == 0 else float(exact_locations) / total_locations * 100
     profession_per    = float(profession)      / good_entries * 100
     no_category_per   = float(no_category)     / good_entries * 100
 
+    #exact_geo_per = 0 if exact_locations == 0
+    #else float(exact_locations) / total_locations * 100
+    if exact_locations == 0:
+        exact_geo_per = 0
+    else:
+        exact_geo_per = float(exact_locations) / total_locations * 100
+
     print '\n%-20s%5d' % ('Total Entries:', total)
-    print '%-20s%5d%5d%%' % ('Rejected:',    rejected,    rejected_per)
-    print '%-20s%5d%5d%%' % ('No Geo Tag:',  no_geo,      no_geo_per)
-    print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo,     bad_geo_per)
+    print '%-20s%5d%5d%%' % ('Rejected:', rejected, rejected_per)
+    print '%-20s%5d%5d%%' % ('No Geo Tag:', no_geo, no_geo_per)
+    print '%-20s%5d%5d%%' % ('Bad Geo Tag:', bad_geo, bad_geo_per)
     print '%-20s%10d%%'   % ('Exact Tags:', exact_geo_per)
-    print '%-20s%5d%5d%%' % ('Professions:', profession,  profession_per)
+    print '%-20s%5d%5d%%' % ('Professions:', profession, profession_per)
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
 if __name__ == "__main__":
@@ -345,58 +377,65 @@ if __name__ == "__main__":
     podparser_dir = os.getcwd()
 
     # parse commandline arguments
-    arg_parser = argparse.ArgumentParser(description='Tool for parsing postcode directories')
+    arg_parser = argparse.ArgumentParser(
+        description='Tool for parsing postcode directories')
 
     parse_group = arg_parser.add_argument_group('Parse Options')
-    parse_group.add_argument('-p', '--page',
-                             help = 'single postcode directory page to be parsed')
+    parse_group.add_argument(
+        '-p', '--page',
+        help='single postcode directory page to be parsed')
 
-    parse_group.add_argument('-d', '--directory',
-                             nargs = 1,
-                             help  = 'postcode directory to be parsed')
-    parse_group.add_argument('-s', '--start',
-                             default = 0,
-                             help    = 'Start page to be parsed (only applies to -d). If no start page given start from 0.')
-    parse_group.add_argument('-e', '--end',
-                             default = 9999,
-                             type    = int,
-                             help    = 'End page to be parsed (only applies to -d), If no end page given parse until last.')
+    parse_group.add_argument(
+        '-d', '--directory',
+        nargs=1,
+        help='postcode directory to be parsed')
+    parse_group.add_argument(
+        '-s', '--start',
+        default=0,
+        help="""Start page to be parsed (only applies to -d). If no start page
+                given start from 0.""")
+    parse_group.add_argument(
+        '-e', '--end',
+        default=9999,
+        type=int,
+        help="""End page to be parsed (only applies to -d), If no end page
+                given parse until last.""")
     parse_group.add_argument('-C', '--config',
-                             nargs = 1,
-                             help  = 'configuration directory')
+                             nargs=1,
+                             help='configuration directory')
     parse_group.add_argument('-w', '--williamson',
-                             action = 'store_false',
-                             help   = "parse williamson's directory")
+                             action='store_false',
+                             help="parse williamson's directory")
 
     arg_parser.add_argument('-v', '--verbose',
-                            action = 'store_true',
-                            help   = 'print detailed output')
+                            action='store_true',
+                            help='print detailed output')
 
     google_group = arg_parser.add_argument_group('Google Options')
     google_group.add_argument('-k', '--key',
-                              help = 'Google premium private key')
+                              help='Google premium private key')
     google_group.add_argument('-i', '--client_id',
-                              help = 'Google premium client identifier')
+                              help='Google premium client identifier')
 
     db_group = arg_parser.add_argument_group('Database Options')
     db_group.add_argument('-H', '--dbhost',
-                            default = 'localhost',
-                            help    ='database host')
+                          default='localhost',
+                          help='database host')
     db_group.add_argument('-D', '--dbname',
-                            default = 'ahistory',
-                            help    = 'database name')
+                          default='ahistory',
+                          help='database name')
     db_group.add_argument('-P', '--dbport',
-                            type    = int,
-                            default = 5432,
-                            help    = 'database port')
+                          type=int,
+                          default=5432,
+                          help='database port')
     db_group.add_argument('-U', '--dbuser',
-                            default = 'ahistory',
-                            help    = 'database user name')
+                          default='ahistory',
+                          help='database user name')
     db_group.add_argument('-W', '--dbpassword',
-                            help = 'database password')
+                          help='database password')
     db_group.add_argument('-c', '--commit',
-                            action = 'store_true',
-                            help   = 'commit parsed results to database')
+                          action='store_true',
+                          help='commit parsed results to database')
 
     args = arg_parser.parse_args()
 
@@ -424,11 +463,11 @@ if __name__ == "__main__":
         # putting import here ensures that there is no
         # database library dependency unless needed
         from db import connection
-        db_conn = connection.PodConnection(db_password = args.dbpassword,
-                                           db_name     = args.dbname,
-                                           db_user     = args.dbuser,
-                                           db_host     = args.dbhost,
-                                           db_port     = args.dbport)
+        db_conn = connection.PodConnection(db_password=args.dbpassword,
+                                           db_name=args.dbname,
+                                           db_user=args.dbuser,
+                                           db_host=args.dbhost,
+                                           db_port=args.dbport)
     else:
         print 'No database defined'
 
@@ -437,16 +476,15 @@ if __name__ == "__main__":
         args.key = None
 
     # kick off parsing
-    parser.Parser(config          = config_dir,
-                  dir_path        = directory,
-                  start           = args.start,
-                  end             = args.end,
-                  encoder_key     = args.key,
-                  client_id       = args.client_id,
-                  verbose         = args.verbose,
-                  pre_post_office = args.williamson,
-                  db              = db_conn,
-                  commit          = args.commit).run_parser(read_page)
+    parser.Parser(config=config_dir,
+                  dir_path=directory,
+                  start=args.start,
+                  end=args.end,
+                  encoder_key=args.key,
+                  client_id=args.client_id,
+                  verbose=args.verbose,
+                  pre_post_office=args.williamson,
+                  db=db_conn,
+                  commit=args.commit).run_parser(read_page)
 
     sys.exit(0)
-

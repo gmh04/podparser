@@ -707,14 +707,12 @@
     </town>
   </address>
   <address>
-    <pattern>belhaven terrace</pattern>
+    <pattern>belhaven ter</pattern>
     <street>Belhaven Terrace</street>
-    <!--<town>
+    <town>
       <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>-->
+      <latlon>55.879836 -4.296298</latlon>
+    </town>
   </address>
   <address>
     <pattern>bell st</pattern>
@@ -731,14 +729,8 @@
     <street>Bellahouston Terrace</street>
   </address>
   <address>
-    <pattern>bellevue terrace</pattern>
+    <pattern>bellevue ter</pattern>
     <street>Bellevue Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Springburn</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>bellfield st</pattern>
@@ -749,34 +741,16 @@
     <street>Bellgrove Street</street>
   </address>
   <address>
-    <pattern>belmar terrace</pattern>
+    <pattern>belmar ter</pattern>
     <street>Belmar Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Pollockshields</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>belmont crescent</pattern>
+    <pattern>belmont cres</pattern>
     <street>Belmont Crescent</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>belmont st</pattern>
     <street>Belmont Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>bentinck st</pattern>
@@ -1951,66 +1925,40 @@
   <address>
     <pattern>cross st</pattern>
     <street>Cross Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>crossburn st</pattern>
     <street>Crossburn Street</street>
   </address>
   <address>
-    <pattern>crossloan road</pattern>
-    <street>Crossloan Road</street>
+    <pattern>crossloan</pattern>
+    <street>Crossloan</street>
     <town>
       <name>Glasgow</name>
       <area>
-        <name>Kelvinside</name>
+        <name>Govan</name>
       </area>
     </town>
   </address>
   <address>
-    <pattern>crow road</pattern>
+    <pattern>crossloan r</pattern>
+    <street>Crossloan Road</street>
+  </address>
+  <address>
+    <pattern>crow r</pattern>
     <street>Crow Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>crown circus</pattern>
     <street>Crown Circus</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>crown gardens</pattern>
     <street>Crown Gardens</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>crown place</pattern>
+    <pattern>crown pl</pattern>
     <street>Crown Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>crown st</pattern>
@@ -6603,7 +6551,7 @@
     </town>
   </address>
   <address>
-    <pattern>somerville drive</pattern>
+    <pattern>somerville dr</pattern>
     <street>Somerville Drive</street>
   </address>
   <address>
@@ -6619,18 +6567,13 @@
     <street>South Kinning Place</street>
   </address>
   <address>
-    <pattern>south park terrace</pattern>
+    <pattern>south park ter</pattern>
     <street>South Park Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>south portland st</pattern>
     <pattern>s portland st</pattern>
+    <pattern>s. portland st</pattern>
     <street>South Portland Street</street>
   </address>
   <address>
@@ -6646,11 +6589,11 @@
     </town>
   </address>
   <address>
-    <pattern>south woodside road</pattern>
+    <pattern>south woodside r</pattern>
     <street>South Woodside Road</street>
   </address>
   <address>
-    <pattern>spiers' place</pattern>
+    <pattern>spiers' pl</pattern>
     <street>Spiers' Place</street>
   </address>
   <address>

@@ -4,6 +4,7 @@ import os
 import re
 import sys
 
+
 class Directory():
     """
     Post Office Directory
@@ -40,8 +41,7 @@ class Directory():
             ddir = ddir[0: ddir.rfind(os.sep)]
         else:
             print '*** Cannot read directory: %s ***' % self.path
-            #sys.exit(1)
-            return
+            return None
 
         # find meta file in directory
         meta_file = None
@@ -55,7 +55,8 @@ class Directory():
             dom = parse(meta_file)
 
             # use publisher field for town
-            publisher = dom.getElementsByTagName('publisher')[0].firstChild.nodeValue
+            publisher = dom.getElementsByTagName(
+                'publisher')[0].firstChild.nodeValue
             self.town = publisher.split(':')[0].strip()
 
             # volume becomes year
@@ -64,6 +65,7 @@ class Directory():
         else:
             print '*** Cannot find metadata file in : %s ***' % ddir
             self.town = None
+
 
 class Page():
     """
@@ -88,6 +90,7 @@ class Page():
         self.section = 'General Directory'
         self.number  = number
         self.entries = []
+
 
 class Entry():
     """
@@ -144,14 +147,16 @@ class Entry():
             if len(columns) == 3:
                 self.address = columns[2]
             elif len(columns) == 4:
-                # if the third column has an address match concatenate with address
+                # if the third column has an address
+                # match concatenate with address
                 if self._get_address_match(columns[2]):
                     self.address = '%s,%s' % (columns[2], columns[3])
                 else:
                     self.profession = columns[2]
                     self.address = columns[3]
             else:
-                # there are more than four columns, use the number in the address to divide them
+                # there are more than four columns,
+                # use the number in the address to divide them
                 remaining = None
                 for column in columns[2: len(columns)]:
                     if remaining:
@@ -168,15 +173,17 @@ class Entry():
                     # comma to left of number
                     comma_index = remaining[0: num_index].rfind(',')
                 else:
-                    # no address match just assign the third column to profession and the rest to the address
+                    # no address match just assign the third column
+                    # to profession and the rest to the address
                     comma_index = remaining.find(',')
 
                 if comma_index == -1:
-                    # if no comma index means an address is probably in the third column
+                    # if no comma index means an address
+                    # is probably in the third column
                     self.address = remaining
                 else:
                     self.profession = remaining[0: comma_index]
-                    self.address    = remaining[comma_index + 1: len(remaining)]
+                    self.address   = remaining[comma_index + 1: len(remaining)]
 
             self.profession = self.profession.strip()
             self.address    = self.address.strip()
@@ -199,8 +206,8 @@ class Entry():
 
     def valid(self):
         """
-        Is the entry valid? The entry is deemed invalid if the error property is
-        set.
+        Is the entry valid? The entry is deemed invalid if the error property
+        is set.
         """
         return self.error == None
 
@@ -230,6 +237,7 @@ class Entry():
         return status
 
     def get_location_stats(self):
+        # get number of locations and exact locations in an entry
         no_of_locations = len(self.locations)
         exact_locations = 0
 
@@ -244,11 +252,12 @@ class Entry():
         if self.error:
             str = 'Rejected: %s. Reason: %s\n' % (self.line, self.error)
         else:
-            str = '  | %-20s | %-20s | %-20s | %-1s | %-40s\n' % (self.surname,
-                                                                  self.forename,
-                                                                  self.profession,
-                                                                  self.category,
-                                                                  self.address)
+            str = '  | %-20s | %-20s | %-20s | %-1s | %-40s\n' % (
+                self.surname,
+                self.forename,
+                self.profession,
+                self.category,
+                self.address)
             for location in self.locations:
                 str = '%s%s\n' % (str, '> %s' % location)
 

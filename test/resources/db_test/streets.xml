@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addresses>
+
+  <address>
+    <pattern>albert road</pattern>
+    <street>Albert Road</street>
+    <town>
+      <name>Glasgow</name>
+      <area>
+        <name>Crosshill</name>
+      </area>
+      <area>
+        <name>Langside</name>
+        <modern_name>Dowanside Road</modern_name>
+      </area>
+      <area>
+        <name>Pollockshields</name>
+        <modern_name>Albert Drive</modern_name>
+      </area>
+    </town>
+  </address>
+
+  <address>
+    <pattern>rosslyn terrace</pattern>
+    <street>Rosslyn Terrace</street>
+  </address>
+
+</addresses>

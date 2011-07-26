@@ -116,7 +116,7 @@ Any following row (starting with '>') are locations that the parser has found in
     1  Address
     2  LatLon
     3  Accuracy see location_type in `Google Geocoding API results`_
-    4  type     raw or derived (A raw type is an address query request as found in the address column. A derived type is constructed used pattern matching, see `Streets config`_)
+    4  type     raw, derived or explicit(A raw type is an address query request as found in the address column. A derived type is constructed used pattern matching, see `Streets config`_. An explicit location is a hard coded latlon defined in streets.xml)
    === ======== =
 
 Stats
