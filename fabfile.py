@@ -45,8 +45,6 @@ def code_check():
 
     local('find . -name "*.py" | xargs pep8 --ignore=E221 --exclude=tests.py,conf.py,fabfile.py,',
           capture=False)
-    #local('find . -name "fabfile.py" | xargs pep8', capture=False)
-
 
 def run_tests():
     """Run parser tests"""

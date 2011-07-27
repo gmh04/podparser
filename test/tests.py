@@ -193,6 +193,20 @@ class LineWrapping(unittest.TestCase):
         res = p._fix_line_returns(lines)
         self.assertEquals(3, len(res))
 
+        lines[0] = 'Aname, fname, pro, 21 Argyll-'
+        lines[1] = ' street'
+        lines[2] = 'Aname, fname, pro,'
+        lines[3] = '12 Argyll St.'
+        lines.append('Aname, fname, pro, 1 Argyll St and')
+        lines.append('2 Argyll St.')
+        lines.append('Aname, fname, pro, 21')
+        lines.append('Argyll St')
+        res = p._fix_line_returns(lines)
+
+        self.assertEquals(res[0], 'Aname, fname, pro, 21 Argyll street')
+        self.assertEquals(res[1], 'Aname, fname, pro, 12 Argyll St.')
+        self.assertEquals(res[2], 'Aname, fname, pro, 1 Argyll St and 2 Argyll St.')
+        self.assertEquals(res[3], 'Aname, fname, pro, 21 Argyll St')
 
 class DbTest(unittest.TestCase):
 

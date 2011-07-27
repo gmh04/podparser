@@ -28,6 +28,7 @@ Battlefield crescent, Langside
 Beaufort Gardens, Govanhill
 Belhaven Terrace (NUM)
 Bellahouston ter
+Bellahouston terrace, Ibrox
 Berkeley terrace
 Berlin place
 Bishop street, Anderston
@@ -57,8 +58,10 @@ Cathcart street, Kinning park
 Cathcart street, Rutherglen
 Catherine St (AMB)
 Catherine street, north
+Cockmuir, Springburn
 Charlotte lane
 Chatham place
+Comely Park place
 Coustonholm, Pollokshaws
 Craignestock Place
 Crookston hall
@@ -84,6 +87,8 @@ Eton place, Hillhead
 Exchange sq
 
 Finnieston st (NUM)
+Fish Market
+Fisher st
 Fisher St, Dennistoun
 Fitzroy Place
 Franklin Terrace
@@ -98,7 +103,6 @@ Glebe street
 Glenavon terrace, Partick
 Govan st
 Govan View terrace, Govanhill
-Grove street
 Grafton square
 Grafton street
 Grafton terrace
@@ -107,6 +111,8 @@ Grange Terrace
 Granville place
 Greenhead terrace
 Greenhill street
+Grove street
+Guildry court
 
 Hamilton crescent, Partick
 Hamilton park ter, hillhead
@@ -167,6 +173,7 @@ Morris Place
 Moss view, Crossmyloof
 
 Naburn street
+Nelson terrace
 Newgate street
 Newton ter
 Northpark ter, Hillhead
@@ -195,6 +202,7 @@ Regent terrace
 Renfrew Street (NUM)
 Risk street
 Ronald Street
+Rosebank terrace
 Rosehall street
 Rosevale ter., Partick
 Rosslyn place, Pollokshields
@@ -223,6 +231,8 @@ South Albion Place
 South Kinning place
 South St. Mungo street
 Spiers wharf, PortDundas
+Spring place, Crossmyloof
+Springfield place
 St Andrew's road, Pollokshields
 St Enoch Square
 St George's Terrace
@@ -269,6 +279,7 @@ West Bank place, Hillhead.
 West Graham Street
 W(est) Howard street
 Westbank pl, Hillhead
+Westbourne terrace, Hillhead 
 Westbourne terrace Kelvinside
 Westminster terrace
 Whitfield place, Govan
