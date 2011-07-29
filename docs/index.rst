@@ -8,7 +8,7 @@ The podparser is a tool for parsing Scotland's Post Office directories.
 ************
 Introduction
 ************
-The `Scottish Post Office directories`_ are annual directories, from the period 1773 to 1911, that include an alphabetical list of a town's or county's inhabitants. The directories have been digitised by the `National Library of Scotland`_ and made available in XML fomat. The podparser attempts to parse the XML and determine the forename, surname, occupation and address(es) of each entry. Furthermore, each address location is geocoded using the `Google Geocoding API`_.
+The `Scottish Post Office directories`_ are annual directories, from the period 1773 to 1911, that include an alphabetical list of a town's or county's inhabitants. The directories have been digitised by the `National Library of Scotland`_ and made available in XML format. The podparser attempts to parse the XML and determine the forename, surname, occupation and address(es) of each entry. Furthermore, each address location is geocoded using the `Google Geocoding API`_.
 
 Currently only the General Directory section of the directories are parsed.
 
@@ -44,20 +44,20 @@ Command Line
 ------------
 The command-line application parses the Post Offices directories from XML and optionally commits the entries to a database. For example, the following parses a single directory page::
 
-    $ python </path/to/site-packages>/podparser.parser.py -p </path/to/pod.xml>
+    $ podparser -p </path/to/pod.xml>
 
 
 The next example parses a range of directory pages::
 
-    $ python </path/to/site-packages>/podparser.parser.py -d </path/to/pods> -s 110 -e 115
+    $ podparser -d </path/to/pods> -s 110 -e 115
 
 Below is an example that will commit the parse result to a database::
 
-    $ python </path/to/site-packages>/podparser.parser.py -p </path/to/pod.xml> -D mydb -W mydbpass -c
+    $ podparser -p </path/to/pod.xml> -D mydb -W mydbpass -c
 
 For a full list of parser command-line options see help options::
 
-    $ python </path/to/site-packages>/podparser.parser.py --help
+    $ podparser --help
 
 Python Library
 --------------

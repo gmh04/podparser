@@ -1,0 +1,12 @@
+# Sphinx inventory version 1
+# Project: podparser
+# Version: 0.1
+podparser.parser mod index.html
+podparser.directory mod index.html
+podparser.directory.Entry.get_geo_status method index.html
+podparser.parser.Parser class index.html
+podparser.directory.Entry.valid method index.html
+podparser.directory.Directory.read_from_meta method index.html
+podparser.directory.Entry class index.html
+podparser.directory.Page class index.html
+podparser.directory.Directory class index.html

@@ -12,6 +12,7 @@ import checker
 import directory
 import geo
 import parser
+import podparser
 
 from geo import encoder
 
@@ -362,10 +363,10 @@ def read_page(directory, page):
     print '%-20s%5d%5d%%' % ('Professions:', profession, profession_per)
     print '%-20s%5d%5d%%' % ('No Category:', no_category, no_category_per)
 
-if __name__ == "__main__":
-    """
-    Execute parser as command line process
-    """
+
+def run_parser():
+    # kick off parser process
+
     # print unicode to std out
     sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
@@ -410,6 +411,9 @@ if __name__ == "__main__":
     arg_parser.add_argument('-v', '--verbose',
                             action='store_true',
                             help='print detailed output')
+    arg_parser.add_argument('-V', '--version',
+                            action='store_true',
+                            help='print podparser version')
 
     google_group = arg_parser.add_argument_group('Google Options')
     google_group.add_argument('-k', '--key',
@@ -438,6 +442,10 @@ if __name__ == "__main__":
                           help='commit parsed results to database')
 
     args = arg_parser.parse_args()
+
+    if args.version:
+        print podparser.get_version()
+        sys.exit(0)
 
     if args.config:
         if os.path.isdir(args.config[0]):
@@ -488,3 +496,9 @@ if __name__ == "__main__":
                   commit=args.commit).run_parser(read_page)
 
     sys.exit(0)
+
+if __name__ == "__main__":
+    """
+    Execute parser as command line process
+    """
+    run_parser()

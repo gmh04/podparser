@@ -1,5 +1,5 @@
-dependency_links.txt
 PKG-INFO
+dependency_links.txt
+entry_points.txt
 requires.txt
 top_level.txt
-zip-safe

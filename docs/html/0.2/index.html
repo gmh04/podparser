@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Post Office Directory Parser (podparser) &mdash; podparser v0.2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="podparser v0.2 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">podparser v0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="post-office-directory-parser-podparser">
+<h1>Post Office Directory Parser (podparser)<a class="headerlink" href="#post-office-directory-parser-podparser" title="Permalink to this headline">¶</a></h1>
+<p>This document refers to version 0.2</p>
+<p>The podparser is a tool for parsing Scotland&#8217;s Post Office directories.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://www.nls.uk/family-history/directories/post-office">Scottish Post Office directories</a> are annual directories, from the period 1773 to 1911, that include an alphabetical list of a town&#8217;s or county&#8217;s inhabitants. The directories have been digitised by the <a class="reference external" href="http://www.nls.uk">National Library of Scotland</a> and made available in XML format. The podparser attempts to parse the XML and determine the forename, surname, occupation and address(es) of each entry. Furthermore, each address location is geocoded using the <a class="reference external" href="http://code.google.com/apis/maps/documentation/geocoding/">Google Geocoding API</a>.</p>
+<p>Currently only the General Directory section of the directories are parsed.</p>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.python.org/dev/library/argparse.html">argparse</a></li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/psycopg2/2.0.4">psycopg2</a> (only if the parser results are to be stored in a database. Note: Only <a class="reference external" href="http://postgis.refractions.net/">Postgis</a> is currently supported.)</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ pip install podparser</pre>
+</div>
+<p>or</p>
+<div class="highlight-python"><pre>$ easy_install podparser</pre>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The parser can be used as a command-line application or envoked as a library call within a python script.</p>
+<div class="section" id="command-line">
+<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h3>
+<p>The command-line application parses the Post Offices directories from XML and optionally commits the entries to a database. For example, the following parses a single directory page:</p>
+<div class="highlight-python"><pre>$ podparser -p &lt;/path/to/pod.xml&gt;</pre>
+</div>
+<p>The next example parses a range of directory pages:</p>
+<div class="highlight-python"><pre>$ podparser -d &lt;/path/to/pods&gt; -s 110 -e 115</pre>
+</div>
+<p>Below is an example that will commit the parse result to a database:</p>
+<div class="highlight-python"><pre>$ podparser -p &lt;/path/to/pod.xml&gt; -D mydb -W mydbpass -c</pre>
+</div>
+<p>For a full list of parser command-line options see help options:</p>
+<div class="highlight-python"><pre>$ podparser --help</pre>
+</div>
+</div>
+<div class="section" id="python-library">
+<h3>Python Library<a class="headerlink" href="#python-library" title="Permalink to this headline">¶</a></h3>
+<p>The following example demonstrates envoking the parser and retrieving the results from within a python script.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">podparser.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s">&#39;/path/to/conf&#39;</span><span class="p">,</span> <span class="n">dir_path</span><span class="o">=</span><span class="s">&#39;/path/to/pod&#39;</span><span class="p">)</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">run_parser</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">dir</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+        <span class="c"># do something with the entry</span>
+        <span class="k">print</span> <span class="n">entry</span>
+</pre></div>
+</div>
+<p>Post Office directories can contain many pages, leading to parse times of many hours. In cases where many pages are being parsed it makes more sense to use a callback to process the results after the parsing of each page. This means if the process is killed before finishing, it can be restarted from the point of failure. The next example demonstrates the use of a callback.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">podparser.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+
+<span class="k">def</span> <span class="nf">read_page</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+        <span class="c"># do something with the entry</span>
+        <span class="k">print</span> <span class="n">entry</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s">&#39;/path/to/conf&#39;</span><span class="p">,</span> <span class="n">dir_path</span><span class="o">=</span><span class="s">&#39;/path/to/pod&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">run_parser</span><span class="p">(</span><span class="n">read_page</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<p>The parser prints out the parse results to the terminal. The following is an example of a single entry:</p>
+<div class="highlight-python"><pre>  | Auld                 | John                 | grocer and victualler | G | 25 Duke street ; house, 4 Burrell's lane.
+&gt; | 4 Burrell's Lane, Glasgow, Scotland                          | 55.860516 : -4.238328  | GEOMETRIC_CENTER     | derived    (Burrell's Ln)
+&gt; | 25 Duke Street, Glasgow, Scotland                            | 55.860185 : -4.238551  | RANGE_INTERPOLATED   | derived    (Duke St)</pre>
+</div>
+<p>The first row is the entry details:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="2%" />
+<col width="31%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>Surname</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>2</td>
+<td>Forename</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>3</td>
+<td>Occupation</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>4</td>
+<td>Occupation Category</td>
+<td>see <a class="reference external" href="http://www.google.com/url?sa=t&amp;source=web&amp;cd=4&amp;ved=0CDsQFjAD&amp;url=http%3A%2F%2Fwww.statistics.gov.uk%2Fmethods_quality%2Fsic%2Fdownloads%2Fsic2007explanatorynotes.pdf&amp;rct=j&amp;q=sic&amp;ei=eqoNTpTEA8LRhAfJp4nnDQ&amp;usg=AFQjCNG7JIkJyXBNV49I3Z5i1gMkMGiGww&amp;sig2=_e5xBAyCYwqGh_qH8cEkMg&amp;cad=rja">UK Standard Industrial Classification</a></td>
+</tr>
+<tr><td>5</td>
+<td>Address(es)</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Any following row (starting with &#8216;&gt;&#8217;) are locations that the parser has found in the address column:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="1%" />
+<col width="3%" />
+<col width="96%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>Address</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>2</td>
+<td>LatLon</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>3</td>
+<td>Accuracy</td>
+<td>see location_type in <a class="reference external" href="http://code.google.com/apis/maps/documentation/geocoding/#Results">Google Geocoding API results</a></td>
+</tr>
+<tr><td>4</td>
+<td>type</td>
+<td>raw, derived or explicit(A raw type is an address query request as found in the address column. A derived type is constructed used pattern matching, see <a class="reference external" href="#streets">Streets config</a>. An explicit location is a hard coded latlon defined in streets.xml)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="stats">
+<h4>Stats<a class="headerlink" href="#stats" title="Permalink to this headline">¶</a></h4>
+<p>Statistics of the parse are collected and a summary is displayed after each page. For multiple page parses, this summary is for all pages parsed and not the last:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Total Entries</td>
+<td>Number of processed entries after fixing line wrapping.</td>
+</tr>
+<tr><td>Rejected</td>
+<td>If an entry has less than 3 columns or the name contains a <a class="reference external" href="#names">stop word</a>, the entry is not processed.</td>
+</tr>
+<tr><td>No geo tag</td>
+<td>Google has returned no geotag for the entry.</td>
+</tr>
+<tr><td>Bad geo tag</td>
+<td>Google has returned an accuracy of APPROXIMATE, see <a class="reference external" href="http://code.google.com/apis/maps/documentation/geocoding/#Results">Google Geocoding API results</a>.</td>
+</tr>
+<tr><td>Exact Tags</td>
+<td>The percentage of good tags where the search address matches the result address.</td>
+</tr>
+<tr><td>Professions</td>
+<td>Number of entries with a profession entry</td>
+</tr>
+<tr><td>No Category</td>
+<td>Number of entries with a profession but no category.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="problems">
+<h4>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h4>
+<p>The parser will alert the user when there is a problem with an entry:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>No geo tag</td>
+<td>No valid location could be found in the address column.</td>
+</tr>
+<tr><td>Poor Geo tag</td>
+<td>There is no address in the entry with a geo tag better than APPROXIMATE, see  location_type in <a class="reference external" href="http://code.google.com/apis/maps/documentation/geocoding/#Results">Google Geocoding API results</a></td>
+</tr>
+<tr><td>No profession category</td>
+<td>Entry has a profession but no pattern is matched in <a class="reference external" href="#professions">Professions config</a>.</td>
+</tr>
+<tr><td>Inexact tag</td>
+<td>In parentheses after the type column is the address returned by the google geocoding service. If the address returned does not match the query, it is marked as inexact with three asterixes.</td>
+</tr>
+<tr><td>Rejected</td>
+<td>If an entry has less than 3 columns or contains a <a class="reference external" href="#names">stop word</a>, the entry is not processed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="database">
+<h2>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h2>
+<p>Currently only Postgis is supported. The schema can be found in &lt;/path/to/site-packages&gt;/podparser/etc.</p>
+</div>
+<div class="section" id="config">
+<h2>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+<p>A number of XML files exist to help the parser improve the quality of the results.</p>
+<div class="section" id="global">
+<h3>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h3>
+<p>global.xml contains replace elements to fix Optical Character Recogintion(OCR) errors and misspellings for all entry fields. E.g.:</p>
+<div class="highlight-python"><pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;global&gt;
+
+  &lt;replaces&gt;
+    &lt;replace&gt;
+      &lt;pattern&gt;Eando'ph&lt;/pattern&gt;
+      &lt;value&gt;Randolph&lt;/value&gt;
+    &lt;/replace&gt;
+    &lt;replace&gt;
+      &lt;pattern&gt;Eobert&lt;/pattern&gt;
+      &lt;value&gt;Robert&lt;/value&gt;
+    &lt;/replace&gt;
+    ...
+  &lt;/replaces&gt;
+&lt;/global&gt;</pre>
+</div>
+</div>
+<div class="section" id="names">
+<h3>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h3>
+<p>In addition to containing replace elements to fix OCR errors and misspellings for name fields, names.xml contains stop words. A stop word is a character string where if found in the forename or surname, the entry will be rejected. Stop words in names can be used for identifying commercial entries:</p>
+<div class="highlight-python"><pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;names&gt;
+  &lt;stopWords&gt;
+    &lt;word&gt;Association&lt;/word&gt;
+    &lt;word&gt;Insurance&lt;/word&gt;
+    ...
+  &lt;/stopWords&gt;
+
+  ...
+  &lt;replace&gt;
+    &lt;pattern&gt;Jobn&lt;/pattern&gt;
+    &lt;value&gt;John&lt;/value&gt;
+  &lt;/replace&gt;
+  ...
+&lt;/names&gt;</pre>
+</div>
+</div>
+<div class="section" id="professions">
+<h3>Professions<a class="headerlink" href="#professions" title="Permalink to this headline">¶</a></h3>
+<p>In addition to containing replace elements to fix OCR errors and misspellings for the profession field, professions.xml contains elements for indentifying professional category:</p>
+<div class="highlight-python"><pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;professions&gt;
+  &lt;replaces&gt;
+    &lt;replace&gt;
+      &lt;pattern&gt;bookfeller&lt;/pattern&gt;
+      &lt;value&gt;bookseller&lt;/value&gt;
+    &lt;/replace&gt;
+    ...
+  &lt;/replaces&gt;
+  &lt;categories&gt;
+    &lt;category&gt;
+      &lt;name&gt;Agriculture, forestry and fishing&lt;/name&gt;
+      &lt;code&gt;A&lt;/code&gt;
+      &lt;list&gt;
+        &lt;pattern&gt;cowfeeder&lt;/pattern&gt;
+        &lt;pattern&gt;dairy&lt;/pattern&gt;
+        &lt;pattern&gt;farmer&lt;/pattern&gt;
+        &lt;pattern&gt;game dealer&lt;/pattern&gt;
+      &lt;/list&gt;
+    &lt;/category&gt;
+  &lt;/categories&gt;
+&lt;/professions&gt;</pre>
+</div>
+</div>
+<div class="section" id="addresses">
+<h3>Addresses<a class="headerlink" href="#addresses" title="Permalink to this headline">¶</a></h3>
+<p>addresses.xml contains replace elements to fix OCR errors and misspellings for the address field. E.g.:</p>
+<div class="highlight-python"><pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;addresses&gt;
+  &lt;replaces&gt;
+    &lt;replace&gt;
+      &lt;pattern&gt;Caftle&lt;/pattern&gt;
+      &lt;value&gt;Castle&lt;/value&gt;
+    &lt;/replace&gt;
+    &lt;replace&gt;
+      &lt;pattern&gt;Calton-hiil&lt;/pattern&gt;
+      &lt;value&gt;Calton hill&lt;/value&gt;
+    &lt;/replace&gt;
+    ...
+  &lt;/replaces&gt;
+&lt;/addresses&gt;</pre>
+</div>
+</div>
+<div class="section" id="streets">
+<h3>Streets<a class="headerlink" href="#streets" title="Permalink to this headline">¶</a></h3>
+<p>streets.xml helps the parser improve google geoencoding by cleaning the address character string sent to google (derived address) and providing a mechanism for specifying the modern street name. For example for following provides a means of finding alternative spelling for the same street:</p>
+<div class="highlight-python"><pre>&lt;addresses&gt;
+  &lt;address&gt;
+    &lt;pattern&gt;st james' terrace&lt;/pattern&gt;
+    &lt;pattern&gt;st. james terrace&lt;/pattern&gt;
+    &lt;street&gt;St James' Terrace&lt;/street&gt;
+  &lt;/address&gt;
+&lt;/addresses&gt;</pre>
+</div>
+<p>The next example shows how by providing a town element, a modern street name can be defined:</p>
+<div class="highlight-python"><pre>&lt;address&gt;
+  &lt;pattern&gt;alexander street&lt;/pattern&gt;
+  &lt;street&gt;Alexander Street&lt;/street&gt;
+  &lt;town&gt;
+    &lt;name&gt;Glasgow&lt;/name&gt;
+    &lt;modern_name&gt;Brechin Street&lt;/modern_name&gt;
+  &lt;/town&gt;
+&lt;/address&gt;</pre>
+</div>
+<p>Alternatively, latlon co-ordinates can be given. This is useful is google doesn&#8217;t find the address:</p>
+<div class="highlight-python"><pre>&lt;address&gt;
+  &lt;pattern&gt;alexander street&lt;/pattern&gt;
+  &lt;street&gt;Alexander Street&lt;/street&gt;
+  &lt;town&gt;
+    &lt;name&gt;Glasgow&lt;/name&gt;
+    &lt;latlon&gt;55.864210 -4.281235&lt;/latlon&gt;
+  &lt;/town&gt;
+&lt;/address&gt;</pre>
+</div>
+<p>Furthermore, areas withing particular towns can have the same street name but different modern names or latlon co-ordinates:</p>
+<div class="highlight-python"><pre>&lt;address&gt;
+  &lt;pattern&gt;albert road&lt;/pattern&gt;
+  &lt;street&gt;Albert Road&lt;/street&gt;
+  &lt;town&gt;
+    &lt;name&gt;Glasgow&lt;/name&gt;
+    &lt;area&gt;
+      &lt;name&gt;Crosshill&lt;/name&gt;
+    &lt;/area&gt;
+    &lt;area&gt;
+      &lt;name&gt;Langside&lt;/name&gt;
+      &lt;modern_name&gt;Dowanside Road&lt;/modern_name&gt;
+    &lt;/area&gt;
+    &lt;area&gt;
+      &lt;name&gt;Pollockshields&lt;/name&gt;
+      &lt;latlon&gt;55.864210 -4.281235&lt;/latlon&gt;
+    &lt;/area&gt;
+  &lt;/town&gt;
+&lt;/address&gt;</pre>
+</div>
+<p>If both town and area level location details are defined, the area details take precence. A full example of streets can be found at <a class="reference external" href="https://github.com/gmh04/podparser/blob/master/etc/streets.xml">github</a>.</p>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parser">
+<h3>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.parser.Parser">
+<em class="property">class </em><tt class="descclassname">podparser.parser.</tt><tt class="descname">Parser</tt><big>(</big><em>config</em>, <em>dir_path</em>, <em>start=0</em>, <em>end=9999</em>, <em>encoder_key=None</em>, <em>client_id=None</em>, <em>verbose=False</em>, <em>pre_post_office=False</em>, <em>db=None</em>, <em>commit=False</em><big>)</big><a class="headerlink" href="#podparser.parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post office directory parser.</p>
+<div class="line-block">
+<div class="line">config      - The full path to the parser configuration files.</div>
+<div class="line">directory   - The full path to either an individual POD file or the POD
+directory.</div>
+<div class="line">start       - Start directory page to be parsed, only applies to for
+directory parse. If no start page given start from 0.</div>
+<div class="line">end         - End directory page to be parsed, only applies to for
+directory parse. If no end page given parse until last.</div>
+<div class="line">encoder_key - Google premium private key</div>
+<div class="line">client_id   - Google premium client identifier</div>
+<div class="line">verbose     - Print detailed output</div>
+<div class="line">pre_post_office - parse williamson&#8217;s directory?</div>
+<div class="line">db          - <a class="reference external" href="#podparser.db.connection.PodConnection">PODconnection</a> instance</div>
+<div class="line">commit      - commit results to database?</div>
+</div>
+<dl class="method">
+<dt id="Parser.run_parser">
+<tt class="descname">run_parser</tt><big>(</big><em>callback=None</em><big>)</big><a class="headerlink" href="#Parser.run_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kick off parser.</p>
+<p>Returns <a class="reference external" href="#podparser.directory.Directory">Directory</a> instance</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="directory">
+<h3>Directory<a class="headerlink" href="#directory" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.directory.Directory">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Directory</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#podparser.directory.Directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Office Directory</p>
+<p>path - full path to the post directory</p>
+<dl class="attribute">
+<dt id="podparser.directory.Directory.country">
+<tt class="descname">country</tt><a class="headerlink" href="#podparser.directory.Directory.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Office Directory country, default Scotland.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.directory.Directory.pages">
+<tt class="descname">pages</tt><a class="headerlink" href="#podparser.directory.Directory.pages" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of parsed <a class="reference external" href="#podparser.directory.Page">Pages</a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="page">
+<h3>Page<a class="headerlink" href="#page" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.directory.Page">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Page</tt><big>(</big><em>path</em>, <em>number</em><big>)</big><a class="headerlink" href="#podparser.directory.Page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a single page in the POD.</p>
+<p>path - full path to the post directory
+number - Directory page number.</p>
+<dl class="attribute">
+<dt id="podparser.directory.Page.entries">
+<tt class="descname">entries</tt><a class="headerlink" href="#podparser.directory.Page.entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of parsed <a class="reference external" href="#podparser.directory.Entry">Entries</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.directory.Page.number">
+<tt class="descname">number</tt><a class="headerlink" href="#podparser.directory.Page.number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directory page number</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="entry">
+<h3>Entry<a class="headerlink" href="#entry" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.directory.Entry">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Entry</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#podparser.directory.Entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single POD entry.</p>
+<p>line - the raw line being parsed into an entry.</p>
+<dl class="attribute">
+<dt id="podparser.directory.Entry.forename">
+<tt class="descname">forename</tt><a class="headerlink" href="#podparser.directory.Entry.forename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Occupant&#8217;s forname.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.directory.Entry.surname">
+<tt class="descname">surname</tt><a class="headerlink" href="#podparser.directory.Entry.surname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Occupant&#8217;s surname.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.directory.Entry.profession">
+<tt class="descname">profession</tt><a class="headerlink" href="#podparser.directory.Entry.profession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Occupant&#8217;s profession.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.directory.Entry.locations">
+<tt class="descname">locations</tt><a class="headerlink" href="#podparser.directory.Entry.locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference external" href="podparser.geo.encoder.Google">Locations</a> successfully geotagged.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="location">
+<h3>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.geo.encoder.Location">
+<em class="property">class </em><tt class="descclassname">podparser.geo.encoder.</tt><tt class="descname">Location</tt><big>(</big><em>address</em>, <em>town</em>, <em>point</em>, <em>accuracy</em>, <em>type=None</em>, <em>found_address=None</em>, <em>found_locality=None</em><big>)</big><a class="headerlink" href="#podparser.geo.encoder.Location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores location information related to an address</p>
+<dl class="attribute">
+<dt id="podparser.geo.encoder.Location.address">
+<tt class="descname">address</tt><a class="headerlink" href="#podparser.geo.encoder.Location.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Address used in google search.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="podparser.geo.encoder.Location.point">
+<tt class="descname">point</tt><a class="headerlink" href="#podparser.geo.encoder.Location.point" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latlon returned by google for address.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="podconnection">
+<h3>PodConnection<a class="headerlink" href="#podconnection" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="podparser.db.connection.PodConnection">
+<em class="property">class </em><tt class="descclassname">podparser.db.connection.</tt><tt class="descname">PodConnection</tt><big>(</big><em>db_password</em>, <em>db_name='ahistory'</em>, <em>db_user='ahistory'</em>, <em>db_host='localhost'</em>, <em>db_port=5432</em><big>)</big><a class="headerlink" href="#podparser.db.connection.PodConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Office Directory database connection.</p>
+<p>Currently only supports Postgis using the psycopg2 driver.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Post Office Directory Parser (podparser)</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#python-library">Python Library</a></li>
+<li><a class="reference internal" href="#output">Output</a><ul>
+<li><a class="reference internal" href="#stats">Stats</a></li>
+<li><a class="reference internal" href="#problems">Problems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#database">Database</a></li>
+<li><a class="reference internal" href="#config">Config</a><ul>
+<li><a class="reference internal" href="#global">Global</a></li>
+<li><a class="reference internal" href="#names">Names</a></li>
+<li><a class="reference internal" href="#professions">Professions</a></li>
+<li><a class="reference internal" href="#addresses">Addresses</a></li>
+<li><a class="reference internal" href="#streets">Streets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#api">API</a><ul>
+<li><a class="reference internal" href="#parser">Parser</a></li>
+<li><a class="reference internal" href="#directory">Directory</a></li>
+<li><a class="reference internal" href="#page">Page</a></li>
+<li><a class="reference internal" href="#entry">Entry</a></li>
+<li><a class="reference internal" href="#location">Location</a></li>
+<li><a class="reference internal" href="#podconnection">PodConnection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">podparser v0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright .
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.1.
+    </div>
+  </body>
+</html>

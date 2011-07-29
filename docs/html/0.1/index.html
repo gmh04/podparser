@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Post Office Directory Parser (podparser) &mdash; podparser v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="podparser v0.1 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li><a href="#">podparser v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="post-office-directory-parser-podparser">
+<h1>Post Office Directory Parser (podparser)<a class="headerlink" href="#post-office-directory-parser-podparser" title="Permalink to this headline">¶</a></h1>
+<p>This document refers to version 0.1</p>
+<p>The podparser is a tool for parsing Scotland&#8217;s Post Office directories.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="http://www.nls.uk/family-history/directories/post-office">Scottish Post Office directories</a> are annual directories, from the period 1773 to 1911, that include an alphabetical list of a town&#8217;s or county&#8217;s inhabitants. The directories have been digitised by the <a class="reference external" href="http://www.nls.uk">National Library of Scotland</a> and made available in XML fomat. The podparser attempts to parse the XML and determine the forename, surname, occupation and address(es) of each entry. Furthermore, each address location is geocoded.</p>
+<p>Currently only the General Directory section of the directories are parsed.</p>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>argparse</li>
+</ul>
+<p>If the parser results are to be stored in a database there is a dependecy on <a class="reference external" href="http://pypi.python.org/pypi/psycopg2/2.0.4">psycopg2</a>. Note: Only <a class="reference external" href="http://postgis.refractions.net/">Postgis</a> is current supported.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ pip install podparser</pre>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The parser can be used as a command-line application or envoked as a library call within a python script.</p>
+<div class="section" id="command-line">
+<h3>Command Line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h3>
+<p>The command-line application parses the directories from XML and optionally commits the entries to a database.</p>
+<div class="highlight-python"><pre>$ python &lt;/path/to/site-packages&gt;/podparser.parser.py</pre>
+</div>
+<p>For a full list of parser command-line options see:</p>
+</div>
+<div class="section" id="python-library">
+<h3>Python Library<a class="headerlink" href="#python-library" title="Permalink to this headline">¶</a></h3>
+<p>The following example demonstrates executing the parser and retreiving the results.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">podparser.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s">&#39;/path/to/conf&#39;</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="s">&#39;/path/to/pod&#39;</span><span class="p">)</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">run_parser</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">dir</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+        <span class="c"># do something with the entry</span>
+        <span class="k">print</span> <span class="n">entry</span>
+</pre></div>
+</div>
+<p>Post Office directories can contain many pages, leading to parse times of many hours. In cases where many pages are being parsed it makes more sense to use a callback to process the results after the parsing of each page. This means if the process is killed before finishing, it can be restarted from the point of failure. The next example demonstrates the use of a callback.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">podparser.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+
+<span class="k">def</span> <span class="nf">read_page</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+        <span class="c"># do something with the entry</span>
+        <span class="k">print</span> <span class="n">entry</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s">&#39;/path/to/conf&#39;</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="s">&#39;/path/to/pod&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">run_parser</span><span class="p">(</span><span class="n">read_page</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="config">
+<h2>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-podparser.directory">
+<h2>API<a class="headerlink" href="#module-podparser.directory" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="podparser.parser.Parser">
+<em class="property">class </em><tt class="descclassname">podparser.parser.</tt><tt class="descname">Parser</tt><big>(</big><em>config</em>, <em>directory</em>, <em>start=0</em>, <em>end=9999</em>, <em>encoder_key=None</em>, <em>client_id=None</em>, <em>verbose=False</em>, <em>pre_post_office=False</em>, <em>db=None</em>, <em>commit=False</em><big>)</big><a class="headerlink" href="#podparser.parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post office directory parser.</p>
+<p>config    - The full path to the parser configuration files.</p>
+<p>directory - The full path to either an individual POD file or the POD directory
+start</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="podparser.directory.Directory">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Directory</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#podparser.directory.Directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>POD metadata</p>
+<dl class="method">
+<dt id="podparser.directory.Directory.read_from_meta">
+<tt class="descname">read_from_meta</tt><big>(</big><big>)</big><a class="headerlink" href="#podparser.directory.Directory.read_from_meta" title="Permalink to this definition">¶</a></dt>
+<dd>read metadata from POD meta file</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podparser.directory.Entry">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Entry</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="#podparser.directory.Entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a single POD entry.</p>
+<dl class="method">
+<dt id="podparser.directory.Entry.get_geo_status">
+<tt class="descname">get_geo_status</tt><big>(</big><big>)</big><a class="headerlink" href="#podparser.directory.Entry.get_geo_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get geo status of an entry. This will return</p>
+<p>0 - there is no geo tag
+1 - there is a poor geo tag
+2 - there is a good geo tag</p>
+<p>A poor geo tag is accuracy &#8216;APPROXIMATE&#8217;, while a good tag is any value
+above that (ROOFTOP, RANGE_INTERPOLATED, GEOMETRIC_CENTER, see
+<a class="reference external" href="http://code.google.com/apis/maps/documentation/geocoding/#Results">http://code.google.com/apis/maps/documentation/geocoding/#Results</a>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="podparser.directory.Entry.valid">
+<tt class="descname">valid</tt><big>(</big><big>)</big><a class="headerlink" href="#podparser.directory.Entry.valid" title="Permalink to this definition">¶</a></dt>
+<dd>Is the entry valid? The entry is deemed invalid if the error property is
+set.</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="podparser.directory.Page">
+<em class="property">class </em><tt class="descclassname">podparser.directory.</tt><tt class="descname">Page</tt><big>(</big><em>path</em>, <em>number</em><big>)</big><a class="headerlink" href="#podparser.directory.Page" title="Permalink to this definition">¶</a></dt>
+<dd>Represents a single page in the POD</dd></dl>
+
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference external" href="modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference external" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="#">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Post Office Directory Parser (podparser)</a><ul>
+<li><a class="reference external" href="#introduction">Introduction</a></li>
+<li><a class="reference external" href="#dependencies">Dependencies</a></li>
+<li><a class="reference external" href="#installation">Installation</a></li>
+<li><a class="reference external" href="#usage">Usage</a><ul>
+<li><a class="reference external" href="#command-line">Command Line</a></li>
+<li><a class="reference external" href="#python-library">Python Library</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#config">Config</a></li>
+<li><a class="reference external" href="#module-podparser.directory">API</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/index.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             >modules</a> |</li>
+        <li><a href="#">podparser v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2011, George Hamilton.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.6.
+    </div>
+  </body>
+</html>

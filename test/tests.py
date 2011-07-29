@@ -53,7 +53,7 @@ class MiscTest(unittest.TestCase):
 
     def test_dito(self):
         # test that ditos ' do.' addresses are ignored
-        path = '%s%c%s' % (self.test_resources_dir, os.sep, 'misc_test')
+        path = '%s%c%s' % (self.test_resources_dir, os.sep, 'dito_test')
 
         p = Parser(config=path, dir_path=path)
         d = p.run_parser()

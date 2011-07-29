@@ -2,9 +2,29 @@ from fabric.api import cd, local, settings
 
 import fabfile
 import os
+import podparser
 import sys
 import types
 
+
+def build_docs():
+    """Create parser documentation"""
+
+    with cd('docs'):
+        fname = 'docs.zip'
+
+        with settings(warn_only=True):
+            local('rm %s' % fname)
+            local('rm -rf html/%s' % podparser.get_version())
+
+        local('make clean html', capture=False)
+
+        # copy current version to root and versioned directory
+        local('cp -rf _build/html html/%s' % podparser.get_version())
+        local('cp -rf _build/html .')
+
+        with cd('html'):
+            local('zip -r ../%s .' % fname)
 
 def upload():
     """Upload new package to pypi"""
@@ -14,36 +34,16 @@ def upload():
 
     local('python setup.py sdist upload', capture=False)
 
+def upload_docs():
+    """Upload sphinx documentation to pypi"""
 
-def build_docs():
-    """Create parser documentation"""
-
-    # set up environment
-    sys.path.append(local('pwd').strip())
-    import setup
-
-    print setup.version
-
-    with cd('docs'):
-        fname = 'docs.zip'
-
-        with settings(warn_only=True):
-            local('rm %s' % fname)
-
-        local('make clean html', capture=False)
-
-        # copy current version to root and versioned directory
-        local('cp -rf _build/html html/%s' % setup.version)
-        local('cp -rf _build/html .')
-
-        with cd('html'):
-            local('zip -r ../%s .' % fname)
-
+    build_docs()
+    local('python setup.py upload_sphinx --upload-dir=docs/html')
 
 def code_check():
     """Run code style checker"""
 
-    local('find . -name "*.py" | xargs pep8 --ignore=E221 --exclude=tests.py,conf.py,fabfile.py,',
+    local('find podparser -name "*.py" | xargs pep8 --ignore=E221',
           capture=False)
 
 def run_tests():
