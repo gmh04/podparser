@@ -1,0 +1,3 @@
+include LICENSE.txt
+include podparser/etc/schema.sql
+prune test

@@ -49,3 +49,15 @@ def code_check():
 def run_tests():
     """Run parser tests"""
     local('python -m unittest test.tests', capture=False)
+
+def release():
+    """Create a new version of the podparser"""
+
+    # upload new package to pypi
+    upload()
+
+    # upload new package to pypi
+    upload_docs()
+
+    # create new tag
+    local('git tag -a %s' % podparser.get_version())
