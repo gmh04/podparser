@@ -2,10 +2,12 @@
 # AMB - ambiguous
 # NUM use with number returns bad result (to do with providing numbers greater than current highest number)
 
+Adelphi Terrace
 Abercorn Street
 Abington street
 Afton Crescent
 Airlie ter., Pollokshields
+Albert St., Pollockshields
 Albion crescent
 Alexandra parade (NUM)
 Allanton terrace, Govanhill
@@ -33,6 +35,7 @@ Berkeley terrace
 Berlin place
 Bishop street, Anderston
 Blythswood terrace
+Bobbie's loan
 Boswell ter., Kelvinside
 Bothwell terrace, Shawlands
 Brandon place
@@ -54,6 +57,7 @@ Carlton ter.. North Woodside
 Caprera place
 Castle Street (NUM)
 Cathcart Road (NUM)
+Cathcart street, Gorbals
 Cathcart street, Kinning park
 Cathcart street, Rutherglen
 Catherine St (AMB)
@@ -70,6 +74,7 @@ Cumberland Lane
 
 Darnley terrace, Shawlands
 Dean terrace
+Debbie's loan
 Doune ter, North Woodside
 Dowanhill Gardens
 Downie Place
@@ -78,12 +83,14 @@ Dundas Street (NUM)
 Dunlop st (NUM)
 
 Eaglesham Street
+East Russell street
 Edmund street
 Eglinton ter, Govanhil
 Elba lane, Parkhead
 Elgin terrace
 Elmbank Place
 Eton place, Hillhead
+Eton terrace
 Exchange sq
 
 Finnieston st (NUM)
@@ -98,7 +105,9 @@ Gallowflat pl, Rutherglen
 Garden street
 Garngad Hill
 Garngad rd
+Garscadden Street
 George Square
+Germiston st
 Glebe street
 Glenavon terrace, Partick
 Govan st
@@ -122,6 +131,7 @@ Hamilton ter. west, Partick
 Hampden Place
 Hampden Terrace (NUM)
 Hayburn ct
+Hayburn terrace, Partickhill
 Herriot street, Pollokshields
 Hope terrace, Govanhill.
 Holland place
@@ -168,9 +178,12 @@ Matilda place
 Matilda terrace
 Mavisbank Quay
 Maxwell terrace, Pollokshields
+Melrose place
 Melville Terrace
+Milton terrace, Langside
 Morris Place
 Moss view, Crossmyloof
+Myrtle Street
 
 Naburn street
 Nelson terrace
@@ -200,7 +213,9 @@ Randolph terrace, Garnehill
 Regent park terrace
 Regent terrace
 Renfrew Street (NUM)
+Renton terrace, Crosshill
 Risk street
+Rokeby ter., Hillhead
 Ronald Street
 Rosebank terrace
 Rosehall street
@@ -279,7 +294,7 @@ West Bank place, Hillhead.
 West Graham Street
 W(est) Howard street
 Westbank pl, Hillhead
-Westbourne terrace, Hillhead 
+Westbourne terrace, Hillhead
 Westbourne terrace Kelvinside
 Westminster terrace
 Whitfield place, Govan

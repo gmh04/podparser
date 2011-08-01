@@ -31,6 +31,10 @@
       <pattern>Brou^hton</pattern>
       <value>Broughton</value>
     </replace>
+    <replace>
+      <pattern>Bumbank</pattern>
+      <value>Burnbank</value>
+    </replace>
 
     <!-- C -->
     <replace>
@@ -107,6 +111,11 @@
       <pattern>Dison st</pattern>
       <value>Dixon st</value>
     </replace>
+    <replace>
+      <pattern>Dnndas</pattern>
+      <value>Dundas</value>
+    </replace>
+
 
     <!-- E -->
     <replace>
@@ -181,9 +190,12 @@
       <pattern>Garnethili</pattern>
       <value>Garnethill</value>
     </replace>
-
     <replace>
       <pattern>Garscnbe</pattern>
+      <value>Garscube</value>
+    </replace>
+    <replace>
+      <pattern>Garseube</pattern>
       <value>Garscube</value>
     </replace>
     <replace>
@@ -381,6 +393,10 @@
     </replace>
 
     <!-- S -->
+    <replace>
+      <pattern>Saucbiehall</pattern>
+      <value>Sauchiehall</value>
+    </replace>
     <replace>
       <pattern>Sauchieliall</pattern>
       <value>Sauchiehall</value>

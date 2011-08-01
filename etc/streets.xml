@@ -300,10 +300,10 @@
     <town>
       <name>Glasgow</name>
       <modern_name>Midland Street</modern_name>
-      <area>
+      <!--<area>
         <name>Bridgeton</name>
         <modern_name>Laird Street</modern_name>
-      </area>
+      </area>-->
       <area>
         <name>Hillhead</name>
         <modern_name>Southpark Avenue</modern_name>
@@ -553,11 +553,11 @@
     <street>Baird Street</street>
   </address>
   <address>
-    <pattern>ballochmyle place</pattern>
+    <pattern>ballochmyle pl</pattern>
     <street>Ballochmyle Place</street>
   </address>
   <address>
-    <pattern>ballochmyle terrace</pattern>
+    <pattern>ballochmyle ter</pattern>
     <street>Ballochmyle Terrace</street>
   </address>
   <address>
@@ -609,7 +609,7 @@
     <street>Bath Street</street>
   </address>
   <address>
-    <pattern>battlefield crescent</pattern>
+    <pattern>battlefield cres</pattern>
     <street>Battlefield Crescent</street>
     <town>
       <name>Glasgow</name>
@@ -1394,6 +1394,14 @@
     </town>
   </address>
   <address>
+    <pattern>cathcart</pattern>
+    <street>Cathcart</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.818318 -4.261515</latlon>
+    </town>
+  </address>
+  <address>
     <pattern>cathcart r</pattern>
     <street>Cathcart Road</street>
   </address>
@@ -2007,21 +2015,15 @@
     </town>
   </address>
   <address>
-    <pattern>derby crescent</pattern>
+    <pattern>derby cres</pattern>
     <street>Derby Crescent</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvonside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>derby st</pattern>
     <street>Derby Street</street>
   </address>
   <address>
-    <pattern>derby terrace</pattern>
+    <pattern>derby ter</pattern>
     <street>Derby Terrace</street>
   </address>
   <address>
@@ -2038,6 +2040,7 @@
   </address>
   <address>
     <pattern>dobbie's loan</pattern>
+    <pattern>debbie's loan</pattern>
     <street>Dobbie's Loan</street>
   </address>
   <address>
@@ -2393,6 +2396,7 @@
   </address>
   <address>
     <pattern>elliot st</pattern>
+    <pattern>elliott st</pattern>
     <street>Elliot Street</street>
   </address>
   <address>
@@ -2410,7 +2414,7 @@
     <street>Elm Street</street>
   </address>
   <address>
-    <pattern>elmbank crescent</pattern>
+    <pattern>elmbank cres</pattern>
     <street>Elmbank Crescent</street>
   </address>
   <address>
@@ -2418,52 +2422,32 @@
     <street>Elmbank Street</street>
   </address>
   <address>
-    <pattern>elmbank place</pattern>
+    <pattern>elmbank pl</pattern>
     <street>Elmbank Place</street>
   </address>
   <address>
-    <pattern>emily place</pattern>
+    <pattern>emily pl</pattern>
     <street>Emily Place</street>
   </address>
   <address>
-    <pattern>ethel terrace</pattern>
+    <pattern>ethel ter</pattern>
     <street>Ethel Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>eton gardens</pattern>
     <street>Eton Gardens</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>eton place</pattern>
+    <pattern>eton pl</pattern>
     <street>Eton Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>ettrick terrace</pattern>
+    <pattern>eton ter</pattern>
+    <street>Eton Terrace</street>
+  </address>
+  <address>
+    <pattern>ettrick ter</pattern>
     <street>Ettrick Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>exchange sq</pattern>
@@ -2472,25 +2456,13 @@
   <address>
     <pattern>fairlie bank</pattern>
     <street>Fairlie Bank</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>fairlie park</pattern>
     <street>Fairlie Park</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>falkland place</pattern>
+    <pattern>falkland pl</pattern>
     <street>Falkland Place</street>
   </address>
   <address>
@@ -2763,6 +2735,10 @@
   <address>
     <pattern>germinston st</pattern>
     <street>Germinston Street</street>
+  </address>
+  <address>
+    <pattern>germiston st</pattern>
+    <street>Germiston Street</street>
   </address>
   <address>
     <pattern>gibson st</pattern>
@@ -3257,39 +3233,27 @@
     <street>Havelock Street</street>
   </address>
   <address>
-    <pattern>havelock terrace</pattern>
+    <pattern>havelock ter</pattern>
     <street>Havelock Terrace</street>
   </address>
   <address>
     <pattern>hawthorn st</pattern>
     <street>Hawthorn Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Possilpark</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hayburn cres</pattern>
     <street>Hayburn Crescent</street>
   </address>
   <address>
-    <pattern>hayburn terrace</pattern>
+    <pattern>hayburn ter</pattern>
     <street>Hayburn Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hayfield st</pattern>
     <street>Hayfield Street</street>
   </address>
   <address>
-    <pattern>hayfield terrace</pattern>
+    <pattern>hayfield ter</pattern>
     <street>Hayfield Terrace</street>
   </address>
   <address>
@@ -3975,6 +3939,10 @@
   <address>
     <pattern>lancefield st</pattern>
     <street>Lancefield Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.858611 -4.276603</latlon>
+    </town>
   </address>
   <address>
     <pattern>lancelot place</pattern>
@@ -4268,12 +4236,6 @@
   <address>
     <pattern>mcintyre st</pattern>
     <street>MacIntyre Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Anderston</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>mckechnie st</pattern>
@@ -4294,6 +4256,10 @@
   <address>
     <pattern>mclellan st</pattern>
     <street>McLellan Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>MaClellan Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>mcneil st</pattern>
@@ -4671,6 +4637,10 @@
     </town>
   </address>
   <address>
+    <pattern>mid wharf</pattern>
+    <street>Mid Wharf Street</street>
+  </address>
+  <address>
     <pattern>middleton place</pattern>
     <street>Middleton Place</street>
   </address>
@@ -4729,11 +4699,11 @@
     </town>
   </address>
   <address>
-    <pattern>millcroft place</pattern>
+    <pattern>millcroft pl</pattern>
     <street>Millcroft Place</street>
   </address>
   <address>
-    <pattern>miller's place</pattern>
+    <pattern>miller's pl</pattern>
     <street>Miller's Place</street>
     <town>
       <name>Glasgow</name>
@@ -4749,7 +4719,7 @@
     <street>Millroad Street</street>
   </address>
   <address>
-    <pattern>milton place</pattern>
+    <pattern>milton pl</pattern>
     <street>Milton Place</street>
   </address>
   <address>
@@ -4759,12 +4729,6 @@
   <address>
     <pattern>milton ter</pattern>
     <street>Milton Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>minard avenue</pattern>
@@ -4778,7 +4742,7 @@
     </town>
   </address>
   <address>
-    <pattern>minard road</pattern>
+    <pattern>minard r</pattern>
     <street>Minard Road</street>
     <town>
       <name>Glasgow</name>
@@ -5233,7 +5197,7 @@
     <street>Oxford Street</street>
   </address>
   <address>
-    <pattern>paisley road</pattern>
+    <pattern>paisley r</pattern>
     <street>Paisley Road</street>
   </address>
   <address>
@@ -5253,8 +5217,12 @@
     <street>Park Lane</street>
   </address>
   <address>
-    <pattern>park place</pattern>
+    <pattern>park pl</pattern>
     <street>Park Place</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.891792 -4.341884</latlon>
+    </town>
   </address>
   <address>
     <pattern>park quadrant</pattern>
@@ -5276,15 +5244,15 @@
         <name>Kinning Park</name>
         <modern_name>Milnpark Street</modern_name>
       </area>
-      <area>
+      <!--<area>
         <name>Plantation</name>
-      </area>
+      </area>-->
     </town>
   </address>
   <address>
-    <pattern>park terrace</pattern>
+    <pattern>park ter</pattern>
     <street>Park Terrace</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Crosshill</name>
@@ -5292,18 +5260,30 @@
       <area>
         <name>Langside</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
-    <pattern>parkgrove place</pattern>
+    <pattern>parkgrove pl</pattern>
     <street>Parkgrove Place</street>
   </address>
   <address>
-    <pattern>park grove terrace</pattern>
-    <street>Park Grove Terrace</street>
+    <pattern>park grove ter</pattern>
+    <pattern>parkgrove ter</pattern>
+    <street>Parkgrove Terrace</street>
     <town>
       <name>Glasgow</name>
-      <modern_name>Tolcross Road</modern_name>
+      <area>
+        <name>Parkhead</name>
+        <modern_name>Tollcross Road</modern_name>
+      </area>
+    </town>
+  </address>
+  <address>
+    <pattern>parkhead</pattern>
+    <street>Parkhead</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.84971 -4.194374</latlon>
     </town>
   </address>
   <address>
@@ -5313,15 +5293,9 @@
   <address>
     <pattern>parkview</pattern>
     <street>Parkview</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>parliamentary road</pattern>
+    <pattern>parliamentary r</pattern>
     <street>Parliamentary Road</street>
   </address>
   <address>
@@ -5329,19 +5303,21 @@
     <street>Parson Street</street>
   </address>
   <address>
-    <pattern>partickhill road</pattern>
-    <street>Partickhill Road</street>
+    <pattern>partick</pattern>
+    <street>Partick</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
+      <latlon>55.870736 -4.312648</latlon>
     </town>
+  </address>
+  <address>
+    <pattern>partickhill r</pattern>
+    <street>Partickhill Road</street>
   </address>
   <address>
     <pattern>paterson st</pattern>
     <street>Paterson Street</street>
-    <town>
+    <!--<town>
       <name>Glasgow</name>
       <area>
         <name>Anderston</name>
@@ -5349,34 +5325,22 @@
       <area>
         <name>Kingston</name>
       </area>
-    </town>
+    </town>-->
   </address>
   <address>
     <pattern>paul st</pattern>
     <street>Paul Street</street>
   </address>
   <address>
-    <pattern>paxton terrace</pattern>
+    <pattern>paxton ter</pattern>
     <street>Paxton Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>peel st</pattern>
     <street>Peel Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>peel terrace</pattern>
+    <pattern>peel ter</pattern>
     <street>Peel Terrace</street>
   </address>
   <address>
@@ -5388,21 +5352,15 @@
     <street>Percy Street</street>
   </address>
   <address>
-    <pattern>percy terrace</pattern>
+    <pattern>percy ter</pattern>
     <street>Percy Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>perth st</pattern>
     <street>Perth Street</street>
   </address>
   <address>
-    <pattern>petershill road</pattern>
+    <pattern>petershill r</pattern>
     <street>Petershill Road</street>
   </address>
   <address>
@@ -5436,6 +5394,14 @@
   <address>
     <pattern>pollock st</pattern>
     <street>Pollock Street</street>
+  </address>
+  <address>
+    <pattern>pollockshaws</pattern>
+    <street>Pollockshaws</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.825395,-4.295139</latlon>
+    </town>
   </address>
   <address>
     <pattern>pollockshaws r</pattern>
@@ -5562,77 +5528,47 @@
     <street>Queen Arcade</street>
   </address>
   <address>
-    <pattern>queensberry terrace</pattern>
+    <pattern>queensberry ter</pattern>
     <street>Queensberry Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>queen's crescent</pattern>
+    <pattern>queen's cres</pattern>
     <street>Queen's Crescent</street>
   </address>
   <address>
-    <pattern>queen's drive</pattern>
+    <pattern>queen's dr</pattern>
     <street>Queen's Drive</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>queen mary avenue</pattern>
+    <pattern>queen mary av</pattern>
     <street>Queen Mary Avenue</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>queen mary st</pattern>
     <street>Queen Mary Street</street>
   </address>
   <address>
-    <pattern>queen's park place</pattern>
+    <pattern>queen's park pl</pattern>
     <street>Queen's Park Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Strathbungo</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>queen's park terrace</pattern>
+    <pattern>queen's park ter</pattern>
     <street>Queen's Park Terrace</street>
   </address>
   <address>
-    <pattern>queen's place</pattern>
+    <pattern>queen's pl</pattern>
     <street>Queen's Place</street>
   </address>
   <address>
-    <pattern>queen square</pattern>
+    <pattern>queen sq</pattern>
     <street>Queen Square</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Strathbungo</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>queen st</pattern>
     <street>Queen Street</street>
   </address>
   <address>
-    <pattern>queen's terrace</pattern>
+    <pattern>queen's ter</pattern>
     <street>Queen's Terrace</street>
   </address>
   <address>
@@ -5640,18 +5576,12 @@
     <street>Radnor Street</street>
   </address>
   <address>
-    <pattern>radnor terrace</pattern>
+    <pattern>radnor ter</pattern>
     <street>Radnor Terrace</street>
   </address>
   <address>
     <pattern>rae st</pattern>
     <street>Rae Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Port Dundas</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>raeberry st</pattern>
@@ -5662,48 +5592,24 @@
     <street>Raglan Street</street>
   </address>
   <address>
-    <pattern>randolph place</pattern>
+    <pattern>randolph pl</pattern>
     <street>Randolph Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Garnethill</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>randolph terrace</pattern>
+    <pattern>randolph ter</pattern>
     <street>Randolph Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Garnethill</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>ranfurly place</pattern>
+    <pattern>ranfurly pl</pattern>
     <street>Ranfurly Place</street>
   </address>
   <address>
-    <pattern>regent park square</pattern>
+    <pattern>regent park sq</pattern>
     <street>Regent Park Square</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Strathbungo</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>regent park terrace</pattern>
+    <pattern>regent park ter</pattern>
     <street>Regent Park Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Strathbungo</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>regent street lane</pattern>
@@ -5720,12 +5626,6 @@
   <address>
     <pattern>reid st</pattern>
     <street>Reid Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Bridgeton</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>reidvale st</pattern>
@@ -5740,7 +5640,7 @@
     <street>Renfield Street</street>
   </address>
   <address>
-    <pattern>renfrew court</pattern>
+    <pattern>renfrew c</pattern>
     <street>Renfrew Court</street>
   </address>
   <address>
@@ -5752,24 +5652,12 @@
     <street>Renfrew Street</street>
   </address>
   <address>
-    <pattern>renton terrace</pattern>
+    <pattern>renton ter</pattern>
     <street>Renton Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Crosshill</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>renwick st</pattern>
     <street>Renwick Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kinning Park</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>richard st</pattern>
@@ -5798,32 +5686,14 @@
   <address>
     <pattern>rockbank </pattern>
     <street>Rockbank </street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>rocklea terrace</pattern>
+    <pattern>rocklea ter</pattern>
     <street>Rocklea Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>rokeby terrace</pattern>
+    <pattern>rokeby ter</pattern>
     <street>Rokeby Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>ronald st</pattern>
@@ -5847,11 +5717,11 @@
     </town>
   </address>
   <address>
-    <pattern>roseband terrace</pattern>
+    <pattern>roseband ter</pattern>
     <street>Roseband Terrace</street>
   </address>
   <address>
-    <pattern>roseberry terrace</pattern>
+    <pattern>roseberry ter</pattern>
     <street>Roseberry Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -6291,14 +6161,8 @@
     </town>
   </address>
   <address>
-    <pattern>sardinia terrace</pattern>
+    <pattern>sardinia ter</pattern>
     <street>Sardinia Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>sauchiehall l</pattern>
@@ -6331,7 +6195,8 @@
     <town>
       <name>Glasgow</name>
       <area>
-        <name>Garnethill</name>
+        <name>Bridgeton</name>
+        <modern_name>Madras Street</modern_name>
       </area>
       <area>
         <name>Port Dundas</name>
@@ -6381,7 +6246,7 @@
     <street>Shaftesbury Street</street>
   </address>
   <address>
-    <pattern>shaftesbury terrace</pattern>
+    <pattern>shaftesbury ter</pattern>
     <street>Shaftesbury Terrace</street>
   </address>
   <address>
@@ -6389,21 +6254,23 @@
     <street>Shamrock Street</street>
   </address>
   <address>
-    <pattern>shawfield place</pattern>
+    <pattern>shawfield pl</pattern>
     <street>Shawfield Place</street>
   </address>
   <address>
-    <pattern>shields road</pattern>
-    <street>Shields Road</street>
+    <pattern>shawlands</pattern>
+    <street>Shawlands</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Pollockshields</name>
-      </area>
+      <latlon>55.83494 -4.279239</latlon>
     </town>
   </address>
   <address>
-    <pattern>shields terrace</pattern>
+    <pattern>shields r</pattern>
+    <street>Shields Road</street>
+  </address>
+  <address>
+    <pattern>shields ter</pattern>
     <street>Shields Terrace</street>
     <town>
       <name>Glasgow</name>

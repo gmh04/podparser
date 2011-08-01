@@ -4,10 +4,20 @@
 
   <replaces>
 
+    <!-- C -->
+    <replace>
+      <pattern>CoUingwood</pattern>
+      <value>Collingwood</value>
+    </replace>
+
     <!-- R -->
     <replace>
       <pattern>Eando'ph</pattern>
       <value>Randolph</value>
+    </replace>
+    <replace>
+      <pattern>Eeid</pattern>
+      <value>Reid</value>
     </replace>
     <replace>
       <pattern>Eobert</pattern>

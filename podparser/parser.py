@@ -98,7 +98,6 @@ class Parser:
             return None
 
         if self.db:
-            #self.db.set_directory(self.dir_path)
             self.db.set_directory(self.directory, self.commit)
 
         # create checker object
@@ -449,7 +448,7 @@ def run_parser():
 
     if args.config:
         if os.path.isdir(args.config[0]):
-            config_dir = args.config
+            config_dir = args.config[0]
         else:
             print '*** Invalid config directory ***'
             print arg_parser.print_help()
