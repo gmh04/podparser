@@ -24,6 +24,10 @@
       <value>Bothwell</value>
     </replace>
     <replace>
+      <pattern>Bothwell</pattern>
+      <value>Bothwell</value>
+    </replace>
+    <replace>
       <pattern>Brifio</pattern>
       <value>Bristo</value>
     </replace>
@@ -112,10 +116,13 @@
       <value>Dixon st</value>
     </replace>
     <replace>
+      <pattern>Dulte </pattern>
+      <value>Duke </value>
+    </replace>
+    <replace>
       <pattern>Dnndas</pattern>
       <value>Dundas</value>
     </replace>
-
 
     <!-- E -->
     <replace>
@@ -123,9 +130,18 @@
       <value>Eglinton</value>
     </replace>
     <replace>
+      <pattern>Eglintonst</pattern>
+      <value>Eglinton st</value>
+    </replace>
+    <replace>
       <pattern>Elackfriars</pattern>
       <value>Blackfriars</value>
     </replace>
+    <replace>
+      <pattern>Ehnbank</pattern>
+      <value>Elmbank</value>
+    </replace>
+
 
     <!-- F -->
     <replace>
@@ -247,6 +263,10 @@
     <replace>
       <pattern>Kelvinhangh</pattern>
       <value>Kelvinhaugh</value>
+    </replace>
+    <replace>
+      <pattern>Kelvingi'ove</pattern>
+      <value>Kelvingrove</value>
     </replace>
     <replace>
       <pattern>Kelviuside</pattern>
@@ -380,6 +400,10 @@
       <value> Royal</value>
     </replace>
     <replace>
+      <pattern>Eupert </pattern>
+      <value>Rupert </value>
+    </replace>
+    <replace>
       <pattern> Eutherglen</pattern>
       <value> Rutherglen</value>
     </replace>
@@ -429,16 +453,20 @@
       <pattern>StMing</pattern>
       <value>Stirling</value>
     </replace>
-
-
-    <!-- T -->
-    <replace>
-      <pattern>Thiftle</pattern>
-      <value>Thistle</value>
-    </replace>
     <replace>
       <pattern>tlreet</pattern>
       <value>street</value>
+    </replace>
+
+    <!-- T -->
+    <replace>
+      <pattern>ten-ace</pattern>
+      <value>terrace</value>
+    </replace>
+
+    <replace>
+      <pattern>Thiftle</pattern>
+      <value>Thistle</value>
     </replace>
 
     <!-- V -->
@@ -446,6 +474,11 @@
       <pattern>v/ynd</pattern>
       <value>wynd</value>
     </replace>
+    <replace>
+      <pattern>Virginia pi</pattern>
+      <value>Virginia pl</value>
+    </replace>
+
 
     <!-- W -->
     <replace>

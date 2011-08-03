@@ -7,6 +7,7 @@ Abercorn Street
 Abington street
 Afton Crescent
 Airlie ter., Pollokshields
+Albany Terrace
 Albert St., Pollockshields
 Albion crescent
 Alexandra parade (NUM)
@@ -16,6 +17,7 @@ Ann St (AMB)
 Annfield terrace, Partick
 Apsley Place (Warwick Street)
 Argyle Arcade
+Argyle place, Springburn
 Argyle Terrace, Crosshill
 Ashfield pl
 Ashfield terrace
@@ -23,10 +25,12 @@ Ashgrove terrace
 Ashton Terrace
 Athole terrace, Govanhill
 Avon St
+Avondale place
 
 Ballochmyle terrace, Kelvinside
 Bath crescent
 Battlefield crescent, Langside
+Beaconsfield st., Partick
 Beaufort Gardens, Govanhill
 Belhaven Terrace (NUM)
 Bellahouston ter
@@ -53,6 +57,7 @@ Bute terrace, Strathbungo
 
 Camden street
 Canning Street (AMB)
+Canon street
 Carlton ter.. North Woodside
 Caprera place
 Castle Street (NUM)
@@ -62,6 +67,8 @@ Cathcart street, Kinning park
 Cathcart street, Rutherglen
 Catherine St (AMB)
 Catherine street, north
+Clarinda terrace, Polloksbields
+Claythorn street (NUM)
 Cockmuir, Springburn
 Charlotte lane
 Chatham place
@@ -98,6 +105,7 @@ Fish Market
 Fisher st
 Fisher St, Dennistoun
 Fitzroy Place
+Florentine place, Hillhead
 Franklin Terrace
 Frederick Lane
 
@@ -117,6 +125,7 @@ Grafton street
 Grafton terrace
 Granby ter
 Grange Terrace
+Granville Buildings
 Granville place
 Greenhead terrace
 Greenhill street
@@ -263,12 +272,14 @@ Stewartville Place
 Stirling Road (NUM)
 Stonefield Terrace
 Struan terrace, Crosshill.
+Sydney Place
 
 Taylor St (NUM)
 Titwood place, Strathbungo
 Tollcross
 Tennent street
 Tureen street, Calton
+Turner street
 Tylefield street
 
 Ure Place
@@ -279,8 +290,10 @@ Victoria St., Hillhead
 Victoria terrace, Dowanhill
 Viewfield Place, Pollokshields
 Viewfield ter., Pollokshield
+Villiers street
 
 Walworth Terrace
+Warwick street
 Water st., Port-Dundas
 Well st
 Wellpark pl
@@ -296,6 +309,7 @@ W(est) Howard street
 Westbank pl, Hillhead
 Westbourne terrace, Hillhead
 Westbourne terrace Kelvinside
+Westfield lane, Crcssmyloof
 Westminster terrace
 Whitfield place, Govan
 Wigton Street

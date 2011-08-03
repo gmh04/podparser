@@ -12,6 +12,10 @@
 
     <!-- R -->
     <replace>
+      <pattern>Eailway</pattern>
+      <value>Railway</value>
+    </replace>
+    <replace>
       <pattern>Eando'ph</pattern>
       <value>Randolph</value>
     </replace>
