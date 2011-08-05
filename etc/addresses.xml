@@ -468,6 +468,11 @@
       <pattern>Thiftle</pattern>
       <value>Thistle</value>
     </replace>
+    <replace>
+      <pattern>ToUcross</pattern>
+      <value>Tollcross</value>
+    </replace>
+
 
     <!-- V -->
     <replace>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- glasgow source for changed street names: http://www.glasgowguide.co.uk/info-streetschanged1.html -->
+<!-- glasgow source for changed street names:
+
+http://www.glasgowguide.co.uk/info-streetschanged1.html and
+A guide a Glasgow Addresses Part II 1826 - 1950, Susan Millay
+
+ -->
 
 <addresses>
   <address>
@@ -156,12 +161,18 @@
     <street>Albert Street</street>
     <town>
       <name>Glasgow</name>
+      <modern_name>Albert Road</modern_name>
+      <area>
+        <name>Govan</name>
+        <modern_name>Orkney Street</modern_name>
+      </area>
+      <area>
+        <name>Kelvinside</name>
+        <modern_name>Beaumont Gate</modern_name>
+      </area>
       <area>
         <name>Townhead</name>
         <modern_name>McAslin Street</modern_name>
-      </area>
-      <area>
-        <name>Pollockshields</name>
       </area>
     </town>
   </address>
@@ -344,6 +355,13 @@
   <address>
     <pattern>annfield ter</pattern>
     <street>Annfield Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <area>
+        <name>Partick</name>
+        <modern_name>Minard Road</modern_name>
+      </area>
+    </town>
   </address>
   <address>
     <pattern>apsley pl</pattern>
@@ -1091,7 +1109,7 @@
     </town>
   </address>
   <address>
-    <pattern>buckingham terrace</pattern>
+    <pattern>buckingham ter</pattern>
     <street>Buckingham Terrace</street>
     <town>
       <name>Glasgow</name>
@@ -1112,7 +1130,7 @@
     <street>Burnbank Gardens</street>
   </address>
   <address>
-    <pattern>burnbank place</pattern>
+    <pattern>burnbank pl</pattern>
     <street>Burnbank Place</street>
   </address>
   <address>
@@ -1424,21 +1442,13 @@
   <address>
     <pattern>cathkin r</pattern>
     <street>Cathkin Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>cathkin terrace</pattern>
+    <pattern>cathkin ter</pattern>
     <street>Cathkin Terrace</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
+      <modern_name>Stanmore Road</modern_name>
     </town>
   </address>
   <address>
@@ -1452,12 +1462,6 @@
   <address>
     <pattern>cecil st</pattern>
     <street>Cecil Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Hillhead</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>cedar st</pattern>
@@ -1817,9 +1821,6 @@
         <name>Port Dundas</name>
         <modern_name>Townsend Street</modern_name>
       </area>
-      <!--<area>
-        <name>Partick</name>
-      </area>-->
       <area>
         <name>Port Eglinton</name>
         <modern_name>Kilbirnie Street</modern_name>
@@ -2641,6 +2642,10 @@
   <address>
     <pattern>garngad hill</pattern>
     <street>Garngad Hill</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Roystonhill</modern_name>
+    </town>
   </address>
   <address>
     <pattern>garngad road</pattern>
@@ -3266,11 +3271,15 @@
     <street>Hillhead Street</street>
   </address>
   <address>
-    <pattern>hillsborough square</pattern>
+    <pattern>hillsborough sq</pattern>
     <street>Hillsborough Square</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Hillhead Street</modern_name>
+    </town>
   </address>
   <address>
-    <pattern>hillsborough terrace</pattern>
+    <pattern>hillsborough ter</pattern>
     <street>Hillsborough Terrace</street>
   </address>
   <address>
@@ -3286,15 +3295,19 @@
     </town>
   </address>
   <address>
-    <pattern>hilton terrace</pattern>
+    <pattern>hilton ter</pattern>
     <street>Hilton Terrace</street>
   </address>
   <address>
-    <pattern>holborn terrace</pattern>
+    <pattern>holborn ter</pattern>
     <street>Holborn Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Montgomery Street</modern_name>
+    </town>
   </address>
   <address>
-    <pattern>holland place</pattern>
+    <pattern>holland pl</pattern>
     <street>Holland Place</street>
   </address>
   <address>
@@ -3347,12 +3360,6 @@
   <address>
     <pattern>horselethill road</pattern>
     <street>Horselethill Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hospital st</pattern>
@@ -3369,33 +3376,25 @@
   <address>
     <pattern>howard st</pattern>
     <street>Howard Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Bridgeton</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hunter st</pattern>
     <street>Hunter Street</street>
   </address>
   <address>
-    <pattern>hunter terrace</pattern>
+    <pattern>hunter ter</pattern>
     <street>Hunter Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Kent Road</modern_name>
+    </town>
   </address>
   <address>
     <pattern>huntly gardens</pattern>
     <street>Huntly Gardens</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>hutcheson square</pattern>
+    <pattern>hutcheson sq</pattern>
     <street>Hutcheson Square</street>
   </address>
   <address>
@@ -3407,24 +3406,12 @@
     <street>Hydepark Street</street>
   </address>
   <address>
-    <pattern>hyndland road</pattern>
+    <pattern>hyndland r</pattern>
     <street>Hyndland Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>hyndland st</pattern>
     <street>Hyndland Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>ibrox pl</pattern>
@@ -3433,15 +3420,9 @@
   <address>
     <pattern>india st</pattern>
     <street>India Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>ingleby drive</pattern>
+    <pattern>ingleby dr</pattern>
     <street>Ingleby Drive</street>
   </address>
   <address>
@@ -3449,7 +3430,7 @@
     <street>Inglefield Street</street>
   </address>
   <address>
-    <pattern>inglefield terrace</pattern>
+    <pattern>inglefield ter</pattern>
     <street>Inglefield Terrace</street>
   </address>
   <address>
@@ -3461,21 +3442,15 @@
     <street>Ingram Street</street>
   </address>
   <address>
-    <pattern>iona place</pattern>
+    <pattern>iona pl</pattern>
     <street>Iona Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>jackson st</pattern>
     <street>Jackson Street</street>
   </address>
   <address>
-    <pattern>jail square</pattern>
+    <pattern>jail sq</pattern>
     <street>Jail Square</street>
     <town>
       <name>Glasgow</name>
@@ -4274,14 +4249,8 @@
     </town>
   </address>
   <address>
-    <pattern>maitland place</pattern>
+    <pattern>maitland pl</pattern>
     <street>Maitland Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>marlborough st</pattern>
@@ -4292,76 +4261,48 @@
     </town>
   </address>
   <address>
-    <pattern>mallsmire place</pattern>
+    <pattern>mallsmire pl</pattern>
     <street>Mallsmire Place</street>
+  </address>
+  <address>
+    <pattern>malvern pl</pattern>
+    <street>Malvem Place</street>
     <town>
       <name>Glasgow</name>
-      <area>
-        <name>Mount Florida</name>
-      </area>
+      <modern_name>Comelypark Street</modern_name>
     </town>
   </address>
   <address>
-    <pattern>mansfield place</pattern>
+    <pattern>mansfield pl</pattern>
     <street>Mansfield Place</street>
   </address>
   <address>
     <pattern>mansfield st</pattern>
     <street>Mansfield Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Partick</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>mansion house road</pattern>
+    <pattern>mansion house r</pattern>
     <street>Mansion House Road</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Langside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>mansion st</pattern>
     <street>Mansion Street</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Possilpark</name>
-      </area>
-    </town>
   </address>
   <address>
-    <pattern>marchmont terrace</pattern>
+    <pattern>marchmont ter</pattern>
     <street>Marchmont Terrace</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Kelvinside</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>margaret st</pattern>
     <street>Margaret Street</street>
-    <!--<town>
+    <town>
       <name>Glasgow</name>
       <modern_name>Peebles Street</modern_name>
-    </town>-->
+    </town>
   </address>
   <address>
     <pattern>marjory place</pattern>
     <street>Marjory Place</street>
-    <town>
-      <name>Glasgow</name>
-      <area>
-        <name>Pollockshields</name>
-      </area>
-    </town>
   </address>
   <address>
     <pattern>market st</pattern>
@@ -4966,6 +4907,10 @@
   <address>
     <pattern>newton ter</pattern>
     <street>Newton Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Sauchiehall Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>new wynd</pattern>
@@ -5041,11 +4986,15 @@
     </town>
   </address>
   <address>
+    <pattern>north wallace st</pattern>
+    <street>North Wallace Street</street>
+  </address>
+  <address>
     <pattern>north woodside road</pattern>
     <street>North Woodside Road</street>
   </address>
   <address>
-    <pattern>norwood terrace</pattern>
+    <pattern>norwood ter</pattern>
     <street>Norwood Terrace</street>
   </address>
   <address>
@@ -5217,6 +5166,14 @@
     </town>
   </address>
   <address>
+    <pattern>park street, east</pattern>
+    <street>Park Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Park Circus</modern_name>
+    </town>
+  </address>
+  <address>
     <pattern>park ter</pattern>
     <street>Park Terrace</street>
     <!--<town>
@@ -5309,6 +5266,10 @@
   <address>
     <pattern>peel ter</pattern>
     <street>Peel Terrace</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Hill Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>pembroke st</pattern>
@@ -5362,6 +5323,10 @@
     <pattern>pollock st</pattern>
     <pattern>pollok st</pattern>
     <street>Pollock Street</street>
+    <town>
+      <name>Glasgow</name>
+      <modern_name>Kelso Street</modern_name>
+    </town>
   </address>
   <address>
     <pattern>pollockshaws</pattern>
