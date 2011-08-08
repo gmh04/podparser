@@ -108,6 +108,10 @@
       <value>Dalmarnock</value>
     </replace>
     <replace>
+      <pattern>Dalmamock</pattern>
+      <value>Dalmarnock</value>
+    </replace>
+    <replace>
       <pattern> diive</pattern>
       <value> drive</value>
     </replace>

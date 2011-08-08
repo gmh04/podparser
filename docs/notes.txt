@@ -3,7 +3,7 @@
 # NUM use with number returns bad result (to do with providing numbers greater than current highest number)
 
 Adelphi Terrace
-Abercorn Street
+Abercorn Street (*)
 Abington street
 Afton Crescent
 Airlie ter., Pollokshields
@@ -13,7 +13,7 @@ Albion crescent
 Alexandra parade (NUM)
 Allanton terrace, Govanhill
 Anderson Quay
-Ann St (AMB)
+Ann St (AMB) (*)
 Annfield terrace, Partick
 Apsley Place (Warwick Street)
 Argyle Arcade
@@ -76,6 +76,7 @@ Chatham place
 Comely Park place
 Coustonholm, Pollokshaws
 Craignestock Place
+Craignestock Street (*)
 Crookston hall
 Cubie street. Mile-end
 Cumberland Lane
@@ -179,7 +180,7 @@ Lyon street
 
 Main street, Anderston
 Mallsmire Place
-Mansfield place
+Mansfield place 
 Margaret Street (* Peebles St *)
 Marquis street, Bridgeton
 Morrison Street (NUM)
@@ -217,7 +218,7 @@ Princes Square
 
 Queen Mary place (*)
 Queen's drive, Crosshill.
-Queen's square, Strathbungo
+Queen's square, Strathbungo (*)
 Queen's terrace
 
 Radnor terrace
@@ -248,7 +249,7 @@ Sandyford place
 Sardinia terrace, Hillhead
 Scarlow st. , Port Glasgow
 Schipka pass
-Scotia Street
+Scotia Street (*)
 Sedan place
 Shaftesbury terrace
 Shinir bank, Crosshill
@@ -268,7 +269,7 @@ St Mungo street
 St Ninian st
 St Vincent crescent (NUM)
 St. Vine. pi (*)
-Stanhope street
+Stanhope street (*)
 Steven street
 Stevenson drive, Crossmyloof
 Stewart street
@@ -311,6 +312,7 @@ West Bank, Hillhead
 West Bank place, Hillhead.
 West Graham Street
 W(est) Howard street
+West Russell street (*)
 Westbank pl, Hillhead
 Westbourne terrace, Hillhead
 Westbourne terrace Kelvinside
@@ -318,7 +320,7 @@ Westfield lane, Crcssmyloof
 Westminster terrace
 Whitfield place, Govan
 Wigton Street
-Wilton Crescent
+Wilton Crescent (*)
 Wilton Terrace
 Windsor terrace (NUM)
 Winton street, Crosshill
