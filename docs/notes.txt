@@ -22,7 +22,7 @@ Argyle Terrace, Crosshill
 Ashfield pl
 Ashfield terrace
 Ashgrove terrace
-Ashton Terrace
+Ashton Terrace (*)
 Athole terrace, Govanhill
 Avon St
 Avondale place
@@ -118,7 +118,7 @@ Garngad rd
 Garscadden Street
 George Square
 Germiston st
-Glebe street
+Glebe street (*)
 Glenavon terrace, Partick
 Govan st
 Govan View terrace, Govanhill
@@ -157,8 +157,9 @@ Hutcheson square
 Ibrox Place
 Iona place, Mount Florida
 
-Jackson St
+Jackson St (*)
 Jane Place
+James St, Calton (*)
 
 Kelburn terrace, Govanhill
 Kelvin bank ter., Kelvinside
@@ -180,7 +181,7 @@ Lyon street
 
 Main street, Anderston
 Mallsmire Place
-Mansfield place 
+Mansfield place
 Margaret Street (* Peebles St *)
 Marquis street, Bridgeton
 Morrison Street (NUM)
@@ -201,6 +202,7 @@ Nelson terrace
 Newgate street
 Northpark ter, Hillhead
 North Ure place
+Norwood terrace, Hillhead (*)
 
 Oakfield terrace, Hillhead.
 Oswald pl.,Whiteinch
@@ -210,11 +212,13 @@ Park View terrace, Hillhead
 Parliamentary Road
 Partick hill
 Peebles st
+Pine st (*)
 Plantation st
 Pollok street
 Port st, Anderston (*)
 Prince of Wales Terrace
 Princes Square
+Prince's Terrace (*)
 
 Queen Mary place (*)
 Queen's drive, Crosshill.
@@ -239,7 +243,7 @@ Royal arcade
 Royal Exchange
 Royal Exchange place
 Royal terrace (NUM)
-Rutherglen Loan
+Rutherglen Loan (*)
 Rutherglen Road (NUM 55.838346, -4.231603)
 
 Salisbury ter Hillhead
@@ -283,7 +287,7 @@ Sydney Place
 Taylor St (NUM)
 Titwood place, Strathbungo
 Tollcross
-Tennent street
+Tennent street (*)
 Tureen street, Calton
 Turner street
 Tylefield street
@@ -318,6 +322,7 @@ Westbourne terrace, Hillhead
 Westbourne terrace Kelvinside
 Westfield lane, Crcssmyloof
 Westminster terrace
+Whitevale (*)
 Whitfield place, Govan
 Wigton Street
 Wilton Crescent (*)

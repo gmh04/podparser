@@ -20,11 +20,15 @@
 
     <!-- B -->
     <replace>
+      <pattern>Bellgi-ove</pattern>
+      <value>Bellgrove</value>
+    </replace>
+    <replace>
       <pattern>Botbwell</pattern>
       <value>Bothwell</value>
     </replace>
     <replace>
-      <pattern>Bothwell</pattern>
+      <pattern>BothweU</pattern>
       <value>Bothwell</value>
     </replace>
     <replace>
@@ -181,6 +185,10 @@
       <value>square</value>
     </replace>
     <replace>
+      <pattern>Eraser st</pattern>
+      <value>Fraser St</value>
+    </replace>
+    <replace>
       <pattern>ftables</pattern>
       <value>stables</value>
     </replace>
@@ -325,6 +333,10 @@
       <value> Main st</value>
     </replace>
     <replace>
+      <pattern>McAshn</pattern>
+      <value>McAslin</value>
+    </replace>
+    <replace>
       <pattern>McLcan</pattern>
       <value>McLean</value>
     </replace>
@@ -345,10 +357,9 @@
       <value>Paterson</value>
     </replace>
     <replace>
-      <pattern>PoUokshaws</pattern>
-      <value>Pollokshaws</value>
+      <pattern>PoUok</pattern>
+      <value>Pollok</value>
     </replace>
-
     <replace>
       <pattern>Pleafancc</pattern>
       <value>Pleasance</value>
@@ -467,7 +478,10 @@
       <pattern>ten-ace</pattern>
       <value>terrace</value>
     </replace>
-
+    <replace>
+      <pattern>teiTace</pattern>
+      <value>terrace</value>
+    </replace>
     <replace>
       <pattern>Thiftle</pattern>
       <value>Thistle</value>

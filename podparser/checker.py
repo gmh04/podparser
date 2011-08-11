@@ -253,7 +253,7 @@ class EntryChecker():
             # don't process address if:
             # its a number
             # it contains the string ' do.' (or dito)
-            if addr.isalnum() or addr.find(' do.') != -1:
+            if addr.isdigit() or addr.find(' do.') != -1:
                 continue
 
             # encode address using derived address
