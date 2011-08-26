@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT>
+  <LINE>Smith, Bob, baker, 1 Albert Road</LINE>
+  <LINE>Smith, Bill, baker, 2 Argyle Street</LINE>
+  <LINE>Smith, Tom, baker, 3 Rosslyn Terrace</LINE>
+  <LINE>Smith, Jack, baker, 4 Smith St</LINE>
+  <LINE>Smith, Jerry, baker, 4 xyz St</LINE>
+</OBJECT>

@@ -60,4 +60,4 @@ def release():
     upload_docs()
 
     # create new tag
-    local('git tag -a %s' % podparser.get_version())
+    local('git tag -a %s -m "release version %s"' % (podparser.get_version(), podparser.get_version()))

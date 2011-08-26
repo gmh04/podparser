@@ -60,6 +60,34 @@ class MiscTest(unittest.TestCase):
         entry = d.pages[0].entries[0]
         self.assertEquals(1, len(entry.locations))
 
+    def test_exact(self):
+        # test that the exact tag is correctly assigned
+        path = '%s%c%s' % (self.test_resources_dir, os.sep, 'exact_test')
+
+        p = Parser(config=path, dir_path=path)
+        d = p.run_parser()
+        page = d.pages[0]
+
+        bob = page.entries[0]
+        self.assertEquals(bob.forename, 'Bob')
+        self.assertEquals(bob.locations[0].exact, True)
+
+        bill = page.entries[1]
+        self.assertEquals(bill.forename, 'Bill')
+        self.assertEquals(bill.locations[0].exact, True)
+
+        tom = page.entries[2]
+        self.assertEquals(tom.forename, 'Tom')
+        self.assertEquals(tom.locations[0].exact, True)
+
+        jack = page.entries[3]
+        self.assertEquals(jack.forename, 'Jack')
+        self.assertEquals(jack.locations[0].exact, True)
+
+        jerry = page.entries[4]
+        self.assertEquals(jerry.forename, 'Jerry')
+        self.assertEquals(jerry.locations[0].exact, False)
+
 class StringReplaceTest(unittest.TestCase):
     def setUp(self):
         self.replace_test_dir = '%s%c%s' % (get_resource_dir(),

@@ -339,6 +339,7 @@ class EntryChecker():
                                                'lng': lon},
                                         accuracy='GEOMETRIC_CENTER')
                     location.type = 'explicit'
+                    location.exact = True
                 except Exception as e:
                     print '*** Error invalid latlon: %s: %s' % (points, e)
             else:

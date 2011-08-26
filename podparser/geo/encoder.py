@@ -30,6 +30,9 @@ class Google(object):
 
         url = self._get_url()
 
+        if self.verbose:
+            print url
+
         try:
             f = urllib.urlopen(url)
             output = f.read()
@@ -74,7 +77,6 @@ class Google(object):
                         result['status'] == "INVALID_REQUEST":
                     print 'Fetch rejected: %s' % result['status']
                     print url
-        #except ValueError as e:
         except Exception as e:
             # can happen if URL is too large or if
             # connection problems with google

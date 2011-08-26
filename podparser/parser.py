@@ -347,8 +347,6 @@ def read_page(directory, page):
     profession_per    = float(profession)      / good_entries * 100
     no_category_per   = float(no_category)     / good_entries * 100
 
-    #exact_geo_per = 0 if exact_locations == 0
-    #else float(exact_locations) / total_locations * 100
     if exact_locations == 0:
         exact_geo_per = 0
     else:
