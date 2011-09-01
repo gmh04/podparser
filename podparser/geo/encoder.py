@@ -138,7 +138,7 @@ class GooglePremium(Google):
         return '%s&signature=%s' % (originalUrl, encodedSignature)
 
 
-class Location():
+class Location(object):
     """
     Stores location information related to an address
     """
@@ -232,7 +232,7 @@ class Location():
             #print s_addr
             #print g_addr
 
-            # if street returned buy google starts or ends with a single
+            # if street returned by google starts or ends with a single
             # character (e.g N, E, S or W) remove it
             if re.match('\w ', g_addr):
                 g_addr = g_addr[2: len(g_addr)]
