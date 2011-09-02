@@ -90,7 +90,7 @@ class EntryChecker():
                     modern_name = None
                     latlon      = None
 
-                    for c in town_nodes[0].childNodes:
+                    for c in town_node.childNodes:
                         if c.nodeName == 'name':
                             name = c.firstChild.nodeValue
                         elif c.nodeName == 'modern_name':
@@ -125,7 +125,7 @@ class EntryChecker():
                                     if ll_node:
                                         town['areas'][area_name]['latlon'] = \
                                             ll_node[0].firstChild.nodeValue
-                    break
+                        break
 
                 for patternNode in patterns:
                     pattern = patternNode.firstChild.nodeValue

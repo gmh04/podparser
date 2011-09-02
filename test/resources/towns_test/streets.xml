@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addresses>
+
+  <address>
+    <pattern>smith st</pattern>
+    <street>Smith Street</street>
+    <town>
+      <name>Edinburgh</name>
+      <latlon>55.123456 -2.123456</latlon>
+    </town>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.123456 -3.123456</latlon>
+    </town>
+  </address>
+
+</addresses>

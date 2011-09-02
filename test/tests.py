@@ -88,6 +88,19 @@ class MiscTest(unittest.TestCase):
         self.assertEquals(jerry.forename, 'Jerry')
         self.assertEquals(jerry.locations[0].exact, False)
 
+    def test_multiple_towns(self):
+        # test multiple towns defined in the address tag
+        path = '%s%c%s' % (self.test_resources_dir, os.sep, 'towns_test')
+
+        p = Parser(config=path, dir_path=path)
+        d = p.run_parser()
+        page = d.pages[0]
+
+        location = page.entries[0].locations[0]
+        self.assertEquals(location.type, 'explicit')
+        self.assertEquals(location.point['lng'], 55.123456)
+        self.assertEquals(location.point['lat'], -3.123456)
+
 class StringReplaceTest(unittest.TestCase):
     def setUp(self):
         self.replace_test_dir = '%s%c%s' % (get_resource_dir(),
