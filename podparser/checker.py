@@ -171,8 +171,8 @@ class EntryChecker():
 
         # forename / surname name replaces
         for name in self.names:
-            if entry.surname.find(name) != -1:
-                entry.surname = entry.surname.replace(name, self.names[name])
+            # only so forename here as surname
+            # should be done as part of line fixing
             if entry.forename.find(name) != -1:
                 entry.forename = self.names[name]
 
@@ -211,7 +211,7 @@ class EntryChecker():
 
     def clean_up_global(self, line):
         """
-        TODO
+        Fix global OCR problems
         """
 
         for replace in self.globals:
@@ -225,9 +225,24 @@ class EntryChecker():
 
         return line
 
+    def clean_up_surname(self, line):
+        """
+        Clean first column of raw pod entry
+        """
+
+        idx = line.find(',')
+        first_col = line[0: idx]
+
+        for name in self.names:
+            if name in first_col:
+                line = ''.join((first_col.replace(name, self.names[name]),
+                                line[idx:]))
+
+        return line
+
     def geo_encode(self, encoder, entry):
         """
-        TODO
+        Create geo loactions for an entry
         """
 
         entry.locations = []
@@ -241,7 +256,7 @@ class EntryChecker():
 
         # process multiple addresses divided by ' and '
         for addr in addrs:
-            if addr.find(' and '):
+            if ' and ' in addr:
                 more = addr.split(' and ')
                 addrs.remove(addr)
                 for a in more:

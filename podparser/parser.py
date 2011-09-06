@@ -112,7 +112,8 @@ class Parser:
 
             print '\nParsing %s ' % page.path
 
-            lines = self._fix_line_returns(self._parse_page(page))
+            lines = self._fix_line_returns(self._parse_page(page,
+                                                            entry_checker))
 
             if self.verbose:
                 self._print_page(lines)
@@ -182,7 +183,7 @@ class Parser:
             self.directory.pages.append(
                 directory.Page(path, get_page_from_file(path)))
 
-    def _parse_page(self, page):
+    def _parse_page(self, page, checker):
         entries = []
 
         # parse POD page
@@ -192,7 +193,10 @@ class Parser:
 
         for line in lines:
             if line.firstChild:
-                entries.append(line.firstChild.nodeValue)
+                # need to do surname replace on the raw line
+                line = checker.clean_up_surname(line.firstChild.nodeValue)
+
+                entries.append(line)
 
         return entries
 
@@ -229,10 +233,12 @@ class Parser:
         current_alpha = None
 
         for entry in lines:
+
             if current_alpha is None:
                 # if the first character is a character and uppercase and entry
                 # contains a comma, then it looks like the first real entry
-                if entry[0].isalpha() and entry[0].istitle() and \
+                if entry[0].isalpha() and \
+                        entry[0].istitle() and \
                         len(entry.split(',')) > 2 and \
                         abs(ord(entry[0]) - ord(top_char)) < 2:
                     current_alpha = entry[0]

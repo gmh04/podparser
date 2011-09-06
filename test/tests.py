@@ -98,8 +98,8 @@ class MiscTest(unittest.TestCase):
 
         location = page.entries[0].locations[0]
         self.assertEquals(location.type, 'explicit')
-        self.assertEquals(location.point['lng'], 55.123456)
-        self.assertEquals(location.point['lat'], -3.123456)
+        self.assertEquals(location.point['lat'], 55.123456)
+        self.assertEquals(location.point['lng'], -3.123456)
 
 class StringReplaceTest(unittest.TestCase):
     def setUp(self):
@@ -249,6 +249,17 @@ class LineWrapping(unittest.TestCase):
         self.assertEquals(res[2], 'Aname, fname, pro, 1 Argyll St and 2 Argyll St.')
         self.assertEquals(res[3], 'Aname, fname, pro, 21 Argyll St')
 
+    def test_multiple_ocr_surnames_errors(self):
+        path = os.sep.join((get_resource_dir(), 'surname_ocr_error_test'))
+
+        p = Parser(config=path, dir_path=path, verbose=True)
+        d = p.run_parser()
+        page = d.pages[0]
+
+        self.assertEquals(page.entries[0].surname, 'Robertson')
+        self.assertEquals(page.entries[1].surname, 'Robertson')
+        self.assertEquals(page.entries[2].surname, 'Robertson')
+
 class DbTest(unittest.TestCase):
 
     def setUp(self):
@@ -318,25 +329,26 @@ class DbTest(unittest.TestCase):
         cur.execute(sql, data)
         rows = cur.fetchall()
 
-        self.assertEquals('10 Albert Road, Glasgow, Scotland',  rows[0][0])
+
+        self.assertEquals('100 Rosslyn Terrace, Glasgow, Scotland',  rows[0][0])
         self.assertEquals(4,                                    rows[0][1])
         self.assertEquals('derived',                            rows[0][2])
         self.assertEquals('parser',                             rows[0][3])
-        dt = rows[0][4]
+        dt = rows[1][4]
         self.assertTrue(dt > then.replace(tzinfo=dt.tzinfo) and dt < datetime.now(tz=dt.tzinfo))
         self.assertEquals(True,                             rows[0][5])
         self.assertEquals(True,                             rows[0][6])
-        self.assertEquals('POINT(-4.2650211 55.8345335)',   rows[0][7])
+        self.assertEquals('POINT(-4.2979506 55.8794522)',   rows[0][7])
 
-        self.assertEquals('100 Rosslyn Terrace, Glasgow, Scotland',  rows[1][0])
+        self.assertEquals('10 Albert Road, Glasgow, Scotland',  rows[1][0])
         self.assertEquals(4,                                    rows[1][1])
         self.assertEquals('derived',                            rows[1][2])
         self.assertEquals('parser',                             rows[1][3])
-        dt = rows[1][4]
+        dt = rows[0][4]
         self.assertTrue(dt > then.replace(tzinfo=dt.tzinfo) and dt < datetime.now(tz=dt.tzinfo))
         self.assertEquals(True,                             rows[1][5])
         self.assertEquals(True,                             rows[1][6])
-        self.assertEquals('POINT(-4.2979506 55.8794522)',   rows[1][7])
+        self.assertEquals('POINT(-4.2650211 55.8345335)',   rows[1][7])
 
     def tearDown(self):
         self.db._delete_directory(self.directory)
