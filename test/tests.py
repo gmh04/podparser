@@ -322,7 +322,7 @@ class DbTest(unittest.TestCase):
 
         cur = self.db.conn.cursor()
         sql = """
-                SELECT address, accuracy, type, userid_mod, date_mod, current, exact, ST_AsText(geom)
+                SELECT address, accuracy, type, userid_mod, date_mod, current, exact, ST_AsText(geom), position
                 FROM location WHERE entry_id = %s
                 """
         data = (entry_id,)
@@ -331,14 +331,15 @@ class DbTest(unittest.TestCase):
 
 
         self.assertEquals('100 Rosslyn Terrace, Glasgow, Scotland',  rows[0][0])
-        self.assertEquals(4,                                    rows[0][1])
-        self.assertEquals('derived',                            rows[0][2])
-        self.assertEquals('parser',                             rows[0][3])
+        self.assertEquals(4,                                         rows[0][1])
+        self.assertEquals('derived',                                 rows[0][2])
+        self.assertEquals('parser',                                  rows[0][3])
         dt = rows[1][4]
         self.assertTrue(dt > then.replace(tzinfo=dt.tzinfo) and dt < datetime.now(tz=dt.tzinfo))
         self.assertEquals(True,                             rows[0][5])
         self.assertEquals(True,                             rows[0][6])
         self.assertEquals('POINT(-4.2979506 55.8794522)',   rows[0][7])
+        self.assertEquals(1,                                rows[0][8])
 
         self.assertEquals('10 Albert Road, Glasgow, Scotland',  rows[1][0])
         self.assertEquals(4,                                    rows[1][1])
@@ -349,6 +350,7 @@ class DbTest(unittest.TestCase):
         self.assertEquals(True,                             rows[1][5])
         self.assertEquals(True,                             rows[1][6])
         self.assertEquals('POINT(-4.2650211 55.8345335)',   rows[1][7])
+        self.assertEquals(2,                                rows[1][8])
 
     def tearDown(self):
         self.db._delete_directory(self.directory)

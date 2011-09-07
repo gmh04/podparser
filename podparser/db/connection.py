@@ -112,12 +112,13 @@ class PodConnection(object):
                 # insert each location for a given entry
                 sql = """
                       INSERT INTO location(entry_id, address, accuracy, type,
-                                           userid_mod, current, geom, exact)
+                                           userid_mod, current, geom, exact,
+                                           position)
                          VALUES (%s, %s,
                                  (SELECT id
                                   FROM location_accuracy where name = %s),
                                  %s, %s, %s,
-                                 ST_GeomFromText('POINT(%s %s)', 4326), %s)
+                                 ST_GeomFromText('POINT(%s %s)', 4326), %s, %s)
                       """
                 data = (entry_id,
                         location.address,
@@ -127,7 +128,10 @@ class PodConnection(object):
                         True,
                         location.point['lng'],
                         location.point['lat'],
-                        location.exact)
+                        location.exact,
+
+                        # position is the index of the location plus 1
+                        entry.locations.index(location) + 1)
                 cur.execute(sql, data)
 
         self.conn.commit()
