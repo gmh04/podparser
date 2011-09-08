@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addresses>
+
+  <address>
+    <pattern>albert road</pattern>
+    <street>Albert Road</street>
+  </address>
+  <address>
+    <pattern>renfrew st</pattern>
+    <street>Renfrew Street</street>
+    <town>
+      <name>Glasgow</name>
+      <latlon>55.862308 -4.244671</latlon>
+    </town>
+  </address>
+  <address>
+    <pattern>rosslyn ter</pattern>
+    <street>Rosslyn Terrace</street>
+  </address>
+</addresses>

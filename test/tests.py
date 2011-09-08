@@ -101,6 +101,21 @@ class MiscTest(unittest.TestCase):
         self.assertEquals(location.point['lat'], 55.123456)
         self.assertEquals(location.point['lng'], -3.123456)
 
+    def test_and(self):
+        # test that the position order is not messed
+        # up by the 'and' address delimiter
+
+        path = '%s%c%s' % (self.test_resources_dir, os.sep, 'and_test')
+
+        p = Parser(config=path, dir_path=path)
+        d = p.run_parser()
+        page = d.pages[0]
+
+        for entry in page.entries:
+            self.assertEquals(entry.locations[0].address, '1 Albert Road, Glasgow, Scotland')
+            self.assertEquals(entry.locations[1].address, 'Renfrew Street')
+            self.assertEquals(entry.locations[2].address, '3 Rosslyn Terrace, Glasgow, Scotland')
+
 class StringReplaceTest(unittest.TestCase):
     def setUp(self):
         self.replace_test_dir = '%s%c%s' % (get_resource_dir(),

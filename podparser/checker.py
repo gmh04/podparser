@@ -258,9 +258,12 @@ class EntryChecker():
         for addr in addrs:
             if ' and ' in addr:
                 more = addr.split(' and ')
+                idx = addrs.index(addr)
                 addrs.remove(addr)
                 for a in more:
-                    addrs.append(a)
+                    # to maintain correct position, insert the address in the
+                    # place it was removed from
+                    addrs.insert(idx + more.index(a), a)
 
         for addr in addrs:
             addr = addr.strip()
