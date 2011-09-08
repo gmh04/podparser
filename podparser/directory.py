@@ -124,13 +124,23 @@ class Entry():
     List of `Locations`_ successfully geotagged.
     """
 
-    def __init__(self, line):
+    error = None
+
+
+    def __init__(self, line=None):
+        """
+        Pod entry constructor.
+
+        line - raw pod entry line
+        """
+
         self.line       = line
         self.category   = None
         self.error      = None
 
         # parse individual entry values from pod
-        self._parse()
+        if self.line:
+            self._parse()
 
     def _parse(self):
         # parse pod entry based on a single line string

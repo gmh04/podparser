@@ -109,32 +109,42 @@ class PodConnection(object):
             cur.execute(sql, data)
 
             for location in entry.locations:
-                # insert each location for a given entry
-                sql = """
-                      INSERT INTO location(entry_id, address, accuracy, type,
-                                           userid_mod, current, geom, exact,
-                                           position)
-                         VALUES (%s, %s,
-                                 (SELECT id
-                                  FROM location_accuracy where name = %s),
-                                 %s, %s, %s,
-                                 ST_GeomFromText('POINT(%s %s)', 4326), %s, %s)
-                      """
-                data = (entry_id,
-                        location.address,
-                        location.accuracy,
-                        location.type,
-                        USER,
-                        True,
-                        location.point['lng'],
-                        location.point['lat'],
-                        location.exact,
+                # position is the index of the location in the entry
+                idx = entry.locations.index(location) + 1,
 
-                        # position is the index of the location plus 1
-                        entry.locations.index(location) + 1)
-                cur.execute(sql, data)
+                # insert each location for a given entry
+                query = self._get_location_query(entry_id,
+                                                 location,
+                                                 USER,
+                                                 idx)
+                cur.execute(query[0], query[1])
 
         self.conn.commit()
+
+    def _get_location_query(self, entry_id, location, user='parser', position=1):
+        # build insert location helper
+
+        sql = """
+              INSERT INTO location(entry_id, address, accuracy, type,
+                                   userid_mod, current, geom, exact, position)
+              VALUES (%s, %s,
+                      (SELECT id
+                       FROM location_accuracy where name = %s),
+                      %s, %s, %s,
+                      ST_GeomFromText('POINT(%s %s)', 4326), %s, %s)
+                      """
+        data = (entry_id,
+                location.address,
+                location.accuracy,
+                location.type,
+                user,
+                True,
+                location.point['lng'],
+                location.point['lat'],
+                location.exact,
+                position)
+
+        return sql, data
 
     def record_google_lookup(self):
         """
