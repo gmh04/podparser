@@ -126,7 +126,6 @@ class Entry():
 
     error = None
 
-
     def __init__(self, line=None):
         """
         Pod entry constructor.

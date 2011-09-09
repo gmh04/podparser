@@ -121,7 +121,11 @@ class PodConnection(object):
 
         self.conn.commit()
 
-    def _get_location_query(self, entry_id, location, user='parser', position=1):
+    def _get_location_query(self,
+                            entry_id,
+                            location,
+                            user='parser',
+                            position=1):
         # build insert location helper
 
         sql = """
