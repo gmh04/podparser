@@ -352,6 +352,16 @@ PodConnection
 
 .. autoclass:: podparser.db.connection.PodConnection
 
+*******
+Testing
+*******
+
+The parser unit tests can be run with
+
+::
+
+    $ python -m unittest test.tests
+
 Indices and tables
 ==================
 

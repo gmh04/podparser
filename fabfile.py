@@ -1,4 +1,4 @@
-from fabric.api import cd, local, settings
+from fabric.api import lcd, local, settings
 
 import fabfile
 import os
@@ -8,9 +8,13 @@ import types
 
 
 def build_docs():
-    """Create parser documentation"""
+    """
+    Create parser documentation
 
-    with cd('docs'):
+    requires: python-sphinx
+    """
+
+    with lcd('docs'):
         fname = 'docs.zip'
 
         with settings(warn_only=True):
@@ -23,7 +27,7 @@ def build_docs():
         local('cp -rf _build/html html/%s' % podparser.get_version())
         local('cp -rf _build/html .')
 
-        with cd('html'):
+        with lcd('html'):
             local('zip -r ../%s .' % fname)
 
 def upload():
@@ -35,7 +39,11 @@ def upload():
     local('python setup.py sdist upload', capture=False)
 
 def upload_docs():
-    """Upload sphinx documentation to pypi"""
+    """
+    Upload sphinx documentation to pypi
+
+    requires: Sphinx-PyPI-upload
+    """
 
     build_docs()
     local('python setup.py upload_sphinx --upload-dir=docs/html')
