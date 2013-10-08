@@ -47,7 +47,7 @@ The parser expects the input files in the format and file structure of Scottish 
       <publisher></publisher>
     </metadata>
 
-The POD pages are expected in a child directory whose name ends in _djvu_xml. Each file contains a single POD page whose page number is contained in the file name. See https://github.com/gmh04/podparser/tree/master/test/resources for an example. The following is an example of the XML format of the file ::
+The POD pages are expected in a child directory whose name ends in _djvu_xml. Each file contains a single POD page whose page number is contained in the filename. See https://github.com/gmh04/podparser/tree/master/test/example/example_djvu_xml for an example. The following is the XML format of the file ::
 
     <OBJECT>
       <PARAM name="PAGE" value="postofficeannal188182gla_0116.xml"/>
