@@ -38,11 +38,31 @@ or
 Usage
 *****
 
+Input
+-----
+The parser expects the input files in the format and file structure of Scottish Post Office directories djvu XML files. The parent directory should contain a metadata XML file ending in _meta.xml containing the following values::
+
+    <metadata>
+      <volume></volume>
+      <publisher></publisher>
+    </metadata>
+
+The POD pages are expected in a child directory whose name ends in _djvu_xml. Each file contains a single POD page whose page number is contained in the file name. See https://github.com/gmh04/podparser/tree/master/test/resources for an example. The following is an example of the XML format of the file ::
+
+    <OBJECT>
+      <PARAM name="PAGE" value="postofficeannal188182gla_0116.xml"/>
+      <LINE>Auld, John, grocer and victualler, 25 Duke street ;</LINE>
+      <LINE>house, 4 Burrell's lane.</LINE>
+      <LINE>Auld, John, painter and paperhanger, S9 Bath street.</LINE>
+      <LINE>Auld, John (of David Auld &amp; Sons), house, 13</LINE>
+      ...
+    </OBJECT>
+
 The parser can be used as a command-line application or envoked as a library call within a python script.
 
 Command Line
 ------------
-The command-line application parses the Post Offices directories from XML and optionally commits the entries to a database. For example, the following parses a single directory page::
+The command-line application parses the Post Offices directories from XML and optionally commits the entries to a database. For example, the following parses a single directory page (note paths to files are full paths)::
 
     $ podparser -p </path/to/pod.xml>
 
@@ -251,7 +271,7 @@ addresses.xml contains replace elements to fix OCR errors and misspellings for t
 
 Streets
 -------
-streets.xml helps the parser improve google geoencoding by cleaning the address character string sent to google (derived address) and providing a mechanism for specifying the modern street name. For example for following provides a means of finding alternative spelling for the same street::
+streets.xml helps the parser improve google geoencoding by cleaning the address character string sent to google (derived address) and providing a mechanism for specifying the modern street name. For example the following provides a means of finding alternative spelling for the same street::
 
   <addresses>
     <address>
