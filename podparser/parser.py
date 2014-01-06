@@ -17,6 +17,7 @@ from xml.dom.minidom import parse
 
 import argparse
 import codecs
+import contextlib
 import os
 import sys
 
@@ -49,6 +50,22 @@ def timer(f):
         return d
     return deco
 
+
+@contextlib.contextmanager
+def chdir(dirname=None):
+    """
+    Change directory but return to origin after context.
+
+    dirname - the directory to change to
+    """
+
+    curdir = os.getcwd()
+    try:
+        if dirname is not None:
+            os.chdir(dirname)
+        yield
+    finally:
+        os.chdir(curdir)
 
 class Parser:
     """
@@ -396,17 +413,17 @@ def run_parser():
 
     # parse commandline arguments
     arg_parser = argparse.ArgumentParser(
-        description='Tool for parsing postcode directories')
+        description='Tool for parsing postoffice directories')
 
     parse_group = arg_parser.add_argument_group('Parse Options')
     parse_group.add_argument(
         '-p', '--page',
-        help='single postcode directory page to be parsed')
+        help='single postoffice directory page to be parsed')
 
     parse_group.add_argument(
         '-d', '--directory',
         nargs=1,
-        help='postcode directory to be parsed')
+        help='postoffice directory to be parsed')
     parse_group.add_argument(
         '-s', '--start',
         default=0,

@@ -24,10 +24,12 @@ setup(name='podparser',
         'Topic :: Text Processing :: Indexing'
         ],
       install_requires=[
-        'argparse'
+        ['argparse', 'lxml']
         ],
       entry_points="""
             [console_scripts]
             podparser = podparser.parser:run_parser
+            podfetch = podparser.fetcher:fetch_pod
           """,
-      )
+      data_files=[('etc', ['etc/schema.sql', 'etc/DJVU.xsl'])],
+    )
