@@ -19,6 +19,7 @@ import urllib2
 
 import lxml.etree as ET
 
+from pkg_resources import resource_filename
 from parser import chdir
 
 
@@ -28,7 +29,7 @@ def fetch_pod():
     """
 
     arg_parser = argparse.ArgumentParser(
-        description='Tool for fetcing postoffice directories')
+        description='Tool for fetching postoffice directories')
     arg_parser.add_argument(
         '-d', '--directory',
         nargs=1,
@@ -77,7 +78,7 @@ def fetch_pod():
     print 'Generating page files ...'
     dir_name = fname.replace('.', '_')
     dom = ET.parse(fname)
-    xslt = ET.parse('etc/DJVU.xsl')
+    xslt = ET.parse(resource_filename(__name__, 'etc/DJVU.xsl'))
     if not os.path.isdir(dir_name):
         os.mkdir(dir_name)
     with chdir(dir_name):

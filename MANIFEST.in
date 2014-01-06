@@ -1,3 +1,4 @@
 include LICENSE.txt
 include podparser/etc/schema.sql
+include podparser/etc/DJVU.xsl
 prune test

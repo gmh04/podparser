@@ -31,5 +31,5 @@ setup(name='podparser',
             podparser = podparser.parser:run_parser
             podfetch = podparser.fetcher:fetch_pod
           """,
-      data_files=[('etc', ['etc/schema.sql', 'etc/DJVU.xsl'])],
+      include_package_data=True,
     )

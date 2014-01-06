@@ -39,7 +39,7 @@ or
 POD set up
 ************
 
-Scottish Post office directories can be found at the `Internet Archive`_. Select the 'All files: HTTPS' link of a valid directory (example: https://ia601600.us.archive.org/1/items/postofficeann194041edin/). It is this URL that the podfetcher uses to set up the pod. Note: the parser current only parses the General Directory section of town directories.
+Scottish Post Office directories can be found at the `Internet Archive`_. Select the 'All files: HTTPS' link of a valid directory (example: https://ia601600.us.archive.org/1/items/postofficeann194041edin/). It is this URL that the podfetcher uses to set up the pod. Note: the parser currently only parses the General Directory section of town directories.
 
 To create the pod (with a slow internet connection this can take a long time)::
 
