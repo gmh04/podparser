@@ -499,6 +499,7 @@ def run_parser():
         print '*** No directory given ***'
         print arg_parser.print_help()
         sys.exit(1)
+    directory = os.path.abspath(directory)
 
     db_conn = None
     if args.dbpassword:

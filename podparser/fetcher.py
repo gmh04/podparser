@@ -21,6 +21,7 @@ import lxml.etree as ET
 
 from parser import chdir
 
+
 def fetch_pod():
     """
     Retrieve pod from remote URL and generate djvu xml files

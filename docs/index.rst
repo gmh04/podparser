@@ -18,6 +18,7 @@ Dependencies
 ************
 
 - `argparse`_
+- `lxml`_
 - `psycopg2`_ (only if the parser results are to be stored in a database. Note: Only `Postgis`_ is currently supported.)
 
 ************
@@ -33,6 +34,19 @@ or
 ::
 
     $ easy_install podparser
+
+************
+POD set up
+************
+
+Scottish Post office directories can be found at the `Internet Archive`_. Select the 'All files: HTTPS' link of a valid directory (example: https://ia601600.us.archive.org/1/items/postofficeann194041edin/). It is this URL that the podfetcher uses to set up the pod. Note: the parser current only parses the General Directory section of town directories.
+
+To create the pod (with a slow internet connection this can take a long time)::
+
+    $ cd </path/to/pod>
+    $ podfetch -d <url>
+
+If successful, this will fetch a metadata file and a djvu file containing all pages in the pod. A new djvu XML file is then generated for each page in the pod in a new directory.
 
 *****
 Usage
@@ -395,7 +409,9 @@ Indices and tables
 .. _github: https://github.com/gmh04/podparser/blob/master/etc/streets.xml
 .. _Google Geocoding API: http://code.google.com/apis/maps/documentation/geocoding/
 .. _Google Geocoding API results: http://code.google.com/apis/maps/documentation/geocoding/#Results
+.. _Internet Archive: https://archive.org/search.php?query=collection%3Ascottishdirectories&sort=-publicdate&page=1
 .. _Locations: podparser.geo.encoder.Google
+.. _lxml: http://lxml.de
 .. _National Library of Scotland: http://www.nls.uk
 .. _Pages: #podparser.directory.Page
 .. _psycopg2: http://pypi.python.org/pypi/psycopg2/2.0.4
