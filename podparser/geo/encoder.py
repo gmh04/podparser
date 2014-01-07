@@ -252,9 +252,7 @@ class Location(object):
                 g_addr = g_addr[2: len(g_addr)]
             if re.search(' \w$', g_addr):
                 g_addr = g_addr[0: len(g_addr) - 2]
-            print s_addr,  "<=>", g_addr
             if s_addr.find(g_addr) != -1:
-                print self.town, self.found_locality
                 if self.town.lower() == self.found_locality.lower():
                     self.exact = True
 
